@@ -1,6 +1,6 @@
 # Course Map & Schedules
 
-**AI and Agentics Basics** -- full learning path, schedule, and readiness checklist.
+**AI and Agentics Basics** — full learning path, schedule, and readiness checklist.
 
 ---
 
@@ -8,15 +8,29 @@
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│   Day 0 -- Pre-Course Ramp-Up                       │
-│   Phases 1-4, Modules 0.1-0.17                      │
-│   Mental model + prompting + terminal + git          │
-│   Multi-week, short daily reps                       │
+│   Bedrock                                           │
+│   AI literacy, prompt engineering,                  │
+│   personalizing your AI, delivery, data handling    │
+│   Multi-week, short daily reps                      │
+└──────────────────┬──────────────────────────────────┘
+                   ↓
+┌─────────────────────────────────────────────────────┐
+│   Terminal Basics                                   │
+│   Filesystem, plaintext, code editor,               │
+│   terminal navigation, file operations,             │
+│   version control concept                           │
+│   Multi-week, short daily reps                      │
+└──────────────────┬──────────────────────────────────┘
+                   ↓
+┌─────────────────────────────────────────────────────┐
+│   Agentic AI                                        │
+│   Chatbot vs. agent, supervisor mindset             │
+│   1-2 sessions                                      │
 └──────────────────┬──────────────────────────────────┘
                    ↓
 ┌─────────────────────────────────────────────────────┐
 │   Mental Models (35 minutes)                        │
-│   6 conceptual frameworks for working with AI        │
+│   6 conceptual frameworks for working with AI       │
 └──────────────────┬──────────────────────────────────┘
                    ↓
 ┌─────────────────────────────────────────────────────┐
@@ -34,20 +48,43 @@
 
 ---
 
-## Phase Descriptions
+## Section Descriptions
 
-### Day 0 -- Pre-Course Ramp-Up
+### Bedrock
 
-Four phases delivered in short daily sessions over multiple weeks. Built for a true beginner -- someone who uses chatbots but has never opened a terminal.
+Built for someone who uses AI by feel and has never thought about what is actually happening. Delivered in short daily sessions over multiple weeks.
 
-| Phase | Focus | Modules |
+| Module | Focus |
+|---|---|
+| AI Literacy | What an LLM is, tokens, failure modes, prompt engineering, delivery, data handling |
+| Personalizing Your AI | Custom instructions, projects, memory — stop re-briefing the model every session |
+
+**What Bedrock builds:** A working mental model of the engine, calibrated trust, and deliberate prompting habits. Everything after this assumes this foundation.
+
+---
+
+### Terminal Basics
+
+Genuinely new material for most of this audience. No AI here — plain computer and command-line literacy. Delivered in short daily reps alongside Bedrock.
+
+| Page | Focus | Modules |
 |---|---|---|
-| Phase 1 | Know What You Are Talking To | 0.1-0.4 |
-| Phase 2 | The Computer Underneath | 0.5-0.7 |
-| Phase 3 | The Terminal | 0.8-0.12 |
-| Phase 4 | From Chatbot to Agent | 0.13-0.17 |
+| The Machine | Files, folders, plaintext vs rich text, code editor | 3 modules |
+| The Terminal | Terminal navigation, file operations, paths, flags, version control concept | 6 modules |
 
-**Critical path:** Phase 3 (terminal) is the spine. It receives the most calendar time and is the most common point where students need extra reps.
+**Critical path:** The Terminal is the spine. It receives the most calendar time and is the most common point where students need extra reps. Frame every rep as: "This is how the agent moves around your computer."
+
+---
+
+### Agentic AI
+
+The bridge that makes Bedrock and Terminal Basics pay off. Short — 1-2 sessions. This is where it all connects.
+
+| Module | Focus |
+|---|---|
+| Chatbot vs Agent | Read, write, execute access — why Terminal Basics existed |
+| Version Control | The logbook you need before the agent edits your files |
+| Supervisor Mindset | Delegate, verify, own — the through-line of the entire course |
 
 ---
 
@@ -99,11 +136,11 @@ M7: Context Files
 M8: Capstone (integrates all)
 ```
 
-Do not skip M3 (Git) -- M8 depends on it. Do not skip M7 (Context Files) -- it changes how you work with AI tools permanently.
+Do not skip M3 (Git) — M8 depends on it. Do not skip M7 (Context Files) — it changes how you work with AI tools permanently.
 
 ---
 
-## Daily Schedule -- Technical Foundations
+## Daily Schedule — Technical Foundations
 
 ### Day 1: Foundations (8 hours)
 
@@ -159,6 +196,7 @@ You have completed this course when you can do all of the following without help
 **Technical**
 
 - [ ] Write specific, iterative prompts
+- [ ] Customize your AI tool with persistent instructions
 - [ ] Navigate the terminal confidently
 - [ ] Use git (init, add, commit, branch, merge, push)
 - [ ] Write Markdown with multiple syntax elements
@@ -172,16 +210,20 @@ You have completed this course when you can do all of the following without help
 - [ ] Understand that AI tools require supervision, not trust
 - [ ] Know that you are responsible for the output
 - [ ] Be comfortable asking the model clarifying questions
-- [ ] Expect to iterate -- one-shot prompts rarely produce final results
+- [ ] Expect to iterate — one-shot prompts rarely produce final results
 - [ ] Recognize the difference between a chatbot and an agentic tool
 
 ---
 
 ## Common Questions
 
-**Q: Do I have to do Day 0 if I already know the terminal?**
+**Q: Do I have to complete Bedrock if I already know how LLMs work?**
 
-If you are comfortable in a terminal and understand git basics, you can move through Day 0 quickly. Do not skip Phase 1 (LLM fundamentals) or Phase 4 (chatbot vs. agent) -- those are not about terminal skills.
+If you are already past the "it's like a search engine" mental model and understand hallucination and context windows, you can move through AI Literacy quickly. Do not skip the Personalizing module — most people have not configured their tools deliberately. Do not skip Agentic AI regardless — the chatbot vs. agent distinction and supervisor mindset are load-bearing for everything that follows.
+
+**Q: Do I have to do Terminal Basics if I already use the command line?**
+
+If you are comfortable in a terminal, know what a path is, and can make and move files, you can skip The Terminal. Skim The Machine to confirm you have the file literacy foundation. Move straight to Agentic AI.
 
 **Q: Can I skip modules in Technical Foundations?**
 
@@ -189,8 +231,8 @@ No. Every module builds on earlier ones. M8 (Capstone) specifically requires M3,
 
 **Q: What if I already code in Python or JavaScript?**
 
-M5 (Programming Concepts) will feel familiar. Read it anyway -- it covers problem-solving and debugging mindset, not just syntax. All other modules are still required.
+M5 (Programming Concepts) will feel familiar. Read it anyway — it covers problem-solving and debugging mindset, not just syntax. All other modules are still required.
 
 **Q: How long does the full course take?**
 
-Day 0 (multi-week, short daily reps) + Technical Foundations (2-3 days) = roughly 2-3 weeks of active learning if done consistently. The terminal phase in Day 0 is where most students need extra time.
+Bedrock + Terminal Basics (multi-week, short daily reps) + Agentic AI (1-2 sessions) + Technical Foundations (2-3 days) = roughly 2-3 weeks of active learning if done consistently. The terminal phase is where most students need extra time.
