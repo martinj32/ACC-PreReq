@@ -1,0 +1,28 @@
+site_name: ACC Prerequisite Course
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+docs_dir: docs
+nav:
+  - Get Started: index.md
+  - Course Map & Schedules: overview.md
+  - Day 0 -- Pre-Course Ramp-Up:
+    - Pre-Course Essentials: day0/ai-agentics-basics.md
+  - Mental Models:
+    - Core Content: mental-models/core-content.md
+    - Quick Reference: mental-models/quick-reference.md
+    - Workbook: mental-models/workbook.md
+  - ACC Foundations Course (M1-M8):
+    - Course Design & Instructor Guide: prereq-course/course-design.md
+    - Module Reference & Quick Guide: prereq-course/module-summary.md
+  - Instructor Handbooks:
+    - Mental Models Teaching Guide: instructor/mental-models-guide.md
+    - ACC Prerequisite Course -- Instructor Guide: instructor/prereq-guide.md
