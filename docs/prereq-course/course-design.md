@@ -1,6 +1,8 @@
 # AI and Agentics Basics — Course Design
 ## Technical Foundations Curriculum
 
+**BLUF.** Eight modules take students from zero to agentic-ready. Every module is hands-on first; concepts follow practice.
+
 **Target Audience:** Students with NO background knowledge in LLMs, command-line development, version control, or coding concepts.
 
 **Duration:** 2-3 days  
@@ -21,7 +23,8 @@ This course bridges students from zero knowledge to a solid foundational compete
 6. Set up and authenticate development tools
 7. Troubleshoot basic technical problems independently
 
-**Philosophy:** Learn by doing. Every concept is introduced through a real problem students solve themselves, not a lecture they watch. Hands-on exercises always come before abstract concepts.
+!!! note "Course Philosophy"
+    Learn by doing. Every concept is introduced through a real problem students solve themselves, not a lecture they watch. Hands-on exercises always come before abstract concepts.
 
 ---
 
@@ -91,6 +94,12 @@ This course bridges students from zero knowledge to a solid foundational compete
 - Submission: A markdown document with 5 well-written prompts (one for each learning objective)
 - Rubric: Clarity, specificity, realistic expectations, evidence of iteration
 
+**Readiness Check:**
+- [ ] You can write a clear, specific prompt using the RGCOA structure
+- [ ] You know the difference between a prompt and a system prompt
+- [ ] You can identify at least one LLM failure mode and explain how to verify for it
+- [ ] You understand what a context window is and when it becomes a constraint
+
 **Estimated Hands-On Time:** 85 minutes | **Lecture/Discussion:** 5 minutes
 
 ---
@@ -99,44 +108,40 @@ This course bridges students from zero knowledge to a solid foundational compete
 
 BLUF: the model is not the classification authority. You are. If you paste sensitive information into a consumer AI tool, you have made a disclosure decision. Know what you are doing before you type.
 
-**What never goes into any AI tool:**
-
-- Classified material at any level
-- CUI (Controlled Unclassified Information -- defined below)
-- PII: real names combined with any other identifier -- SSN, date of birth, home address, phone number, personal email, or any combination that could identify a person
-- Personnel records: evaluations, medical, legal, disciplinary
-- Operational planning detail: timelines, routes, objectives, force compositions
-- Credentials and API keys: passwords, tokens, certificates -- never under any circumstances
+!!! danger "What Never Goes Into Any AI Tool"
+    - Classified material at any level
+    - CUI (Controlled Unclassified Information -- defined below)
+    - PII: real names combined with any other identifier -- SSN, date of birth, home address, phone number, personal email, or any combination that could identify a person
+    - Personnel records: evaluations, medical, legal, disciplinary
+    - Operational planning detail: timelines, routes, objectives, force compositions
+    - Credentials and API keys: passwords, tokens, certificates -- never under any circumstances
 
 **CUI defined:**
 
 Controlled Unclassified Information is information requiring safeguarding per law, regulation, or government-wide policy, but not classified under an Executive Order. The legacy FOUO (For Official Use Only) marking is being replaced by CUI designations across the federal government. If a document is marked FOUO, it is CUI. Other common CUI categories students will encounter: Law Enforcement Sensitive (LES), personnel records, and unclassified intelligence information that reveals sources or methods.
 
-One working rule: if the document carries ANY marking, or if it describes real people, real units, real operations, or real capabilities, it does not get pasted into a consumer AI tool. The marking is not required for the rule to apply -- the content triggers it.
+!!! warning "Working Rule"
+    If the document carries ANY marking, or if it describes real people, real units, real operations, or real capabilities, it does not get pasted into a consumer AI tool. The marking is not required for the rule to apply -- the content triggers it.
 
-**Where your prompts go:**
+!!! warning "Where Your Prompts Go"
+    Consumer AI applications (Claude.ai, ChatGPT.com, and similar) transmit your input to a provider-operated backend. Depending on the service tier and opt-out settings, that input may be reviewed by humans or used in future model training. "This tool is impressive" is not the same as "this tool is authorized for work use." Authorization is a property of the contract your organization has signed and the system's ATO (Authority to Operate) -- not the capability of the tool or how widely your colleagues use it. Without an approved system designation and an ATO, a consumer application is not authorized for CUI input, regardless of how the tool is marketed.
 
-Consumer AI applications (Claude.ai, ChatGPT.com, and similar) transmit your input to a provider-operated backend. Depending on the service tier and opt-out settings, that input may be reviewed by humans or used in future model training. "This tool is impressive" is not the same as "this tool is authorized for work use." Authorization is a property of the contract your organization has signed and the system's ATO (Authority to Operate) -- not the capability of the tool or how widely your colleagues use it. Without an approved system designation and an ATO, a consumer application is not authorized for CUI input, regardless of how the tool is marketed.
+!!! note "Local Session Logs"
+    Claude Code writes conversation history to disk in the `.claude/` folder of your project. That log file is subject to the same handling requirements as its content. A log containing CUI requires the same protection as CUI. Scrub discipline applies to what you type, not just what you paste.
 
-**Local session logs:**
+!!! danger "Scrub Checklist -- Remove All of These Before Pasting"
+    - Real names (of any person)
+    - Real unit designations
+    - Real locations: base names, grid coordinates, facility names
+    - Dates tied to real operations or events
+    - Any document markings (CUI, FOUO, LES, classification)
+    - Phone numbers, personal email addresses, account identifiers
+    - Credentials, API keys, and passwords -- never under any circumstances
+    - System names and network names
+    - IP addresses belonging to real infrastructure
 
-Claude Code writes conversation history to disk in the `.claude/` folder of your project. That log file is subject to the same handling requirements as its content. A log containing CUI requires the same protection as CUI. Scrub discipline applies to what you type, not just what you paste.
-
-**Scrub checklist -- remove all of the following before pasting:**
-
-- Real names (of any person)
-- Real unit designations
-- Real locations: base names, grid coordinates, facility names
-- Dates tied to real operations or events
-- Any document markings (CUI, FOUO, LES, classification)
-- Phone numbers, personal email addresses, account identifiers
-- Credentials, API keys, and passwords -- never under any circumstances
-- System names and network names
-- IP addresses belonging to real infrastructure
-
-**Bracketed placeholder technique:**
-
-Replace removed specifics with bracketed labels that describe the type of information. The model does not need the real identifier to help you. Examples: [NCO], [LOCATION], [UNIT], [DATE], [SYSTEM]. The model reasons about structure and process, not identity. Your scrubbed prompt is fully functional for the task.
+!!! tip "Bracketed Placeholder Technique"
+    Replace removed specifics with bracketed labels that describe the type of information. The model does not need the real identifier to help you. Examples: [NCO], [LOCATION], [UNIT], [DATE], [SYSTEM]. The model reasons about structure and process, not identity. Your scrubbed prompt is fully functional for the task.
 
 **Hands-On: Scrub Drill**
 
@@ -154,9 +159,8 @@ Outcome: A scrubbed version of the document plus a written list of what was remo
 
 BLUF: the model generates plausible text, not verified fact. These are the failure modes you will encounter. Know them before you rely on the output.
 
-**Hallucination:**
-
-The model has no truth-checking mechanism. It generates tokens that are statistically likely to follow the prior text, regardless of whether they correspond to fact. The model cannot distinguish "information I trained on accurately" from "a completion that sounds plausible." Confident output and correct output are entirely unrelated. A model can produce a detailed, well-cited, grammatically perfect answer that is entirely fabricated. The confidence of the response is not evidence of its accuracy.
+!!! warning "Hallucination"
+    The model has no truth-checking mechanism. It generates tokens that are statistically likely to follow the prior text, regardless of whether they correspond to fact. The model cannot distinguish "information I trained on accurately" from "a completion that sounds plausible." Confident output and correct output are entirely unrelated. A model can produce a detailed, well-cited, grammatically perfect answer that is entirely fabricated. The confidence of the response is not evidence of its accuracy.
 
 **Knowledge cutoff -- three behaviors:**
 
@@ -168,9 +172,8 @@ The model has a training data cutoff: a point after which it has no direct knowl
 
 Students must verify time-sensitive content regardless of which behavior they observe. The only safe assumption is that anything that could have changed since training may have changed.
 
-**Nondeterminism:**
-
-The model uses a temperature parameter that introduces randomness into each generation. The same prompt submitted twice will produce different output. For low-stakes tasks this is irrelevant. For high-stakes output -- analysis that will inform a decision, a document that will be forwarded -- run the prompt multiple times and compare results. Consistent answers across runs increase confidence. Divergent answers are a signal to verify before use.
+!!! tip "Nondeterminism"
+    The model uses a temperature parameter that introduces randomness into each generation. The same prompt submitted twice will produce different output. For low-stakes tasks this is irrelevant. For high-stakes output -- analysis that will inform a decision, a document that will be forwarded -- run the prompt multiple times and compare results. Consistent answers across runs increase confidence. Divergent answers are a signal to verify before use.
 
 **Hands-On: Hallucination in the Wild**
 
@@ -215,28 +218,29 @@ Claude's current tiers:
 - Running in a loop or processing many items at once: always fast tier. Cost compounds.
 - Default for this course: Sonnet. It is the standard for all exercises unless otherwise specified.
 
-Match the weapon to the target. Using Opus for bulk reformatting is waste. Using Haiku for a nuanced analytical task is risk.
+!!! tip "Match the Model to the Task"
+    Using Opus for bulk reformatting is waste. Using Haiku for a nuanced analytical task is risk.
 
-**Names change:**
-
-The specific model names above are current as of course development but will be superseded. Before each course run, verify current model names at docs.anthropic.com. Teach students the axis (fast/balanced/powerful), not a frozen roster of names. The axis persists; the names rotate.
+!!! warning "Model Names Change"
+    The specific model names above are current as of course development but will be superseded. Before each course run, verify current model names at docs.anthropic.com. Teach students the axis (fast/balanced/powerful), not a frozen roster of names. The axis persists; the names rotate.
 
 ---
 
 #### **Module 2: The Terminal is Friendly — Command Line Basics**
 *Duration: 120 minutes*
 
-**Windows Students: Use WSL**
-
-On Windows, use WSL (Windows Subsystem for Linux), not native PowerShell. PowerShell is a different environment with different commands. The command `touch` does not exist in PowerShell -- the equivalent is `New-Item filename`. Throughout this course, all terminal exercises assume a Linux/Unix environment. WSL provides that environment on Windows.
+!!! warning "Windows Students: Use WSL"
+    On Windows, use WSL (Windows Subsystem for Linux), not native PowerShell. PowerShell is a different environment with different commands. The command `touch` does not exist in PowerShell -- the equivalent is `New-Item filename`. Throughout this course, all terminal exercises assume a Linux/Unix environment. WSL provides that environment on Windows.
 
 Install WSL: open PowerShell and run `wsl --install`. On Windows 11, no administrator privileges are required. The first launch will prompt you to create a Linux username and password -- use something you will remember, it is separate from your Windows login. After setup, open the WSL terminal for all course exercises.
 
 Your Windows files are accessible inside WSL at `/mnt/c/Users/YourName/`. To navigate to your Windows Documents folder from inside WSL: `cd /mnt/c/Users/YourName/Documents`.
 
-Path conversion rule: `C:\Users\Jake\Documents` becomes `/mnt/c/Users/Jake/Documents`. Backslashes become forward slashes. The drive letter (C) becomes lowercase after `/mnt/`. This conversion trips up every Windows beginner -- practice it explicitly in the path exercises.
+!!! tip "Path Conversion Rule (Windows → WSL)"
+    `C:\Users\Jake\Documents` becomes `/mnt/c/Users/Jake/Documents`. Backslashes become forward slashes. The drive letter (C) becomes lowercase after `/mnt/`. This trips up every Windows beginner -- practice it explicitly in the path exercises.
 
-VS Code integration: install the "WSL" extension in VS Code. From a WSL terminal, type `code .` to open the current folder in VS Code with full WSL integration. All terminal operations in VS Code's integrated terminal will then run in the WSL environment.
+!!! tip "VS Code + WSL Integration"
+    Install the "WSL" extension in VS Code. From a WSL terminal, type `code .` to open the current folder in VS Code with full WSL integration. All terminal operations in VS Code's integrated terminal will then run in the WSL environment.
 
 **Learning Objectives:**
 - Navigate directories and list files confidently from the terminal
@@ -254,7 +258,10 @@ VS Code integration: install the "WSL" extension in VS Code. From a WSL terminal
 - The concept of a "path" — relative and absolute
 - Understanding man pages and help flags (`--help`)
 - Piping (|) and redirection (>, >>, <) basics
-- Stopping a running command: press Ctrl+C. This sends an interrupt signal and stops the current process. Use it whenever a command hangs, runs too long, or you need to abort. Ctrl+C is the single most important key combination in the terminal -- name it explicitly and drill it.
+- Stopping a running command: press Ctrl+C
+
+!!! tip "Ctrl+C: The Most Important Shortcut"
+    Ctrl+C sends an interrupt signal and stops the current process. Use it whenever a command hangs, runs too long, or you need to abort. Name it explicitly and drill it -- students need this reflex before anything else in the terminal.
 - Environment variables and PATH
 - Hidden files and dotfiles
 
@@ -305,6 +312,13 @@ VS Code integration: install the "WSL" extension in VS Code. From a WSL terminal
 - Hands-on quiz: 10 terminal tasks (navigate, create, copy, delete, find, pipe)
 - Rubric: Completion, efficiency, understanding (not speed)
 - Allowable: Tab completion, `--help` flags, man pages
+
+**Readiness Check:**
+- [ ] You can navigate to any directory using absolute and relative paths
+- [ ] You can create, copy, move, and delete files and folders from the terminal
+- [ ] You know how to stop a running command (Ctrl+C)
+- [ ] You can pipe and redirect command output
+- [ ] You can explain what PATH is and why it matters
 
 **Estimated Hands-On Time:** 110 minutes | **Lecture/Discussion:** 10 minutes
 
@@ -379,7 +393,8 @@ VS Code integration: install the "WSL" extension in VS Code. From a WSL terminal
 
 6. **The `.gitignore` File** (25 min)
    - Create a repo with files that should NOT be committed (`.env`, `node_modules/`, `*.log`)
-   - Create a `.gitignore` file before making any commits. This order matters: if a credential file is committed first, adding it to `.gitignore` later does NOT remove it from history. The file remains recoverable. Create `.gitignore` before the first commit -- it is the OPSEC enforcement layer for git.
+   !!! danger "Create .gitignore Before Your First Commit"
+       If a credential file is committed first, adding it to `.gitignore` later does NOT remove it from history. The file remains recoverable. Create `.gitignore` before the first commit -- it is the OPSEC enforcement layer for git.
    - Minimum entries for any project: `.env`, any credential files, `.DS_Store`, `__pycache__/`, `.venv/`
    - Verify that the ignored files don't show up in `git status`
    - Create a proper `.gitignore` for a Python project
@@ -397,6 +412,13 @@ VS Code integration: install the "WSL" extension in VS Code. From a WSL terminal
 - Hands-on project: Create a repo, make 3 commits, create and merge a branch, open and merge a PR
 - Rubric: Correct Git workflow, meaningful messages, successful merge, working .gitignore
 - Bonus: Resolve a merge conflict without help
+
+**Readiness Check:**
+- [ ] You can initialize a repo, stage files, and commit with a meaningful message
+- [ ] You can create a branch, make changes, and merge it back to main
+- [ ] You can clone a repo and push changes to GitHub
+- [ ] Your `.gitignore` exists before any commits and excludes `.env` and credential files
+- [ ] You can open a PR and read the diff before merging
 
 **Estimated Hands-On Time:** 110 minutes | **Lecture/Discussion:** 10 minutes
 
@@ -427,20 +449,17 @@ VS Code integration: install the "WSL" extension in VS Code. From a WSL terminal
 - Markdown for system prompts and documentation
 - Markdown as a lingua franca for developers
 
-**GitHub Flavored Markdown (GFM):**
+!!! note "GitHub Flavored Markdown (GFM)"
+    This course teaches GitHub Flavored Markdown, a superset of CommonMark. GFM adds tables, task lists (`- [ ]`), strikethrough (`~~text~~`), and fenced code blocks with language hints (` ```python `). If it renders in VS Code preview and on GitHub, it is valid for this course.
 
-This course teaches GitHub Flavored Markdown, a superset of CommonMark. GFM adds tables, task lists (`- [ ]`), strikethrough (`~~text~~`), and fenced code blocks with language hints (` ```python `). If it renders in VS Code preview and on GitHub, it is valid for this course.
+!!! warning "Critical Spacing Rules -- Most Beginner Errors Live Here"
+    - A space is required between the `#` and the heading text: `# Heading` is correct, `#Heading` is not. Without the space, it renders as plain text.
+    - A blank line is required before any list. A list that immediately follows a paragraph with no blank line may not render as a list.
+    - A blank line is required before a fenced code block.
+    - Tables require both a header row and a separator row (`|---|---|`). A table without the separator row will not render.
 
-**Critical spacing rules -- most beginner errors live here:**
-
-- A space is required between the `#` and the heading text: `# Heading` is correct, `#Heading` is not. Without the space, it renders as plain text.
-- A blank line is required before any list. A list that immediately follows a paragraph with no blank line may not render as a list.
-- A blank line is required before a fenced code block.
-- Tables require both a header row and a separator row (`|---|---|`). A table without the separator row will not render.
-
-**Smart-quote warning:**
-
-Do not paste Markdown from Word or Google Docs. Those applications auto-replace straight quotes (`"`) with curly "smart" quotes, which break code blocks and inline code. Write Markdown in VS Code. Use the preview panel (Ctrl+Shift+V) to verify rendering before submitting.
+!!! warning "Smart-Quote Warning"
+    Do not paste Markdown from Word or Google Docs. Those applications auto-replace straight quotes (`"`) with curly "smart" quotes, which break code blocks and inline code. Write Markdown in VS Code. Use the preview panel (Ctrl+Shift+V) to verify rendering before submitting.
 
 **Hands-On Exercises:**
 
@@ -484,6 +503,12 @@ Do not paste Markdown from Word or Google Docs. Those applications auto-replace 
 **Assessment:**
 - Submission: A markdown document (documentation or personal README)
 - Rubric: Clarity, proper formatting, use of 5+ syntax elements, readability
+
+**Readiness Check:**
+- [ ] You can write a properly formatted Markdown document with 5+ syntax elements
+- [ ] You know the critical spacing rules (# space, blank lines before lists and code blocks)
+- [ ] You write Markdown in VS Code, not Word or Google Docs
+- [ ] You can create tables, code blocks, and task lists
 
 **Estimated Hands-On Time:** 85 minutes | **Lecture/Discussion:** 5 minutes
 
@@ -568,6 +593,12 @@ Note: These exercises use pseudocode and one real language (JavaScript recommend
 - Hands-on: Write 3 small programs (a function, a conditional, a loop)
 - Rubric: Logic correctness, clarity, comments, proper use of concepts
 
+**Readiness Check:**
+- [ ] You can write pseudocode before writing real code
+- [ ] You understand variables, conditionals, loops, and functions
+- [ ] You can read a buggy snippet and identify the error type
+- [ ] You can write a working function with a clear name and documented purpose
+
 **Estimated Hands-On Time:** 110 minutes | **Lecture/Discussion:** 10 minutes
 
 ---
@@ -646,6 +677,12 @@ Note: These exercises use pseudocode and one real language (JavaScript recommend
 **Assessment:**
 - Checklist: All required tools installed and authenticated
 - Rubric: Working installation, correct authentication, understanding of each tool
+
+**Readiness Check:**
+- [ ] Claude Code is installed and `claude --version` passes
+- [ ] GitHub CLI is authenticated (`gh auth status` passes)
+- [ ] VS Code is installed with your preferred extensions
+- [ ] You know what `.env` files are and why they must not be committed
 
 **Estimated Hands-On Time:** 85 minutes | **Lecture/Discussion:** 5 minutes
 
@@ -744,6 +781,12 @@ Pulls the unit's daily log and produces a formatted brief.
 **Assessment:**
 - Submission: CLAUDE.md + me.md for a real project
 - Rubric: Clarity, completeness, enforceability, practical usefulness
+
+**Readiness Check:**
+- [ ] You have a complete CLAUDE.md that specifies project scope, rules, and constraints
+- [ ] You have a personal me.md with communication preferences and working style
+- [ ] Claude Code reads your context files and references them in conversation
+- [ ] You understand how Markdown formatting affects how the model reads instructions
 
 **Estimated Hands-On Time:** 85 minutes | **Lecture/Discussion:** 5 minutes
 
@@ -863,6 +906,13 @@ This is the capstone project. Students choose one of three paths:
   - Did you iterate based on feedback? (10%)
   - Did you help yourself when stuck? (5%)
 - Bonus: 1 point per stretch goal
+
+**Readiness Check:**
+- [ ] Your capstone project runs without errors
+- [ ] It is documented with a clear README (what it does, how to run it)
+- [ ] You have 5+ commits with meaningful messages
+- [ ] No credentials appear in your git history
+- [ ] Your project is pushed to GitHub and publicly visible
 
 **Estimated Time:** 170 minutes | **Mentoring/Troubleshooting:** 10 minutes
 

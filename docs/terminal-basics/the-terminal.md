@@ -35,12 +35,30 @@ The **prompt line** is where your typing goes. It usually ends with a `$` (Mac/L
 
 ### Hands-On
 
-1. Open the terminal on your machine.
-2. Sit with the blinking cursor for ten seconds. Name the feeling. Then continue.
-3. Type the command to print the current date. Press Enter.
-4. Close the terminal and open it again.
+1. Open the terminal on your machine. Sit with the blinking cursor for ten seconds. Name the feeling.
+2. Run each command below for your platform. Read the output before moving to the next one.
 
-That is it. You opened it, ran something, and closed it. The anxiety has a smaller surface area now.
+=== "Mac / WSL (Linux)"
+    | Command | What it does |
+    |---|---|
+    | `date` | Print the current date and time |
+    | `whoami` | Print your username |
+    | `pwd` | Print your current location in the filesystem |
+    | `ls` | List the files in the current folder |
+    | `echo "hello"` | Print text to the terminal |
+
+=== "Windows PowerShell"
+    | Command | What it does |
+    |---|---|
+    | `Get-Date` | Print the current date and time |
+    | `$env:USERNAME` | Print your username |
+    | `Get-Location` | Print your current location in the filesystem |
+    | `Get-ChildItem` | List the files in the current folder |
+    | `Write-Output "hello"` | Print text to the terminal |
+
+3. Close the terminal and open it again. Re-run one command from memory without looking at the table.
+
+You opened it, ran five things, and closed it. The anxiety has a smaller surface area now.
 
 !!! question "Before You Continue"
     You typed a command and saw a response. What is the difference between that and clicking a button in an app? What stayed the same?

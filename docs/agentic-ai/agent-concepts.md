@@ -36,9 +36,24 @@ The LLM is the engine. A harness with tools is what gives it hands. You are the 
 
 ### Hands-On
 
-1. Open your chatbot. Ask it: "Rename the folder 'project' to 'project-v1'." Read what it gives you.
-2. Identify: did it rename the folder, or did it tell you how?
-3. Think about what would need to change for it to perform the action instead of describe it.
+**Step 1 — The chatbot side.**
+
+1. Open your AI chatbot (Claude web, ChatGPT, or equivalent).
+2. Ask it: "Rename the folder 'project' to 'project-v1'."
+3. Read the response. Note whether it renamed anything or told you how to rename it yourself.
+
+**Step 2 — The agent side (if Claude Code is available).**
+
+4. Open Claude Code in a project folder.
+5. Ask the same question: "Rename the folder 'project' to 'project-v1'."
+6. Watch what it does. Does it call a tool? Does it ask for confirmation? Does the folder change on disk?
+
+**Step 3 — Compare.**
+
+7. Write one sentence describing what was different between the two responses.
+8. Identify: which response required you to do the work, and which one did the work?
+
+That gap — between advice and action — is the entire definition of an agent.
 
 !!! question "Before You Continue"
     You just asked a chatbot to rename a folder. What would an agent do differently — and what are you trusting it with when it does?

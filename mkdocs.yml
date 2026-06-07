@@ -48,14 +48,14 @@ nav:
     - The Machine: terminal-basics/the-machine.md
     - The Terminal: terminal-basics/the-terminal.md
   - Agentic AI:
-    - Agent Concepts: agentic-ai/agent-concepts.md
+    - Core Concepts: agentic-ai/agent-concepts.md
   - Mental Models:
-    - Core Content: mental-models/core-content.md
+    - The Module: mental-models/core-content.md
     - Quick Reference: mental-models/quick-reference.md
     - Workbook: mental-models/workbook.md
-  - Technical Foundations (M1-M8):
-    - Course Design & Instructor Guide: prereq-course/course-design.md
-    - Module Reference & Quick Guide: prereq-course/module-summary.md
+  - Technical Foundations:
+    - Course Design (M1-M8): prereq-course/course-design.md
+    - Module Quick Reference: prereq-course/module-summary.md
   - Instructor Handbooks:
     - Content Style Guide: instructor/style-guide.md
     - Mental Models Teaching Guide: instructor/mental-models-guide.md

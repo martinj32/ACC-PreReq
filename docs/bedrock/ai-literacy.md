@@ -42,11 +42,13 @@ The model reads a sequence of text and predicts what comes next. One chunk at a 
 
 The lab is the chatbot you already have open.
 
-1. Ask it something you already know well enough to spot an error.
-2. Read the output. Ask yourself: "How would I verify this?"
-3. Ask it to continue a sentence you leave unfinished.
+1. Type an incomplete sentence on a topic you know well and submit it. Read what the model predicts comes next.
+2. Add the word "definitely" or "obviously" to the same sentence and submit again. Does the completion change?
+3. Ask the model a factual question you already know the answer to. Check the output for accuracy.
+4. Ask the exact same question again in a new chat. Is the answer identical, or slightly different?
+5. Ask yourself: "How would I verify any of these outputs if I did not already know the answer?"
 
-You are watching prediction happen in real time.
+You are watching prediction happen in real time — and building the verification reflex before you need it.
 
 !!! question "Before You Continue"
     The model just gave you a confident-sounding answer. What would it take to verify it? Where would you check?
@@ -295,9 +297,11 @@ You will be selecting models and making decisions about how to use them. Underst
 
 ### Hands-On
 
-1. Open your chatbot's settings or account page. Find which model you are using.
-2. If you have API access, open the pricing page. Read it for structure — not memorization.
-3. Identify which delivery model you are currently on.
+1. Open your chatbot's settings or account page. Find which model you are currently using and note the name.
+2. Open anthropic.com/pricing (or your provider's equivalent). Find two models — one fast/small, one large/powerful. Read the price difference. Do not memorize numbers; notice the structure.
+3. Identify which delivery model you are on: subscription app, pay-per-token API, or organization-managed key.
+4. Optional: paste a paragraph of text into a tokenizer tool (such as platform.openai.com/tokenizer). Count the tokens. Note how the token count compares to the word count.
+5. Pick one task you might use AI for this week. Decide which model tier is appropriate for that task and write one sentence explaining why.
 
 !!! question "Before You Continue"
     You need to run an analysis task with a very long document and several back-and-forth exchanges. What factors determine the cost of that task, and how would you reduce it?

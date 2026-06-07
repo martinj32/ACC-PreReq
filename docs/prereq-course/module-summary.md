@@ -1,6 +1,6 @@
 # AI and Agentics Basics — Module Quick Reference
 
-**Condensed view of all 8 modules for quick planning and prep.**
+**BLUF.** Condensed view of all 8 modules -- use this for planning, pacing, and quick prep before each session.
 
 ---
 
@@ -123,6 +123,9 @@
 | **Common Stumble** | Students under-scope (build something too simple) or over-scope (try to build too much). Instructor guidance: "Can you demo this in 2 minutes? If not, it's too big." |
 
 ---
+
+!!! note "Critical Path"
+    M1 → M2 → M3 → M5 → M8 is the non-negotiable sequence. M4 (Markdown) can run in parallel once M1 is done. M6 and M7 must complete before M8 begins.
 
 ## Prerequisite Dependency Map
 
@@ -247,6 +250,11 @@
 
 ---
 
+!!! warning "The Two OPSEC Stumbles That Matter Most"
+    **Module 1 -- Scrubbing:** Students paste real unit designations, names, or grid coordinates before understanding scrub discipline. Run the Data Hygiene section before the first exercise.
+
+    **Module 3 -- .gitignore timing:** Students commit a `.env` file before creating `.gitignore`. Once a credential is in git history, it stays there. Create `.gitignore` before the first commit. This is not a recoverable mistake.
+
 ## Common Misconceptions and Corrections
 
 | Misconception | Reality | Clarification |
@@ -314,6 +322,21 @@
 ✓ Ship a real working project to GitHub  
 
 **These are the core skills for AI-assisted development.** Students who complete all 8 modules are ready for advanced agentic work.
+
+---
+
+## Course-Level Readiness Check
+
+Before advancing to agentic work, a student should be able to:
+
+- [ ] Write a specific, structured prompt and iterate on it
+- [ ] Navigate the terminal and manipulate files without help
+- [ ] Commit, branch, merge, and push using Git
+- [ ] Write clean Markdown documentation
+- [ ] Read and write basic programming logic (variables, loops, functions)
+- [ ] Verify all developer tools are installed and authenticated
+- [ ] Write a CLAUDE.md that constrains Claude's behavior for a real project
+- [ ] Ship a working project to GitHub with meaningful commits
 
 ---
 
