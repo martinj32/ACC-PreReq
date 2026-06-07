@@ -45,6 +45,12 @@ This prerequisite course (FND-ACC or "ACC Foundations") bridges students from ze
 - Temperature, top-p, and why they matter to you
 - The problem with vague prompts, the power of specificity
 - Prompt patterns: step-by-step, role-playing, explicit output format
+- RGCOA prompt structure: Role, Goal, Context, Output, Asks. Components:
+  - **Role** -- the expert perspective the model should apply
+  - **Goal** -- the specific task, single and concrete
+  - **Context** -- background required to do the task well
+  - **Output** -- format, length, structure, and tone
+  - **Asks** -- tell the model what to do when it lacks information, what to flag, and what not to assume. Example: "If you need information I haven't provided, ask me before proceeding. Do not invent facts. If you find a contradiction between the source material and a previous instruction, flag it rather than picking one." The Asks element is where you give the model permission to surface uncertainty instead of papering over it with a plausible-sounding guess.
 
 **Hands-On Exercises:**
 
@@ -60,6 +66,8 @@ This prerequisite course (FND-ACC or "ACC Foundations") bridges students from ze
    - Method: Use the same interview question; change the system prompt by starting with "You are a..."
    - Observe: How does the system prompt change tone, vocabulary, detail level?
    - Outcome: Screenshot both responses with notes on 3 differences
+
+   Note: Typing "You are a [role]" in the user turn is persona injection -- you are instructing the model mid-conversation, and that instruction is visible in the chat history. A true system prompt is loaded by the platform before the conversation begins and is invisible to the user during the conversation. The exercise demonstrates the behavioral effect of persona instructions; the distinction between user-turn persona and platform system prompt matters when you begin configuring harness files in ACC.
 
 3. **Clarity Matters** (20 min)
    - Vague prompt: "Write about networking."
@@ -87,8 +95,148 @@ This prerequisite course (FND-ACC or "ACC Foundations") bridges students from ze
 
 ---
 
+#### **Data Hygiene and OPSEC**
+
+BLUF: the model is not the classification authority. You are. If you paste sensitive information into a consumer AI tool, you have made a disclosure decision. Know what you are doing before you type.
+
+**What never goes into any AI tool:**
+
+- Classified material at any level
+- CUI (Controlled Unclassified Information -- defined below)
+- PII: real names combined with any other identifier -- SSN, date of birth, home address, phone number, personal email, or any combination that could identify a person
+- Personnel records: evaluations, medical, legal, disciplinary
+- Operational planning detail: timelines, routes, objectives, force compositions
+- Credentials and API keys: passwords, tokens, certificates -- never under any circumstances
+
+**CUI defined:**
+
+Controlled Unclassified Information is information requiring safeguarding per law, regulation, or government-wide policy, but not classified under an Executive Order. The legacy FOUO (For Official Use Only) marking is being replaced by CUI designations across the federal government. If a document is marked FOUO, it is CUI. Other common CUI categories students will encounter: Law Enforcement Sensitive (LES), personnel records, and unclassified intelligence information that reveals sources or methods.
+
+One working rule: if the document carries ANY marking, or if it describes real people, real units, real operations, or real capabilities, it does not get pasted into a consumer AI tool. The marking is not required for the rule to apply -- the content triggers it.
+
+**Where your prompts go:**
+
+Consumer AI applications (Claude.ai, ChatGPT.com, and similar) transmit your input to a provider-operated backend. Depending on the service tier and opt-out settings, that input may be reviewed by humans or used in future model training. "This tool is impressive" is not the same as "this tool is authorized for work use." Authorization is a property of the contract your organization has signed and the system's ATO (Authority to Operate) -- not the capability of the tool or how widely your colleagues use it. Without an approved system designation and an ATO, a consumer application is not authorized for CUI input, regardless of how the tool is marketed.
+
+**Local session logs:**
+
+Claude Code writes conversation history to disk in the `.claude/` folder of your project. That log file is subject to the same handling requirements as its content. A log containing CUI requires the same protection as CUI. Scrub discipline applies to what you type, not just what you paste.
+
+**Scrub checklist -- remove all of the following before pasting:**
+
+- Real names (of any person)
+- Real unit designations
+- Real locations: base names, grid coordinates, facility names
+- Dates tied to real operations or events
+- Any document markings (CUI, FOUO, LES, classification)
+- Phone numbers, personal email addresses, account identifiers
+- Credentials, API keys, and passwords -- never under any circumstances
+- System names and network names
+- IP addresses belonging to real infrastructure
+
+**Bracketed placeholder technique:**
+
+Replace removed specifics with bracketed labels that describe the type of information. The model does not need the real identifier to help you. Examples: [NCO], [LOCATION], [UNIT], [DATE], [SYSTEM]. The model reasons about structure and process, not identity. Your scrubbed prompt is fully functional for the task.
+
+**Hands-On: Scrub Drill**
+
+The instructor provides a realistic-but-fabricated one-page document containing: a soldier's name and rank, a unit designation, a base name, a grid coordinate, a date, and a document marking. The document is fake but representative of what students handle daily.
+
+Task: Produce a paste-safe version of the document using bracketed placeholders. Preserve the structure and substance. Remove everything on the scrub checklist.
+
+Debrief: Each student explains what they removed and why. Instructor highlights any missed items. Class discusses: what information is retained after scrubbing, and whether the model can still accomplish the task with scrubbed input.
+
+Outcome: A scrubbed version of the document plus a written list of what was removed and the category each item falls into.
+
+---
+
+#### **LLM Failure Modes**
+
+BLUF: the model generates plausible text, not verified fact. These are the failure modes you will encounter. Know them before you rely on the output.
+
+**Hallucination:**
+
+The model has no truth-checking mechanism. It generates tokens that are statistically likely to follow the prior text, regardless of whether they correspond to fact. The model cannot distinguish "information I trained on accurately" from "a completion that sounds plausible." Confident output and correct output are entirely unrelated. A model can produce a detailed, well-cited, grammatically perfect answer that is entirely fabricated. The confidence of the response is not evidence of its accuracy.
+
+**Knowledge cutoff -- three behaviors:**
+
+The model has a training data cutoff: a point after which it has no direct knowledge. Students need to understand three distinct behaviors, not just "the model might be out of date":
+
+- (a) The model flags uncertainty and tells you it may not have current information. This is the honest behavior. Do not mistake it for inability.
+- (b) The model answers confidently using stale training data with no indication that the information may be wrong. This is the dangerous behavior. The model is not lying -- it does not know that time has passed. It answers with the same confidence it would apply to well-established facts.
+- (c) The model has a retrieval or search tool and pulls current information from external sources. In this case, check whether the tool was actually invoked and verify the source.
+
+Students must verify time-sensitive content regardless of which behavior they observe. The only safe assumption is that anything that could have changed since training may have changed.
+
+**Nondeterminism:**
+
+The model uses a temperature parameter that introduces randomness into each generation. The same prompt submitted twice will produce different output. For low-stakes tasks this is irrelevant. For high-stakes output -- analysis that will inform a decision, a document that will be forwarded -- run the prompt multiple times and compare results. Consistent answers across runs increase confidence. Divergent answers are a signal to verify before use.
+
+**Hands-On: Hallucination in the Wild**
+
+Task: Ask the model to produce five peer-reviewed academic papers on a narrow, specific topic. Request full citations: author, title, journal, year, volume, and page numbers. The model will produce plausible-sounding citations. Select one and attempt to verify it using an actual academic database (Google Scholar, PubMed, or similar).
+
+The fabricated citation will typically be unverifiable. The exercise produces a hallucination reliably and makes the failure mode concrete before students depend on model output in a consequential context.
+
+Debrief: What made the citation look legitimate? What would you have done if you had not verified it? Where else in your workflow might you accept plausible-sounding output without checking?
+
+Outcome: A written record of the citation the model produced, the verification attempt, and a one-paragraph reflection on where hallucination risk is highest in your own work.
+
+---
+
+#### **Model Landscape: Knowing Your Tools**
+
+BLUF: there is no single "the AI." There are model families, each with a tiered structure. Match the capability level to the task.
+
+**Three major families:**
+
+- Claude (Anthropic)
+- GPT (OpenAI)
+- Gemini (Google)
+
+Each family has a different architecture, training process, and policy. Output quality, behavior, and capability vary. The course focuses on Claude. Students working in other environments will encounter GPT and Gemini and should apply the same analytical framework to both.
+
+**Tier structure:**
+
+Every major provider organizes its models into tiers: a fast, low-cost tier; one or more mid-range options; and a high-capability, higher-cost tier. The pattern is consistent across providers.
+
+Claude's current tiers:
+
+| Tier | Model | Use |
+|------|-------|-----|
+| Fast / cheap | Haiku | High-volume, low-complexity tasks |
+| Balanced | Sonnet | Standard ACC working model |
+| Powerful / expensive | Opus | Complex reasoning, high-stakes analysis |
+
+**When to use which tier:**
+
+- Simple tasks (summarize, reformat, rewrite, translate): fast tier. Cost-effective, sufficient.
+- Complex analysis, multi-step reasoning, planning, synthesis: capable tier. Pay for the ceiling you need.
+- Running in a loop or processing many items at once: always fast tier. Cost compounds.
+- Default for this course: Sonnet. It is the working model for ACC and the standard for all exercises unless otherwise specified.
+
+Match the weapon to the target. Using Opus for bulk reformatting is waste. Using Haiku for a nuanced analytical task is risk.
+
+**Names change:**
+
+The specific model names above are current as of course development but will be superseded. Before each course run, verify current model names at docs.anthropic.com. Teach students the axis (fast/balanced/powerful), not a frozen roster of names. The axis persists; the names rotate.
+
+---
+
 #### **Module 2: The Terminal is Friendly — Command Line Basics**
 *Duration: 120 minutes*
+
+**Windows Students: Use WSL**
+
+On Windows, use WSL (Windows Subsystem for Linux), not native PowerShell. PowerShell is a different environment with different commands. The command `touch` does not exist in PowerShell -- the equivalent is `New-Item filename`. Throughout this course, all terminal exercises assume a Linux/Unix environment. WSL provides that environment on Windows.
+
+Install WSL: open PowerShell and run `wsl --install`. On Windows 11, no administrator privileges are required. The first launch will prompt you to create a Linux username and password -- use something you will remember, it is separate from your Windows login. After setup, open the WSL terminal for all course exercises.
+
+Your Windows files are accessible inside WSL at `/mnt/c/Users/YourName/`. To navigate to your Windows Documents folder from inside WSL: `cd /mnt/c/Users/YourName/Documents`.
+
+Path conversion rule: `C:\Users\Jake\Documents` becomes `/mnt/c/Users/Jake/Documents`. Backslashes become forward slashes. The drive letter (C) becomes lowercase after `/mnt/`. This conversion trips up every Windows beginner -- practice it explicitly in the path exercises.
+
+VS Code integration: install the "WSL" extension in VS Code. From a WSL terminal, type `code .` to open the current folder in VS Code with full WSL integration. All terminal operations in VS Code's integrated terminal will then run in the WSL environment.
 
 **Learning Objectives:**
 - Navigate directories and list files confidently from the terminal
@@ -106,6 +254,7 @@ This prerequisite course (FND-ACC or "ACC Foundations") bridges students from ze
 - The concept of a "path" — relative and absolute
 - Understanding man pages and help flags (`--help`)
 - Piping (|) and redirection (>, >>, <) basics
+- Stopping a running command: press Ctrl+C. This sends an interrupt signal and stops the current process. Use it whenever a command hangs, runs too long, or you need to abort. Ctrl+C is the single most important key combination in the terminal -- name it explicitly and drill it.
 - Environment variables and PATH
 - Hidden files and dotfiles
 
@@ -228,16 +377,25 @@ This prerequisite course (FND-ACC or "ACC Foundations") bridges students from ze
    - Verify they follow the convention: present tense, action-focused, informative
    - Outcome: Markdown document with 5 well-written commit messages and explanations
 
-6. **The `.gitignore` File** (20 min)
+6. **The `.gitignore` File** (25 min)
    - Create a repo with files that should NOT be committed (`.env`, `node_modules/`, `*.log`)
-   - Create a `.gitignore` file
+   - Create a `.gitignore` file before making any commits. This order matters: if a credential file is committed first, adding it to `.gitignore` later does NOT remove it from history. The file remains recoverable. Create `.gitignore` before the first commit -- it is the OPSEC enforcement layer for git.
+   - Minimum entries for any project: `.env`, any credential files, `.DS_Store`, `__pycache__/`, `.venv/`
    - Verify that the ignored files don't show up in `git status`
-   - Create a proper `.gitignore` for a Node.js project
+   - Create a proper `.gitignore` for a Python project
    - Outcome: `.gitignore` file with explanatory comments
 
+7. **Pull Requests** (20 min)
+   - A pull request (PR) is a proposal on GitHub to merge one branch into another, with a review step before the merge occurs. The PR displays a diff showing exactly what changed, line by line. This is the quality gate for agentic work: when an agent produces changes on a branch, the PR is how you review what it did before it touches main.
+   - Task: Create a branch, make changes, push the branch to GitHub, and open a PR using the GitHub CLI.
+   - Command: `gh pr create --title "Add content" --body "Description of what changed and why"`
+   - Review the PR diff in the GitHub web interface. Confirm that only the intended changes appear.
+   - Merge the PR from the GitHub interface.
+   - Outcome: A merged PR visible in the repository's pull request history, with a screenshot of the diff view.
+
 **Assessment:**
-- Hands-on project: Create a repo, make 3 commits, create and merge a branch
-- Rubric: Correct Git workflow, meaningful messages, successful merge
+- Hands-on project: Create a repo, make 3 commits, create and merge a branch, open and merge a PR
+- Rubric: Correct Git workflow, meaningful messages, successful merge, working .gitignore
 - Bonus: Resolve a merge conflict without help
 
 **Estimated Hands-On Time:** 110 minutes | **Lecture/Discussion:** 10 minutes
@@ -268,6 +426,21 @@ This prerequisite course (FND-ACC or "ACC Foundations") bridges students from ze
 - YAML frontmatter (intro)
 - Markdown for system prompts and documentation
 - Markdown as a lingua franca for developers
+
+**GitHub Flavored Markdown (GFM):**
+
+This course teaches GitHub Flavored Markdown, a superset of CommonMark. GFM adds tables, task lists (`- [ ]`), strikethrough (`~~text~~`), and fenced code blocks with language hints (` ```python `). If it renders in VS Code preview and on GitHub, it is valid for this course.
+
+**Critical spacing rules -- most beginner errors live here:**
+
+- A space is required between the `#` and the heading text: `# Heading` is correct, `#Heading` is not. Without the space, it renders as plain text.
+- A blank line is required before any list. A list that immediately follows a paragraph with no blank line may not render as a list.
+- A blank line is required before a fenced code block.
+- Tables require both a header row and a separator row (`|---|---|`). A table without the separator row will not render.
+
+**Smart-quote warning:**
+
+Do not paste Markdown from Word or Google Docs. Those applications auto-replace straight quotes (`"`) with curly "smart" quotes, which break code blocks and inline code. Write Markdown in VS Code. Use the preview panel (Ctrl+Shift+V) to verify rendering before submitting.
 
 **Hands-On Exercises:**
 
@@ -503,10 +676,29 @@ Note: These exercises use pseudocode and one real language (JavaScript recommend
 **Hands-On Exercises:**
 
 1. **The CLAUDE.md Anatomy** (15 min)
-   - Read an example CLAUDE.md (from the d1-kit-alpha)
+   - Read the following example CLAUDE.md:
+
+```markdown
+# Project: Daily Brief Generator
+
+## What this does
+Pulls the unit's daily log and produces a formatted brief.
+
+## Rules
+- Never include real names in the output -- use [NAME] as a placeholder
+- Use the provided template structure, do not invent new sections
+- Flag any entries with incomplete location or time data
+
+## Files
+- `brief-template.md` -- the output template (read-only)
+- `input-log.txt` -- the daily log to process
+```
+
+   Note: Every element in this file is Markdown syntax you just learned. The `##` headers create sections the model reads as distinct instruction blocks. The bullet list under Rules creates discrete, unambiguous rules. If the formatting breaks -- a header without a space, a list without a blank line before it -- the model reads a wall of text instead of structured instructions.
+
    - Identify sections: project name, goals, constraints, deliverables
    - Understand how it guides Claude's behavior
-   - Outcome: Annotation of an example CLAUDE.md with notes on each section
+   - Outcome: Annotation of the example CLAUDE.md with notes on each section and what behavior each element produces
 
 2. **Write Your me.md** (20 min)
    - Create a personal profile:

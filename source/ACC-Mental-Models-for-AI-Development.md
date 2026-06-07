@@ -42,6 +42,12 @@ The **harness** is what makes an LLM into an agent. It's the system that gives t
 - **Hands:** tools to write files, create directories, modify code, run tests
 - **Body:** tools to execute commands, call APIs, move files, deploy code
 
+### The Engine-Harness-Operator Stack
+
+The working vocabulary for this course is the engine-harness-operator stack: the **engine** is the LLM (the reasoning brain), the **harness** is the tool layer that gives it access to files, commands, and external systems, and the **operator** is you -- the person who directs the mission, approves consequential actions, and carries accountability for the result. The engine cannot act without a harness. The harness cannot direct without an operator. All three are required.
+
+Note: this framing is specific to the ACC course. External resources may use different vocabulary -- Anthropic's own documentation uses "model + tools + orchestration layer." The concepts are the same regardless of labels.
+
 ### The Simple Formula
 
 ```
@@ -64,15 +70,54 @@ When you invoke an LLM in Claude Code or through the API with tools enabled, you
 
 ---
 
+## Section 1.5: The Model Landscape -- Families and Tiers
+
+Three major model families dominate current agentic work: Claude (Anthropic), GPT (OpenAI), Gemini (Google). Each family offers multiple tiers -- a fast/cheap option and a slow/powerful option, with one or two in between.
+
+**Claude's tiers (the ACC working toolchain):**
+- **Haiku** -- fast and cheap. Good for evaluation loops, simple formatting, high-volume tasks.
+- **Sonnet** -- balanced. The standard working model.
+- **Opus** -- powerful and expensive. Reserve for the hardest reasoning tasks.
+
+**The decision rule:** match the model to the task. A summarization or format conversion uses a fast tier. A complex analysis or planning task uses a capable tier. Running any model in a tight loop uses the cheapest tier that meets quality requirements. "Always use the biggest model" is the wrong instinct -- it is expensive, slower, and often unnecessary.
+
+Verify current model names and pricing at anthropic.com before any course run. Model lineups change with new releases; the tier concept is durable, the specific names are not.
+
+---
+
+## Section 1.6: How the Model Fails (And Why That Matters)
+
+### Hallucination -- the mechanism, not just the label
+
+The model generates tokens that are statistically likely to follow prior context. It has no separate truth-checking step. It cannot distinguish between "information I trained on accurately" and "information I'm completing plausibly because it pattern-matches." The result: confident, fluent output that is factually wrong. Not a rare edge case -- a consistent property of how the system works. The practical rule: treat confident output as a starting point for verification, not a conclusion.
+
+### Knowledge cutoff -- three behaviors
+
+The model has no reliable information about events after its training cutoff. But it does not handle this uniformly:
+
+1. The model flags the gap ("My knowledge cutoff is [date], I cannot confirm this")
+2. The model answers confidently using stale training data with no indication it may be wrong -- the dangerous one
+3. The model has a retrieval tool (web search) and can fetch current information
+
+All three behaviors look like confident answers from the outside. Verify anything time-sensitive regardless of how the model presents it.
+
+### Nondeterminism
+
+The model uses a sampling parameter (temperature) that introduces randomness. The same prompt on two separate runs produces different outputs -- sometimes slightly, sometimes significantly. Do not treat a single output as definitive for high-stakes work. Run important prompts multiple times and compare for consistency. Inconsistency is a signal to verify more carefully.
+
+### Doctrinal framing
+
+The model is the sharp junior analyst who never says "I don't know." They are confident, fluent, and occasionally making it up entirely. You check the work -- not because you expect failure, but because fluency is not evidence of accuracy.
+
+---
+
 ## Section 2: Context Windows
 
 ### What is a Context Window?
 
 A context window is the amount of text (measured in tokens) that an LLM can "see" at one time. Think of it as the LLM's working memory.
 
-**Claude 3.5 Sonnet:** 200,000 tokens  
-**Claude 3 Opus:** 200,000 tokens  
-**Claude 3 Haiku:** 200,000 tokens
+**Current Claude models:** 200,000 tokens (check docs.anthropic.com/claude/docs/models-overview for the current lineup -- model names change with new releases, the 200k context window applies across the current generation)
 
 A typical page of text is ~300-500 tokens. A 50-page document is roughly 15,000-25,000 tokens.
 
@@ -91,7 +136,7 @@ You're working in Claude Code. You ask Claude to read a 50,000-token codebase, a
 
 1. **Context is not infinite.** At 200,000 tokens, you have real limits. A multi-day conversation, long documents, and verbose reasoning add up fast.
 
-2. **Context is reset per tool call (in Claude Code).** When Claude uses a tool (read file, run command), that tool executes outside the context window. The result comes back in. So Claude can work on massive codebases—it reads files on demand, not all at once.
+2. **Tool execution happens outside the LLM's inference -- the filesystem operation or command itself is not consuming context tokens.** However, the result of every tool call returns into the running context window and consumes tokens. Context grows with accumulated tool call results; it is not reset. A long agentic session that reads many files or runs many commands can silently fill the context window through tool result accumulation, not just through conversation.
 
 3. **You control what's in context.** You decide what documents to include, how verbose to be, how much history to keep. Strategic use of context is a skill.
 
@@ -138,9 +183,7 @@ A token is the unit of text that an LLM processes. It's not a word—it's a chun
 
 **Cost:** Every token you send to Claude costs money. Input tokens are cheaper than output tokens, but the total cost = (input tokens × input price) + (output tokens × output price).
 
-**Example:**
-- You ask Claude: 500 input tokens (your prompt) → Claude generates 2000 output tokens (the response)
-- Cost for Claude 3.5 Sonnet: (500 × $0.001) + (2000 × $0.003) = $0.50 + $6.00 = $6.50
+**Pricing:** Check current pricing at anthropic.com/pricing -- input tokens are cheaper than output tokens, and larger/more capable models cost more per token than smaller/faster ones. These ratios are durable; the specific dollar figures change with model releases.
 
 **Speed:** More tokens = slower response time. Not linearly, but it matters.
 
@@ -268,6 +311,10 @@ That's the difference between "helpful AI chat" and "agentic development."
 ## Section 5: Operator Posture and Supervision
 
 ### What is Operator Posture?
+
+The frame that holds this section together: the agent is a motivated PFC who has been given file-system access and a mission. Capable, fast, eager -- and will execute confidently on an ambiguous brief rather than stopping to ask for clarification. Over-plan, over-brief, verify the work. The capability does not transfer the accountability. You sign for the result.
+
+**Human in the loop** means a human is positioned to review and approve consequential agent actions before they execute -- you are the decision point the loop depends on, not a passive observer.
 
 Your posture is your stance toward the AI. Are you:
 - Delegating (asking it to do everything while you step away)?
@@ -421,60 +468,56 @@ The ACC assumes you think like this. When you have 8 days to build real applicat
 
 ### Example 1: The Harness in Action
 
-**Scenario:** You're building a CLI tool and need to know if it actually runs.
+**Scenario:** You need to produce an intelligence summary from a folder of raw source documents. You need to know if the output is actually grounded in the sources.
 
-**Without the harness (vibe coding):**
-You: "Can you write a Node.js CLI that reads a JSON file and prints it?"
-Claude: "Sure, here's some code."
-[Claude generates code]
-You: "Thanks. I'll copy-paste this locally and test it."
-[You leave. You copy the code. You discover it has a typo. It doesn't run. You text Claude. You wait for clarification.]
+**Without the harness (unverified generation):**
+You: "Can you write an intelligence summary covering adversary logistics activity?"
+Claude: "Sure, here's a summary."
+[Claude generates a summary from training data and general inference]
+You: "Thanks. I'll include this in the brief."
+[You leave. You submit the brief. A reviewer flags two claims that are not in your source documents. You cannot trace them. The brief is pulled.]
 
-**With the harness (deterministic development):**
-You: "Write a Node.js CLI that reads a JSON file and prints it. Call it `reader.js`. Test it."
-Claude: "I'll create the file and test it."
-[Claude calls: write("/path/to/reader.js", "[code]")]
-[Claude calls: run("node /path/to/reader.js test.json")]
-[Claude sees: "ENOENT: no such file or directory"]
-Claude: "The test file doesn't exist. Let me create a test file first."
-[Claude calls: write("/path/to/test.json", '{"name":"test"}')]
-[Claude calls: run("node /path/to/reader.js test.json")]
-[Claude sees: "{"name":"test"}" — success]
-Claude: "Done. Your CLI works."
+**With the harness (grounded, traceable output):**
+You: "Write an intelligence summary on adversary logistics activity. Read the source documents in `/reports/AO-North/` and base the summary only on what is in those files."
+Claude: "I'll read the source documents and summarize from them."
+[Claude calls: list("/reports/AO-North/")]
+[Result: 14 files returned]
+[Claude calls: read on each relevant file]
+[Claude sees gaps: three files have no logistics content]
+Claude: "I found logistics-relevant content in 11 of 14 files. Three files cover unrelated activity -- I excluded them. Here is the summary with source citations by filename."
+Claude: "Done. Every claim in the summary traces to a specific source file."
 
 **Why it matters:**
-- First approach: You're guessing. Claude is guessing. Lots of iteration.
-- Second approach: Claude has feedback. It fixes its own mistakes. You know it works.
+- First approach: You're trusting Claude's generation. The output may be accurate or may be hallucinated. You cannot tell.
+- Second approach: Claude has read the actual sources. Every claim is traceable. You can defend it.
 
 **Tokens:**
-- First: ~200 tokens for code generation + later clarification
-- Second: ~500 tokens total, but you're done in one go
+- First: ~200 tokens for generation + later damage control
+- Second: ~500 tokens total, but the product is defensible
 
 ---
 
 ### Example 2: Context Windows and Smart Sampling
 
-**Scenario:** You have a 500-file codebase. You need to add a new feature.
+**Scenario:** You have a folder of 500 field reports. You need to identify all mentions of a specific grid coordinate across the collection.
 
 **Bad approach:**
-You: "Here's my entire codebase [paste all 500 files as a 100,000-token dump]. Add a new feature to handle notifications."
-Claude: Overwhelmed. Loses track. Misses files. Makes contradictory changes.
+You: "Here are all 500 field reports [paste entire collection as a 100,000-token dump]. Find every mention of grid 38SMB4521."
+Claude: Overwhelmed. Loses track. Misses reports. Returns incomplete results with no way to verify coverage.
 
 **Good approach:**
-You: "I'm adding notifications to my app. The code is in `/src/`. Can you identify the event bus, the user model, and the API router? Then propose where to hook notifications."
-Claude: "I'll search for those files."
-[Claude calls: find("/src/", "-name *event*")]
-[Result: 2 event-related files]
-[Claude calls: read("/src/events/bus.js")]
-[Claude calls: find("/src/", "-name *user*")]
-[Claude calls: read("/src/models/User.js")]
-[Claude calls: find("/src/", "-name *router*") or find("/src/", "-name *api*")]
-[Claude calls: read relevant router file]
-Claude: "Here's the event structure, user model, and API entry point. Notifications should hook in here [specific location]. Here's the design."
+You: "I need every mention of grid 38SMB4521 across the field reports in `/reports/field/`. Search the collection and return the relevant excerpts with source filenames."
+Claude: "I'll search the collection."
+[Claude calls: find("/reports/field/", "-name *.txt")]
+[Result: 500 files returned]
+[Claude calls: grep("38SMB4521", "/reports/field/")]
+[Result: 7 matching files with line references]
+[Claude calls: read on each of the 7 matching files to pull context around each hit]
+Claude: "Found 9 mentions across 7 reports. Here are the excerpts with source file and date. Three reports are from the same 72-hour window and describe the same activity from different collection sources."
 
 **Why it matters:**
-- Bad approach: 100,000 tokens in context from the start. Claude can't reason efficiently.
-- Good approach: Claude reads what it needs (maybe 10,000 tokens total across all reads). Smart sampling.
+- Bad approach: 100,000 tokens in context from the start. Claude cannot reason efficiently and coverage is unverifiable.
+- Good approach: Claude searches first, reads only the matching files (maybe 10,000 tokens total). Complete, verifiable coverage.
 
 **Context window:**
 - Bad: Uses 100,000 tokens, leaves 100,000 remaining
@@ -484,57 +527,55 @@ Claude: "Here's the event structure, user model, and API entry point. Notificati
 
 ### Example 3: Tool Calls Enabling Verification
 
-**Scenario:** You're adding a security feature (password hashing).
+**Scenario:** You are formatting a database of reporting for export to a standardized template. You need to confirm the output is correct before it goes to the customer.
 
 **Without tools:**
-You: "I'm adding bcrypt password hashing. Here's my current code [paste]. Should I add salt rounds?"
-Claude: "You should use 10-12 salt rounds for security."
+You: "I need to convert this reporting database to standard format. Here's a sample row [paste]. What does the output format look like?"
+Claude: "Based on the standard template, your output should look like this [generates example]."
 You: "OK thanks."
-[You implement it. You realize later you didn't validate if the hashing actually works.]
+[You apply the format manually. You realize later that three fields were transposed. The customer received malformed data for two weeks before anyone caught it.]
 
 **With tools:**
-You: "Add bcrypt password hashing to the authentication. Verify it works."
-Claude: "I'll add bcrypt, write a test, and verify."
-[Claude calls: write("/src/auth/hash.js", "[bcrypt implementation]")]
-[Claude calls: write("/test/hash.test.js", "[unit tests]")]
-[Claude calls: run("npm test")]
-[Result: "2 passing, 0 failing"]
-Claude: "Done. Hash function works. Salt rounds: 12 (recommended). Tests verify it correctly hashes and validates."
+You: "Convert the reporting database at `/data/raw_reports.csv` to the standard export format. Write the output to `/data/export_ready.csv`. Verify the output is correctly structured."
+Claude: "I'll read the source, convert it, and verify the output."
+[Claude calls: read("/data/raw_reports.csv")]
+[Claude calls: write("/data/export_ready.csv", "[converted data]")]
+[Claude calls: read("/data/export_ready.csv") to spot-check the result]
+[Claude sees: field order matches template, no missing values, row count consistent]
+Claude: "Done. Output file has 847 rows. Field order matches the template. Row count matches source. Spot-checked 10 records -- all correctly converted."
 
 **Why it matters:**
-- Without tools: You're trusting Claude's text. No verification.
-- With tools: You're trusting Claude's *executed* code. Much more reliable.
+- Without tools: You're trusting Claude's text description of what the output would look like. No verification.
+- With tools: Claude has read the actual output file and confirmed it. Much more reliable.
 
 ---
 
 ### Example 4: Operator Supervision Preventing Disaster
 
-**Scenario:** You ask Claude to refactor your database schema.
+**Scenario:** You ask Claude to draft and format a situation report from unstructured notes.
 
 **Without supervision (over-trust):**
-You: "Refactor the schema for better performance."
-Claude: "I'll add indexes, denormalize some fields, and restructure tables."
-[Claude makes changes]
-[You don't review for a day]
-[You go to deploy]
-[Oops: migrations are broken, data is lost, deployment fails]
+You: "Draft a SITREP from my notes."
+Claude: "I'll write the SITREP."
+[Claude drafts a SITREP, inferring details not in the notes to fill gaps]
+[You don't review carefully]
+[You submit to the operations center]
+[Oops: the SITREP includes a casualty figure Claude inferred from context that is not in your notes and is not accurate. Correction required.]
 
 **With supervision (active oversight):**
-You: "The database is slow on user queries. Here's the current schema [paste]. Identify bottlenecks and propose fixes."
-Claude: "Query on `users.email` is slow (no index). Joining with `posts` is expensive (missing foreign key optimization). Here's what I'll change [shows migration]."
-You: "Show me the migration SQL before you apply it."
-Claude: "Here's the migration. It adds an index on email, creates a composite index on user_id + created_at, and adds a foreign key constraint."
-You: "Will this lose data?"
-Claude: "No. Composite index is additive. Foreign key constraint will reject only orphaned records (if any). Safe."
-You: "OK, apply it."
-[Claude applies migration]
-You: "Run the slow query again. How's the time?"
-[Claude runs benchmark]
-Claude: "Query time: 50ms (was 2s). 40x faster."
+You: "Draft a SITREP from my notes in `/notes/0600-update.txt`. Use only information in that file. Flag any required fields you cannot fill from the source."
+Claude: "I'll read the notes and draft from them."
+[Claude reads the file]
+Claude: "Here is the draft SITREP. I could not fill the following required fields from your notes: friendly forces count (SECTION 3), next reporting period (SECTION 6). I flagged both with [REQUIRED -- NOT IN SOURCE]. Do not submit until those are filled."
+You: "Review the enemy activity section -- does that match my notes exactly?"
+Claude: "Yes. I can trace each sentence in that section to a specific line in your source file. Here are the line references."
+You: "Fill in the missing fields. Friendly count is 42. Next report is 1800Z."
+Claude: "Updated. SITREP is complete. All required fields are filled. No inferred content."
+You: "Submit."
 
 **Why it matters:**
-- Over-trust: You lose data and have to recover.
-- Supervision: You prevent the disaster by reviewing at each step.
+- Over-trust: Claude fills gaps with plausible inference. You submit inaccurate reporting.
+- Supervision: You control what goes into the product. Claude flags gaps instead of inventing answers.
 
 ---
 
