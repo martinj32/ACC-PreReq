@@ -41,8 +41,14 @@ markdown_extensions:
 nav:
   - Get Started: index.md
   - Course Map & Schedules: overview.md
-  - Day 0 -- Pre-Course Ramp-Up:
-    - Pre-Course Essentials: day0/ai-agentics-basics.md
+  - Bedrock:
+    - AI Literacy: bedrock/ai-literacy.md
+    - Personalizing Your AI: bedrock/personalizing-your-ai.md
+  - Terminal Basics:
+    - The Machine: terminal-basics/the-machine.md
+    - The Terminal: terminal-basics/the-terminal.md
+  - Agentic AI:
+    - Agent Concepts: agentic-ai/agent-concepts.md
   - Mental Models:
     - Core Content: mental-models/core-content.md
     - Quick Reference: mental-models/quick-reference.md
@@ -54,3 +60,4 @@ nav:
     - Content Style Guide: instructor/style-guide.md
     - Mental Models Teaching Guide: instructor/mental-models-guide.md
     - Course Instructor Guide: instructor/prereq-guide.md
+    - Day 0 Teaching Scaffold: instructor/day0-scaffold.md
