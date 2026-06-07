@@ -10,7 +10,34 @@ theme:
     - navigation.sections
     - navigation.top
     - toc.integrate
+    - content.tabs.link
+
 docs_dir: docs
+
+plugins:
+  - search
+
+extra_javascript:
+  - javascripts/quiz.js
+
+extra_css:
+  - stylesheets/quiz.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - md_in_html
+  - tables
+  - attr_list
+
 nav:
   - Get Started: index.md
   - Course Map & Schedules: overview.md
@@ -24,5 +51,6 @@ nav:
     - Course Design & Instructor Guide: prereq-course/course-design.md
     - Module Reference & Quick Guide: prereq-course/module-summary.md
   - Instructor Handbooks:
+    - Content Style Guide: instructor/style-guide.md
     - Mental Models Teaching Guide: instructor/mental-models-guide.md
     - ACC Prerequisite Course -- Instructor Guide: instructor/prereq-guide.md
