@@ -1,8 +1,8 @@
-# ACC Prerequisite Course
+# AI and Agentics Basics
 
-This site contains all prerequisite material for the Agentic Commanders Course (ACC).
+A self-contained course for anyone starting from zero with AI tools and agentic systems.
 
-Complete the content in sequence. Each phase builds on the one before it.
+No prior technical experience required. Work through the material in sequence -- each phase builds on the one before it.
 
 ---
 
@@ -10,18 +10,25 @@ Complete the content in sequence. Each phase builds on the one before it.
 
 | Phase | Content | Duration |
 |---|---|---|
-| **Day 0** | AI/Agentics Basics -- mental model, prompting, terminal, git | Multi-week, short daily reps |
-| **Mental Models** | 6 conceptual frameworks for AI-assisted development | 35 minutes |
-| **Prerequisite Course** | 8 technical modules (M1-M8) | 2-3 days |
+| **Day 0** | Mental model, prompting, filesystem, terminal, git | Multi-week, short daily reps |
+| **Mental Models** | 6 conceptual frameworks for working with AI | 35 minutes |
+| **Technical Foundations** | 8 hands-on modules (M1-M8) | 2-3 days |
+
+---
+
+## What You Will Be Able to Do
+
+By the end of this course you will be able to:
+
+- Explain what an LLM is, how it fails, and why you verify its output
+- Write deliberate, structured prompts and iterate on them
+- Navigate a filesystem and run commands from a terminal without fear
+- Use git to save, version, and share your work
+- Understand the difference between a chatbot and an agentic tool
+- Operate AI tools with a supervisory mindset -- delegate, verify, own the result
 
 ---
 
 ## Before You Start
 
-Read the [Course Overview](overview.md) to understand the full learning path, the ACC readiness checklist, and how each phase connects to the next.
-
----
-
-## Ready for the ACC?
-
-Complete all three phases above and verify against the ACC Readiness Checklist in the Course Overview before Day 1.
+Read the [Course Map & Schedules](overview.md) for the full learning path, daily schedule, and readiness checklist.

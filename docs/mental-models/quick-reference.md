@@ -16,7 +16,7 @@ An LLM is text-in, text-out. Tools give it:
 
 **When it matters:** You're not chatting with a bot. You're building a feedback loop. Claude can read your code, try things, and verify.
 
-**In the ACC:** You set up permissions (which tools Claude can use), give instructions, and supervise the loop.
+**In practice:** You set up permissions (which tools Claude can use), give instructions, and supervise the loop.
 
 ---
 
@@ -32,7 +32,7 @@ An LLM is text-in, text-out. Tools give it:
 - Keep system prompts concise. Use files that Claude reads on-demand.
 - Long conversations add up. Start fresh if needed.
 
-**In the ACC:** You'll work on multi-file projects. Use tools (find, grep) to sample code, not paste everything. Context windowing is a skill.
+**In practice:** You'll work on multi-file projects. Use tools (find, grep) to sample code, not paste everything. Context windowing is a skill.
 
 ---
 
@@ -48,7 +48,7 @@ An LLM is text-in, text-out. Tools give it:
 - Bad: "Here's my 50KB codebase [paste]. What's the architecture?" → 50,000 tokens input
 - Good: "What are the main modules? Read the src/ folder." → Claude uses tools, ~5,000 tokens
 
-**In the ACC:** With tight time budgets, efficiency saves hours. Clear prompts outperform rambling ones.
+**In practice:** With tight time budgets, efficiency saves hours. Clear prompts outperform rambling ones.
 
 ---
 
@@ -66,7 +66,7 @@ An LLM is text-in, text-out. Tools give it:
 6. Claude sees: "3 passed"
 7. Claude reports: "Done. Verified."
 
-**In the ACC:** You won't guess if Claude's code works. Claude will test it and tell you.
+**In practice:** You won't guess if Claude's code works. Claude will test it and tell you.
 
 ---
 
@@ -83,7 +83,7 @@ An LLM is text-in, text-out. Tools give it:
 
 **Golden rule:** If you don't understand what Claude is about to do, don't let it do it.
 
-**In the ACC:** You're responsible for the code. Review before committing. Ask Claude to show you changes. Verify before deploying.
+**In practice:** You're responsible for the code. Review before committing. Ask Claude to show you changes. Verify before deploying.
 
 ---
 
@@ -102,7 +102,7 @@ An LLM is text-in, text-out. Tools give it:
 - Know when Claude helps vs. when you should Google (save tokens)
 - Plan before building (prevents surprises)
 
-**In the ACC:** You have 8 days to ship real apps. Every token and minute counts. Efficiency = speed.
+**In practice:** You have 8 days to ship real apps. Every token and minute counts. Efficiency = speed.
 
 ---
 
@@ -117,7 +117,7 @@ Before you start coding, ask yourself:
 - [ ] **Operator Posture:** Am I ready to review and supervise? Or am I vanishing?
 - [ ] **Cost-Consciousness:** Have I planned, or am I about to iterate 10 times?
 
-If you can check all of these, you're thinking like an ACC student.
+If you can check all of these, you're thinking like a competent agentic developer.
 
 ---
 
@@ -186,9 +186,9 @@ Do this exercise. It cements the models.
 
 ---
 
-## Transition to the ACC
+## Course Outcomes
 
-When you enter the ACC on Day 1, you'll know:
+By the end of this course, you'll have internalized:
 
 ✓ The harness is how Claude becomes agentic  
 ✓ Context windows limit what fits in memory (use tools)  
@@ -197,7 +197,7 @@ When you enter the ACC on Day 1, you'll know:
 ✓ You supervise (you're responsible)  
 ✓ Cost-consciousness is a core skill (plan and iterate tight)
 
-**Everyone in the ACC is assumed to understand these.** If you're unsure, re-read the full module before Day 1. This is the foundation.
+**Everyone completing this course is assumed to understand these.** If you're unsure, re-read the full module. This is the foundation.
 
 ---
 

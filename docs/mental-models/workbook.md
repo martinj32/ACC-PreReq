@@ -6,7 +6,7 @@
 
 ## How to Use This Workbook
 
-This workbook is designed to be filled in as you read the main module (`ACC-Mental-Models-for-AI-Development.md`).
+This workbook is designed to be filled in as you read the main module (Mental Models for AI-Assisted Development).
 
 **Process:**
 1. Read each section of the main module
@@ -725,14 +725,14 @@ Rate your understanding of each mental model (1-5, where 5 = can explain clearly
 
 **Total Score:** ___/30
 
-**Target for ACC Readiness:** 24+/30 (80%+)
+**Target for Completion:** 24+/30 (80%+)
 
 ---
 
 ## Next Steps
 
 - [ ] Re-read any section where you rated yourself <4
-- [ ] Review the quick reference guide (`ACC-Mental-Models-Quick-Reference.md`)
+- [ ] Review the quick reference guide
 - [ ] Discuss the models with a peer or instructor
 - [ ] Watch for these models in action in your first Claude Code session
 - [ ] Move on to the prerequisite course when you're confident
@@ -751,4 +751,4 @@ Use this space to jot down questions or insights:
 
 **End of Workbook**
 
-Keep this workbook. Review it before the ACC starts. These mental models should be instinctive by Day 1 of the course.
+Keep this workbook. Review it regularly. These mental models should become instinctive as you progress through the course.

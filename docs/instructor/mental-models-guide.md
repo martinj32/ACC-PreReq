@@ -1,14 +1,14 @@
 # Mental Models for AI-Assisted Development — Teaching Guide
 
-**For instructors delivering the ACC or the prerequisite course**
+**For instructors delivering AI and Agentics Basics**
 
 ---
 
 ## Overview
 
-This guide helps you teach the "Mental Models for AI-Assisted Development" module. It's a 35-minute self-contained lesson that precedes the ACC and prerequisite course.
+This guide helps you teach the "Mental Models for AI-Assisted Development" module. It's a 35-minute self-contained lesson.
 
-**Key insight:** Students who understand these mental models will excel in the ACC. Students who don't will struggle with inefficiency, wasted tokens, and fundamental misunderstandings about AI-assisted development.
+**Key insight:** Students who understand these mental models will excel in agentic development work. Students who don't will struggle with inefficiency, wasted tokens, and fundamental misunderstandings about AI-assisted development.
 
 ---
 
@@ -20,7 +20,7 @@ This guide helps you teach the "Mental Models for AI-Assisted Development" modul
 - No coding experience required yet
 
 **Your prep (15 minutes):**
-1. Read the full module (`ACC-Mental-Models-for-AI-Development.md`)
+1. Read the full module (`mental-models/core-content.md`)
 2. Do the exercise (Section 8) yourself
 3. Prepare examples from your own experience that illustrate each model
 4. Have Claude Code available for live demos (optional but powerful)
@@ -31,7 +31,7 @@ This guide helps you teach the "Mental Models for AI-Assisted Development" modul
 
 ### Opening (3 minutes)
 
-**Hook:** "Everything we're about to teach in the ACC assumes you understand six mental models. Miss these, and you'll write inefficient code, waste tokens, and blame the AI when really the problem is how you're using it."
+**Hook:** "Everything we're about to cover in this course assumes you understand six mental models. Miss these, and you'll write inefficient code, waste tokens, and blame the AI when really the problem is how you're using it."
 
 **Agenda:**
 - Six mental models (5-25 minutes)
@@ -278,7 +278,7 @@ The good version is longer, but it's longer in the right way. It prevents 10 ite
 ## Closing (2 minutes)
 
 **Summary:**
-"You now understand the six mental models that the ACC assumes. As you move through the prerequisite course and into the ACC:
+"You now understand the six mental models that this course is built on. As you move through the course:
 
 - Notice the harness in action (Claude reading your code, running tests)
 - Think strategically about context (sample smartly, don't paste everything)
@@ -287,13 +287,12 @@ The good version is longer, but it's longer in the right way. It prevents 10 ite
 - Supervise actively (review, ask questions, decide)
 - Plan before building (prevents wasted iterations)
 
-Get comfortable with these six models. By the ACC, they should be instinctive."
+Get comfortable with these six models. By the end of the course, they should be instinctive."
 
 **Next steps:**
-1. Complete the workbook (`ACC-Mental-Models-Workbook.md`)
+1. Complete the workbook (Mental Models Workbook)
 2. Review the quick reference before bed
-3. Do the prerequisite course (8 modules, 2-3 days)
-4. Enter the ACC ready to move fast
+3. Continue through the Technical Foundations (8 modules, 2-3 days)
 
 ---
 
@@ -303,7 +302,7 @@ Get comfortable with these six models. By the ACC, they should be instinctive."
 
 A: "No. These aren't coding skills—they're frameworks for how to work with AI. Experienced coders still need to understand context windows and tokens. Different mindset."
 
-**Q: "Is this only for the ACC, or does it apply to all AI development?"**
+**Q: "Is this only for this course, or does it apply to all AI development?"**
 
 A: "This applies to any development with Claude Code or agentic systems. The principles are universal."
 
@@ -381,9 +380,9 @@ A: "Reading it? Zero (you're reading text, not prompting Claude). Explaining it 
 ## Materials Checklist
 
 **For students:**
-- [ ] Main module (`ACC-Mental-Models-for-AI-Development.md`)
-- [ ] Quick reference (`ACC-Mental-Models-Quick-Reference.md`)
-- [ ] Workbook (`ACC-Mental-Models-Workbook.md`)
+- [ ] Main module (`mental-models/core-content.md`)
+- [ ] Quick reference (`mental-models/quick-reference.md`)
+- [ ] Workbook (`mental-models/workbook.md`)
 
 **For you:**
 - [ ] This teaching guide
@@ -429,7 +428,7 @@ A: "Reading it? Zero (you're reading text, not prompting Claude). Explaining it 
 - "Remember the harness? That's why we're learning git."
 - "This is tool use at work."
 
-**In the ACC:**
+**Later in the course:**
 - Mental models should be instinctive by now
 - Don't re-teach them, just reference them
 - "Remember context windows? This is why you're sampling code strategically."
@@ -449,13 +448,13 @@ A: "Reading it? Zero (you're reading text, not prompting Claude). Explaining it 
 - When students ignore Claude's recommendations: "Did you understand what Claude proposed? If not, ask it to explain."
 
 **Be a cheerleader:**
-- Students who get these models will move fast in the ACC
+- Students who get these models will move fast
 - Celebrate that: "You're thinking like an agentic developer now."
 
 ---
 
 **End of Teaching Guide**
 
-Teach this well, and your students will excel in the ACC. Teach it poorly, and they'll struggle for the first 2 days of the course. It's worth the 35-45 minutes.
+Teach this well, and your students will excel. Teach it poorly, and they'll struggle for the first 2 days of the course. It's worth the 35-45 minutes.
 
 Good luck.

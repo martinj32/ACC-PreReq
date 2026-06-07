@@ -1,13 +1,13 @@
 # AI / Agentics Basics — Day 0 (Pre-Course)
 
-**Theme:** Get a true beginner from zero to the floor the Agentic Commanders Course assumes on Day 1.
-**Outcome:** A student who has never touched a terminal walks out able to navigate a filesystem from the command line, has a working mental model of what an LLM is and how it fails, prompts deliberately instead of by feel, and understands that an agent acts on their real machine. They are ready to load an engine into a harness on ACC Day 1 without freezing.
+**Theme:** Get a true beginner from zero to a solid foundation in AI literacy and command-line fluency.
+**Outcome:** A student who has never touched a terminal walks out able to navigate a filesystem from the command line, has a working mental model of what an LLM is and how it fails, prompts deliberately instead of by feel, and understands that an agent acts on their real machine. They are ready to load an engine into a harness without freezing.
 
 ---
 
 ## Course BLUF
 
-This block is numbered `0.x` so it sits cleanly below ACC's `1.x` and hands students up into ACC Day 1. It is built for **casual AI users with zero terminal experience**, run over **multiple weeks** in short daily reps rather than long blocks.
+This block is numbered `0.x` as the foundation layer of the course. It is built for **casual AI users with zero terminal experience**, run over **multiple weeks** in short daily reps rather than long blocks.
 
 Calibration note for instructors: the audience is *zero on the machine, not zero on the chatbot*. They already use ChatGPT or Claude. Do not bore them through the AI weeks; spend the reclaimed time on the terminal, which is the actual washout gate. Every module is do-first: the student touches the thing, then you explain the concept using what they just watched happen.
 
@@ -20,14 +20,14 @@ Calibration note for instructors: the audience is *zero on the machine, not zero
 | 3 | The Terminal | Command-line muscle memory | **Heaviest — the spine** |
 | 4 | From Chatbot to Agent | The bridge that makes Phases 2 and 3 pay off | Medium |
 
-### Handoff to ACC
+### What Each Phase Unlocks
 
-| Phase | Clears the student for ACC modules |
+| Phase | Skills it delivers |
 |---|---|
-| 1 | 1.3, 1.6, 1.7, 1.9, 1.11, 1.12 |
-| 2 | 1.4, 1.13, 1.19 |
-| 3 | 1.10, 1.13, 1.15, and the entire hands-on harness |
-| 4 | 1.3, 1.5, 1.8, 1.16, 1.20, 1.21 |
+| 1 | LLM mental model, prompting, context awareness, frontier landscape, data hygiene |
+| 2 | File system literacy, plaintext vs. rich text, code editor comfort |
+| 3 | Terminal navigation, file operations, paths, flags, command control |
+| 4 | Chatbot vs. agent distinction, version control concept, delivery models, supervisor mindset |
 
 ---
 
@@ -78,7 +78,7 @@ The LLM is the engine. By itself it is a brain in a jar — it can describe the 
 ### What this module covers
 - Demo: paste a long document, then ask about something from the very top, and watch recall degrade.
 - The window as a whiteboard with finite space — new writing crowds out old.
-- Foreshadow ACC: this is exactly why ACC teaches `/clear` and `/context`.
+- This concept is exactly why tools like `/clear` and `/context` exist in agentic environments.
 
 ### Military Doctrinal Framing
 The context window is the radio net. Every voice on the net makes it harder to hear the one you need. A clean, focused net carries signal; a net jammed with three side conversations carries noise. Keeping the conversation tight is keeping the net clean.
@@ -116,7 +116,7 @@ Auto-pilot does not work. The operator who treats the model as a magic box gets 
 ### Watch-Outs
 - Make them *produce* a hallucination with their own hands. Telling them it happens does not land; watching it happen does.
 - Do not let this tip into cynicism. The point is calibrated trust, not distrust.
-- This module is the load-bearing prerequisite for ACC 1.7 and 1.12. If it does not land, the rest of the course is built on sand.
+- This module is load-bearing. If it does not land, the rest of the course is built on sand.
 - Nondeterminism: the model uses a temperature parameter that introduces variation. Same prompt, different runs, different results -- by design. Do not treat one output as "the answer" for high-stakes work. Run important prompts multiple times and compare for consistency.
 
 ### Instructor Note: Reliably Eliciting Hallucinations on Demand
@@ -132,7 +132,7 @@ Use these to produce hallucinations in front of the class so students see failur
 
 ## Module 0.4 — Deliberate Prompting
 
-**TLDR/BLUF.** They already prompt by feel. This converts that into method: tell the model who to be, give it the context it needs, show it an example, and say what good output looks like. Treat it like briefing a person, not typing into a search box. This is the seed of the R.G.C.O.A. framework they will meet in ACC.
+**TLDR/BLUF.** They already prompt by feel. This converts that into method: tell the model who to be, give it the context it needs, show it an example, and say what good output looks like. Treat it like briefing a person, not typing into a search box. This is the seed of the deliberate prompting framework developed throughout this course.
 
 ### Learning Objectives
 - Improve a weak prompt by adding role, context, an example, and an output spec.
@@ -149,12 +149,10 @@ Use these to produce hallucinations in front of the class so students see failur
 A vague prompt is a vague order, and a vague order gets a vague result from a junior who fills the gaps with assumptions. A good prompt is a clear brief: who you are, what I need, what right looks like. The model meets you halfway the moment you give it a structure to work from.
 
 ### Watch-Outs
-- Do not teach a rigid template they recite. The structure is the lesson, not the acronym; ACC will name the framework later.
+- Do not teach a rigid template they recite. The structure is the lesson, not the acronym.
 - Resist turning this into a "prompt engineering tricks" hour. The durable skill is clarity, not magic phrases.
 - Casual users over-trust one-shot prompts. Push the iterative, conversational habit hard.
 
-### References
-- ACC Module 1.6 (R.G.C.O.A.) is the direct downstream.
 
 ---
 
@@ -191,7 +189,7 @@ The filesystem is the terrain. Before you can maneuver, you have to read the map
 
 ## Module 0.6 — Plaintext vs Rich Text
 
-**TLDR/BLUF.** A plaintext file is just characters — nothing hidden. A rich-text file (like a Word document) hides formatting and metadata you cannot see. Models and tools want plaintext, because what you see is exactly what the machine reads. This is the runway for ACC's Markdown module.
+**TLDR/BLUF.** A plaintext file is just characters — nothing hidden. A rich-text file (like a Word document) hides formatting and metadata you cannot see. Models and tools want plaintext, because what you see is exactly what the machine reads. This is the foundation for understanding Markdown and structured data.
 
 ### Learning Objectives
 - Distinguish plaintext from rich text and give an example of each.
@@ -202,17 +200,15 @@ The filesystem is the terrain. Before you can maneuver, you have to read the map
 ### What this module covers
 - Open a `.txt` and a `.docx` and show what each actually contains underneath.
 - Demonstrate Word turning a straight hyphen into an em dash, and why that breaks a Markdown bullet.
-- Preview Markdown as "plaintext with light structure" — the full lesson is ACC 1.4.
+- Preview Markdown as "plaintext with light structure" — the full lesson comes in the Markdown module.
 
 ### Military Doctrinal Framing
 Plaintext is a message in the clear: no hidden traffic, no surprises, readable by anyone and anything on the net. Rich text is a message with attachments you cannot see. When you hand a file to a machine, you want it in the clear.
 
 ### Watch-Outs
-- The smart-quote and em-dash trap is real and will bite them in ACC. Show it now so it is muscle memory, not a mystery later.
+- The smart-quote and em-dash trap is real and will bite them in later work. Show it now so it is muscle memory, not a mystery later.
 - Do not go deep on encodings. "Plaintext is honest, rich text hides things" is enough at this level.
 
-### References
-- ACC Module 1.4 (Structured Data and Markdown) is the downstream.
 
 ---
 
@@ -322,12 +318,10 @@ This is land navigation. Where am I, what is around me, how do I move to the nex
 Navigation got you to the position; now you act on it. Every action you take, you confirm — you do not assume the round landed, you check the target. Listing the folder after each command is your battle-damage assessment.
 
 ### Watch-Outs
-- Introduce the verify habit now, hard. It is the same instinct ACC teaches as "trust the tool call, not the narration."
+- Introduce the verify habit now, hard. "Trust the tool call, not the narration" is the principle -- build it here.
 - Hold off on deletion. When you eventually teach it, frame it heavily; deletion is irreversible at the command line and there is no recycle bin.
 - Watch for typos in filenames. A mistyped name creates a second file rather than erroring; teach them to list and notice.
 
-### References
-- ACC Module 1.10 (the Daily 8) is where these motor skills get used in anger.
 
 ---
 
@@ -350,17 +344,15 @@ Navigation got you to the position; now you act on it. Every action you take, yo
 A path is a grid coordinate: precise, unambiguous, and unforgiving of a wrong digit. Tab-completion is your forward observer calling the coordinate so you do not transpose it. Sloppy coordinates put rounds in the wrong place; sloppy paths put files in the wrong folder.
 
 ### Watch-Outs
-- Exactness is the lesson and the frustration. A space or a capital letter in the wrong place fails silently or hits the wrong target. This previews ACC 1.13's "the space is load-bearing."
+- Exactness is the lesson and the frustration. A space or a capital letter in the wrong place fails silently or hits the wrong target. The principle: "the space is load-bearing."
 - Tab-completion is the single biggest morale and accuracy win in the terminal. Teach it early and insist on it.
 
-### References
-- ACC Module 1.13 (pattern syntax is exact) is the direct downstream.
 
 ---
 
 ## Module 0.12 — Commands, Flags, and Knowing When to Stop
 
-**TLDR/BLUF.** Most commands take options, called flags, that change what they do. You also need to know how to tell whether something is still running and how to stop it. This rounds out terminal literacy and makes ACC's CLI flags and Escape key feel familiar instead of foreign.
+**TLDR/BLUF.** Most commands take options, called flags, that change what they do. You also need to know how to tell whether something is still running and how to stop it. This rounds out terminal literacy and prepares students for CLI flags and context recovery techniques.
 
 ### Learning Objectives
 - Add a simple flag to a command and observe the changed behavior.
@@ -377,12 +369,10 @@ A path is a grid coordinate: precise, unambiguous, and unforgiving of a wrong di
 Flags are the settings you dial in before you give the order — same command, different mission profile. Knowing how to stop a running command is knowing how to call a check-fire. You never want to be the operator who cannot halt their own element.
 
 ### Watch-Outs
-- This sets up ACC 1.15 (CLI flags) and 1.17 (the Escape key as pause, not abort). Name those forward links so the handoff is smooth.
+- This prepares students for CLI flags and the Escape key as pause, not abort. Name those forward links so students know where they are headed.
 - Do not catalog flags. Teach the *concept* of a flag and how to look the rest up. Memorization is the wrong target.
 - "How do I get out of this?" is a real beginner fear. Make stopping and exiting a deliberate, practiced, calm move.
 
-### References
-- ACC Modules 1.15 (CLI flags) and 1.17 (context recovery / Escape).
 
 ---
 
@@ -406,14 +396,12 @@ Flags are the settings you dial in before you give the order — same command, d
 - Why everything in Phases 2 and 3 was the prerequisite for understanding this.
 
 ### Military Doctrinal Framing
-The LLM can tell you what is in the doctrine. A harness with tools can execute it. This is the human-machine team: the engine reasons, the harness gives it hands, and you are the operator who points it at the right problem and pulls the plug when it heads somewhere wrong. Engine plus harness plus operator. Everything ACC builds stacks on this primitive.
+The LLM can tell you what is in the doctrine. A harness with tools can execute it. This is the human-machine team: the engine reasons, the harness gives it hands, and you are the operator who points it at the right problem and pulls the plug when it heads somewhere wrong. Engine plus harness plus operator. Everything in advanced agentic work stacks on this primitive.
 
 ### Watch-Outs
 - This is the payoff module. If Phases 2 and 3 felt like a detour, this is where you prove they weren't. Make the connection explicit.
 - Read, write, execute is a lot of trust. Set up the bright line that Module 0.16 enforces; do not let them get comfortable handing over access without it.
 
-### References
-- ACC Module 1.3 (What is an Agentic Development Tool) is the direct continuation.
 
 ---
 
@@ -436,17 +424,15 @@ The LLM can tell you what is in the doctrine. A harness with tools can execute i
 Version control is the duty logbook. Every change recorded: what, when, why, who. The agent is about to start making entries in your files; the logbook is how you keep accountability over a teammate who works fast and never sleeps.
 
 ### Watch-Outs
-- Resist teaching git commands here. The concept is the prerequisite; ACC 1.8 teaches the three commands. Overloading now defeats the gentle ramp.
+- Resist teaching git commands here. The concept is the prerequisite; the hands-on git module later teaches the commands. Overloading now defeats the gentle ramp.
 - For a military audience, lean on the logbook framing; it is already intuitive. For a civilian audience, the "undo button for your whole project" framing lands better.
 
-### References
-- ACC Module 1.8 (Git and GitHub, light touch).
 
 ---
 
 ## Module 0.15 — How AI Is Delivered and Paid For
 
-**TLDR/BLUF.** The same model reaches you through different doors: a flat-rate app, a pay-per-use API, or your own cloud account footing the bill. It can run in the cloud or, sometimes, locally. And it costs money per token, which is why model choice and conversation length have a price. This demystifies the plumbing behind ACC's cost and model modules.
+**TLDR/BLUF.** The same model reaches you through different doors: a flat-rate app, a pay-per-use API, or your own cloud account footing the bill. It can run in the cloud or, sometimes, locally. And it costs money per token, which is why model choice and conversation length have a price. This demystifies the plumbing behind cost and model selection decisions.
 
 ### Learning Objectives
 - Name the three ways AI is paid for: prepaid plan, pay-per-token API, bring-your-own-cloud.
@@ -457,17 +443,15 @@ Version control is the duty logbook. Every change recorded: what, when, why, who
 ### What this module covers
 - App versus API versus bring-your-own-key, in plain terms.
 - Cloud versus local: connectivity and control trade-offs.
-- The cost ladder concept (small/cheap to large/expensive) that ACC formalizes.
+- The cost ladder concept (small/cheap to large/expensive) developed further in this course.
 
 ### Military Doctrinal Framing
 Cost is your fuel budget for the mission. Different models burn at different rates, and how hard you make the model think is throttle position. "The biggest model is always best" is wrong; the right call depends on whether your limit is time, money, or speed.
 
 ### Watch-Outs
 - Do not drown them in pricing tables. The instinct "match model to job, mind the meter" is the deliverable.
-- Tie this to a behavior, not trivia. Otherwise it is forgettable. The behavior is deliberate model choice, which ACC 1.16 builds on.
+- Tie this to a behavior, not trivia. Otherwise it is forgettable. The behavior is deliberate model choice.
 
-### References
-- ACC Modules 1.16 (mode, model, thinking budget) and 1.20 (cost management).
 
 ---
 
@@ -491,16 +475,14 @@ This is your bright line and it does not expire at 1700. The tool not being auth
 
 ### Watch-Outs
 - For a military or intel audience, this is second nature but still worth stating; for a civilian audience, it is genuinely new and needs concrete examples (medical, financial, others' personal data).
-- This is the prerequisite for ACC 1.5. Do not soften it. A single careless paste is the kind of mistake that has real consequences.
+- Do not soften this module. A single careless paste is the kind of mistake that has real consequences.
 
-### References
-- ACC Module 1.5 (Security Caveat).
 
 ---
 
 ## Module 0.17 — The Supervisor Mindset
 
-**TLDR/BLUF.** You delegate to the agent, you verify its work, and you remain accountable for the result. The model is a motivated junior teammate who works fast, never sleeps, and will confidently assume things you did not say. Your job is not to type more; it is to command well and check the work. This is the mindset ACC's whole hands-on day depends on.
+**TLDR/BLUF.** You delegate to the agent, you verify its work, and you remain accountable for the result. The model is a motivated junior teammate who works fast, never sleeps, and will confidently assume things you did not say. Your job is not to type more; it is to command well and check the work. This is the mindset all responsible agentic work depends on.
 
 ### Learning Objectives
 - State the three duties of the supervisor: delegate, verify, own the outcome.
@@ -521,16 +503,14 @@ The agent is a junior teammate with file-system access who takes your intent and
 - Casual users drift toward two failure modes: blind trust ("it sounds right") and learned helplessness ("I can't check this"). Name both and counter both.
 - The win is the mindset, not a finished artifact. Optimize the capstone for the loop, not the polish.
 
-### References
-- ACC Modules 1.7 (not making you software engineers) and 1.21 (the vibe build and the wall).
 
 ---
 
 ## Day 0 Close
 
-A student who clears this block walks into ACC Day 1 with the four things that material silently assumes: a working mental model of the engine, deliberate prompting, comfort moving around a real machine from the command line, and the supervisor mindset. They are ready to load an engine into a harness without freezing at the first command prompt.
+A student who completes this block has the four essential foundations: a working mental model of the engine, deliberate prompting, comfort moving around a real machine from the command line, and the supervisor mindset. They are ready to load an engine into a harness without freezing at the first command prompt.
 
-The terminal was the spine on purpose. It is also a filter: some casual users will not finish Phase 3, and that is the course doing its job, not failing. The ones who do finish arrive at ACC ready to drive.
+The terminal was the spine on purpose. It is also a filter: some casual users will not finish Phase 3, and that is the course doing its job, not failing. The ones who do finish are ready for advanced agentic work.
 
 ---
 

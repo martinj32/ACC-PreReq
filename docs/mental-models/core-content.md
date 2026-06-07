@@ -1,12 +1,12 @@
 # Mental Models for AI-Assisted Development
 
-**The conceptual scaffolding for the Agentic Commanders Course**
+**Core mental models for AI-assisted development**
 
 ---
 
 ## Overview
 
-This module teaches the **mental models** that the ACC assumes you understand. These are not technical skills—they are conceptual frameworks that shape how you think about AI, tools, and development.
+This module teaches the **mental models** that this course assumes you understand. These are not technical skills—they are conceptual frameworks that shape how you think about AI, tools, and development.
 
 **Duration:** 35 minutes (self-contained)
 
@@ -21,7 +21,7 @@ This module teaches the **mental models** that the ACC assumes you understand. T
 - Identify mental models in a real development transcript
 
 **Why This Matters:**
-The ACC is not a course on "how to use Claude." It assumes you understand the underlying mental models of how LLMs, tools, and human operators work together. Without these models, you'll make costly mistakes: blow through context windows, build single-threaded workflows when parallel execution is needed, forget to supervise, or assume the AI can do something it can't. With these models, you move fast and confidently.
+AI and Agentics Basics is not a course on "how to use Claude." It assumes you understand the underlying mental models of how LLMs, tools, and human operators work together. Without these models, you'll make costly mistakes: blow through context windows, build single-threaded workflows when parallel execution is needed, forget to supervise, or assume the AI can do something it can't. With these models, you move fast and confidently.
 
 ---
 
@@ -46,7 +46,7 @@ The **harness** is what makes an LLM into an agent. It's the system that gives t
 
 The working vocabulary for this course is the engine-harness-operator stack: the **engine** is the LLM (the reasoning brain), the **harness** is the tool layer that gives it access to files, commands, and external systems, and the **operator** is you -- the person who directs the mission, approves consequential actions, and carries accountability for the result. The engine cannot act without a harness. The harness cannot direct without an operator. All three are required.
 
-Note: this framing is specific to the ACC course. External resources may use different vocabulary -- Anthropic's own documentation uses "model + tools + orchestration layer." The concepts are the same regardless of labels.
+Note: this framing is specific to this course. External resources may use different vocabulary -- Anthropic's own documentation uses "model + tools + orchestration layer." The concepts are the same regardless of labels.
 
 ### The Simple Formula
 
@@ -74,7 +74,7 @@ When you invoke an LLM in Claude Code or through the API with tools enabled, you
 
 Three major model families dominate current agentic work: Claude (Anthropic), GPT (OpenAI), Gemini (Google). Each family offers multiple tiers -- a fast/cheap option and a slow/powerful option, with one or two in between.
 
-**Claude's tiers (the ACC working toolchain):**
+**Claude's tiers (the standard working toolchain):**
 - **Haiku** -- fast and cheap. Good for evaluation loops, simple formatting, high-volume tasks.
 - **Sonnet** -- balanced. The standard working model.
 - **Opus** -- powerful and expensive. Reserve for the hardest reasoning tasks.
@@ -458,9 +458,9 @@ Does this make sense? Any red flags?"
 
 Claude affirms or suggests changes. You build. You don't waste tokens on surprises.
 
-### Cost Consciousness in the ACC
+### Cost Consciousness in Practice
 
-The ACC assumes you think like this. When you have 8 days to build real applications, you don't have time to waste tokens on vague prompts and bad planning. Efficient communication is the gate. If you can't ask Claude a clear question, you can't work fast.
+This course assumes you think like this. When you're building real applications, you don't have time to waste tokens on vague prompts and bad planning. Efficient communication is the gate. If you can't ask Claude a clear question, you can't work fast.
 
 ---
 
@@ -715,12 +715,11 @@ Claude: [read file] → [identify issue] → [write fix] → [run tests] → [re
 
 ---
 
-## How This Applies to the ACC
+## How This Applies to Your Work
 
-The **Agentic Commanders Course** assumes you understand these models cold. On Day 1:
+This course assumes you understand these models cold. In practice:
 
-- You'll receive 8 commands per day to execute in Claude Code
-- Each command involves writing specifications, reading code, iterating with Claude, and shipping
+- You'll execute tasks in Claude Code that involve writing specifications, reading code, iterating, and shipping
 - You have limited time and token budgets
 - You need to move fast without spinning your wheels
 - You need to supervise Claude's work and verify it works
@@ -735,7 +734,7 @@ If you understand:
 
 Then you're ready.
 
-If you don't—if you think Claude is magic, or that you can skip verification, or that costs don't matter—the ACC will expose those gaps quickly. Not in a mean way, but practically: you'll run out of tokens, miss deadlines, or ship broken code.
+If you don't—if you think Claude is magic, or that you can skip verification, or that costs don't matter—those gaps will surface quickly. Practically: you'll run out of tokens, miss deadlines, or ship broken code.
 
 ---
 
@@ -752,10 +751,10 @@ If you don't—if you think Claude is magic, or that you can skip verification, 
 
 4. **Build the habit.** These models aren't just concepts—they're habits of thought. With practice, they become instinctive.
 
-5. **When you hit the ACC, these habits will be your superpower.** You'll move faster than students who are still figuring out these concepts.
+5. **These habits will be your superpower.** You'll move faster than people who are still figuring out these concepts.
 
 ---
 
 **End of Mental Models Module**
 
-This scaffolding is what the ACC builds on. Master it, and everything that follows will make sense.
+This scaffolding is the foundation of competent agentic development. Master it, and everything that follows will make sense.

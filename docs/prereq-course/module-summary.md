@@ -1,4 +1,4 @@
-# ACC Prerequisite Course — Module Quick Reference
+# AI and Agentics Basics — Module Quick Reference
 
 **Condensed view of all 8 modules for quick planning and prep.**
 
@@ -219,9 +219,9 @@
 - **Not yet:** Deliverable is incomplete; significant work remains
 
 ### **Course-Level Grading**
-- **7/8 modules passed:** Eligible for ACC (just barely)
-- **8/8 modules passed + capstone >80%:** Honors (ready to excel in ACC)
-- **<7/8:** Remediation needed before ACC
+- **7/8 modules passed:** Course completion
+- **8/8 modules passed + capstone >80%:** Honors (distinguished mastery)
+- **<7/8:** Remediation needed; not yet at completion level
 
 ---
 
@@ -300,20 +300,20 @@
 
 ---
 
-## Transition to ACC
+## Course Completion and Next Steps
 
-**Upon completion of this course, students are ready for ACC Day 1 because they:**
+**Upon completion of this course, students will be able to:**
 
-✓ Know what LLMs are and how to prompt them clearly  
-✓ Can navigate the terminal confidently  
-✓ Understand Git and GitHub workflows  
-✓ Can write clear Markdown documentation  
-✓ Know basic programming concepts (variables, logic, functions)  
+✓ Understand what LLMs are and how to prompt them clearly  
+✓ Navigate the terminal confidently  
+✓ Use Git and GitHub for version control  
+✓ Write clear Markdown documentation  
+✓ Apply basic programming concepts (variables, logic, functions)  
 ✓ Have all developer tools installed and authenticated  
-✓ Have written context files (CLAUDE.md, me.md)  
-✓ Have shipped a real project to GitHub  
+✓ Create and manage context files (CLAUDE.md, me.md)  
+✓ Ship a real working project to GitHub  
 
-**ACC Day 1 assumes all of this.** The course starts immediately with Vertex authentication, Daily 8 commands, permissions, and building real apps. No remediation time.
+**These are the core skills for AI-assisted development.** Students who complete all 8 modules are ready for advanced agentic work.
 
 ---
 

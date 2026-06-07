@@ -1,4 +1,4 @@
-site_name: ACC Prerequisite Course
+site_name: AI and Agentics Basics
 theme:
   name: material
   palette:
@@ -47,10 +47,10 @@ nav:
     - Core Content: mental-models/core-content.md
     - Quick Reference: mental-models/quick-reference.md
     - Workbook: mental-models/workbook.md
-  - ACC Foundations Course (M1-M8):
+  - Technical Foundations (M1-M8):
     - Course Design & Instructor Guide: prereq-course/course-design.md
     - Module Reference & Quick Guide: prereq-course/module-summary.md
   - Instructor Handbooks:
     - Content Style Guide: instructor/style-guide.md
     - Mental Models Teaching Guide: instructor/mental-models-guide.md
-    - ACC Prerequisite Course -- Instructor Guide: instructor/prereq-guide.md
+    - Course Instructor Guide: instructor/prereq-guide.md

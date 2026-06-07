@@ -1,5 +1,5 @@
-# ACC Prerequisite Course Design
-## Foundations for the Agentic Commanders Course
+# AI and Agentics Basics — Course Design
+## Technical Foundations Curriculum
 
 **Target Audience:** Students with NO background knowledge in LLMs, command-line development, version control, or coding concepts.
 
@@ -11,7 +11,7 @@
 
 ## Course Overview
 
-This prerequisite course (FND-ACC or "ACC Foundations") bridges students from zero knowledge to ACC-ready baseline competency. Upon completion, students will:
+This course bridges students from zero knowledge to a solid foundational competency in AI-assisted development. Upon completion, students will:
 
 1. Understand what LLMs are, how they work, and how to interact with them
 2. Navigate and manipulate file systems confidently from the command line
@@ -67,7 +67,7 @@ This prerequisite course (FND-ACC or "ACC Foundations") bridges students from ze
    - Observe: How does the system prompt change tone, vocabulary, detail level?
    - Outcome: Screenshot both responses with notes on 3 differences
 
-   Note: Typing "You are a [role]" in the user turn is persona injection -- you are instructing the model mid-conversation, and that instruction is visible in the chat history. A true system prompt is loaded by the platform before the conversation begins and is invisible to the user during the conversation. The exercise demonstrates the behavioral effect of persona instructions; the distinction between user-turn persona and platform system prompt matters when you begin configuring harness files in ACC.
+   Note: Typing "You are a [role]" in the user turn is persona injection -- you are instructing the model mid-conversation, and that instruction is visible in the chat history. A true system prompt is loaded by the platform before the conversation begins and is invisible to the user during the conversation. The exercise demonstrates the behavioral effect of persona instructions; the distinction between user-turn persona and platform system prompt matters when you begin configuring harness files in this course.
 
 3. **Clarity Matters** (20 min)
    - Vague prompt: "Write about networking."
@@ -205,7 +205,7 @@ Claude's current tiers:
 | Tier | Model | Use |
 |------|-------|-----|
 | Fast / cheap | Haiku | High-volume, low-complexity tasks |
-| Balanced | Sonnet | Standard ACC working model |
+| Balanced | Sonnet | Standard working model |
 | Powerful / expensive | Opus | Complex reasoning, high-stakes analysis |
 
 **When to use which tier:**
@@ -213,7 +213,7 @@ Claude's current tiers:
 - Simple tasks (summarize, reformat, rewrite, translate): fast tier. Cost-effective, sufficient.
 - Complex analysis, multi-step reasoning, planning, synthesis: capable tier. Pay for the ceiling you need.
 - Running in a loop or processing many items at once: always fast tier. Cost compounds.
-- Default for this course: Sonnet. It is the working model for ACC and the standard for all exercises unless otherwise specified.
+- Default for this course: Sonnet. It is the standard for all exercises unless otherwise specified.
 
 Match the weapon to the target. Using Opus for bulk reformatting is waste. Using Haiku for a nuanced analytical task is risk.
 
@@ -758,8 +758,8 @@ Pulls the unit's daily log and produces a formatted brief.
 - Integrate all prerequisite concepts into one project
 - Practice the full workflow: plan → code → commit → push
 - Troubleshoot real problems
-- Prepare psychologically for ACC intensity
-- Demonstrate readiness for ACC Day 1
+- Prepare for the demands of advanced agentic development
+- Demonstrate readiness to progress to advanced work
 
 **Key Concepts:**
 - Project planning (SMEAC intro)
@@ -936,7 +936,7 @@ Module 8: Capstone Project (integrates all modules)
 | 8:00 - 12:00 | Module 8: Capstone Project (first half) |
 | 12:00 - 1:00 | Lunch |
 | 1:00 - 5:00 | Module 8: Capstone Project (second half) + presentations |
-| 5:00 onwards | Celebration, retrospective, ACC intro |
+| 5:00 onwards | Celebration and retrospective |
 
 ---
 
@@ -983,7 +983,7 @@ All 8 modules must be completed. Each module has a graded exercise.
 | 7: Context | CLAUDE.md + me.md | Complete and coherent |
 | 8: Capstone | Working project on GitHub | Runs, documented, commits |
 
-**Overall:** 7/8 modules passed = ACC-ready. 8/8 = honors.
+**Overall:** 7/8 modules passed = course complete. 8/8 = honors.
 
 ---
 
@@ -1013,19 +1013,19 @@ All 8 modules must be completed. Each module has a graded exercise.
 
 ---
 
-## Transition to ACC
+## Course Completion Outcomes
 
-After course completion, students are ready for ACC Day 1:
-- ✓ They know what prompts and system prompts are
-- ✓ They can navigate the terminal confidently
-- ✓ They understand Git workflow
-- ✓ They can write Markdown
-- ✓ They understand basic programming concepts
-- ✓ They have tools installed and authenticated
-- ✓ They can create and manage context files
-- ✓ They've built and shipped a project
+After completing this course, students will be able to:
+- ✓ Write clear, structured prompts and understand system prompts
+- ✓ Navigate the terminal confidently
+- ✓ Use Git for version control
+- ✓ Write Markdown
+- ✓ Understand basic programming concepts
+- ✓ Have all developer tools installed and authenticated
+- ✓ Create and manage context files (CLAUDE.md, me.md)
+- ✓ Build and ship a working project to GitHub
 
-**The ACC assumes all of this.** Day 1 starts immediately with `claude --version` → Vertex auth → Daily 8 commands → permissions. No review.
+**These are the core skills for AI-assisted development.** Students who complete all 8 modules are ready for advanced agentic work.
 
 ---
 
@@ -1065,4 +1065,4 @@ After course completion, students are ready for ACC Day 1:
 
 **End of Prerequisite Course Design**
 
-This course prepares students with zero background knowledge to enter the ACC as competent, confident learners ready to master agentic development.
+This course prepares students with zero background knowledge to become competent, confident learners ready to master agentic development.

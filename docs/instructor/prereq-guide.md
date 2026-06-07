@@ -1,6 +1,6 @@
-# ACC Prerequisite Course — Instructor Preparation Guide
+# AI and Agentics Basics — Instructor Preparation Guide
 
-**For:** Instructors teaching the ACC Foundations prerequisite course  
+**For:** Instructors teaching the Technical Foundations course  
 **Purpose:** Detailed implementation guide, demo scripts, troubleshooting, and timing guidance  
 **Last Updated:** 2026-06-05
 
@@ -1106,7 +1106,7 @@ git push -u origin main
 | **M8** | GitHub repo | 5+ commits, README, code runs |
 
 ### **Overall Grade Calculation**
-- 7/8 modules passed = **Passed, ACC-ready**
+- 7/8 modules passed = **Passed, course complete**
 - 8/8 modules passed + capstone >80% = **Honors**
 - <7/8 = Offer remediation or next cohort
 

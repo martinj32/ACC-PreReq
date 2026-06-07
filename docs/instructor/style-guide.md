@@ -78,7 +78,7 @@ Syntax: `- [ ]` and `- [x]` list items.
 Use for:
 - End-of-module readiness checks ("You are ready to move on when you can...")
 - Setup steps where students verify each item before proceeding
-- ACC readiness checks
+- Course readiness checks
 
 ```markdown
 Before moving to the next module, confirm:
