@@ -1,5 +1,5 @@
 ---
-session: 2026-06-07
+session: 2026-06-08
 status: clean — all changes committed and pushed to origin/master
 ---
 
@@ -7,58 +7,72 @@ status: clean — all changes committed and pushed to origin/master
 
 ## What Was Completed This Session
 
-- **Phase B: Module edits** — Rewrote all 17 modules from instructor scaffold format into student-facing content. Each module now follows the style guide template: BLUF, Why This Matters, Concepts (with admonitions), Hands-On, reflection question, quiz block, readiness checklist.
+- **5 module slide decks built** via 7-agent parallel build (agents spawned their own sub-agents):
+  - `slides/Finished/bedrock-ai-literacy.pptx` — 44 slides
+  - `slides/Finished/bedrock-personalizing.pptx` — 21 slides
+  - `slides/Finished/terminal-machine.pptx` — 30 slides
+  - `slides/Finished/terminal-terminal.pptx` — 42 slides
+  - `slides/Finished/agentic-concepts.pptx` — 26 slides
+  - Total: 163 slides across 5 decks. Army Cyber dark theme throughout.
 
-- **Course restructure** — Split Day 0 into three new student-facing sections:
-  - `docs/bedrock/ai-literacy.md` — AI literacy (LLM basics, tokens, failure modes, prompt engineering, delivery, data handling)
-  - `docs/bedrock/personalizing-your-ai.md` — New module written from scratch: custom instructions, Claude Projects, ChatGPT memory, personas
-  - `docs/terminal-basics/the-machine.md` — Files, plaintext vs rich text, code editor
-  - `docs/terminal-basics/the-terminal.md` — Terminal navigation, file operations, paths, flags, version control concept
-  - `docs/agentic-ai/agent-concepts.md` — Chatbot vs agent, version control concept, supervisor mindset
+- **All builder scripts committed** to `slides/` — one per module + `build_mental_models.py` (the master template)
 
-- **Nav updated** — `mkdocs.yml` now: Bedrock → Terminal Basics → Agentic AI → Mental Models → Technical Foundations → Instructor Handbooks. Day 0 removed from nav.
+- **Teaching guide converted to HTML** — `docs/instructor/teaching-guide.html`
+  - Self-contained, print-ready, Army Cyber dark theme section banners, color-coded callout boxes
 
-- **Archived** — Original Day 0 scaffold copied to `docs/instructor/day0-scaffold.md`.
-
-- **Get Started + Course Map updated** — `index.md` and `overview.md` rewritten to reflect the new structure, FAQ, and completion checklist.
+- **Atlas updated** — ACC Content and Team Deliverables Roadmap projects:
+  - Slide deck tasks marked done
+  - Phase 3 milestone (Slide Decks Complete) marked completed
+  - python-pptx styling risk marked mitigated
+  - Session note added to ACC Content
 
 - **Commits pushed:**
-  - `088e315` feat: restructure course into Bedrock, Terminal Basics, and Agentic AI sections
-  - `724fc2a` feat: update Get Started and Course Map to reflect new structure
+  - `3663bfb` feat: add slide deck builder scripts and 5 completed .pptx outputs
+  - `e614017` feat: convert teaching guide to standalone HTML document
 
 ---
 
 ## What Is Still In Progress
 
-Nothing from this session is outstanding. Site is clean and live on origin.
-
-**Content not yet built:**
-- Mental Models pages — populated from source files, not yet edited for style guide compliance
-- Technical Foundations (M1-M8) — populated from source files, not yet edited
-- Slide decks (.pptx) — not started
-- Consolidated teaching guide — not started
+- **Mental Models slide deck** — not built. `docs/mental-models/core-content.md` was intentionally excluded from the agent run. The template (`build_mental_models.py`) was built specifically for this module.
+- **Wire teaching guide into MkDocs nav** — `teaching-guide.html` exists but is not wired into `mkdocs.yml`. The `.md` version at `docs/instructor/teaching-guide.md` is already there but not confirmed in nav.
+- **End-to-end QA** — site, slides, and nav links not yet verified together.
+- **ACC main course (3-day)** — blocked on Jake providing source material.
 
 ---
 
 ## Explicit Next Steps
 
-1. **Delete old Day 0 file** — `docs/day0/ai-agentics-basics.md` still exists on disk (not in nav). Safe to delete: `git rm docs/day0/ai-agentics-basics.md` then commit.
+1. **Build Mental Models deck** — `python slides/build_mental_models.py`. Check if `slides/Finished/mental-models.pptx` is already current (it was present in Finished/ this session — verify it matches the current source).
+2. **Add teaching guide to MkDocs nav** — Edit `mkdocs.yml`, wire `instructor/teaching-guide.md` into the Instructor Handbooks nav section.
+3. **Run `mkdocs serve`** — Verify full site renders, all pages load, nav is correct.
+4. **Open all 5 .pptx files** — Spot-check slide formatting, confirm Army Cyber dark theme applied correctly.
+5. **End-to-end QA** — Complete task 9 from the build plan.
+6. **Await ACC main course source** — When Jake provides it, scope and build the 3-day main course content.
 
-2. **Mental Models — style guide pass** — Apply same Phase B treatment to `docs/mental-models/core-content.md`. Read the style guide first.
+---
 
-3. **Technical Foundations — style guide pass** — Same treatment for `docs/prereq-course/course-design.md` and `docs/prereq-course/module-summary.md`.
+## Key Paths
 
-4. **Slide decks** — Begin .pptx builds using python-pptx. Recommended start: Bedrock/AI Literacy — most self-contained and fully written.
-
-5. **Teaching guide** — Consolidate all `??? note` instructor collapsibles from Bedrock, Terminal Basics, and Agentic AI into `docs/instructor/teaching-guide.md`.
+| What | Where |
+|---|---|
+| Slide decks (output) | `C:\Users\jmart\ACC-Content\slides\Finished\` |
+| Builder scripts | `C:\Users\jmart\ACC-Content\slides\build_*.py` |
+| Master template | `C:\Users\jmart\ACC-Content\slides\build_mental_models.py` |
+| Teaching guide (MD) | `C:\Users\jmart\ACC-Content\docs\instructor\teaching-guide.md` |
+| Teaching guide (HTML) | `C:\Users\jmart\ACC-Content\docs\instructor\teaching-guide.html` |
+| MkDocs config | `C:\Users\jmart\ACC-Content\mkdocs.yml` |
+| Build plan | `C:\Users\jmart\ACC-Content\ACC-Course-Build-Plan.md` |
+| Atlas project | http://localhost:3001 → ACC Content |
 
 ---
 
 ## Context for Next Session
 
-- **Repo:** `https://github.com/martinj32/ACC-PreReq.git`
-- **Local path:** `C:\Users\jmart\ACC-Content\`
-- **Site:** MkDocs + Material theme. Serve with: `python -m mkdocs serve --dev-addr=127.0.0.1:8000`
-- **Style guide:** `docs/instructor/style-guide.md` — read before editing any module
-- **Branch:** `master` — working directly on master
-- **Nav order:** Get Started → Course Map → Bedrock → Terminal Basics → Agentic AI → Mental Models → Technical Foundations → Instructor Handbooks
+- The 5 slide decks use the **Army Cyber dark theme** defined in `build_mental_models.py` — background `#0A0C14`, accents `#00B4FF` / `#FFAA00` / `#00E57A`. Do not change the theme.
+- `build_mental_models.py` is both the Mental Models deck builder AND the master template. Read it first before touching any slide script.
+- The Atlas app runs at `http://localhost:3001`. Start with `npm run dev` from `C:\Users\jmart\projects\project-atlas\`.
+- ACC-Content remote: `https://github.com/martinj32/ACC-PreReq.git`. Jake pushes manually — confirm before pushing.
+- **Repo:** `C:\Users\jmart\ACC-Content\` — branch `master`, working directly on master.
+- **Site:** Serve with `python -m mkdocs serve --dev-addr=127.0.0.1:8000`
+- **Style guide:** `docs/instructor/style-guide.md` — read before editing any module content.
