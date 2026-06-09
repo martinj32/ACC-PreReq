@@ -1,0 +1,1964 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../style-guide/">
+      
+      
+        <link rel="next" href="../prereq-guide/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Mental Models Teaching Guide - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mental-models-for-ai-assisted-development-teaching-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Mental Models Teaching Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedules
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bedrock/ai-literacy/" class="md-tabs__link">
+          
+  
+  
+  Bedrock
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../terminal-basics/the-machine/" class="md-tabs__link">
+          
+  
+  
+  Terminal Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../agentic-ai/agent-concepts/" class="md-tabs__link">
+          
+  
+  
+  Agentic AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mental-models/core-content/" class="md-tabs__link">
+          
+  
+  
+  Mental Models
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../prereq-course/course-design/" class="md-tabs__link">
+          
+  
+  
+  Technical Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../teaching-guide/" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedrock
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bedrock
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bedrock/ai-literacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Literacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bedrock/personalizing-your-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personalizing Your AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terminal Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal-basics/the-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal-basics/the-terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentic AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agentic-ai/agent-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mental Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/core-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/workbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technical Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prereq-course/course-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Design (M1-M8)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prereq-course/module-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../teaching-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-teach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Before You Teach
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teaching-structure-35-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teaching Structure (35 minutes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teaching Structure (35 minutes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#opening-3-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Opening (3 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teaching-the-six-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Teaching the Six Models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Teaching the Six Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-1-the-harness-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model 1: The Harness (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-2-context-windows-6-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model 2: Context Windows (6 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-3-tokens-as-currency-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model 3: Tokens as Currency (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-4-tool-calls-4-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model 4: Tool Calls (4 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-5-operator-posture-4-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model 5: Operator Posture (4 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-6-cost-consciousness-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model 6: Cost-Consciousness (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-examples-5-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Examples (5 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise-5-10-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise (5-10 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#closing-2-minutes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Closing (2 minutes)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-student-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Student Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classroom-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classroom Dynamics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classroom Dynamics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-fast-learners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Fast Learners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-slower-learners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Slower Learners
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-skeptical-learners" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Skeptical Learners
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assessment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pacing-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pacing Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materials Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#after-this-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        After This Module
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-role-as-instructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Your Role as Instructor
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prereq-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day0-scaffold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 0 Teaching Scaffold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mental-models-for-ai-assisted-development-teaching-guide">Mental Models for AI-Assisted Development — Teaching Guide</h1>
+<p><strong>For instructors delivering AI and Agentics Basics</strong></p>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>This guide helps you teach the "Mental Models for AI-Assisted Development" module. It's a 35-minute self-contained lesson.</p>
+<p><strong>Key insight:</strong> Students who understand these mental models will excel in agentic development work. Students who don't will struggle with inefficiency, wasted tokens, and fundamental misunderstandings about AI-assisted development.</p>
+<hr />
+<h2 id="before-you-teach">Before You Teach</h2>
+<p><strong>Prerequisites for students:</strong>
+- Basic familiarity with what an LLM is
+- A Claude account or access to Claude Code
+- No coding experience required yet</p>
+<p><strong>Your prep (15 minutes):</strong>
+1. Read the full module (<code>mental-models/core-content.md</code>)
+2. Do the exercise (Section 8) yourself
+3. Prepare examples from your own experience that illustrate each model
+4. Have Claude Code available for live demos (optional but powerful)</p>
+<hr />
+<h2 id="teaching-structure-35-minutes">Teaching Structure (35 minutes)</h2>
+<h3 id="opening-3-minutes">Opening (3 minutes)</h3>
+<p><strong>Hook:</strong> "Everything we're about to cover in this course assumes you understand six mental models. Miss these, and you'll write inefficient code, waste tokens, and blame the AI when really the problem is how you're using it."</p>
+<p><strong>Agenda:</strong>
+- Six mental models (5-25 minutes)
+- Worked examples (5 minutes)
+- Exercise (5-10 minutes)</p>
+<p><strong>Handouts:</strong>
+- Main module (for reference)
+- Quick reference (study guide)
+- Workbook (active learning)
+- This teaching guide (for instructors)</p>
+<hr />
+<h2 id="teaching-the-six-models">Teaching the Six Models</h2>
+<h3 id="model-1-the-harness-5-minutes">Model 1: The Harness (5 minutes)</h3>
+<p><strong>Objective:</strong> Students understand that an LLM becomes agentic when paired with tools.</p>
+<p><strong>Key points:</strong>
+- LLM alone: text-in, text-out. Can't read your code. Can't run tests. Can't verify.
+- LLM + tools: eyes (read), hands (write), feedback loop (execute, observe, adjust)
+- This is why Claude Code is different from web chat</p>
+<p><strong>Live demo (optional):</strong>
+- Open Claude Code
+- Ask Claude to read a file (show the tool call)
+- Ask Claude to write a file (show the tool call)
+- Ask Claude to run a command (show the tool call)
+- Narrative: "Notice—Claude isn't guessing. It's seeing. It's acting. It's verifying."</p>
+<p><strong>Common misconception:</strong>
+- Students think: "Claude can do anything if I just ask it well enough."
+- Reality: "Claude can only do what it can see and act on through tools."</p>
+<p><strong>Check for understanding:</strong>
+- Q: "Why is reading a file a tool call and not just part of Claude's knowledge?"
+- A: "Because files change. Claude's training is static. Tools let Claude see your actual, current code."</p>
+<hr />
+<h3 id="model-2-context-windows-6-minutes">Model 2: Context Windows (6 minutes)</h3>
+<p><strong>Objective:</strong> Students understand why they can't paste everything into Claude.</p>
+<p><strong>Key points:</strong>
+1. Context window = working memory (~200k tokens)
+2. Context is NOT infinite
+3. Tool calls reset context (Claude reads on-demand, not all at once)
+4. You control what's in context</p>
+<p><strong>Real example:</strong>
+- "You have a 500-file codebase. You paste all 500 files (100,000 tokens) into a prompt. Claude has 100,000 tokens left. You ask it to understand the architecture, refactor, optimize, and add a feature. Claude runs out of tokens mid-response. It's broken."
+- Alternative: "You ask Claude to use tools. 'Find the main entry points. Read them. What's the architecture?' Claude samples strategically. It reads 5-10 key files. It reasons from that sample. It succeeds."</p>
+<p><strong>Live demo (optional):</strong>
+- Show a large document
+- Paste it into Claude (show it counting tokens)
+- Ask Claude to summarize a specific part
+- Narrative: "See how many tokens that just cost? If we ask for 10 summaries, we've burned through the context window. Now ask Claude to use a tool instead."</p>
+<p><strong>Common misconception:</strong>
+- Students think: "More context = more information = better answers."
+- Reality: "Targeted context + smart sampling &gt; massive dumping. Signal vs. noise."</p>
+<p><strong>Check for understanding:</strong>
+- Q: "If you have a 1000-file codebase, should you paste all 1000 files into a prompt?"
+- A: "No. Use tools to find and read the relevant 10-20 files. Context windowing is about smart sampling."</p>
+<hr />
+<h3 id="model-3-tokens-as-currency-5-minutes">Model 3: Tokens as Currency (5 minutes)</h3>
+<p><strong>Objective:</strong> Students think cost-consciously about communication.</p>
+<p><strong>Key points:</strong>
+1. Tokens ≈ cost + time + context
+2. A concise, clear prompt beats a rambling one
+3. Clear prompts save iterations (saves tokens overall)
+4. Use tools instead of pasting (saves token cost)</p>
+<p><strong>Economic example:</strong>
+- "Bad prompt (vague): 'Make this faster.' Claude guesses. You iterate 10 times. 10x tokens spent."
+- "Good prompt (specific): 'The user lookup is 2 seconds. Target: &lt;100ms. Here's the schema and current query.' Claude fixes it once. 1x tokens spent."</p>
+<p><strong>Live demo (optional):</strong>
+- Show two prompts side by side
+- Bad: "I have code that's slow. Fix it."
+- Good: "The <code>getUserProfile</code> endpoint takes 5 seconds. Bottleneck is the database query (see below). Target: &lt;200ms. Here's the schema and query: [SQL]. What's the fix?"
+- Ask Claude to estimate token cost for a response to each
+- Narrative: "Notice the good prompt is only slightly longer, but it's longer in the <em>right way</em>. It saves iterations."</p>
+<p><strong>Common misconception:</strong>
+- Students think: "More detail = more tokens = better answer."
+- Reality: "Relevant detail + clarity = efficiency. Rambling = waste."</p>
+<p><strong>Check for understanding:</strong>
+- Q: "You're about to ask Claude something. You've written a 500-word rambling prompt. What should you do before sending it?"
+- A: "Rewrite it concisely. Clarify what you actually want. Then send it."</p>
+<hr />
+<h3 id="model-4-tool-calls-4-minutes">Model 4: Tool Calls (4 minutes)</h3>
+<p><strong>Objective:</strong> Students understand that tool calls enable verification.</p>
+<p><strong>Key points:</strong>
+1. Tool call = request from Claude to execute something
+2. Result comes back to Claude
+3. Claude observes and adjusts
+4. This is how Claude self-corrects (deterministic development)</p>
+<p><strong>Example loop:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Claude: &quot;I&#39;ll add an index to the database.&quot;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>System: [executes migration]
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Claude: &quot;Hmm, the migration has a syntax error. Let me fix it.&quot;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>System: [executes corrected migration]
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Claude: &quot;Migration succeeded. Let me benchmark the query.&quot;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>System: [runs benchmark]
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Claude: &quot;Query is now 30x faster. Done.&quot;
+</code></pre></div></p>
+<p><strong>Live demo (optional):</strong>
+- Ask Claude to write code AND run tests
+- Show the tool calls (write file, run npm test)
+- Show the test results coming back
+- Claude sees the results and adjusts
+- Narrative: "Without tool calls, Claude is guessing. With them, Claude is verifying."</p>
+<p><strong>Common misconception:</strong>
+- Students think: "Claude will tell me if my code works."
+- Reality: "Claude doesn't know unless it can see execution results (tool calls)."</p>
+<p><strong>Check for understanding:</strong>
+- Q: "How does Claude know if the code it wrote actually works?"
+- A: "It runs the code (tool call), sees the output, and verifies."</p>
+<hr />
+<h3 id="model-5-operator-posture-4-minutes">Model 5: Operator Posture (4 minutes)</h3>
+<p><strong>Objective:</strong> Students understand their role as supervisors.</p>
+<p><strong>Key points:</strong>
+1. You're the operator
+2. Claude executes
+3. Supervision loop: specify → Claude asks → you clarify → Claude acts → you review → Claude adjusts
+4. Golden rule: "If you don't understand what Claude is about to do, don't let it do it."</p>
+<p><strong>Real disaster story:</strong>
+- "Student asked Claude to refactor a database schema. Didn't review. One day later, went to deploy. Schema migrations were broken. Lost data. Had to recover from backups."
+- Better: "Student asked Claude to refactor schema. Reviewed the migration SQL first. Asked clarifying questions. Ran it in a test environment first. Only then deployed to production. Success."</p>
+<p><strong>Live demo (optional):</strong>
+- Ask Claude to make a big change (refactor code, change schema, etc.)
+- Before Claude acts, pause and ask: "Show me what you're about to do."
+- Claude shows the change
+- You say: "Wait, that would break X. Let me clarify the requirements first."
+- Claude adjusts based on feedback
+- Narrative: "Notice—I didn't just let Claude loose. I supervised every step."</p>
+<p><strong>Common misconception:</strong>
+- Students think: "I'll ask Claude to do X and come back later."
+- Reality: "You stay present. You review. You decide next steps."</p>
+<p><strong>Check for understanding:</strong>
+- Q: "You ask Claude to add a critical security feature to your API. What should you do before deploying?"
+- A: "Review the code. Ask clarifying questions about the security approach. Maybe have Claude write tests first. Then deploy."</p>
+<hr />
+<h3 id="model-6-cost-consciousness-5-minutes">Model 6: Cost-Consciousness (5 minutes)</h3>
+<p><strong>Objective:</strong> Students think strategically about efficiency.</p>
+<p><strong>Key points:</strong>
+1. Cost is not just money (token cost, time cost, iteration cost)
+2. Planning beats iterating
+3. Clear specs beat vague requests
+4. Tight loops beat loose ones</p>
+<p><strong>Planning example:</strong>
+- Bad: "Build me a task manager."
+- Good: "Build a task manager. Features: create/read/update/delete tasks, filter by status, tags. Stack: Node.js + React + PostgreSQL. Offline-first sync. Mobile-friendly. &lt;2sec load time. Start with the API schema."</p>
+<p>The good version is longer, but it's longer in the right way. It prevents 10 iterations of "Wait, what about X?"</p>
+<p><strong>Live demo (optional):</strong>
+- Show a vague request to Claude
+- Get a response
+- Iterate 3-4 times to clarify
+- Show the token cost accumulating
+- Now restart with a clear, specific request
+- Get a complete response in one shot
+- Narrative: "Planning saves tokens and time. Vagueness costs both."</p>
+<p><strong>Common misconception:</strong>
+- Students think: "Efficiency is about being cheap."
+- Reality: "Efficiency is about moving fast and shipping quality. Cost-consciousness is how you do it."</p>
+<p><strong>Check for understanding:</strong>
+- Q: "Before you ask Claude to work on a project, what should you do?"
+- A: "Clarify the specs, define constraints, maybe sketch the architecture. Then ask Claude to build it."</p>
+<hr />
+<h2 id="worked-examples-5-minutes">Worked Examples (5 minutes)</h2>
+<p><strong>Objective:</strong> See all six models in action.</p>
+<p><strong>Process:</strong>
+1. Read Example 1 aloud (1 min)
+   - Pause at key points
+   - Ask: "What went wrong? What went right?"
+   - Connect to the six models
+2. Repeat for Examples 2, 3, 4 (4 min total)</p>
+<p><strong>Key teaching moment:</strong> "Notice how Example A (vibe coding) violates multiple models, while Example B (real development) uses all of them together."</p>
+<hr />
+<h2 id="exercise-5-10-minutes">Exercise (5-10 minutes)</h2>
+<p><strong>Objective:</strong> Students identify models in a transcript.</p>
+<p><strong>Process:</strong>
+1. Have students read the three transcripts (3 min reading)
+2. Work through SECTION A together (2 min)
+   - Q: "What models are violated?"
+   - A: [Guide students to identify harness, tool calls, operator posture]
+3. Have students analyze SECTIONS B and C on their own or in pairs (3-5 min)
+4. Debrief (2 min)
+   - Ask a student: "What's the core difference between A and B?"
+   - Expected answer: "Tool calls, verification, supervision."</p>
+<p><strong>If short on time:</strong>
+- Do SECTION A together
+- Assign B and C as homework</p>
+<hr />
+<h2 id="closing-2-minutes">Closing (2 minutes)</h2>
+<p><strong>Summary:</strong>
+"You now understand the six mental models that this course is built on. As you move through the course:</p>
+<ul>
+<li>Notice the harness in action (Claude reading your code, running tests)</li>
+<li>Think strategically about context (sample smartly, don't paste everything)</li>
+<li>Be cost-conscious (clear specs, tight iterations)</li>
+<li>Rely on tool calls (verify, don't guess)</li>
+<li>Supervise actively (review, ask questions, decide)</li>
+<li>Plan before building (prevents wasted iterations)</li>
+</ul>
+<p>Get comfortable with these six models. By the end of the course, they should be instinctive."</p>
+<p><strong>Next steps:</strong>
+1. Complete the workbook (Mental Models Workbook)
+2. Review the quick reference before bed
+3. Continue through the Technical Foundations (8 modules, 2-3 days)</p>
+<hr />
+<h2 id="common-student-questions">Common Student Questions</h2>
+<p><strong>Q: "If I'm a strong coder, can I skip the mental models?"</strong></p>
+<p>A: "No. These aren't coding skills—they're frameworks for how to work with AI. Experienced coders still need to understand context windows and tokens. Different mindset."</p>
+<p><strong>Q: "Is this only for this course, or does it apply to all AI development?"</strong></p>
+<p>A: "This applies to any development with Claude Code or agentic systems. The principles are universal."</p>
+<p><strong>Q: "What if I don't understand a model?"</strong></p>
+<p>A: "Re-read it. Do the workbook. Talk to an instructor. Don't move forward until it clicks. These are foundational."</p>
+<p><strong>Q: "Can tool calls be turned off?"</strong></p>
+<p>A: "Yes, but don't. The whole power of Claude Code is that Claude can read your code, run tests, and verify. Without tools, you're back to 'vibe coding.'"</p>
+<p><strong>Q: "What's the token cost of this entire module?"</strong></p>
+<p>A: "Reading it? Zero (you're reading text, not prompting Claude). Explaining it to Claude to check your understanding? ~1,000-2,000 tokens. Cheap."</p>
+<hr />
+<h2 id="classroom-dynamics">Classroom Dynamics</h2>
+<h3 id="for-fast-learners">For Fast Learners</h3>
+<ul>
+<li>Have them read the quick reference during the module</li>
+<li>Ask them to create their own examples during the worked examples section</li>
+<li>In the exercise, have them identify which models are MOST important in each transcript</li>
+</ul>
+<h3 id="for-slower-learners">For Slower Learners</h3>
+<ul>
+<li>Go through the six models more slowly (might take 45-50 minutes instead of 35)</li>
+<li>Use more live demos</li>
+<li>Do the exercise together as a class instead of individually</li>
+<li>Assign the workbook as homework and review answers next session</li>
+</ul>
+<h3 id="for-skeptical-learners">For Skeptical Learners</h3>
+<ul>
+<li>Emphasize: "This isn't AI hype. This is how real development with Claude works."</li>
+<li>Use concrete examples from projects they know</li>
+<li>Show them the token bill for efficient vs. inefficient prompts</li>
+<li>Have them try vague vs. clear prompts themselves</li>
+</ul>
+<hr />
+<h2 id="assessment">Assessment</h2>
+<p><strong>Informal:</strong>
+- Can students explain the six models in their own words?
+- Can students identify models in a transcript?
+- Can they plan a project using these models?</p>
+<p><strong>Formal (if grading):</strong>
+- Workbook completion (all questions answered)
+- Exercise analysis (correct identification of models)
+- Self-assessment (honest rating of understanding)</p>
+<p><strong>Passing bar:</strong> Students should rate themselves 4+/5 on at least 5 of 6 models.</p>
+<hr />
+<h2 id="pacing-notes">Pacing Notes</h2>
+<p><strong>If running 35 minutes exactly:</strong>
+- Spend 4-5 min per model
+- 5 min on worked examples
+- 3-5 min on exercise (SECTION A together, B/C as homework)</p>
+<p><strong>If running 45 minutes (recommended):</strong>
+- Spend 5-6 min per model
+- 5 min on worked examples
+- 10 min on exercise (all three sections together)</p>
+<p><strong>If running 60 minutes:</strong>
+- Spend 6-7 min per model
+- 7 min on worked examples
+- 15 min on exercise + debrief
+- 5 min for questions and synthesis</p>
+<hr />
+<h2 id="materials-checklist">Materials Checklist</h2>
+<p><strong>For students:</strong>
+- [ ] Main module (<code>mental-models/core-content.md</code>)
+- [ ] Quick reference (<code>mental-models/quick-reference.md</code>)
+- [ ] Workbook (<code>mental-models/workbook.md</code>)</p>
+<p><strong>For you:</strong>
+- [ ] This teaching guide
+- [ ] Claude Code available (for live demos)
+- [ ] Examples from your own experience (1-2 per model)
+- [ ] Slides (optional, but nice to have)</p>
+<p><strong>Classroom setup:</strong>
+- [ ] Projector/screen (if demos)
+- [ ] Everyone has the workbook (print or digital)</p>
+<hr />
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p><strong>"Students don't seem engaged"</strong>
+- Use a live demo. Live demos are powerful.
+- Ask students to explain concepts to each other in pairs
+- Use examples from their field (military, tech, etc.)</p>
+<p><strong>"Students are confused about context windows"</strong>
+- This is the hardest concept. Spend extra time here.
+- Demo: paste a large document, show token count, ask about implications
+- Use the analogy: "Context window is like your desk. You can only fit so much on it."</p>
+<p><strong>"Students think tokens are money and get anxious"</strong>
+- Emphasize: "Tokens are your resource. Like gasoline. You want to use them wisely, not hoard them."
+- Show token costs ($0.001 input, $0.003 output for Sonnet). It's cheaper than you think.</p>
+<p><strong>"Students ask 'Isn't this just good prompting?'"</strong>
+- Good answer: "It is. Good prompting + supervision + cost-consciousness + tool use = agentic development. The mental models tie it together."</p>
+<hr />
+<h2 id="after-this-module">After This Module</h2>
+<p><strong>Next session:</strong> Prerequisite Module 1 (LLM &amp; Prompts)
+- Students will now understand why context and tokens matter
+- They'll be ready to learn prompt engineering</p>
+<p><strong>Throughout the prerequisite course:</strong>
+- Point out where mental models show up
+- "Remember the harness? That's why we're learning git."
+- "This is tool use at work."</p>
+<p><strong>Later in the course:</strong>
+- Mental models should be instinctive by now
+- Don't re-teach them, just reference them
+- "Remember context windows? This is why you're sampling code strategically."</p>
+<hr />
+<h2 id="your-role-as-instructor">Your Role as Instructor</h2>
+<p><strong>Be the model:</strong>
+- When you demo Claude Code, narrate using mental model language
+- "Notice I'm not pasting the entire codebase. I'm using tools to read on-demand. Context windowing."
+- "Claude ran the tests and saw a failure. Now it's adjusting. Tool calls enable verification."</p>
+<p><strong>Be an enforcer:</strong>
+- When students ask vague questions, redirect: "Be more specific. What exactly do you want?"
+- When students propose pasting huge amounts of code: "Use tools instead. Why?"
+- When students ignore Claude's recommendations: "Did you understand what Claude proposed? If not, ask it to explain."</p>
+<p><strong>Be a cheerleader:</strong>
+- Students who get these models will move fast
+- Celebrate that: "You're thinking like an agentic developer now."</p>
+<hr />
+<p><strong>End of Teaching Guide</strong></p>
+<p>Teach this well, and your students will excel. Teach it poorly, and they'll struggle for the first 2 days of the course. It's worth the 35-45 minutes.</p>
+<p>Good luck.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

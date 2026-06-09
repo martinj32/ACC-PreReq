@@ -1,0 +1,2207 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../the-machine/">
+      
+      
+        <link rel="next" href="../../agentic-ai/agent-concepts/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>The Terminal - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#terminal-basics-the-terminal" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              The Terminal
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedules
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bedrock/ai-literacy/" class="md-tabs__link">
+          
+  
+  
+  Bedrock
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../the-machine/" class="md-tabs__link">
+          
+  
+  
+  Terminal Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../agentic-ai/agent-concepts/" class="md-tabs__link">
+          
+  
+  
+  Agentic AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mental-models/core-content/" class="md-tabs__link">
+          
+  
+  
+  Mental Models
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../prereq-course/course-design/" class="md-tabs__link">
+          
+  
+  
+  Technical Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../instructor/teaching-guide/" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedrock
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bedrock
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bedrock/ai-literacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Literacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bedrock/personalizing-your-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personalizing Your AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terminal Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../the-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Terminal
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-the-terminal-is-and-why-it-is-safe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What the Terminal Is (and Why It Is Safe)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What the Terminal Is (and Why It Is Safe)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#navigating-where-am-i-what-is-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Navigating: Where Am I, What Is Here
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Navigating: Where Am I, What Is Here">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acting-make-move-copy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acting: Make, Move, Copy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Acting: Make, Move, Copy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paths-tab-completion-and-the-up-arrow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Paths, Tab-Completion, and the Up-Arrow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paths, Tab-Completion, and the Up-Arrow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands-flags-and-knowing-when-to-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Commands, Flags, and Knowing When to Stop
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Commands, Flags, and Knowing When to Stop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-version-control-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Version Control Exists
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Why Version Control Exists">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentic AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agentic-ai/agent-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mental Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/core-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/workbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technical Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prereq-course/course-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Design (M1-M8)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prereq-course/module-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/teaching-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/mental-models-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/prereq-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/day0-scaffold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 0 Teaching Scaffold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="terminal-basics-the-terminal">Terminal Basics — The Terminal</h1>
+<p><strong>Who this is for:</strong> Someone who has completed The Machine module and is ready to stop clicking and start typing.</p>
+<p><strong>What you will leave with:</strong> You can navigate the filesystem from the command line, create and move files, use paths and tab-completion, read command help, and stop anything that will not quit. These are the exact moves an agent makes on your machine — you are learning them so you can supervise.</p>
+<hr />
+<h2 id="what-the-terminal-is-and-why-it-is-safe">What the Terminal Is (and Why It Is Safe)</h2>
+<p><strong>BLUF.</strong> The terminal is a typed way to give the computer the same instructions you used to give by clicking — it is not hacking, it is not dangerous by default, and it feels alien for about an hour before it feels normal.</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>This is where the course gets uncomfortable for some people. If you are wondering why an AI course includes a unit on typing Unix commands — the answer is in the Agentic AI section. The short version: the agent acts through the terminal. You need to understand the terrain it operates on.</p>
+<h3 id="concepts">Concepts</h3>
+<p>A command is a typed instruction. It is the same as a click — it tells the computer to do something. The difference is precision: a click is constrained by what a menu shows you; a command can express anything the machine understands.</p>
+<p>The <strong>prompt line</strong> is where your typing goes. It usually ends with a <code>$</code> (Mac/Linux) or <code>&gt;</code> (Windows PowerShell). When you see that character, the terminal is ready for input.</p>
+<div class="admonition example">
+<p class="admonition-title">Your First Command</p>
+<p>Open the terminal. On Windows: search for "PowerShell" or "Terminal" in the Start menu. On Mac: search for "Terminal" in Spotlight.</p>
+<p>Type <code>date</code> (Mac/Linux) or <code>Get-Date</code> (Windows PowerShell) and press Enter.</p>
+<p>The terminal printed the current date and returned the prompt. That is a command.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Nothing Today Can Hurt the Machine</p>
+<p>The commands in this module and the next two are read-only and harmless. You are looking at the filesystem, not modifying it. Anything that can cause real damage comes much later, behind heavy framing.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Address the Bait-and-Switch Out Loud</summary>
+<p>Name the frustration before a student says it: "Some of you are wondering why an AI course spent two weeks on the command line." Then make the connection explicit: the agent acts through the terminal. The student who does not understand the terminal cannot supervise an agent using it.</p>
+</details>
+<h3 id="hands-on">Hands-On</h3>
+<ol>
+<li>Open the terminal on your machine. Sit with the blinking cursor for ten seconds. Name the feeling.</li>
+<li>Run each command below for your platform. Read the output before moving to the next one.</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Mac / WSL (Linux)</label><label for="__tabbed_1_2">Windows PowerShell</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date</code></td>
+<td>Print the current date and time</td>
+</tr>
+<tr>
+<td><code>whoami</code></td>
+<td>Print your username</td>
+</tr>
+<tr>
+<td><code>pwd</code></td>
+<td>Print your current location in the filesystem</td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td>List the files in the current folder</td>
+</tr>
+<tr>
+<td><code>echo "hello"</code></td>
+<td>Print text to the terminal</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Get-Date</code></td>
+<td>Print the current date and time</td>
+</tr>
+<tr>
+<td><code>$env:USERNAME</code></td>
+<td>Print your username</td>
+</tr>
+<tr>
+<td><code>Get-Location</code></td>
+<td>Print your current location in the filesystem</td>
+</tr>
+<tr>
+<td><code>Get-ChildItem</code></td>
+<td>List the files in the current folder</td>
+</tr>
+<tr>
+<td><code>Write-Output "hello"</code></td>
+<td>Print text to the terminal</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ol>
+<li>Close the terminal and open it again. Re-run one command from memory without looking at the table.</li>
+</ol>
+<p>You opened it, ran five things, and closed it. The anxiety has a smaller surface area now.</p>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You typed a command and saw a response. What is the difference between that and clicking a button in an app? What stayed the same?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">What does a terminal actually do?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">It connects you to the internet through a secure tunnel</li>
+    <li data-correct="false">It runs programs faster than clicking does</li>
+    <li data-correct="true">It accepts typed instructions and passes them to the operating system — the same as clicking, without the menu</li>
+    <li data-correct="false">It is a special tool only developers have access to</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can open the terminal on my machine</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I ran one command and read its output</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can find the prompt line and know where my typing goes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> The anxiety is smaller than it was at the start of this module</li>
+</ul>
+<hr />
+<h2 id="navigating-where-am-i-what-is-here">Navigating: Where Am I, What Is Here</h2>
+<p><strong>BLUF.</strong> Three commands cover most of navigation — where am I, what is here, move — and mastering them by typing replaces every click from The Machine module.</p>
+<h3 id="why-this-matters_1">Why This Matters</h3>
+<p>Getting "lost" in the filesystem is the number-one beginner panic in the terminal. These three commands are the reset button. Know them cold and you can always find your way back to a known position.</p>
+<h3 id="concepts_1">Concepts</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Job</th>
+<th>Works on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pwd</code></td>
+<td>Print current location</td>
+<td>Mac, Linux, WSL, PowerShell</td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td>List folder contents</td>
+<td>Mac, Linux, WSL, PowerShell</td>
+</tr>
+<tr>
+<td><code>cd foldername</code></td>
+<td>Move into a folder</td>
+<td>All</td>
+</tr>
+<tr>
+<td><code>cd ..</code></td>
+<td>Move up one level</td>
+<td>All</td>
+</tr>
+</tbody>
+</table>
+<p><code>pwd</code> — <strong>P</strong>rint <strong>W</strong>orking <strong>D</strong>irectory. Your current location in the tree.</p>
+<p><code>ls</code> — <strong>L</strong>i<strong>s</strong>t. Everything in the current folder. Add <code>-la</code> (Mac/WSL) for details including hidden files.</p>
+<p><code>cd</code> — <strong>C</strong>hange <strong>D</strong>irectory. <code>cd foldername</code> moves down; <code>cd ..</code> moves up.</p>
+<div class="admonition example">
+<p class="admonition-title">Walking the Tree</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">pwd</span><span class="w">              </span><span class="c1"># See where you are</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>ls<span class="w">               </span><span class="c1"># See what is here</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nb">cd</span><span class="w"> </span>Documents<span class="w">     </span><span class="c1"># Move into Documents</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">pwd</span><span class="w">              </span><span class="c1"># Confirm you moved</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>ls<span class="w">               </span><span class="c1"># See what is in Documents</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">cd</span><span class="w"> </span>..<span class="w">            </span><span class="c1"># Move back up one level</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nb">pwd</span><span class="w">              </span><span class="c1"># Confirm you are back</span>
+</code></pre></div>
+<p>Walk this sequence on your own machine. These are the exact same moves you did by clicking in The Machine module — same tree, typed instead.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">pwd Is Your Reset Button</p>
+<p>Any time you feel lost in the terminal, type <code>pwd</code>. It tells you exactly where you are. You can never be permanently lost if you can always ask "where am I."</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Reps Over Coverage</summary>
+<p>Same three commands, many short repetitions, spread across several days. Do not introduce file creation yet. One capability at a time. Reps build muscle memory; coverage builds confusion.</p>
+</details>
+<h3 id="hands-on_1">Hands-On</h3>
+<ol>
+<li>Open the terminal. Run <code>pwd</code>. Read the path. Find that same location in File Explorer.</li>
+<li>Run <code>ls</code>. Identify three items by name.</li>
+<li>Run <code>cd</code> to move into one of them.</li>
+<li>Run <code>pwd</code> and <code>ls</code> again.</li>
+<li>Run <code>cd ..</code> to go back up.</li>
+</ol>
+<p>Repeat this cycle until it feels routine.</p>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You typed <code>cd Documents</code> and then <code>pwd</code>. What does <code>pwd</code> tell you, and how does it prove you moved?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You are in the terminal and have no idea where you are in the filesystem. What is the first command you run?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">`ls` to see what files are nearby</li>
+    <li data-correct="true">`pwd` to print your current location</li>
+    <li data-correct="false">`cd` to move to a known folder</li>
+    <li data-correct="false">Close and reopen the terminal to reset</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_1">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can print my current location with <code>pwd</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can list folder contents with <code>ls</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can move into and back out of folders with <code>cd</code> and <code>cd ..</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I have walked the same tree by clicking (The Machine) and by typing (this module)</li>
+</ul>
+<hr />
+<h2 id="acting-make-move-copy">Acting: Make, Move, Copy</h2>
+<p><strong>BLUF.</strong> Four commands cover most day-to-day file work — make a folder, make a file, copy, move — the same actions from The Machine module, now typed.</p>
+<h3 id="why-this-matters_2">Why This Matters</h3>
+<p>Navigation got you to the position; now you act on it. This is where the terminal goes from "I can look around" to "I can do things." These four commands are the ones an agent uses most when it works in your filesystem.</p>
+<h3 id="concepts_2">Concepts</h3>
+<p>Every action you take, you confirm. You do not assume the round landed — you check the target. The habit starts here.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Mac / WSL / Linux</label><label for="__tabbed_2_2">Windows (PowerShell)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mkdir foldername</code></td>
+<td>Make a new folder</td>
+</tr>
+<tr>
+<td><code>touch filename.txt</code></td>
+<td>Make a new empty file</td>
+</tr>
+<tr>
+<td><code>cp source destination</code></td>
+<td>Copy a file</td>
+</tr>
+<tr>
+<td><code>mv source destination</code></td>
+<td>Move or rename a file</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mkdir foldername</code></td>
+<td>Make a new folder</td>
+</tr>
+<tr>
+<td><code>New-Item filename.txt</code></td>
+<td>Make a new empty file</td>
+</tr>
+<tr>
+<td><code>cp source destination</code></td>
+<td>Copy a file</td>
+</tr>
+<tr>
+<td><code>mv source destination</code></td>
+<td>Move or rename a file</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Build Something From Scratch</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>project
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">cd</span><span class="w"> </span>project
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>touch<span class="w"> </span>notes.txt
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>ls<span class="w">                              </span><span class="c1"># Verify notes.txt is there</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>mkdir<span class="w"> </span>drafts
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>cp<span class="w"> </span>notes.txt<span class="w"> </span>drafts/notes-copy.txt
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>ls<span class="w"> </span>drafts<span class="w">                       </span><span class="c1"># Verify the copy landed</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>mv<span class="w"> </span>notes.txt<span class="w"> </span>notes-v1.txt
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>ls<span class="w">                              </span><span class="c1"># Verify the rename happened</span>
+</code></pre></div>
+<p>After each command, run <code>ls</code> to confirm the change happened. That is the verify-after-acting habit — build it now.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">No Deletion Yet</p>
+<p>Deletion is irreversible at the command line. There is no Recycle Bin. It comes later, behind heavy framing. For now: make, copy, and move only.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Typos Create New Files</p>
+<p>If you mistype a filename, the command does not error — it creates a second file with the wrong name. Run <code>ls</code> after every action and read the output.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — The Verify Habit</summary>
+<p>"Trust the action, not the narration" runs through all agentic work. Build it here. A student who verifies every terminal action will verify every agent action later.</p>
+</details>
+<h3 id="hands-on_2">Hands-On</h3>
+<ol>
+<li>Make a folder called <code>terminal-practice</code>.</li>
+<li>Navigate into it.</li>
+<li>Create a file called <code>day1.txt</code>.</li>
+<li>Copy it to <code>day1-backup.txt</code>.</li>
+<li>Rename <code>day1.txt</code> to <code>day1-v1.txt</code>.</li>
+<li>Run <code>ls</code> after each step to verify the change.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You ran <code>mv notes.txt notes-final.txt</code>. What does <code>ls</code> show you, and what would it look like if you had made a typo in the destination name?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You run `mv report.txt final-report.txt` and then `ls`. What are you checking for?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Whether the file's contents changed</li>
+    <li data-correct="false">Whether the command is still running</li>
+    <li data-correct="true">Whether `final-report.txt` exists and `report.txt` is gone — confirming the rename happened correctly</li>
+    <li data-correct="false">Whether the file is now read-only</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_2">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can create a folder and a file from the command line</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can copy and move/rename files</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I run <code>ls</code> after every action to verify it happened</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I have not attempted to delete anything yet</li>
+</ul>
+<hr />
+<h2 id="paths-tab-completion-and-the-up-arrow">Paths, Tab-Completion, and the Up-Arrow</h2>
+<p><strong>BLUF.</strong> A path is the full address of a file; tab-completion finishes names so you stop fat-fingering them; the up-arrow recalls your last command — three tools that separate fighting the terminal from flowing in it.</p>
+<h3 id="why-this-matters_3">Why This Matters</h3>
+<p>Typos in paths fail silently or hit the wrong target. Tab-completion is the single biggest accuracy and morale win in the terminal. The up-arrow turns one good command into a reusable tool. These are not tricks; they are standard operating procedure.</p>
+<h3 id="concepts_3">Concepts</h3>
+<p><strong>Absolute vs. relative paths.</strong></p>
+<p>An <strong>absolute path</strong> starts from the root of the filesystem: <code>C:\Users\YourName\Documents\report.txt</code> (Windows) or <code>/home/yourname/documents/report.txt</code> (Mac/Linux). It works from anywhere.</p>
+<p>A <strong>relative path</strong> starts from wherever you currently are: <code>Documents/report.txt</code> or <code>../otherfolder/file.txt</code>. It only works if you are in the right starting position.</p>
+<p>A path is a grid coordinate: precise, unambiguous, and unforgiving of a wrong character. A space or a capital letter in the wrong place either fails or hits the wrong target. The space is load-bearing.</p>
+<div class="admonition example">
+<p class="admonition-title">Absolute vs. Relative in Practice</p>
+<p>You are in <code>/home/yourname/</code>. Both of these reach the same file:</p>
+<ul>
+<li>Absolute: <code>/home/yourname/documents/report.txt</code></li>
+<li>Relative: <code>documents/report.txt</code></li>
+</ul>
+<p>Move to a different folder and the relative path breaks. The absolute path still works.</p>
+</div>
+<p><strong>Tab-completion.</strong> Start typing a folder or file name and press Tab. The terminal finishes it. If there is more than one match, press Tab twice to see the options. Use it on every path, every time.</p>
+<p><strong>The up-arrow.</strong> Press the up-arrow to cycle through previous commands. Edit a recalled command and re-run it instead of retyping from scratch.</p>
+<div class="admonition tip">
+<p class="admonition-title">The Most Important Habit in This Module</p>
+<p>Never finish typing a long path by hand if tab-completion can do it. Tab-completion makes typos structurally impossible for the completed portion.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Exactness as Frustration</summary>
+<p>A student annoyed that a capital letter breaks a path is learning the right thing. Name it: "Yes, the space matters. The capital letter matters. That is why tab-completion exists."</p>
+</details>
+<h3 id="hands-on_3">Hands-On</h3>
+<ol>
+<li>Navigate to a folder using the full absolute path — type it by hand once to feel the length.</li>
+<li>Navigate to the same folder using tab-completion. Press Tab after each segment.</li>
+<li>Run <code>ls</code> in a folder with several items. Start typing one item's name, press Tab, watch it complete.</li>
+<li>Run a command. Press the up-arrow. Edit one character and re-run it.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You are deep in a nested folder and need to copy a file to a location three levels up. Would you use an absolute or a relative path? Why?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">Why does tab-completion reduce errors in terminal commands?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">It suggests the most recently used command</li>
+    <li data-correct="false">It checks whether the path is valid before you submit</li>
+    <li data-correct="true">It completes names from what actually exists on disk, so the completed portion cannot contain a typo</li>
+    <li data-correct="false">It speeds up the terminal by caching common paths</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_3">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can write both an absolute and a relative path to the same file</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I use tab-completion on every path — it is now a habit, not an option</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can recall and edit previous commands with the up-arrow</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand why exactness (spaces, capitalization) matters in a path</li>
+</ul>
+<hr />
+<h2 id="commands-flags-and-knowing-when-to-stop">Commands, Flags, and Knowing When to Stop</h2>
+<p><strong>BLUF.</strong> Most commands take flags that change what they do; <code>--help</code> shows you all available flags without memorization; and <code>Ctrl+C</code> stops anything that will not quit.</p>
+<h3 id="why-this-matters_4">Why This Matters</h3>
+<p>You are about to encounter tools that require flags to run correctly. You will also encounter commands that hang. Both situations create confusion and abandonment if you do not know what to do. This module removes both as blockers.</p>
+<h3 id="concepts_4">Concepts</h3>
+<p><strong>Flags</strong> are options you add to a command to change its behavior. They usually start with <code>-</code> (short form) or <code>--</code> (long form).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ls<span class="w">          </span><span class="c1"># List files, default view</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ls<span class="w"> </span>-l<span class="w">       </span><span class="c1"># List files, detailed view</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>ls<span class="w"> </span>-la<span class="w">      </span><span class="c1"># List files, detailed view, including hidden files</span>
+</code></pre></div>
+<p>Same command. Different flags. Different output.</p>
+<p><strong>Finding flags.</strong> You do not memorize flags. You look them up.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ls<span class="w"> </span>--help<span class="w">     </span><span class="c1"># Shows all flags and what they do</span>
+</code></pre></div>
+<p>Read the <code>--help</code> output top to bottom. It looks overwhelming the first time. Find the flag you need; ignore the rest.</p>
+<p><strong>The prompt is the signal.</strong> When a command finishes, the prompt returns. If the cursor blinks with no prompt and nothing is happening, the command is still running.</p>
+<p><strong>Ctrl+C</strong> stops a running command and returns the prompt. It does not delete anything; it stops execution and hands control back to you.</p>
+<div class="admonition example">
+<p class="admonition-title">Stopping a Running Command</p>
+<p>Run <code>ping google.com</code> (or <code>ping -t google.com</code> on Windows). Watch it run indefinitely. Press <code>Ctrl+C</code>. The command stops and the prompt returns.</p>
+<p>You just demonstrated that you can stop anything you start.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Do Not Memorize Flags</p>
+<p>The concept of a flag and how to look one up is the lesson. The skill is knowing flags exist and knowing how to find the one you need.</p>
+</div>
+<h3 id="hands-on_4">Hands-On</h3>
+<ol>
+<li>Run <code>ls --help</code> (Mac/Linux) or <code>Get-Help ls</code> (PowerShell). Read the first ten lines without panic.</li>
+<li>Find the flag that shows hidden files. Run <code>ls</code> with that flag.</li>
+<li>Run <code>ping google.com</code> (<code>ping -t google.com</code> on Windows). Let it run for five seconds.</li>
+<li>Press <code>Ctrl+C</code>. Confirm the prompt returned.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You run a command and nothing happens for thirty seconds — the cursor just blinks. What are the two possibilities, and how do you handle each one?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You need to run `ls` but want to see hidden files. You do not know the flag. What do you do?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Google "ls hidden files" and copy the answer</li>
+    <li data-correct="false">Try adding flags at random until one works</li>
+    <li data-correct="true">Run `ls --help` and find the flag in the output</li>
+    <li data-correct="false">Ask the AI chatbot — the terminal cannot tell you its own flags</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_4">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can add a flag to a command and observe the difference in output</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can use <code>--help</code> to find a flag I do not know</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know the prompt returning means a command finished</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can stop a running command with <code>Ctrl+C</code> without fear</li>
+</ul>
+<hr />
+<h2 id="why-version-control-exists">Why Version Control Exists</h2>
+<p><strong>BLUF.</strong> When an agent can change your files, you want a logbook of every change — what changed, when, and why, with the ability to go back — and that logbook is version control.</p>
+<h3 id="why-this-matters_5">Why This Matters</h3>
+<p>You just learned to create, move, and rename files from the command line. An agent will do those same operations — at speed, on multiple files, sometimes without asking. Version control is what lets you see every change and undo any of them.</p>
+<h3 id="concepts_5">Concepts</h3>
+<p>Every time a file changes, version control records a snapshot: what changed, when, and a note about why. Stored locally on your machine. Every snapshot can be rewound.</p>
+<p><strong>Two layers:</strong></p>
+<ul>
+<li><strong>Local logbook.</strong> Your machine keeps the record. You can always rewind to any previous snapshot without needing the internet.</li>
+<li><strong>Remote copy.</strong> The same history synchronized to a cloud server. Backup — and the mechanism for teammates working on the same files.</li>
+</ul>
+<p>No commands today. You are loading the reason. The commands come when you work with git directly.</p>
+<div class="admonition note">
+<p class="admonition-title">Why Software People Seem to Remember Everything</p>
+<p>They do not. They have the log. "Who changed this and when?" is a two-second lookup. "What did this file look like last Tuesday?" is one command.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Resist Teaching Git Commands Here</summary>
+<p>The concept is the prerequisite; hands-on git work teaches the commands. If a student asks "how do I actually do this," tell them: "You will do it in the next session. Today you need to know why."</p>
+</details>
+<h3 id="hands-on_5">Hands-On</h3>
+<p>No commands today. Do this instead:</p>
+<ol>
+<li>Think about a file you have edited multiple times over the past month.</li>
+<li>Ask yourself: "If I needed to see what it looked like three weeks ago, could I?"</li>
+<li>Ask yourself: "If something went wrong, what would I lose?"</li>
+</ol>
+<p>That gap — between what you want to recover and what you can currently recover — is what version control fills.</p>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>An agent just ran a batch edit on 40 files. You look at one and it is not right. Without version control, what are your options? With version control, what changes?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">Why does version control matter specifically once an agent can edit your files?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Agents edit files faster than humans, so you need a backup</li>
+    <li data-correct="false">Version control prevents the agent from making mistakes</li>
+    <li data-correct="true">The agent can make many changes quickly — version control gives you a complete record and the ability to rewind any of them</li>
+    <li data-correct="false">Agents require version control to function</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_5">Readiness Check</h3>
+<p>Before moving to Agentic AI, confirm:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain version control as a logbook of file changes I can rewind</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand why it matters once an agent has write access</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can distinguish the local logbook from the remote copy</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I am not yet expected to know any git commands</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

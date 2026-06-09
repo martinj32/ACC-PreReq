@@ -1,0 +1,3141 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../mental-models/workbook/">
+      
+      
+        <link rel="next" href="../module-summary/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Course Design (M1-M8) - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-and-agentics-basics-course-design" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Course Design (M1-M8)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedules
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bedrock/ai-literacy/" class="md-tabs__link">
+          
+  
+  
+  Bedrock
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../terminal-basics/the-machine/" class="md-tabs__link">
+          
+  
+  
+  Terminal Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../agentic-ai/agent-concepts/" class="md-tabs__link">
+          
+  
+  
+  Agentic AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mental-models/core-content/" class="md-tabs__link">
+          
+  
+  
+  Mental Models
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Technical Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../instructor/teaching-guide/" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedrock
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bedrock
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bedrock/ai-literacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Literacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bedrock/personalizing-your-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personalizing Your AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terminal Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal-basics/the-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal-basics/the-terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentic AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agentic-ai/agent-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mental Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/core-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/workbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technical Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Design (M1-M8)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Design (M1-M8)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#technical-foundations-curriculum" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Technical Foundations Curriculum
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-structure-8-modules-over-2-3-days" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Structure: 8 Modules Over 2-3 Days
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Course Structure: 8 Modules Over 2-3 Days">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#day-1-foundations-of-interaction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAY 1: Foundations of Interaction
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DAY 1: Foundations of Interaction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-1-hello-claude-llms-and-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 1: "Hello, Claude" — LLMs and Prompts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-hygiene-and-opsec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Hygiene and OPSEC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llm-failure-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LLM Failure Modes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#model-landscape-knowing-your-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Landscape: Knowing Your Tools
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-2-the-terminal-is-friendly-command-line-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 2: The Terminal is Friendly — Command Line Basics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-1-continued-day-2-version-control-and-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAY 1 (Continued) / DAY 2: Version Control and Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DAY 1 (Continued) / DAY 2: Version Control and Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-3-git-basics-version-control-for-humans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 3: Git Basics — Version Control for Humans
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-4-markdown-documenting-like-a-pro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 4: Markdown — Documenting Like a Pro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-2-programming-foundations-and-tool-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAY 2: Programming Foundations and Tool Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DAY 2: Programming Foundations and Tool Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-5-programming-concepts-thinking-like-a-developer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 5: Programming Concepts — Thinking Like a Developer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-6-developer-tools-installation-and-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 6: Developer Tools — Installation and Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-7-context-and-configuration-claudemd-and-memd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 7: Context and Configuration — CLAUDE.md and me.md
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-2-continued-day-3-integration-and-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAY 2 (Continued) / DAY 3: Integration and Readiness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DAY 2 (Continued) / DAY 3: Integration and Readiness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-8-putting-it-all-together-your-first-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 8: Putting It All Together — Your First Project
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-learning-progression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Learning Progression
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daily-schedule-outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Schedule Outline
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Daily Schedule Outline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#day-1-foundations-8-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 1: Foundations (8 hours)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-2-intermediate-8-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 2: Intermediate (8 hours)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-3-optional-if-including-capstone-capstone-6-8-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 3 (Optional, if including capstone): Capstone (6-8 hours)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materials and Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Materials and Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-for-students" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required for Students:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provided-by-instructor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Provided by Instructor:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recommended-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Reading:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grading-and-progression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grading and Progression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grading and Progression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#completion-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Completion Requirements:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructor-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructor Notes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructor Notes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pacing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pacing:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-sticking-points" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Sticking Points:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#troubleshooting-mindset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Mindset:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#differentiation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Differentiation:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-completion-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Completion Outcomes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-sample-rubric-for-capstone-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Sample Rubric for Capstone Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#appendix-glossary-of-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appendix: Glossary of Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/teaching-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/mental-models-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/prereq-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/day0-scaffold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 0 Teaching Scaffold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ai-and-agentics-basics-course-design">AI and Agentics Basics — Course Design</h1>
+<h2 id="technical-foundations-curriculum">Technical Foundations Curriculum</h2>
+<p><strong>BLUF.</strong> Eight modules take students from zero to agentic-ready. Every module is hands-on first; concepts follow practice.</p>
+<p><strong>Target Audience:</strong> Students with NO background knowledge in LLMs, command-line development, version control, or coding concepts.</p>
+<p><strong>Duration:</strong> 2-3 days<br />
+<strong>Total Modules:</strong> 8<br />
+<strong>Format:</strong> Hands-on, project-based learning with immediate application</p>
+<hr />
+<h2 id="course-overview">Course Overview</h2>
+<p>This course bridges students from zero knowledge to a solid foundational competency in AI-assisted development. Upon completion, students will:</p>
+<ol>
+<li>Understand what LLMs are, how they work, and how to interact with them</li>
+<li>Navigate and manipulate file systems confidently from the command line</li>
+<li>Understand and use Git for basic version control workflows</li>
+<li>Write clear, structured Markdown for documentation and prompts</li>
+<li>Understand fundamental programming concepts (variables, functions, logic flow)</li>
+<li>Set up and authenticate development tools</li>
+<li>Troubleshoot basic technical problems independently</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Course Philosophy</p>
+<p>Learn by doing. Every concept is introduced through a real problem students solve themselves, not a lecture they watch. Hands-on exercises always come before abstract concepts.</p>
+</div>
+<hr />
+<h2 id="course-structure-8-modules-over-2-3-days">Course Structure: 8 Modules Over 2-3 Days</h2>
+<h3 id="day-1-foundations-of-interaction"><strong>DAY 1: Foundations of Interaction</strong></h3>
+<h4 id="module-1-hello-claude-llms-and-prompts"><strong>Module 1: "Hello, Claude" — LLMs and Prompts</strong></h4>
+<p><em>Duration: 90 minutes</em></p>
+<p><strong>Learning Objectives:</strong>
+- Understand what an LLM is and how it generates text
+- Distinguish between prompts and system prompts
+- Write clear, specific prompts that get useful responses
+- Recognize and avoid common prompt-writing mistakes</p>
+<p><strong>Key Concepts:</strong>
+- What is a large language model? (Visual: scaling laws, training data)
+- The difference between a prompt (user input) and system prompt (instructions)
+- Tokens and context windows (practical, not theoretical)
+- Temperature, top-p, and why they matter to you
+- The problem with vague prompts, the power of specificity
+- Prompt patterns: step-by-step, role-playing, explicit output format
+- RGCOA prompt structure: Role, Goal, Context, Output, Asks. Components:
+  - <strong>Role</strong> -- the expert perspective the model should apply
+  - <strong>Goal</strong> -- the specific task, single and concrete
+  - <strong>Context</strong> -- background required to do the task well
+  - <strong>Output</strong> -- format, length, structure, and tone
+  - <strong>Asks</strong> -- tell the model what to do when it lacks information, what to flag, and what not to assume. Example: "If you need information I haven't provided, ask me before proceeding. Do not invent facts. If you find a contradiction between the source material and a previous instruction, flag it rather than picking one." The Asks element is where you give the model permission to surface uncertainty instead of papering over it with a plausible-sounding guess.</p>
+<p><strong>Hands-On Exercises:</strong></p>
+<ol>
+<li><strong>Ice-Breaker Prompt</strong> (15 min)</li>
+<li>Open Claude AI (web version)</li>
+<li>Prompt 1: "What is the weather?"</li>
+<li>Prompt 2: "I live in Quantico, VA. What outdoor activities are good this time of year?"</li>
+<li>Observe: How does specificity change the answer?</li>
+<li>
+<p>Outcome: One paragraph reflection on what changed</p>
+</li>
+<li>
+<p><strong>System Prompt Experiment</strong> (20 min)</p>
+</li>
+<li>Task: Interview Claude AS a Marine Corps drill sergeant, then AS a kindergarten teacher</li>
+<li>Method: Use the same interview question; change the system prompt by starting with "You are a..."</li>
+<li>Observe: How does the system prompt change tone, vocabulary, detail level?</li>
+<li>Outcome: Screenshot both responses with notes on 3 differences</li>
+</ol>
+<p>Note: Typing "You are a [role]" in the user turn is persona injection -- you are instructing the model mid-conversation, and that instruction is visible in the chat history. A true system prompt is loaded by the platform before the conversation begins and is invisible to the user during the conversation. The exercise demonstrates the behavioral effect of persona instructions; the distinction between user-turn persona and platform system prompt matters when you begin configuring harness files in this course.</p>
+<ol>
+<li><strong>Clarity Matters</strong> (20 min)</li>
+<li>Vague prompt: "Write about networking."</li>
+<li>Better prompt: "Write a 200-word guide on how to build professional relationships for a newly promoted junior officer."</li>
+<li>Task: Re-write three vague prompts from a provided list to be specific and actionable</li>
+<li>
+<p>Outcome: Before/after comparison with an explanation of what improved</p>
+</li>
+<li>
+<p><strong>The Context Window Boundary</strong> (25 min)</p>
+</li>
+<li>Practical exercise: Paste a 10,000-word document, then ask Claude questions about it</li>
+<li>Vary the context window (short doc vs long doc)</li>
+<li>Observe: At what point does Claude miss details or struggle?</li>
+<li>
+<p>Outcome: Short log: "When context got [X] chars, Claude stopped [Y]"</p>
+</li>
+<li>
+<p><strong>Iterative Prompting</strong> (10 min)</p>
+</li>
+<li>Start with a vague prompt, get a mediocre response</li>
+<li>Iterate 3 times, refining based on feedback</li>
+<li>Track the improvement</li>
+<li>Outcome: Conversation log with annotations on what changed each round</li>
+</ol>
+<p><strong>Assessment:</strong>
+- Submission: A markdown document with 5 well-written prompts (one for each learning objective)
+- Rubric: Clarity, specificity, realistic expectations, evidence of iteration</p>
+<p><strong>Readiness Check:</strong>
+- [ ] You can write a clear, specific prompt using the RGCOA structure
+- [ ] You know the difference between a prompt and a system prompt
+- [ ] You can identify at least one LLM failure mode and explain how to verify for it
+- [ ] You understand what a context window is and when it becomes a constraint</p>
+<p><strong>Estimated Hands-On Time:</strong> 85 minutes | <strong>Lecture/Discussion:</strong> 5 minutes</p>
+<hr />
+<h4 id="data-hygiene-and-opsec"><strong>Data Hygiene and OPSEC</strong></h4>
+<p>BLUF: the model is not the classification authority. You are. If you paste sensitive information into a consumer AI tool, you have made a disclosure decision. Know what you are doing before you type.</p>
+<div class="admonition danger">
+<p class="admonition-title">What Never Goes Into Any AI Tool</p>
+<ul>
+<li>Classified material at any level</li>
+<li>CUI (Controlled Unclassified Information -- defined below)</li>
+<li>PII: real names combined with any other identifier -- SSN, date of birth, home address, phone number, personal email, or any combination that could identify a person</li>
+<li>Personnel records: evaluations, medical, legal, disciplinary</li>
+<li>Operational planning detail: timelines, routes, objectives, force compositions</li>
+<li>Credentials and API keys: passwords, tokens, certificates -- never under any circumstances</li>
+</ul>
+</div>
+<p><strong>CUI defined:</strong></p>
+<p>Controlled Unclassified Information is information requiring safeguarding per law, regulation, or government-wide policy, but not classified under an Executive Order. The legacy FOUO (For Official Use Only) marking is being replaced by CUI designations across the federal government. If a document is marked FOUO, it is CUI. Other common CUI categories students will encounter: Law Enforcement Sensitive (LES), personnel records, and unclassified intelligence information that reveals sources or methods.</p>
+<div class="admonition warning">
+<p class="admonition-title">Working Rule</p>
+<p>If the document carries ANY marking, or if it describes real people, real units, real operations, or real capabilities, it does not get pasted into a consumer AI tool. The marking is not required for the rule to apply -- the content triggers it.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Where Your Prompts Go</p>
+<p>Consumer AI applications (Claude.ai, ChatGPT.com, and similar) transmit your input to a provider-operated backend. Depending on the service tier and opt-out settings, that input may be reviewed by humans or used in future model training. "This tool is impressive" is not the same as "this tool is authorized for work use." Authorization is a property of the contract your organization has signed and the system's ATO (Authority to Operate) -- not the capability of the tool or how widely your colleagues use it. Without an approved system designation and an ATO, a consumer application is not authorized for CUI input, regardless of how the tool is marketed.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Local Session Logs</p>
+<p>Claude Code writes conversation history to disk in the <code>.claude/</code> folder of your project. That log file is subject to the same handling requirements as its content. A log containing CUI requires the same protection as CUI. Scrub discipline applies to what you type, not just what you paste.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Scrub Checklist -- Remove All of These Before Pasting</p>
+<ul>
+<li>Real names (of any person)</li>
+<li>Real unit designations</li>
+<li>Real locations: base names, grid coordinates, facility names</li>
+<li>Dates tied to real operations or events</li>
+<li>Any document markings (CUI, FOUO, LES, classification)</li>
+<li>Phone numbers, personal email addresses, account identifiers</li>
+<li>Credentials, API keys, and passwords -- never under any circumstances</li>
+<li>System names and network names</li>
+<li>IP addresses belonging to real infrastructure</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Bracketed Placeholder Technique</p>
+<p>Replace removed specifics with bracketed labels that describe the type of information. The model does not need the real identifier to help you. Examples: [NCO], [LOCATION], [UNIT], [DATE], [SYSTEM]. The model reasons about structure and process, not identity. Your scrubbed prompt is fully functional for the task.</p>
+</div>
+<p><strong>Hands-On: Scrub Drill</strong></p>
+<p>The instructor provides a realistic-but-fabricated one-page document containing: a soldier's name and rank, a unit designation, a base name, a grid coordinate, a date, and a document marking. The document is fake but representative of what students handle daily.</p>
+<p>Task: Produce a paste-safe version of the document using bracketed placeholders. Preserve the structure and substance. Remove everything on the scrub checklist.</p>
+<p>Debrief: Each student explains what they removed and why. Instructor highlights any missed items. Class discusses: what information is retained after scrubbing, and whether the model can still accomplish the task with scrubbed input.</p>
+<p>Outcome: A scrubbed version of the document plus a written list of what was removed and the category each item falls into.</p>
+<hr />
+<h4 id="llm-failure-modes"><strong>LLM Failure Modes</strong></h4>
+<p>BLUF: the model generates plausible text, not verified fact. These are the failure modes you will encounter. Know them before you rely on the output.</p>
+<div class="admonition warning">
+<p class="admonition-title">Hallucination</p>
+<p>The model has no truth-checking mechanism. It generates tokens that are statistically likely to follow the prior text, regardless of whether they correspond to fact. The model cannot distinguish "information I trained on accurately" from "a completion that sounds plausible." Confident output and correct output are entirely unrelated. A model can produce a detailed, well-cited, grammatically perfect answer that is entirely fabricated. The confidence of the response is not evidence of its accuracy.</p>
+</div>
+<p><strong>Knowledge cutoff -- three behaviors:</strong></p>
+<p>The model has a training data cutoff: a point after which it has no direct knowledge. Students need to understand three distinct behaviors, not just "the model might be out of date":</p>
+<ul>
+<li>(a) The model flags uncertainty and tells you it may not have current information. This is the honest behavior. Do not mistake it for inability.</li>
+<li>(b) The model answers confidently using stale training data with no indication that the information may be wrong. This is the dangerous behavior. The model is not lying -- it does not know that time has passed. It answers with the same confidence it would apply to well-established facts.</li>
+<li>(c) The model has a retrieval or search tool and pulls current information from external sources. In this case, check whether the tool was actually invoked and verify the source.</li>
+</ul>
+<p>Students must verify time-sensitive content regardless of which behavior they observe. The only safe assumption is that anything that could have changed since training may have changed.</p>
+<div class="admonition tip">
+<p class="admonition-title">Nondeterminism</p>
+<p>The model uses a temperature parameter that introduces randomness into each generation. The same prompt submitted twice will produce different output. For low-stakes tasks this is irrelevant. For high-stakes output -- analysis that will inform a decision, a document that will be forwarded -- run the prompt multiple times and compare results. Consistent answers across runs increase confidence. Divergent answers are a signal to verify before use.</p>
+</div>
+<p><strong>Hands-On: Hallucination in the Wild</strong></p>
+<p>Task: Ask the model to produce five peer-reviewed academic papers on a narrow, specific topic. Request full citations: author, title, journal, year, volume, and page numbers. The model will produce plausible-sounding citations. Select one and attempt to verify it using an actual academic database (Google Scholar, PubMed, or similar).</p>
+<p>The fabricated citation will typically be unverifiable. The exercise produces a hallucination reliably and makes the failure mode concrete before students depend on model output in a consequential context.</p>
+<p>Debrief: What made the citation look legitimate? What would you have done if you had not verified it? Where else in your workflow might you accept plausible-sounding output without checking?</p>
+<p>Outcome: A written record of the citation the model produced, the verification attempt, and a one-paragraph reflection on where hallucination risk is highest in your own work.</p>
+<hr />
+<h4 id="model-landscape-knowing-your-tools"><strong>Model Landscape: Knowing Your Tools</strong></h4>
+<p>BLUF: there is no single "the AI." There are model families, each with a tiered structure. Match the capability level to the task.</p>
+<p><strong>Three major families:</strong></p>
+<ul>
+<li>Claude (Anthropic)</li>
+<li>GPT (OpenAI)</li>
+<li>Gemini (Google)</li>
+</ul>
+<p>Each family has a different architecture, training process, and policy. Output quality, behavior, and capability vary. The course focuses on Claude. Students working in other environments will encounter GPT and Gemini and should apply the same analytical framework to both.</p>
+<p><strong>Tier structure:</strong></p>
+<p>Every major provider organizes its models into tiers: a fast, low-cost tier; one or more mid-range options; and a high-capability, higher-cost tier. The pattern is consistent across providers.</p>
+<p>Claude's current tiers:</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Model</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fast / cheap</td>
+<td>Haiku</td>
+<td>High-volume, low-complexity tasks</td>
+</tr>
+<tr>
+<td>Balanced</td>
+<td>Sonnet</td>
+<td>Standard working model</td>
+</tr>
+<tr>
+<td>Powerful / expensive</td>
+<td>Opus</td>
+<td>Complex reasoning, high-stakes analysis</td>
+</tr>
+</tbody>
+</table>
+<p><strong>When to use which tier:</strong></p>
+<ul>
+<li>Simple tasks (summarize, reformat, rewrite, translate): fast tier. Cost-effective, sufficient.</li>
+<li>Complex analysis, multi-step reasoning, planning, synthesis: capable tier. Pay for the ceiling you need.</li>
+<li>Running in a loop or processing many items at once: always fast tier. Cost compounds.</li>
+<li>Default for this course: Sonnet. It is the standard for all exercises unless otherwise specified.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Match the Model to the Task</p>
+<p>Using Opus for bulk reformatting is waste. Using Haiku for a nuanced analytical task is risk.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Model Names Change</p>
+<p>The specific model names above are current as of course development but will be superseded. Before each course run, verify current model names at docs.anthropic.com. Teach students the axis (fast/balanced/powerful), not a frozen roster of names. The axis persists; the names rotate.</p>
+</div>
+<hr />
+<h4 id="module-2-the-terminal-is-friendly-command-line-basics"><strong>Module 2: The Terminal is Friendly — Command Line Basics</strong></h4>
+<p><em>Duration: 120 minutes</em></p>
+<div class="admonition warning">
+<p class="admonition-title">Windows Students: Use WSL</p>
+<p>On Windows, use WSL (Windows Subsystem for Linux), not native PowerShell. PowerShell is a different environment with different commands. The command <code>touch</code> does not exist in PowerShell -- the equivalent is <code>New-Item filename</code>. Throughout this course, all terminal exercises assume a Linux/Unix environment. WSL provides that environment on Windows.</p>
+</div>
+<p>Install WSL: open PowerShell and run <code>wsl --install</code>. On Windows 11, no administrator privileges are required. The first launch will prompt you to create a Linux username and password -- use something you will remember, it is separate from your Windows login. After setup, open the WSL terminal for all course exercises.</p>
+<p>Your Windows files are accessible inside WSL at <code>/mnt/c/Users/YourName/</code>. To navigate to your Windows Documents folder from inside WSL: <code>cd /mnt/c/Users/YourName/Documents</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Path Conversion Rule (Windows → WSL)</p>
+<p><code>C:\Users\Jake\Documents</code> becomes <code>/mnt/c/Users/Jake/Documents</code>. Backslashes become forward slashes. The drive letter (C) becomes lowercase after <code>/mnt/</code>. This trips up every Windows beginner -- practice it explicitly in the path exercises.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">VS Code + WSL Integration</p>
+<p>Install the "WSL" extension in VS Code. From a WSL terminal, type <code>code .</code> to open the current folder in VS Code with full WSL integration. All terminal operations in VS Code's integrated terminal will then run in the WSL environment.</p>
+</div>
+<p><strong>Learning Objectives:</strong>
+- Navigate directories and list files confidently from the terminal
+- Create, edit, and delete files and folders
+- Understand PATH, home directory, and relative vs absolute paths
+- Use basic command flags and understand help systems
+- Run commands in sequence and understand exit codes</p>
+<p><strong>Key Concepts:</strong>
+- The file system: folders, files, hierarchy
+- Current working directory and the <code>pwd</code> command
+- Listing files with <code>ls</code> and its flags
+- Moving and copying files
+- Creating and deleting files/folders
+- The concept of a "path" — relative and absolute
+- Understanding man pages and help flags (<code>--help</code>)
+- Piping (|) and redirection (&gt;, &gt;&gt;, &lt;) basics
+- Stopping a running command: press Ctrl+C</p>
+<div class="admonition tip">
+<p class="admonition-title">Ctrl+C: The Most Important Shortcut</p>
+<p>Ctrl+C sends an interrupt signal and stops the current process. Use it whenever a command hangs, runs too long, or you need to abort. Name it explicitly and drill it -- students need this reflex before anything else in the terminal.</p>
+</div>
+<ul>
+<li>Environment variables and PATH</li>
+<li>Hidden files and dotfiles</li>
+</ul>
+<p><strong>Hands-On Exercises:</strong></p>
+<ol>
+<li><strong>Orientation Walk</strong> (15 min)</li>
+<li>Task: Start in the home directory, navigate to 5 different locations</li>
+<li>Use <code>pwd</code> after each move to confirm location</li>
+<li><code>ls</code> to see what's in each folder</li>
+<li>Create a simple text file in one of them</li>
+<li>
+<p>Outcome: Screenshot showing successful navigation and file creation</p>
+</li>
+<li>
+<p><strong>File Manipulation Sprint</strong> (25 min)</p>
+</li>
+<li>Create a folder structure: <code>projects/acc-prep/module-2/</code></li>
+<li>Inside: create 3 text files (use <code>touch</code> and <code>echo</code>)</li>
+<li>Copy one file to another location</li>
+<li>Rename a file</li>
+<li>Delete a file</li>
+<li>List the final structure</li>
+<li>
+<p>Outcome: Terminal transcript showing all steps</p>
+</li>
+<li>
+<p><strong>Path Puzzle</strong> (20 min)</p>
+</li>
+<li>Given a file at <code>/home/user/projects/claude/config.txt</code>, practice writing:<ul>
+<li>The absolute path to that file</li>
+<li>The relative path from <code>/home/user/</code> to that file</li>
+<li>The relative path from <code>/home/user/projects/</code> to that file</li>
+</ul>
+</li>
+<li>Navigate using those paths to verify they work</li>
+<li>
+<p>Outcome: Markdown document with path examples and proof they work</p>
+</li>
+<li>
+<p><strong>The Help System</strong> (15 min)</p>
+</li>
+<li>Task: Use <code>man ls</code>, <code>ls --help</code>, <code>help cd</code> to answer questions</li>
+<li>Questions like: "What does the -l flag do?" "What about -a?" "How do you list by file size?"</li>
+<li>
+<p>Outcome: A help reference card for <code>ls</code>, <code>cd</code>, <code>mkdir</code>, <code>rm</code>, <code>cp</code>, <code>mv</code></p>
+</li>
+<li>
+<p><strong>Piping and Redirection</strong> (25 min)</p>
+</li>
+<li>Create a text file with 10 lines (use <code>echo</code> in a loop or paste content)</li>
+<li>List files and save the output to a file</li>
+<li>Count the number of files in a directory using piping</li>
+<li>Append text to a file</li>
+<li>
+<p>Outcome: Bash script transcript showing 3 piping examples and 2 redirection examples</p>
+</li>
+<li>
+<p><strong>Real-World Scenario</strong> (20 min)</p>
+</li>
+<li>Scenario: "You have a folder with 50 files from last year. You need to find all <code>.txt</code> files, sort them by date, and move them to an archive folder."</li>
+<li>Task: Create the scenario (fake files), then solve it using basic commands</li>
+<li>Outcome: Annotated terminal transcript with explanation of each step</li>
+</ol>
+<p><strong>Assessment:</strong>
+- Hands-on quiz: 10 terminal tasks (navigate, create, copy, delete, find, pipe)
+- Rubric: Completion, efficiency, understanding (not speed)
+- Allowable: Tab completion, <code>--help</code> flags, man pages</p>
+<p><strong>Readiness Check:</strong>
+- [ ] You can navigate to any directory using absolute and relative paths
+- [ ] You can create, copy, move, and delete files and folders from the terminal
+- [ ] You know how to stop a running command (Ctrl+C)
+- [ ] You can pipe and redirect command output
+- [ ] You can explain what PATH is and why it matters</p>
+<p><strong>Estimated Hands-On Time:</strong> 110 minutes | <strong>Lecture/Discussion:</strong> 10 minutes</p>
+<hr />
+<h3 id="day-1-continued-day-2-version-control-and-setup"><strong>DAY 1 (Continued) / DAY 2: Version Control and Setup</strong></h3>
+<h4 id="module-3-git-basics-version-control-for-humans"><strong>Module 3: Git Basics — Version Control for Humans</strong></h4>
+<p><em>Duration: 120 minutes</em></p>
+<p><strong>Learning Objectives:</strong>
+- Initialize a local Git repository
+- Stage changes, commit with clear messages, and view history
+- Understand branches and why they matter
+- Clone a repository, fetch, and push changes
+- Recognize and resolve merge conflicts (basics)
+- Write meaningful commit messages</p>
+<p><strong>Key Concepts:</strong>
+- What is version control and why it matters
+- Local vs remote repositories
+- The three Git states: working directory, staging area, committed
+- Branches: what they are and why they exist
+- Commits: immutable records of change
+- The difference between <code>git add</code> and <code>git commit</code>
+- Remote repositories (GitHub, origin)
+- Merge conflicts: cause and resolution
+- Commit messages as documentation
+- <code>.gitignore</code> and what shouldn't be committed</p>
+<p><strong>Hands-On Exercises:</strong></p>
+<ol>
+<li><strong>Your First Repository</strong> (20 min)</li>
+<li>Create a new folder, init a Git repo</li>
+<li>Create a simple file (e.g., README.md)</li>
+<li>Stage it, commit it, view the log</li>
+<li>Make changes, stage them, commit again</li>
+<li>View the diff between commits</li>
+<li>
+<p>Outcome: Terminal showing init → commit → log, with annotations</p>
+</li>
+<li>
+<p><strong>Branching Sprint</strong> (20 min)</p>
+</li>
+<li>On main, create a file</li>
+<li>Create a new branch called <code>feature/add-content</code></li>
+<li>Make changes on that branch, commit</li>
+<li>Switch back to main, verify the file is unchanged</li>
+<li>Merge the feature branch into main</li>
+<li>Delete the feature branch</li>
+<li>
+<p>Outcome: Terminal transcript showing branch creation, switching, merging, deletion</p>
+</li>
+<li>
+<p><strong>Cloning and Pushing</strong> (20 min)</p>
+</li>
+<li>Clone a small public repository (e.g., <code>github.com/octocat/Hello-World</code>)</li>
+<li>Make a change locally (edit a file, add a comment)</li>
+<li>Attempt to push (will fail if not your repo — expected)</li>
+<li>Create your own GitHub repo, clone it, make changes, push successfully</li>
+<li>
+<p>Outcome: Proof of successful clone and push (screenshot of GitHub showing your commit)</p>
+</li>
+<li>
+<p><strong>Merge Conflicts (Simple)</strong> (25 min)</p>
+</li>
+<li>Create a repo with a file</li>
+<li>Create two branches from main, each modifying the same line</li>
+<li>Merge one branch — succeeds</li>
+<li>Merge the other — conflict!</li>
+<li>Resolve the conflict manually</li>
+<li>Complete the merge</li>
+<li>
+<p>Outcome: Terminal showing conflict resolution with annotations</p>
+</li>
+<li>
+<p><strong>Meaningful Commit Messages</strong> (15 min)</p>
+</li>
+<li>Bad message examples: "fix stuff", "update", "work"</li>
+<li>Good message examples: "Add authentication logic to login form", "Fix off-by-one error in pagination"</li>
+<li>Task: Write 5 commit messages for provided scenarios</li>
+<li>Verify they follow the convention: present tense, action-focused, informative</li>
+<li>
+<p>Outcome: Markdown document with 5 well-written commit messages and explanations</p>
+</li>
+<li>
+<p><strong>The <code>.gitignore</code> File</strong> (25 min)</p>
+</li>
+<li>Create a repo with files that should NOT be committed (<code>.env</code>, <code>node_modules/</code>, <code>*.log</code>)
+   !!! danger "Create .gitignore Before Your First Commit"
+       If a credential file is committed first, adding it to <code>.gitignore</code> later does NOT remove it from history. The file remains recoverable. Create <code>.gitignore</code> before the first commit -- it is the OPSEC enforcement layer for git.</li>
+<li>Minimum entries for any project: <code>.env</code>, any credential files, <code>.DS_Store</code>, <code>__pycache__/</code>, <code>.venv/</code></li>
+<li>Verify that the ignored files don't show up in <code>git status</code></li>
+<li>Create a proper <code>.gitignore</code> for a Python project</li>
+<li>
+<p>Outcome: <code>.gitignore</code> file with explanatory comments</p>
+</li>
+<li>
+<p><strong>Pull Requests</strong> (20 min)</p>
+</li>
+<li>A pull request (PR) is a proposal on GitHub to merge one branch into another, with a review step before the merge occurs. The PR displays a diff showing exactly what changed, line by line. This is the quality gate for agentic work: when an agent produces changes on a branch, the PR is how you review what it did before it touches main.</li>
+<li>Task: Create a branch, make changes, push the branch to GitHub, and open a PR using the GitHub CLI.</li>
+<li>Command: <code>gh pr create --title "Add content" --body "Description of what changed and why"</code></li>
+<li>Review the PR diff in the GitHub web interface. Confirm that only the intended changes appear.</li>
+<li>Merge the PR from the GitHub interface.</li>
+<li>Outcome: A merged PR visible in the repository's pull request history, with a screenshot of the diff view.</li>
+</ol>
+<p><strong>Assessment:</strong>
+- Hands-on project: Create a repo, make 3 commits, create and merge a branch, open and merge a PR
+- Rubric: Correct Git workflow, meaningful messages, successful merge, working .gitignore
+- Bonus: Resolve a merge conflict without help</p>
+<p><strong>Readiness Check:</strong>
+- [ ] You can initialize a repo, stage files, and commit with a meaningful message
+- [ ] You can create a branch, make changes, and merge it back to main
+- [ ] You can clone a repo and push changes to GitHub
+- [ ] Your <code>.gitignore</code> exists before any commits and excludes <code>.env</code> and credential files
+- [ ] You can open a PR and read the diff before merging</p>
+<p><strong>Estimated Hands-On Time:</strong> 110 minutes | <strong>Lecture/Discussion:</strong> 10 minutes</p>
+<hr />
+<h4 id="module-4-markdown-documenting-like-a-pro"><strong>Module 4: Markdown — Documenting Like a Pro</strong></h4>
+<p><em>Duration: 90 minutes</em></p>
+<p><strong>Learning Objectives:</strong>
+- Write clear, well-structured Markdown documents
+- Understand the relationship between Markdown and HTML
+- Use headings, lists, code blocks, tables, and links correctly
+- Format code snippets and inline code
+- Create table of contents and README files
+- Recognize Markdown as a universal documentation language</p>
+<p><strong>Key Concepts:</strong>
+- Markdown vs HTML vs Word processors
+- Headers (h1 through h6)
+- Emphasis: bold, italic, code (inline)
+- Lists: ordered and unordered, nested
+- Code blocks and syntax highlighting
+- Links and image references
+- Tables and alignment
+- Blockquotes and horizontal rules
+- Escaping special characters
+- YAML frontmatter (intro)
+- Markdown for system prompts and documentation
+- Markdown as a lingua franca for developers</p>
+<div class="admonition note">
+<p class="admonition-title">GitHub Flavored Markdown (GFM)</p>
+<p>This course teaches GitHub Flavored Markdown, a superset of CommonMark. GFM adds tables, task lists (<code>- [ ]</code>), strikethrough (<code>~~text~~</code>), and fenced code blocks with language hints (<code>```python</code>). If it renders in VS Code preview and on GitHub, it is valid for this course.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Critical Spacing Rules -- Most Beginner Errors Live Here</p>
+<ul>
+<li>A space is required between the <code>#</code> and the heading text: <code># Heading</code> is correct, <code>#Heading</code> is not. Without the space, it renders as plain text.</li>
+<li>A blank line is required before any list. A list that immediately follows a paragraph with no blank line may not render as a list.</li>
+<li>A blank line is required before a fenced code block.</li>
+<li>Tables require both a header row and a separator row (<code>|---|---|</code>). A table without the separator row will not render.</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Smart-Quote Warning</p>
+<p>Do not paste Markdown from Word or Google Docs. Those applications auto-replace straight quotes (<code>"</code>) with curly "smart" quotes, which break code blocks and inline code. Write Markdown in VS Code. Use the preview panel (Ctrl+Shift+V) to verify rendering before submitting.</p>
+</div>
+<p><strong>Hands-On Exercises:</strong></p>
+<ol>
+<li><strong>Markdown Anatomy</strong> (15 min)</li>
+<li>Read a well-formatted markdown file</li>
+<li>Identify all the Markdown syntax used</li>
+<li>Recreate it from scratch</li>
+<li>
+<p>Outcome: Your own markdown file with 10+ different syntax elements</p>
+</li>
+<li>
+<p><strong>Personal README</strong> (20 min)</p>
+</li>
+<li>Write a markdown file about yourself for the class</li>
+<li>Include: heading, bullet-point list, a link, bold/italic text, a code block</li>
+<li>Format: name, role, skills, interests, favorite terminal command</li>
+<li>
+<p>Outcome: README.md committed to Git</p>
+</li>
+<li>
+<p><strong>Code Blocks and Syntax</strong> (15 min)</p>
+</li>
+<li>Create a markdown file with code examples in multiple languages</li>
+<li>Use proper syntax highlighting (<code>python,</code>bash, ```javascript)</li>
+<li>Include inline code and code blocks</li>
+<li>
+<p>Outcome: Markdown file with at least 3 language examples</p>
+</li>
+<li>
+<p><strong>Tables and Organization</strong> (15 min)</p>
+</li>
+<li>Create a table comparing features of 3 tools</li>
+<li>Create a second table for a simple project plan</li>
+<li>Practice alignment (left, center, right)</li>
+<li>
+<p>Outcome: Markdown file with 2 well-formatted tables</p>
+</li>
+<li>
+<p><strong>Documentation Project</strong> (20 min)</p>
+</li>
+<li>Choose a simple process you know (making coffee, debugging, a workflow)</li>
+<li>Document it in markdown with headers, lists, and code blocks</li>
+<li>Include a table of contents</li>
+<li>Target: 300-500 words, properly formatted</li>
+<li>
+<p>Outcome: Complete markdown document</p>
+</li>
+<li>
+<p><strong>Markdown Frontmatter</strong> (5 min)</p>
+</li>
+<li>Learn about YAML frontmatter</li>
+<li>Add it to your README (title, author, date)</li>
+<li>Understand it as metadata, not content</li>
+<li>Outcome: README with YAML frontmatter</li>
+</ol>
+<p><strong>Assessment:</strong>
+- Submission: A markdown document (documentation or personal README)
+- Rubric: Clarity, proper formatting, use of 5+ syntax elements, readability</p>
+<p><strong>Readiness Check:</strong>
+- [ ] You can write a properly formatted Markdown document with 5+ syntax elements
+- [ ] You know the critical spacing rules (# space, blank lines before lists and code blocks)
+- [ ] You write Markdown in VS Code, not Word or Google Docs
+- [ ] You can create tables, code blocks, and task lists</p>
+<p><strong>Estimated Hands-On Time:</strong> 85 minutes | <strong>Lecture/Discussion:</strong> 5 minutes</p>
+<hr />
+<h3 id="day-2-programming-foundations-and-tool-setup"><strong>DAY 2: Programming Foundations and Tool Setup</strong></h3>
+<h4 id="module-5-programming-concepts-thinking-like-a-developer"><strong>Module 5: Programming Concepts — Thinking Like a Developer</strong></h4>
+<p><em>Duration: 120 minutes</em></p>
+<p><strong>Learning Objectives:</strong>
+- Understand variables, data types, and operators
+- Understand control flow: if/else, loops
+- Understand functions and why they matter
+- Read and write simple pseudocode
+- Understand the concept of debugging
+- Recognize programming patterns in everyday problems</p>
+<p><strong>Key Concepts:</strong>
+- Variables: naming, assignment, types (string, number, boolean, array, object)
+- Data types and type errors
+- Operators: arithmetic, comparison, logical
+- Conditionals: if/else/else-if
+- Loops: for, while, forEach
+- Functions: parameters, return values, scope
+- Errors and debugging strategies
+- Comments and code readability
+- Pseudocode and planning before coding
+- Arrays and objects (data structures)
+- Recursion (intro)</p>
+<p><strong>Hands-On Exercises:</strong></p>
+<p>Note: These exercises use pseudocode and one real language (JavaScript recommended for accessibility). The goal is concepts, not syntax mastery.</p>
+<ol>
+<li><strong>Variables and Types</strong> (15 min)</li>
+<li>Task: In pseudocode, write code that:<ul>
+<li>Stores your name, age, and whether you code</li>
+<li>Calculates next year's age</li>
+<li>Combines name and age in a sentence</li>
+</ul>
+</li>
+<li>Then implement in JavaScript</li>
+<li>
+<p>Outcome: Pseudocode + JavaScript with comments</p>
+</li>
+<li>
+<p><strong>Control Flow: The Decision Tree</strong> (20 min)</p>
+</li>
+<li>Scenario: "A coffee machine that asks for coffee type and size"</li>
+<li>Write pseudocode with if/else logic for price calculation</li>
+<li>Implement in JavaScript</li>
+<li>Test with different inputs</li>
+<li>
+<p>Outcome: JavaScript function that handles 3 coffee types × 2 sizes</p>
+</li>
+<li>
+<p><strong>Loops in Practice</strong> (20 min)</p>
+</li>
+<li>Task: Write code that:<ul>
+<li>Prints numbers 1-10</li>
+<li>Prints "I will learn to code" 5 times</li>
+<li>Sums all numbers from 1-100</li>
+<li>Loops through an array of words and prints each</li>
+</ul>
+</li>
+<li>
+<p>Outcome: 4 code examples with comments explaining what each loop does</p>
+</li>
+<li>
+<p><strong>Functions: Reusable Logic</strong> (20 min)</p>
+</li>
+<li>Write a function that takes a name and returns a greeting</li>
+<li>Write a function that takes two numbers and returns their sum</li>
+<li>Write a function that checks if a password is long enough (8+ chars)</li>
+<li>Write a function that counts vowels in a word</li>
+<li>
+<p>Outcome: 4 JavaScript functions with clear names and comments</p>
+</li>
+<li>
+<p><strong>Debugging Basics</strong> (20 min)</p>
+</li>
+<li>Given 5 buggy code snippets (syntax errors, logic errors, off-by-one)</li>
+<li>Read and identify the bug</li>
+<li>Fix it and test</li>
+<li>Understand: typos, logic errors, boundary conditions</li>
+<li>
+<p>Outcome: Annotated code with bugs fixed and explanations</p>
+</li>
+<li>
+<p><strong>Pseudocode Planning</strong> (25 min)</p>
+</li>
+<li>Scenario: "Build a simple grade calculator: input test scores, output average and letter grade"</li>
+<li>Write pseudocode first (no syntax)</li>
+<li>Outline the steps before writing code</li>
+<li>Implement in JavaScript</li>
+<li>Test edge cases</li>
+<li>Outcome: Pseudocode + working code + test cases</li>
+</ol>
+<p><strong>Assessment:</strong>
+- Hands-on: Write 3 small programs (a function, a conditional, a loop)
+- Rubric: Logic correctness, clarity, comments, proper use of concepts</p>
+<p><strong>Readiness Check:</strong>
+- [ ] You can write pseudocode before writing real code
+- [ ] You understand variables, conditionals, loops, and functions
+- [ ] You can read a buggy snippet and identify the error type
+- [ ] You can write a working function with a clear name and documented purpose</p>
+<p><strong>Estimated Hands-On Time:</strong> 110 minutes | <strong>Lecture/Discussion:</strong> 10 minutes</p>
+<hr />
+<h4 id="module-6-developer-tools-installation-and-authentication"><strong>Module 6: Developer Tools — Installation and Authentication</strong></h4>
+<p><em>Duration: 90 minutes</em></p>
+<p><strong>Learning Objectives:</strong>
+- Install and configure Claude Code
+- Authenticate with GitHub and cloud platforms
+- Understand environment variables and <code>.env</code> files
+- Set up a code editor (VS Code)
+- Test your development environment
+- Troubleshoot common setup issues</p>
+<p><strong>Key Concepts:</strong>
+- Package managers and dependencies
+- Authentication and API keys (safety first)
+- Environment variables and <code>.env</code> files
+- The difference between local and global installs
+- Code editors and their role in development
+- Terminal emulators and shells (bash, zsh)
+- PATH and executable discovery
+- Version management (checking tool versions)
+- HTTPS vs SSH authentication
+- Token-based authentication</p>
+<p><strong>Hands-On Exercises:</strong></p>
+<ol>
+<li><strong>Install Claude Code</strong> (15 min)</li>
+<li>Follow official installation instructions for your OS</li>
+<li>Verify installation: <code>claude --version</code></li>
+<li>Run Claude: <code>claude</code></li>
+<li>Confirm you can interact with Claude</li>
+<li>
+<p>Outcome: Screenshot of Claude running with version info</p>
+</li>
+<li>
+<p><strong>GitHub Authentication</strong> (20 min)</p>
+</li>
+<li>Install GitHub CLI (<code>gh</code>)</li>
+<li>Authenticate: <code>gh auth login</code></li>
+<li>Follow the prompts (choose HTTPS)</li>
+<li>Verify: <code>gh auth status</code></li>
+<li>Clone a test repository</li>
+<li>
+<p>Outcome: Proof of successful <code>gh auth status</code> and cloned repo</p>
+</li>
+<li>
+<p><strong>VS Code Setup</strong> (15 min)</p>
+</li>
+<li>Install VS Code</li>
+<li>Open a folder in VS Code</li>
+<li>Install 2-3 useful extensions (Markdown Preview, Git Graph, Prettier)</li>
+<li>Create a simple file and view it</li>
+<li>
+<p>Outcome: VS Code window with extensions installed</p>
+</li>
+<li>
+<p><strong>Environment Variables</strong> (20 min)</p>
+</li>
+<li>Understand: <code>.env</code> files and why they exist</li>
+<li>Create a <code>.env</code> file with sample variables</li>
+<li>Learn: how applications read environment variables</li>
+<li>Safety: understand that <code>.env</code> should not be committed</li>
+<li>Create a <code>.gitignore</code> that excludes <code>.env</code></li>
+<li>
+<p>Outcome: <code>.env</code> file + updated <code>.gitignore</code></p>
+</li>
+<li>
+<p><strong>Tool Verification Sprint</strong> (15 min)</p>
+</li>
+<li>Create a checklist and verify:<ul>
+<li><code>claude --version</code></li>
+<li><code>node --version</code> (or python)</li>
+<li><code>git --version</code></li>
+<li><code>gh --version</code></li>
+<li><code>code --version</code></li>
+</ul>
+</li>
+<li>Document any missing tools</li>
+<li>
+<p>Outcome: Verification checklist (screenshot or file)</p>
+</li>
+<li>
+<p><strong>Troubleshooting Dry Run</strong> (5 min)</p>
+</li>
+<li>Common issue simulation: missing tool, wrong PATH</li>
+<li>Practice diagnosing: "Where is this command?" (<code>which</code> or <code>where</code>)</li>
+<li>Understand: "Command not found" means it's not on PATH</li>
+<li>Outcome: Understanding of how to find and install missing tools</li>
+</ol>
+<p><strong>Assessment:</strong>
+- Checklist: All required tools installed and authenticated
+- Rubric: Working installation, correct authentication, understanding of each tool</p>
+<p><strong>Readiness Check:</strong>
+- [ ] Claude Code is installed and <code>claude --version</code> passes
+- [ ] GitHub CLI is authenticated (<code>gh auth status</code> passes)
+- [ ] VS Code is installed with your preferred extensions
+- [ ] You know what <code>.env</code> files are and why they must not be committed</p>
+<p><strong>Estimated Hands-On Time:</strong> 85 minutes | <strong>Lecture/Discussion:</strong> 5 minutes</p>
+<hr />
+<h4 id="module-7-context-and-configuration-claudemd-and-memd"><strong>Module 7: Context and Configuration — CLAUDE.md and me.md</strong></h4>
+<p><em>Duration: 90 minutes</em></p>
+<p><strong>Learning Objectives:</strong>
+- Understand why context files matter
+- Write a CLAUDE.md file for a real project
+- Write a personal me.md file
+- Understand how Claude Code reads and uses these files
+- Structure project context clearly
+- Practice setting up a development workspace</p>
+<p><strong>Key Concepts:</strong>
+- System prompts in the Claude Code harness
+- CLAUDE.md: project documentation
+- me.md: personal operating profile
+- Conflict resolution matrices
+- Decision-making frameworks
+- Project scope and constraints
+- Files Claude can and cannot access
+- The role of context in agentic development
+- <code>.claude/</code> folder structure</p>
+<p><strong>Hands-On Exercises:</strong></p>
+<ol>
+<li><strong>The CLAUDE.md Anatomy</strong> (15 min)</li>
+<li>Read the following example CLAUDE.md:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gh"># Project: Daily Brief Generator</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="gu">## What this does</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Pulls the unit&#39;s daily log and produces a formatted brief.
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="gu">## Rules</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="k">-</span><span class="w"> </span>Never include real names in the output -- use [NAME] as a placeholder
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">-</span><span class="w"> </span>Use the provided template structure, do not invent new sections
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="k">-</span><span class="w"> </span>Flag any entries with incomplete location or time data
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="gu">## Files</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">-</span><span class="w"> </span><span class="sb">`brief-template.md`</span> -- the output template (read-only)
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="k">-</span><span class="w"> </span><span class="sb">`input-log.txt`</span> -- the daily log to process
+</code></pre></div>
+<p>Note: Every element in this file is Markdown syntax you just learned. The <code>##</code> headers create sections the model reads as distinct instruction blocks. The bullet list under Rules creates discrete, unambiguous rules. If the formatting breaks -- a header without a space, a list without a blank line before it -- the model reads a wall of text instead of structured instructions.</p>
+<ul>
+<li>Identify sections: project name, goals, constraints, deliverables</li>
+<li>Understand how it guides Claude's behavior</li>
+<li>
+<p>Outcome: Annotation of the example CLAUDE.md with notes on each section and what behavior each element produces</p>
+</li>
+<li>
+<p><strong>Write Your me.md</strong> (20 min)</p>
+</li>
+<li>Create a personal profile:<ul>
+<li>Your name and role</li>
+<li>Your decision-making style (fast/slow, risk tolerance)</li>
+<li>What you value in work (clarity, speed, thoroughness)</li>
+<li>Your communication preference (BLUF, examples, details)</li>
+<li>How you prefer Claude to interact with you</li>
+</ul>
+</li>
+<li>
+<p>Outcome: A completed me.md (5-10 lines)</p>
+</li>
+<li>
+<p><strong>Project CLAUDE.md</strong> (25 min)</p>
+</li>
+<li>Scenario: You're building a simple task manager for Marines</li>
+<li>Write a CLAUDE.md including:<ul>
+<li>What the project is</li>
+<li>What it's NOT (scope boundary)</li>
+<li>Key constraints (security, usability)</li>
+<li>Files Claude can modify</li>
+<li>Success criteria</li>
+</ul>
+</li>
+<li>
+<p>Outcome: A complete CLAUDE.md for the scenario project</p>
+</li>
+<li>
+<p><strong>Conflict Resolution Matrix</strong> (15 min)</p>
+</li>
+<li>Understand: when requirements conflict, how do you choose?</li>
+<li>Example: "Fast vs Secure" — which wins?</li>
+<li>Create a simple matrix for your scenario project:<ul>
+<li>Speed vs Security</li>
+<li>Simplicity vs Features</li>
+<li>Completeness vs Time-to-delivery</li>
+</ul>
+</li>
+<li>
+<p>Outcome: Matrix showing your priorities (rate each pair)</p>
+</li>
+<li>
+<p><strong>Set Up a Project Context</strong> (10 min)</p>
+</li>
+<li>Create a new folder for a practice project</li>
+<li>Create <code>.claude/</code> folder inside it</li>
+<li>Add your CLAUDE.md and me.md</li>
+<li>Run Claude Code in that folder</li>
+<li>
+<p>Outcome: Project folder with context files in place</p>
+</li>
+<li>
+<p><strong>Context Verification</strong> (5 min)</p>
+</li>
+<li>Open Claude Code in your project</li>
+<li>Ask Claude about the project (it should reference your CLAUDE.md)</li>
+<li>Observe how context influences its behavior</li>
+<li>Outcome: Conversation showing Claude understanding your context</li>
+</ul>
+<p><strong>Assessment:</strong>
+- Submission: CLAUDE.md + me.md for a real project
+- Rubric: Clarity, completeness, enforceability, practical usefulness</p>
+<p><strong>Readiness Check:</strong>
+- [ ] You have a complete CLAUDE.md that specifies project scope, rules, and constraints
+- [ ] You have a personal me.md with communication preferences and working style
+- [ ] Claude Code reads your context files and references them in conversation
+- [ ] You understand how Markdown formatting affects how the model reads instructions</p>
+<p><strong>Estimated Hands-On Time:</strong> 85 minutes | <strong>Lecture/Discussion:</strong> 5 minutes</p>
+<hr />
+<h3 id="day-2-continued-day-3-integration-and-readiness"><strong>DAY 2 (Continued) / DAY 3: Integration and Readiness</strong></h3>
+<h4 id="module-8-putting-it-all-together-your-first-project"><strong>Module 8: Putting It All Together — Your First Project</strong></h4>
+<p><em>Duration: 180 minutes (can span 1-2 hours across Day 2 into Day 3)</em></p>
+<p><strong>Learning Objectives:</strong>
+- Integrate all prerequisite concepts into one project
+- Practice the full workflow: plan → code → commit → push
+- Troubleshoot real problems
+- Prepare for the demands of advanced agentic development
+- Demonstrate readiness to progress to advanced work</p>
+<p><strong>Key Concepts:</strong>
+- Project planning (SMEAC intro)
+- Git workflow in a real project
+- Using Claude Code for code assistance
+- Iterative development
+- Testing your own work
+- Committing progress incrementally
+- Documentation as you build</p>
+<p><strong>Hands-On Exercises:</strong></p>
+<p>This is the capstone project. Students choose one of three paths:</p>
+<p><strong>Path A: CLI Tool</strong> (Recommended for terminal-focused students)
+- Build a simple CLI tool (e.g., a password strength checker, a markdown to HTML converter, a task logger)
+- Requirements:
+  - Takes input from the user or a file
+  - Processes it with logic
+  - Outputs the result
+  - Includes basic error handling
+  - Is documented in README.md
+  - Has at least 3 commits
+- Technology: JavaScript (Node.js) or Python
+- Outcome: GitHub repo with working tool + README + commits</p>
+<p><strong>Path B: Web App</strong> (Recommended for web-focused students)
+- Build a simple web app (e.g., a note-taking app, a unit converter, a quote generator)
+- Requirements:
+  - HTML + CSS + basic JavaScript
+  - Takes user input
+  - Does something with it
+  - Is documented in README.md
+  - Runs locally (<code>python -m http.server</code> or similar)
+  - Has at least 3 commits
+- Technology: HTML/CSS/JavaScript
+- Outcome: GitHub repo with working app + README + commits</p>
+<p><strong>Path C: API Integration</strong> (Recommended for advanced students)
+- Build a CLI or web app that uses a free public API (weather, movies, jokes, etc.)
+- Requirements:
+  - Authenticates with or calls a real API
+  - Handles errors gracefully
+  - Displays results in a readable format
+  - Is documented in README.md
+  - Has at least 3 commits
+- Technology: Node.js + fetch or Python + requests
+- Outcome: GitHub repo with working app + README + commits</p>
+<p><strong>Workflow for All Paths:</strong></p>
+<ol>
+<li><strong>Plan (20 min)</strong></li>
+<li>Choose your project (use the three paths above)</li>
+<li>Write a one-paragraph description</li>
+<li>List 3-5 features you'll build</li>
+<li>
+<p>Commit to git (first commit: "Initial project plan")</p>
+</li>
+<li>
+<p><strong>Set Up (20 min)</strong></p>
+</li>
+<li>Create <code>.claude/</code> folder with CLAUDE.md and me.md</li>
+<li>Initialize git repository</li>
+<li>Create a basic file structure</li>
+<li>
+<p>Commit: "Project setup"</p>
+</li>
+<li>
+<p><strong>Build Phase 1 (60 min)</strong></p>
+</li>
+<li>Build the core functionality (simplest version first)</li>
+<li>Use Claude Code to help: ask questions, get code suggestions, iterate</li>
+<li>Make at least one commit per feature</li>
+<li>
+<p>Commit messages: "Add [feature]", "Fix [bug]"</p>
+</li>
+<li>
+<p><strong>Test and Iterate (40 min)</strong></p>
+</li>
+<li>Use your own tool — does it work?</li>
+<li>Find and fix bugs</li>
+<li>Ask Claude to help you improve (error handling, efficiency)</li>
+<li>Make commits for each improvement</li>
+<li>
+<p>Commit: "Handle edge case X", "Improve error messages"</p>
+</li>
+<li>
+<p><strong>Document (20 min)</strong></p>
+</li>
+<li>Write a clear README.md</li>
+<li>Include: what it does, how to use it, any requirements</li>
+<li>Add comments to complex code</li>
+<li>
+<p>Final commit: "Update documentation"</p>
+</li>
+<li>
+<p><strong>Push to GitHub (10 min)</strong></p>
+</li>
+<li>Verify all commits are local</li>
+<li>Push to GitHub</li>
+<li>Verify it appears on GitHub.com</li>
+<li>Outcome: Working repo publicly available</li>
+</ol>
+<p><strong>Stretch Goals (Optional):</strong>
+- Add a second feature or improvement
+- Deploy the app online (Vercel for web apps, GitHub releases for CLI tools)
+- Add automated tests
+- Create a video walkthrough</p>
+<p><strong>Assessment:</strong>
+- Submission: GitHub repo link with evidence of 5+ commits
+- Rubric:
+  - Does it work? (50%)
+  - Is it documented? (20%)
+  - Are commits meaningful? (15%)
+  - Did you iterate based on feedback? (10%)
+  - Did you help yourself when stuck? (5%)
+- Bonus: 1 point per stretch goal</p>
+<p><strong>Readiness Check:</strong>
+- [ ] Your capstone project runs without errors
+- [ ] It is documented with a clear README (what it does, how to run it)
+- [ ] You have 5+ commits with meaningful messages
+- [ ] No credentials appear in your git history
+- [ ] Your project is pushed to GitHub and publicly visible</p>
+<p><strong>Estimated Time:</strong> 170 minutes | <strong>Mentoring/Troubleshooting:</strong> 10 minutes</p>
+<hr />
+<h2 id="course-learning-progression">Course Learning Progression</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Module 1: LLM Basics
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    ↓
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Module 2: Terminal Basics ←→ Module 3: Git Basics
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    ↓
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Module 4: Markdown (can run in parallel)
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    ↓
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>Module 5: Programming Concepts
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    ↓
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>Module 6: Developer Tools Setup
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    ↓
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Module 7: Context and Configuration
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    ↓
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>Module 8: Capstone Project (integrates all modules)
+</code></pre></div>
+<p><strong>Prerequisite Dependencies:</strong>
+- Module 2 (Terminal) needed before Module 3 (Git)
+- Modules 1-4 can run in some parallel (e.g., Markdown while Terminal is sinking in)
+- Modules 5-7 should complete before Module 8
+- Module 6 (Tools) must happen before Module 8
+- Module 7 (Context) ideally happens before Module 8 but can be mini-intro before 8 begins</p>
+<hr />
+<h2 id="daily-schedule-outline">Daily Schedule Outline</h2>
+<h3 id="day-1-foundations-8-hours"><strong>Day 1: Foundations (8 hours)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+<th>Module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8:00 - 9:30</td>
+<td>Module 1: LLM Basics &amp; Prompts</td>
+<td>M1 (90 min)</td>
+</tr>
+<tr>
+<td>9:30 - 10:00</td>
+<td>Break</td>
+<td></td>
+</tr>
+<tr>
+<td>10:00 - 12:00</td>
+<td>Module 2: Command Line Basics</td>
+<td>M2 (120 min)</td>
+</tr>
+<tr>
+<td>12:00 - 1:00</td>
+<td>Lunch</td>
+<td></td>
+</tr>
+<tr>
+<td>1:00 - 2:30</td>
+<td>Module 3: Git Basics Part 1</td>
+<td>M3 (part 1)</td>
+</tr>
+<tr>
+<td>2:30 - 2:45</td>
+<td>Break</td>
+<td></td>
+</tr>
+<tr>
+<td>2:45 - 4:15</td>
+<td>Module 3: Git Basics Part 2</td>
+<td>M3 (part 2)</td>
+</tr>
+<tr>
+<td>4:15 - 5:00</td>
+<td>Module 4: Markdown</td>
+<td>M4 (45 min)</td>
+</tr>
+<tr>
+<td>5:00 - 6:00</td>
+<td>Lab time / Troubleshooting</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Homework:</strong> Finish Module 4 if incomplete, read ahead to Module 5</p>
+<h3 id="day-2-intermediate-8-hours"><strong>Day 2: Intermediate (8 hours)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+<th>Module</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8:00 - 9:30</td>
+<td>Module 4: Markdown (if needed) + finish setup</td>
+<td>M4 (remaining)</td>
+</tr>
+<tr>
+<td>9:30 - 10:00</td>
+<td>Break</td>
+<td></td>
+</tr>
+<tr>
+<td>10:00 - 12:00</td>
+<td>Module 5: Programming Concepts</td>
+<td>M5 (120 min)</td>
+</tr>
+<tr>
+<td>12:00 - 1:00</td>
+<td>Lunch</td>
+<td></td>
+</tr>
+<tr>
+<td>1:00 - 2:30</td>
+<td>Module 6: Developer Tools Setup</td>
+<td>M6 (90 min)</td>
+</tr>
+<tr>
+<td>2:30 - 2:45</td>
+<td>Break</td>
+<td></td>
+</tr>
+<tr>
+<td>2:45 - 4:15</td>
+<td>Module 7: Context and Configuration</td>
+<td>M7 (90 min)</td>
+</tr>
+<tr>
+<td>4:15 - 5:00</td>
+<td>Wrap-up and readiness check</td>
+<td></td>
+</tr>
+<tr>
+<td>5:00 - 6:00</td>
+<td>Lab time / Troubleshooting</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Homework:</strong> Prep for capstone, gather project ideas</p>
+<h3 id="day-3-optional-if-including-capstone-capstone-6-8-hours"><strong>Day 3 (Optional, if including capstone): Capstone (6-8 hours)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8:00 - 12:00</td>
+<td>Module 8: Capstone Project (first half)</td>
+</tr>
+<tr>
+<td>12:00 - 1:00</td>
+<td>Lunch</td>
+</tr>
+<tr>
+<td>1:00 - 5:00</td>
+<td>Module 8: Capstone Project (second half) + presentations</td>
+</tr>
+<tr>
+<td>5:00 onwards</td>
+<td>Celebration and retrospective</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="materials-and-resources">Materials and Resources</h2>
+<h3 id="required-for-students"><strong>Required for Students:</strong></h3>
+<ul>
+<li>A computer (macOS, Linux, or Windows) with at least 4GB RAM</li>
+<li>Terminal / command-line access</li>
+<li>A text editor (we recommend VS Code, free)</li>
+<li>An internet connection</li>
+<li>A GitHub account (free)</li>
+<li>Claude access (API account or web access)</li>
+</ul>
+<h3 id="provided-by-instructor"><strong>Provided by Instructor:</strong></h3>
+<ul>
+<li>Slides and demos for each module</li>
+<li>Worked examples for each exercise</li>
+<li>Troubleshooting guides and common errors</li>
+<li>Sample <code>.env</code> files and code templates</li>
+<li>Example CLAUDE.md and me.md files</li>
+<li>Capstone project rubric and evaluation guide</li>
+</ul>
+<h3 id="recommended-reading"><strong>Recommended Reading:</strong></h3>
+<ul>
+<li>"Learn Git in Y Minutes" (online reference)</li>
+<li>"The Markdown Guide" (online reference)</li>
+<li>"Prompt Engineering Guide" (Anthropic docs)</li>
+<li>"JavaScript for Beginners" (Khan Academy or similar)</li>
+</ul>
+<hr />
+<h2 id="grading-and-progression">Grading and Progression</h2>
+<h3 id="completion-requirements"><strong>Completion Requirements:</strong></h3>
+<p>All 8 modules must be completed. Each module has a graded exercise.</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Grade</th>
+<th>Passing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1: LLM Basics</td>
+<td>5 well-written prompts</td>
+<td>80%+ clarity/specificity</td>
+</tr>
+<tr>
+<td>2: Terminal</td>
+<td>10 terminal tasks</td>
+<td>8/10 correct</td>
+</tr>
+<tr>
+<td>3: Git</td>
+<td>Create, branch, merge, push</td>
+<td>All steps successful</td>
+</tr>
+<tr>
+<td>4: Markdown</td>
+<td>Documentation file</td>
+<td>Uses 5+ syntax elements</td>
+</tr>
+<tr>
+<td>5: Programming</td>
+<td>3 small programs</td>
+<td>Logic correct, readable</td>
+</tr>
+<tr>
+<td>6: Tools</td>
+<td>All tools installed &amp; authenticated</td>
+<td>Version checks all pass</td>
+</tr>
+<tr>
+<td>7: Context</td>
+<td>CLAUDE.md + me.md</td>
+<td>Complete and coherent</td>
+</tr>
+<tr>
+<td>8: Capstone</td>
+<td>Working project on GitHub</td>
+<td>Runs, documented, commits</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Overall:</strong> 7/8 modules passed = course complete. 8/8 = honors.</p>
+<hr />
+<h2 id="instructor-notes">Instructor Notes</h2>
+<h3 id="pacing"><strong>Pacing:</strong></h3>
+<ul>
+<li>The course is designed to be <strong>hands-heavy, lecture-light</strong>. Instructor time is spent in the lab answering questions, not lecturing.</li>
+<li>If a student is falling behind, accelerate them: "Let's pair on this one, then you take the next three."</li>
+<li>If a student is ahead, give them stretch goals from Module 8 early.</li>
+</ul>
+<h3 id="common-sticking-points"><strong>Common Sticking Points:</strong></h3>
+<ol>
+<li><strong>Terminal path concepts:</strong> Students confuse relative/absolute paths. Have them practice navigation 3-4 times.</li>
+<li><strong>Git merge conflicts:</strong> Most student struggle here. Make sure you demonstrate conflict resolution twice and let them practice on a small, safe example.</li>
+<li><strong>Programming logic:</strong> Pseudocode helps. Make them write pseudocode BEFORE any code.</li>
+<li><strong>API keys in <code>.env</code>:</strong> Emphasize: never commit <code>.env</code>. Show them a <code>.gitignore</code> example.</li>
+<li><strong>Authentication:</strong> GitHub SSH vs HTTPS is a fork in the road. Recommend HTTPS for beginners, let advanced students use SSH.</li>
+</ol>
+<h3 id="troubleshooting-mindset"><strong>Troubleshooting Mindset:</strong></h3>
+<ul>
+<li>Normalize debugging and troubleshooting as skills, not failures.</li>
+<li>When a student says "it's broken," ask: "What does the error message say?" or "What did you expect vs what happened?"</li>
+<li>Have them use <code>--help</code>, man pages, and Google before you give the answer.</li>
+</ul>
+<h3 id="differentiation"><strong>Differentiation:</strong></h3>
+<ul>
+<li><strong>Accelerated path:</strong> Skip Module 5 parts (they may know programming), move faster through setup, give capstone stretch goals.</li>
+<li><strong>Slower path:</strong> Add a Module 2.5 on "CLI Practice Drills" (30 min), break Module 5 into 2 sessions, pair them with a mentor.</li>
+<li><strong>Accessibility:</strong> Provide terminal recordings for screen-reader users, text-based alternatives to visual demos.</li>
+</ul>
+<hr />
+<h2 id="course-completion-outcomes">Course Completion Outcomes</h2>
+<p>After completing this course, students will be able to:
+- ✓ Write clear, structured prompts and understand system prompts
+- ✓ Navigate the terminal confidently
+- ✓ Use Git for version control
+- ✓ Write Markdown
+- ✓ Understand basic programming concepts
+- ✓ Have all developer tools installed and authenticated
+- ✓ Create and manage context files (CLAUDE.md, me.md)
+- ✓ Build and ship a working project to GitHub</p>
+<p><strong>These are the core skills for AI-assisted development.</strong> Students who complete all 8 modules are ready for advanced agentic work.</p>
+<hr />
+<h2 id="appendix-sample-rubric-for-capstone-project">Appendix: Sample Rubric for Capstone Project</h2>
+<p><strong>Criteria (100 points total)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Points</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Code Works</strong></td>
+<td>50</td>
+<td>App runs without errors, does what was promised, handles basic errors</td>
+</tr>
+<tr>
+<td><strong>Git Workflow</strong></td>
+<td>15</td>
+<td>5+ commits with clear messages, pushed to GitHub, no credentials in history</td>
+</tr>
+<tr>
+<td><strong>Documentation</strong></td>
+<td>15</td>
+<td>README is clear, includes setup/usage, code has comments on complex logic</td>
+</tr>
+<tr>
+<td><strong>Iteration</strong></td>
+<td>10</td>
+<td>Evidence of feedback loops, bug fixes, improvements based on testing</td>
+</tr>
+<tr>
+<td><strong>Polish</strong></td>
+<td>10</td>
+<td>Code is readable, organized, no debug statements left behind</td>
+</tr>
+<tr>
+<td><strong>Bonus</strong></td>
+<td>+5</td>
+<td>Deployment, tests, second feature, or other ambition</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Passing:</strong> 70+ points (grades: 70-79 Pass, 80-89 Good, 90+ Excellent)</p>
+<hr />
+<h2 id="appendix-glossary-of-terms">Appendix: Glossary of Terms</h2>
+<ul>
+<li><strong>LLM:</strong> Large Language Model (like Claude)</li>
+<li><strong>Prompt:</strong> A user's input to an LLM</li>
+<li><strong>System Prompt:</strong> Instructions that shape how an LLM behaves</li>
+<li><strong>Terminal/CLI:</strong> Command-line interface (text-based interface to your computer)</li>
+<li><strong>Git:</strong> Version control system for tracking code changes</li>
+<li><strong>Repository:</strong> A project folder managed by Git</li>
+<li><strong>Commit:</strong> A saved snapshot of changes in Git</li>
+<li><strong>Markdown:</strong> A plain-text format for structured writing</li>
+<li><strong>Function:</strong> A reusable block of code</li>
+<li><strong>Variable:</strong> A named storage for data</li>
+<li><strong>Authentication:</strong> Proving your identity to a system (like GitHub login)</li>
+<li><strong>API Key/Token:</strong> A secret string that lets code authenticate as you</li>
+</ul>
+<hr />
+<p><strong>End of Prerequisite Course Design</strong></p>
+<p>This course prepares students with zero background knowledge to become competent, confident learners ready to master agentic development.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

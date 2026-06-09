@@ -1,0 +1,3015 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../mental-models-guide/">
+      
+      
+        <link rel="next" href="../day0-scaffold/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Course Instructor Guide - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-and-agentics-basics-instructor-preparation-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Course Instructor Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedules
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bedrock/ai-literacy/" class="md-tabs__link">
+          
+  
+  
+  Bedrock
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../terminal-basics/the-machine/" class="md-tabs__link">
+          
+  
+  
+  Terminal Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../agentic-ai/agent-concepts/" class="md-tabs__link">
+          
+  
+  
+  Agentic AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mental-models/core-content/" class="md-tabs__link">
+          
+  
+  
+  Mental Models
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../prereq-course/course-design/" class="md-tabs__link">
+          
+  
+  
+  Technical Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../teaching-guide/" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedrock
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bedrock
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bedrock/ai-literacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Literacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bedrock/personalizing-your-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personalizing Your AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terminal Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal-basics/the-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal-basics/the-terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentic AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agentic-ai/agent-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mental Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/core-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/workbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technical Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prereq-course/course-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Design (M1-M8)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prereq-course/module-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../teaching-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mental-models-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference-module-at-a-glance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Reference: Module at a Glance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-course-instructor-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-Course Instructor Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pre-Course Instructor Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-test-your-environment-2-hours-before-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Test Your Environment (2 hours before class)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-prepare-demo-files-1-hour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Prepare Demo Files (1 hour)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-prepare-your-screen-setup-30-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Prepare Your Screen Setup (30 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-write-instructor-notes-for-each-module-1-hour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Write Instructor Notes for Each Module (1 hour)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-3-git-basics-120-min-split-across-2-sessions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 3: Git Basics (120 min, split across 2 sessions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-4-markdown-90-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 4: Markdown (90 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-5-programming-concepts-120-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 5: Programming Concepts (120 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-6-developer-tools-setup-90-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 6: Developer Tools Setup (90 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-7-context-files-90-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 7: Context Files (90 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#module-8-capstone-project-180-min-across-multiple-days" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 8: Capstone Project (180 min, across multiple days)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting Quick Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting Quick Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#student-cant-authenticate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Student Can't Authenticate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#command-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        "Command Not Found"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminal-path-confusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terminal Path Confusion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-merge-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git Merge Conflicts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-markdown-preview-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code Markdown Preview Not Working
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascriptnode-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JavaScript/Node Issues
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#git-push-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Git Push Fails
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timing-and-pacing-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Timing and Pacing Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Timing and Pacing Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-a-cohort-moving-at-standard-pace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For a Cohort Moving at Standard Pace
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-a-cohort-moving-faster-skip-stretch-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For a Cohort Moving Faster (Skip Stretch Content)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-a-cohort-moving-slower" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For a Cohort Moving Slower
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessment-and-grading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assessment and Grading
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Assessment and Grading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#per-module-rubric-simplified" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-Module Rubric (Simplified)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overall-grade-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overall Grade Calculation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources-for-instructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources for Instructors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resources for Instructors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slides-and-demos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slides and Demos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handout-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handout Templates
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bonus-materials-if-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bonus Materials (If Time)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-instructor-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Instructor Questions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructor-success-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instructor Success Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day0-scaffold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 0 Teaching Scaffold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ai-and-agentics-basics-instructor-preparation-guide">AI and Agentics Basics — Instructor Preparation Guide</h1>
+<p><strong>For:</strong> Instructors teaching the Technical Foundations course<br />
+<strong>Purpose:</strong> Detailed implementation guide, demo scripts, troubleshooting, and timing guidance<br />
+<strong>Last Updated:</strong> 2026-06-05</p>
+<hr />
+<h2 id="quick-reference-module-at-a-glance">Quick Reference: Module at a Glance</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Duration</th>
+<th>Setup Time</th>
+<th>Key Deliverable</th>
+<th>Instructional Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M1: LLM &amp; Prompts</strong></td>
+<td>90 min</td>
+<td>5 min</td>
+<td>5 prompts</td>
+<td>Demo + hands-on</td>
+</tr>
+<tr>
+<td><strong>M2: Terminal</strong></td>
+<td>120 min</td>
+<td>10 min</td>
+<td>Terminal transcript</td>
+<td>Guided labs</td>
+</tr>
+<tr>
+<td><strong>M3: Git</strong></td>
+<td>120 min</td>
+<td>20 min</td>
+<td>Commits + push</td>
+<td>Guided labs</td>
+</tr>
+<tr>
+<td><strong>M4: Markdown</strong></td>
+<td>90 min</td>
+<td>5 min</td>
+<td>Markdown doc</td>
+<td>Independent + review</td>
+</tr>
+<tr>
+<td><strong>M5: Programming</strong></td>
+<td>120 min</td>
+<td>10 min</td>
+<td>3 programs</td>
+<td>Pseudocode-first</td>
+</tr>
+<tr>
+<td><strong>M6: Tools</strong></td>
+<td>90 min</td>
+<td>30 min</td>
+<td>Verification checklist</td>
+<td>Lab + troubleshooting</td>
+</tr>
+<tr>
+<td><strong>M7: Context Files</strong></td>
+<td>90 min</td>
+<td>5 min</td>
+<td>CLAUDE.md + me.md</td>
+<td>Template + iteration</td>
+</tr>
+<tr>
+<td><strong>M8: Capstone</strong></td>
+<td>180 min</td>
+<td>30 min</td>
+<td>GitHub repo</td>
+<td>Mentored project</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total:</strong> ~900 minutes (15 hours) of instruction spread over 2-3 days<br />
+<strong>Instructor Preparation:</strong> ~4-6 hours before first cohort</p>
+<hr />
+<h2 id="pre-course-instructor-setup">Pre-Course Instructor Setup</h2>
+<h3 id="1-test-your-environment-2-hours-before-class"><strong>1. Test Your Environment (2 hours before class)</strong></h3>
+<p>Run these checks so you can demo confidently:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Terminal shell works</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>bash<span class="w"> </span>--version
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Git works</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>git<span class="w"> </span>--version
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nb">cd</span><span class="w"> </span>/tmp<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>init<span class="w"> </span>test-repo<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">cd</span><span class="w"> </span>test-repo<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>--allow-empty<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;test&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1"># Node or Python installed (for Module 5 &amp; 8)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>node<span class="w"> </span>--version<span class="w">  </span><span class="c1"># or python --version</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># Claude Code installed</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>claude<span class="w"> </span>--version
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>claude<span class="w">  </span><span class="c1"># starts and connects</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># GitHub CLI works</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>gh<span class="w"> </span>auth<span class="w"> </span>status
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>gh<span class="w"> </span>repo<span class="w"> </span>view<span class="w"> </span>--web<span class="w">  </span><span class="c1"># shows web page</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># VS Code launches</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>code<span class="w"> </span>--version
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>code<span class="w"> </span>.<span class="w">  </span><span class="c1"># opens VS Code on current folder</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="c1"># Markdown preview works in VS Code</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="c1"># (extension installed)</span>
+</code></pre></div>
+<p><strong>If anything fails:</strong> Stop and fix it. You cannot troubleshoot student problems if you haven't hit them yourself.</p>
+<h3 id="2-prepare-demo-files-1-hour"><strong>2. Prepare Demo Files (1 hour)</strong></h3>
+<p>Create a folder <code>/_classroom-demos/</code> with:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>_classroom-demos/
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>├── M1-prompts/
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>│   ├── good-prompt.txt
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>│   ├── vague-prompt.txt
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│   └── iterated-prompts.md
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>├── M2-terminal/
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>│   ├── demo-commands.sh
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>│   └── sample-files/
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>├── M3-git/
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>│   ├── merge-conflict-example/
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>│   └── commit-log-example.txt
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>├── M4-markdown/
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>│   ├── example-readme.md
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>│   ├── example-documentation.md
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>│   └── syntax-reference.md
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>├── M5-programming/
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>│   ├── pseudocode-template.txt
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>│   ├── grade-calculator.js
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>│   ├── coffee-machine.js
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>│   └── debugging-examples.js
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>├── M6-tools/
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>│   ├── verify-tools.sh
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>│   └── .env-example
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>├── M7-context/
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>│   ├── example-CLAUDE.md
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>│   ├── example-me.md
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>│   └── conflict-matrix-example.md
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>└── M8-capstone/
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    ├── capstone-rubric.pdf
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>    ├── project-ideas.txt
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>    └── example-project-github-link.txt
+</code></pre></div>
+<h3 id="3-prepare-your-screen-setup-30-min"><strong>3. Prepare Your Screen Setup (30 min)</strong></h3>
+<p><strong>Recommended for teaching:</strong>
+- <strong>Monitor 1:</strong> VS Code with demo file (students see this)
+- <strong>Monitor 2:</strong> Terminal window (or same monitor, split screen)
+- <strong>Monitor 3 (optional):</strong> Instructor notes / timer / student tracker</p>
+<p>Use a terminal multiplexer (tmux) to split your screen if you have one monitor:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>tmux<span class="w"> </span>new-session<span class="w"> </span>-s<span class="w"> </span>teaching<span class="w"> </span>-x<span class="w"> </span><span class="m">200</span><span class="w"> </span>-y<span class="w"> </span><span class="m">50</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># Split into editor + terminal</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>tmux<span class="w"> </span>split-window<span class="w"> </span>-h
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Left pane: VS Code demo file</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># Right pane: Terminal with git/CLI commands</span>
+</code></pre></div>
+<h3 id="4-write-instructor-notes-for-each-module-1-hour"><strong>4. Write Instructor Notes for Each Module (1 hour)</strong></h3>
+<p>For each module, prepare:
+- <strong>Learning objective (1 sentence)</strong>
+- <strong>Key stumbling block</strong> (where students get stuck)
+- <strong>Verbal explanation (2-3 sentences)</strong> — what you'll say
+- <strong>Demo script</strong> — exact commands to run
+- <strong>Common questions and answers</strong>
+- <strong>Timing markers</strong> (if running long, what to skip)</p>
+<p>Example for Module 2 (Terminal):</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gu">## Module 2: Terminal Basics</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="gs">**Learning Objective:**</span> Students navigate confidently and manipulate files.
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="gs">**Key Stumbling Block:**</span> Path confusion (relative vs absolute). 
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Expect 30% of class to struggle here.
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="gs">**Your Opener (30 sec):**</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>&quot;The terminal is just another way to talk to your computer. 
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>If you can drag files in Finder, you can do the same in a terminal—
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>just with words instead of a mouse. Let&#39;s start.&quot;
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="gs">**Demo 1: Navigation (5 min)**</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>```bash
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>pwd                    # Show where you are
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>cd ~                   # Home directory
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>ls                     # List files
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>ls -la                 # Show hidden files
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>cd projects            # Change to a folder
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>pwd                    # Confirm location
+</code></pre></div>
+<strong>Observation:</strong> Students watch. Then they do the same.</p>
+<p><strong>Common Question:</strong> "What's the difference between <code>cd /</code> and <code>cd ./</code>?"
+<strong>Answer:</strong> "Absolute path starts at the root of the whole computer (<code>/</code>). 
+Relative path starts from where you are (<code>.</code>). 
+Both can take you places, but absolute never changes."
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>---
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>## Module-by-Module Teaching Tips
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>### **Module 1: LLM &amp; Prompts (90 min)**
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>**Setup:** Open Claude (web or Claude Code), VS Code with a markdown file for notes
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>**The Opener (2 min):**
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>&quot;Claude is a language model. It&#39;s a pattern-prediction machine trained on text. 
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>You give it words, it predicts the next words based on what it&#39;s seen before. 
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>Our job is to give it clear instructions—prompts—so it predicts what we need.&quot;
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>**Walk Students Through:**
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>1. **Bad Prompt Experiment (15 min)**
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>   ```
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>   Vague: &quot;What is networking?&quot;
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>   Better: &quot;In 200 words, explain how a junior officer should build 
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>            professional relationships with peers and superiors.&quot;
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>   ```
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>   - Show both responses side-by-side
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>   - Ask: &quot;What changed?&quot;
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>   - Let them answer (specificity, context, length)
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>2. **System Prompt Demo (10 min)**
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>   - Show same question answered by &quot;a drill sergeant&quot; vs &quot;a kindergarten teacher&quot;
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>   - Emphasize: the system prompt shapes tone, vocabulary, depth
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>   - Don&#39;t get lost in technical details
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>3. **Context Window Boundary (10 min)**
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>   - Paste a long document (10,000+ words) into Claude
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>   - Ask it a question (it handles fine)
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>   - Ask it a question about something on page 1 (might forget)
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>   - Key insight: **context is finite, and you should know the limit**
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>   - For Claude 3: ~200,000 tokens (roughly 150,000 words)
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>4. **Iterative Refinement (10 min)**
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>   - Start with mediocre prompt
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>   - Get a mediocre response
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>   - Refine the prompt
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>   - Get a better response
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>   - Show: **one prompt is never final; iteration wins**
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>**Common Confusions:**
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>- &quot;Isn&#39;t it just a chatbot?&quot; → &quot;It&#39;s more like a very sophisticated next-word predictor. You&#39;re steering it with prompts.&quot;
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>- &quot;Will it always give the same answer?&quot; → &quot;No. It uses probability. Two prompts that mean the same thing might get different answers.&quot;
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>- &quot;How much context can I use?&quot; → &quot;Roughly 200k tokens. If your document is longer than a novel, you might hit the limit. We&#39;ll cover that in Module 9 (future course).&quot;
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>**Timing:** If running long, skip the context window experiment, just tell them the number.
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>**Deliverable Check:** Students submit 5 prompts. Review for clarity and specificity, not perfection.
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>---
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a>### **Module 2: Terminal Basics (120 min)**
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a>
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a>**Setup:** Each student has a terminal open. You&#39;re demonstrating on your screen.
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a>
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>**The Opener (2 min):**
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a>&quot;The terminal is just another language for talking to your computer. 
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a>Graphically, you use a mouse. Here, you use words. Same computer, same files, different interface.&quot;
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a>
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a>**Absolute Beginner Adjustment:**
+<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a>If &gt;50% of class has never opened a terminal, add 15 min of &quot;terminal orientation&quot; before diving in.
+<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a>```bash
+<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a># Show them what they&#39;re looking at
+<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a>ls        # Lists files, same as Finder icon view
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a>pwd       # Where am I? (like the folder icon in Finder)
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a>cd        # Go to a folder (like double-clicking)
+</code></pre></div></p>
+<p><strong>Walk Them Through the Exercises:</strong></p>
+<ol>
+<li><strong>Orientation Walk (15 min)</strong> — You demo, they type</li>
+<li>You type <code>pwd</code> on your screen, they type <code>pwd</code> on theirs</li>
+<li>Confirm everyone sees the same home directory path</li>
+<li>
+<p>Move to 5 different folders, each time:</p>
+<ul>
+<li>You navigate: <code>cd /usr/local</code></li>
+<li>They follow</li>
+<li>Everyone does <code>pwd</code> to confirm</li>
+<li>Everyone does <code>ls</code> to see what's inside</li>
+</ul>
+</li>
+<li>
+<p><strong>File Manipulation Sprint (25 min)</strong></p>
+</li>
+<li>Demonstrate once, then they do it:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>projects/acc-prep/module-2
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">cd</span><span class="w"> </span>projects/acc-prep/module-2
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>touch<span class="w"> </span>file1.txt<span class="w"> </span>file2.txt<span class="w"> </span>file3.txt
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>ls
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>cp<span class="w"> </span>file1.txt<span class="w"> </span>file1-backup.txt
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>mv<span class="w"> </span>file1-backup.txt<span class="w"> </span>backup.txt
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>rm<span class="w"> </span>file3.txt
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>ls
+</code></pre></div></li>
+<li>
+<p>Checkpoint: Have everyone <code>ls</code> and confirm they have 3 files (file1.txt, file2.txt, backup.txt)</p>
+</li>
+<li>
+<p><strong>Path Puzzle (20 min)</strong></p>
+</li>
+<li>You're at <code>/home/user/projects/</code>. You want to go to <code>/home/user/documents/archive/</code></li>
+<li>Show three ways: absolute, relative from projects, relative from home</li>
+<li>They practice writing paths on a piece of paper, then testing them in terminal</li>
+<li>
+<p>Key insight: <strong>paths are just addresses. Absolute addresses start at <code>/</code>. Relative addresses start at your current location.</strong></p>
+</li>
+<li>
+<p><strong>Help System (15 min)</strong></p>
+</li>
+<li>Show: <code>ls --help</code> output</li>
+<li>"This is your cheat sheet. Every command has one."</li>
+<li>Have them lookup 3 flags: <code>-l</code>, <code>-a</code>, <code>-r</code></li>
+<li>
+<p>They write a reference card with their findings</p>
+</li>
+<li>
+<p><strong>Piping and Redirection (25 min)</strong></p>
+</li>
+<li><strong>Piping example:</strong>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ls<span class="w"> </span>-la<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s2">&quot;txt&quot;</span><span class="w">    </span><span class="c1"># Show only .txt files</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>ls<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="w">             </span><span class="c1"># Count files</span>
+</code></pre></div></li>
+<li><strong>Redirection example:</strong>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ls<span class="w"> </span>&gt;<span class="w"> </span>files.txt<span class="w">         </span><span class="c1"># Save list to file</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;hello&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>notes.txt<span class="w">   </span><span class="c1"># Append to file</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>cat<span class="w"> </span>files.txt<span class="w">          </span><span class="c1"># Read the file</span>
+</code></pre></div></li>
+<li>
+<p>Key insight: <strong>Piping connects commands. Redirection saves output.</strong></p>
+</li>
+<li>
+<p><strong>Real-World Scenario (20 min)</strong></p>
+</li>
+<li>Scenario: "Find all .txt files modified in the last week and list them by date."</li>
+<li>Walk them through:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w"> </span>-mtime<span class="w"> </span>-7
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.txt&quot;</span><span class="w"> </span>-mtime<span class="w"> </span>-7<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort
+</code></pre></div></li>
+<li>Emphasize: <strong>problem-solving with commands builds with time, not memorization.</strong></li>
+</ol>
+<p><strong>Common Stuck Points:</strong>
+- <strong>"Permission denied"</strong> → They tried to <code>rm</code> a system file or access <code>/root/</code>. Redirect to a safe sandbox folder.
+- <strong>"Command not found"</strong> → They typed a typo or the tool isn't installed. Use <code>which</code> to check.
+- <strong>"No such file or directory"</strong> → They're in the wrong folder or used a wrong path. Have them <code>pwd</code> and <code>ls</code> to verify where they are.
+- <strong>Relative path confusion</strong> → Have them practice 5 times in a row with different folders.</p>
+<p><strong>Timing:</strong> This is the slowest module for absolute beginners. Don't rush.</p>
+<p><strong>Deliverable Check:</strong> Run their command transcript. Do they show the 6 exercises completing?</p>
+<hr />
+<h3 id="module-3-git-basics-120-min-split-across-2-sessions"><strong>Module 3: Git Basics (120 min, split across 2 sessions)</strong></h3>
+<p><strong>Setup:</strong> Each student has a code editor (VS Code) and terminal side-by-side</p>
+<p><strong>The Opener (2 min):</strong>
+"Git is a time machine for your code. Every time you save a version of your code (a 'commit'), 
+Git remembers what it looked like. You can jump back to any earlier version, 
+see what changed, and work on multiple ideas at once (branches)."</p>
+<p><strong>Session 1: Local Repository (60 min)</strong></p>
+<ol>
+<li><strong>Init a Repo (10 min)</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">cd</span><span class="w"> </span>/tmp
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>mkdir<span class="w"> </span>my-first-repo
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nb">cd</span><span class="w"> </span>my-first-repo
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>git<span class="w"> </span>init
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>git<span class="w"> </span>config<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;you@example.com&quot;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>git<span class="w"> </span>config<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Your Name&quot;</span>
+</code></pre></div></li>
+<li>Explain: <code>git init</code> creates a <code>.git/</code> folder (hidden)</li>
+<li>That folder is where Git stores all the history</li>
+<li>
+<p><code>.git/</code> is invisible but crucial</p>
+</li>
+<li>
+<p><strong>Create and Commit (15 min)</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# My First Project&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>README.md
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>git<span class="w"> </span>status<span class="w">                </span><span class="c1"># See unstaged changes</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>git<span class="w"> </span>add<span class="w"> </span>README.md<span class="w">         </span><span class="c1"># Stage the file</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>git<span class="w"> </span>status<span class="w">                </span><span class="c1"># See staged changes</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Initial commit: add README&quot;</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>git<span class="w"> </span>log<span class="w">                   </span><span class="c1"># See the commit history</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Checkpoint: Everyone runs <code>git log</code> and sees their commit</p>
+</li>
+<li>
+<p><strong>Make Changes and Commit (10 min)</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;This is a test project.&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>git<span class="w"> </span>diff<span class="w">                  </span><span class="c1"># See what changed</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>git<span class="w"> </span>add<span class="w"> </span>README.md
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update README with description&quot;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w">         </span><span class="c1"># See compact log</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Key insight: <strong>Each commit is a snapshot. Diffs show what changed between snapshots.</strong></p>
+</li>
+<li>
+<p><strong>Branching (15 min)</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>branch<span class="w"> </span>feature/add-docs<span class="w">      </span><span class="c1"># Create a branch</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>checkout<span class="w"> </span>feature/add-docs<span class="w">    </span><span class="c1"># Switch to it (or git switch)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>git<span class="w"> </span>branch<span class="w">                       </span><span class="c1"># See all branches</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Docs here&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>DOCS.md
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>git<span class="w"> </span>add<span class="w"> </span>DOCS.md
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add documentation file&quot;</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>git<span class="w"> </span>switch<span class="w"> </span>main<span class="w">                  </span><span class="c1"># Switch back</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>ls<span class="w">                               </span><span class="c1"># DOCS.md is gone (it&#39;s on the other branch)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Key insight: <strong>Branches are separate lines of work. Switching branches changes your files.</strong></p>
+</li>
+<li>
+<p><strong>Merge (10 min)</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>git<span class="w"> </span>merge<span class="w"> </span>feature/add-docs<span class="w">       </span><span class="c1"># Merge the branch into main</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>ls<span class="w">                               </span><span class="c1"># DOCS.md is now here</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature/add-docs<span class="w">   </span><span class="c1"># Delete the branch (optional)</span>
+</code></pre></div></p>
+</li>
+<li>Explain: <strong>Merge brings changes from another branch into the current branch.</strong></li>
+</ol>
+<p><strong>Session 2: Remote Repository &amp; Conflicts (60 min)</strong></p>
+<ol>
+<li><strong>Set Up GitHub Repo (10 min)</strong></li>
+<li>Go to GitHub.com, create a new repo (call it <code>my-first-repo</code>)</li>
+<li>Copy the HTTPS clone URL</li>
+<li>Back in terminal:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>&lt;URL&gt;
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main<span class="w">              </span><span class="c1"># Ensure main branch exists</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main<span class="w">         </span><span class="c1"># Push to GitHub</span>
+</code></pre></div></li>
+<li>
+<p>Verify on GitHub.com — the repo appears with your commits</p>
+</li>
+<li>
+<p><strong>Clone a Repo (10 min)</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nb">cd</span><span class="w"> </span>/tmp
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/octocat/Hello-World.git
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="nb">cd</span><span class="w"> </span>Hello-World
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>git<span class="w"> </span>log<span class="w">                           </span><span class="c1"># See the history</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Key: <strong>Cloning downloads a full copy of the project and its history.</strong></p>
+</li>
+<li>
+<p><strong>Merge Conflicts (25 min)</strong></p>
+</li>
+<li><strong>Create a conflict scenario:</strong>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># On main</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Line 1: Version A&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>conflict-demo.txt
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>git<span class="w"> </span>add<span class="w"> </span>conflict-demo.txt
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add conflict-demo.txt with version A&quot;</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="c1"># Create branch</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/version-b
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Line 1: Version B&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>conflict-demo.txt
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>git<span class="w"> </span>add<span class="w"> </span>conflict-demo.txt
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Change to version B&quot;</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="c1"># Back to main</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>git<span class="w"> </span>checkout<span class="w"> </span>main
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Line 1: Version A - Updated&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>conflict-demo.txt
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>git<span class="w"> </span>add<span class="w"> </span>conflict-demo.txt
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Update version A&quot;</span>
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a><span class="c1"># Try to merge — CONFLICT!</span>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>git<span class="w"> </span>merge<span class="w"> </span>feature/version-b
+</code></pre></div></li>
+<li>Show the conflict markers in the file</li>
+<li>Explain: Git doesn't know which version is right, so it asks you</li>
+<li>
+<p>Resolve by choosing one (or manually editing)
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Edit the file, keep the version you want</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>git<span class="w"> </span>add<span class="w"> </span>conflict-demo.txt
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Resolve conflict: keep version A&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Meaningful Commits (10 min)</strong></p>
+</li>
+<li>Bad commit messages: "fix", "update", "work"</li>
+<li>Good commit messages: "Fix login validation error", "Add password strength check"</li>
+<li>
+<p>Emphasis: <strong>Your future self (and teammates) need to understand what you changed and why.</strong></p>
+</li>
+<li>
+<p><strong>Real Workflow Practice (10 min)</strong></p>
+</li>
+<li>Scenario: Add a feature, commit it, push it, verify on GitHub
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature/add-footer
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Footer content&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>git<span class="w"> </span>add<span class="w"> </span>README.md
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Add footer to README&quot;</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>feature/add-footer
+</code></pre></div></li>
+<li>On GitHub, show the new branch appearing</li>
+</ol>
+<p><strong>Common Stuck Points:</strong>
+- <strong>"fatal: origin already exists"</strong> → They're re-adding origin. Use <code>git remote -v</code> to check, then <code>git remote remove origin</code> if needed.
+- <strong>Merge conflicts feeling overwhelming</strong> → Walk through one example slowly, then have them create a practice conflict. It gets easier.
+- <strong>"I lost my commits!"</strong> → They did a <code>git reset --hard</code>. Reassure them: commits are still there (<code>git reflog</code>), but this is advanced. For now: don't do that.
+- <strong>Authentication fails</strong> → Check <code>gh auth status</code>. If not logged in, run <code>gh auth login</code>.</p>
+<p><strong>Timing:</strong> Merge conflicts and pushing to GitHub are new concepts. Don't rush.</p>
+<p><strong>Deliverable Check:</strong> Repo on GitHub with 5+ commits and a successful push.</p>
+<hr />
+<h3 id="module-4-markdown-90-min"><strong>Module 4: Markdown (90 min)</strong></h3>
+<p><strong>Setup:</strong> VS Code with Markdown preview extension enabled</p>
+<p><strong>The Opener (2 min):</strong>
+"Markdown is how developers write. It's plain text that looks nice when rendered as HTML. 
+You'll write READMEs, documentation, and even prompts in Markdown."</p>
+<p><strong>Show, Don't Tell:</strong>
+- Open an example README.md in raw view (ugly, shows #, <em>, etc.)
+- Open the preview (beautiful, formatted)
+- Emphasize: </em><em>Markdown is the source, preview is the output.</em>*</p>
+<p><strong>Walk Them Through:</strong></p>
+<ol>
+<li><strong>Markdown Anatomy (15 min)</strong></li>
+<li>Create a file <code>demo.md</code></li>
+<li>
+<p>Add elements one by one, toggling preview:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="gh"># Heading 1</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="gu">## Heading 2</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="gu">### Heading 3</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>This is a <span class="gs">**bold**</span> word and an <span class="ge">*italic*</span> word.
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="k">-</span><span class="w"> </span>Bullet 1
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="k">-</span><span class="w"> </span>Bullet 2
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">  </span><span class="k">-</span><span class="w"> </span>Nested bullet
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="k">1.</span> Numbered 1
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="k">2.</span> Numbered 2
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="sb">`inline code`</span> and code blocks:
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>```javascript
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>console.log(&quot;Hello&quot;);
+</code></pre></div></p>
+<p><a href="https://example.com">Link text</a>
+ <img alt="Alt text" src="image.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th>Header 1</th>
+<th>Header 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cell 1</td>
+<td>Cell 2</td>
+</tr>
+<tr>
+<td>```</td>
+<td></td>
+</tr>
+<tr>
+<td>- As you add each element, toggle preview and show the output</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>Personal README (20 min)</strong></p>
+</li>
+<li>Students write about themselves:<ul>
+<li>Name (h2)</li>
+<li>Role (paragraph)</li>
+<li>Skills (bullet list)</li>
+<li>Interests (paragraph with <strong>bold</strong> emphasis)</li>
+<li>Favorite command (inline code)</li>
+</ul>
+</li>
+<li>
+<p>Checkpoint: Everyone toggles preview and shows themselves</p>
+</li>
+<li>
+<p><strong>Code Blocks with Syntax (15 min)</strong></p>
+</li>
+<li>Key: <code>```language</code> for syntax highlighting
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>```python
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>def hello():
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    return &quot;world&quot;
+</code></pre></div></li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Hello&quot;</span>
+</code></pre></div>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">);</span>
+</code></pre></div>
+   ```
+   - Insight: <strong>Pick the right language for highlighting.</strong></p>
+<ol>
+<li><strong>Tables (10 min)</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>| Feature | Tool A | Tool B |
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>|---------|--------|--------|
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>| Speed   | Fast   | Slow   |
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>| Cost    | $100   | Free   |
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>| Ease    | Hard   | Easy   |
+</code></pre></div></li>
+<li>
+<p>Practice alignment (<code>:---</code> left, <code>:---:</code> center, <code>---:</code> right)</p>
+</li>
+<li>
+<p><strong>Documentation Project (25 min)</strong></p>
+</li>
+<li>Choose a simple process (how to make coffee, debug code, etc.)</li>
+<li>Write it in Markdown with:<ul>
+<li>Main heading</li>
+<li>Sections (h2)</li>
+<li>Numbered steps</li>
+<li>Code blocks if applicable</li>
+<li>A table of contents at the top</li>
+</ul>
+</li>
+<li>Target: 300-500 words, properly formatted</li>
+<li>
+<p>Outcome: One complete, formatted Markdown document</p>
+</li>
+<li>
+<p><strong>YAML Frontmatter (5 min)</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>---
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>title: My Document
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>author: Your Name
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="gu">date: 2026-06-05</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="gu">---</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="gh"># Content starts here</span>
+</code></pre></div></p>
+</li>
+<li>Explanation: <strong>Metadata that some tools read, but humans skip.</strong></li>
+</ol>
+<p><strong>Common Confusions:</strong>
+- "Do I need to use Markdown?" → "Everywhere. README files, documentation, prompts to Claude, even your commit messages benefit from being clear like Markdown."
+- "Can I mix HTML?" → "Yes, but Markdown is cleaner. Stick to Markdown unless you need HTML."
+- "What about tables?" → "Markdown tables are basic but work. They're a little ugly to write but look great rendered."</p>
+<p><strong>Deliverable Check:</strong> Submit one Markdown file with at least 5 syntax elements (headings, bold/italic, lists, code blocks, one more).</p>
+<hr />
+<h3 id="module-5-programming-concepts-120-min"><strong>Module 5: Programming Concepts (120 min)</strong></h3>
+<p><strong>Key Philosophy:</strong> Pseudocode first, code second. If students can think through the logic, syntax is just typing.</p>
+<p><strong>Setup:</strong> VS Code with JavaScript runtime (Node.js) or Python available</p>
+<p><strong>The Opener (3 min):</strong>
+"Programming is problem-solving. You break a big problem into small steps, 
+write them in pseudocode (English-like), then translate pseudocode to real code. 
+The syntax (exact words, punctuation) matters, but the logic is what counts."</p>
+<p><strong>Walk Them Through:</strong></p>
+<ol>
+<li><strong>Variables and Types (15 min)</strong></li>
+<li>Pseudocode:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>name = &quot;Alice&quot;
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>age = 25
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>codes = true
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>next_year_age = age + 1
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>greeting = &quot;Hello, &quot; + name + &quot;. Next year you&#39;ll be &quot; + next_year_age
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>show greeting
+</code></pre></div></li>
+<li>Translate to JavaScript:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">;</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">25</span><span class="p">;</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">codes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nextYearAge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">greeting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`Hello, </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">. Next year you&#39;ll be </span><span class="si">${</span><span class="nx">nextYearAge</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greeting</span><span class="p">);</span>
+</code></pre></div></li>
+<li>Run it. Show the output.</li>
+<li>
+<p>Insight: <strong>Variables store data. Types matter (string vs number).</strong></p>
+</li>
+<li>
+<p><strong>Control Flow: If/Else (20 min)</strong></p>
+</li>
+<li>Scenario: "Coffee shop charges different prices by size."</li>
+<li>Pseudocode:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>size = &quot;medium&quot;
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>if size is &quot;small&quot;:
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>  price = 3
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>else if size is &quot;medium&quot;:
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>  price = 4
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>else if size is &quot;large&quot;:
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>  price = 5
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>else:
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>  price = 0
+<a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a>
+<a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>show price
+</code></pre></div></li>
+<li>JavaScript:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;medium&quot;</span><span class="p">;</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">price</span><span class="p">;</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">size</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;small&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="w">  </span><span class="nx">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">size</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;medium&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="w">  </span><span class="nx">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">size</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;large&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a><span class="w">  </span><span class="nx">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a><span class="w">  </span><span class="nx">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a><span class="p">}</span>
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">price</span><span class="p">);</span>
+</code></pre></div></li>
+<li>
+<p>Key: <strong><code>if</code> checks a condition. If true, run this code. Else, run that code.</strong></p>
+</li>
+<li>
+<p><strong>Loops: For and While (20 min)</strong></p>
+</li>
+<li>Scenario: "Print the word 'Go' ten times."</li>
+<li>Pseudocode:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>repeat 10 times:
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>  show &quot;Go&quot;
+</code></pre></div></li>
+<li>JavaScript:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Go&quot;</span><span class="p">);</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="p">}</span>
+</code></pre></div></li>
+<li>Scenario 2: "Sum all numbers from 1 to 100."</li>
+<li>Pseudocode:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>total = 0
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>for number from 1 to 100:
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>  total = total + number
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>show total
+</code></pre></div></li>
+<li>JavaScript:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">100</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">  </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="p">}</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">total</span><span class="p">);</span>
+</code></pre></div></li>
+<li>
+<p>Key: <strong>Loops repeat code. You're automating repetition.</strong></p>
+</li>
+<li>
+<p><strong>Functions: Reusable Logic (20 min)</strong></p>
+</li>
+<li>Scenario: "A greeting function."</li>
+<li>Pseudocode:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>function greet(name):
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>  return &quot;Hello, &quot; + name + &quot;!&quot;
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>show greet(&quot;Alice&quot;)
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>show greet(&quot;Bob&quot;)
+</code></pre></div></li>
+<li>JavaScript:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">greet</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="sb">`Hello, </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb">!`</span><span class="p">;</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="p">}</span>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>
+<a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greet</span><span class="p">(</span><span class="s2">&quot;Alice&quot;</span><span class="p">));</span>
+<a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greet</span><span class="p">(</span><span class="s2">&quot;Bob&quot;</span><span class="p">));</span>
+</code></pre></div></li>
+<li>Scenario 2: "A function that checks password strength."</li>
+<li>Pseudocode:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>function is_strong_password(password):
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>  if length of password &gt;= 8:
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>    return true
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>  else:
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a>    return false
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a>show is_strong_password(&quot;abc&quot;)     # false
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a>show is_strong_password(&quot;abcdefgh&quot;) # true
+</code></pre></div></li>
+<li>JavaScript:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">isStrongPassword</span><span class="p">(</span><span class="nx">password</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">password</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">8</span><span class="p">;</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="p">}</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isStrongPassword</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">));</span><span class="w">     </span><span class="c1">// false</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isStrongPassword</span><span class="p">(</span><span class="s2">&quot;abcdefgh&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></li>
+<li>
+<p>Key: <strong>Functions take input (parameters), do something, return output. You call them multiple times.</strong></p>
+</li>
+<li>
+<p><strong>Debugging: Reading Errors (20 min)</strong></p>
+</li>
+<li>Show 5 intentionally buggy code snippets:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="c1">// Bug 1: Missing semicolon (usually caught by editor)</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="c1">// Bug 2: Off-by-one error</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+<a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a><span class="p">}</span><span class="w"> </span><span class="c1">// This prints 1,2,3,4,5 — correct!</span>
+<a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a>
+<a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a><span class="c1">// Bug 3: Undefined variable</span>
+<a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">myVariable</span><span class="p">);</span><span class="w">  </span><span class="c1">// Error: myVariable is not defined</span>
+<a id="__codelineno-37-12" name="__codelineno-37-12" href="#__codelineno-37-12"></a>
+<a id="__codelineno-37-13" name="__codelineno-37-13" href="#__codelineno-37-13"></a><span class="c1">// Bug 4: Wrong comparison operator</span>
+<a id="__codelineno-37-14" name="__codelineno-37-14" href="#__codelineno-37-14"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">18</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Oops, = not ==</span>
+<a id="__codelineno-37-15" name="__codelineno-37-15" href="#__codelineno-37-15"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Adult&quot;</span><span class="p">);</span>
+<a id="__codelineno-37-16" name="__codelineno-37-16" href="#__codelineno-37-16"></a><span class="p">}</span>
+<a id="__codelineno-37-17" name="__codelineno-37-17" href="#__codelineno-37-17"></a>
+<a id="__codelineno-37-18" name="__codelineno-37-18" href="#__codelineno-37-18"></a><span class="c1">// Bug 5: Logic error</span>
+<a id="__codelineno-37-19" name="__codelineno-37-19" href="#__codelineno-37-19"></a><span class="kd">function</span><span class="w"> </span><span class="nx">max</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-37-20" name="__codelineno-37-20" href="#__codelineno-37-20"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="p">;</span><span class="w">  </span><span class="c1">// Should be a &gt; b</span>
+<a id="__codelineno-37-21" name="__codelineno-37-21" href="#__codelineno-37-21"></a><span class="w">  </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<a id="__codelineno-37-22" name="__codelineno-37-22" href="#__codelineno-37-22"></a><span class="p">}</span>
+</code></pre></div></li>
+<li>Walk through each: "What's the error? What should it be?"</li>
+<li>
+<p>Insight: <strong>Read error messages carefully. They tell you what went wrong.</strong></p>
+</li>
+<li>
+<p><strong>Pseudocode Planning (25 min)</strong></p>
+</li>
+<li>Scenario: "Build a grade calculator. Input: test scores. Output: average + letter grade."</li>
+<li>Pseudocode first:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>scores = [85, 90, 78, 92]
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>total = sum of all scores
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>average = total / number of scores
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>if average &gt;= 90:
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>  grade = &quot;A&quot;
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>else if average &gt;= 80:
+<a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>  grade = &quot;B&quot;
+<a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>else if average &gt;= 70:
+<a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a>  grade = &quot;C&quot;
+<a id="__codelineno-38-12" name="__codelineno-38-12" href="#__codelineno-38-12"></a>else:
+<a id="__codelineno-38-13" name="__codelineno-38-13" href="#__codelineno-38-13"></a>  grade = &quot;F&quot;
+<a id="__codelineno-38-14" name="__codelineno-38-14" href="#__codelineno-38-14"></a>
+<a id="__codelineno-38-15" name="__codelineno-38-15" href="#__codelineno-38-15"></a>show &quot;Average: &quot; + average + &quot;, Grade: &quot; + grade
+</code></pre></div></li>
+<li>JavaScript:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">scores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">85</span><span class="p">,</span><span class="w"> </span><span class="mf">90</span><span class="p">,</span><span class="w"> </span><span class="mf">78</span><span class="p">,</span><span class="w"> </span><span class="mf">92</span><span class="p">];</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">scores</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">average</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">total</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">scores</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="kd">let</span><span class="w"> </span><span class="nx">grade</span><span class="p">;</span>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">average</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">90</span><span class="p">)</span><span class="w"> </span><span class="nx">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">;</span>
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">average</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">80</span><span class="p">)</span><span class="w"> </span><span class="nx">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;B&quot;</span><span class="p">;</span>
+<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">average</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">70</span><span class="p">)</span><span class="w"> </span><span class="nx">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;C&quot;</span><span class="p">;</span>
+<a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a><span class="k">else</span><span class="w"> </span><span class="nx">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;F&quot;</span><span class="p">;</span>
+<a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a>
+<a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Average: </span><span class="si">${</span><span class="nx">average</span><span class="si">}</span><span class="sb">, Grade: </span><span class="si">${</span><span class="nx">grade</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</code></pre></div></li>
+<li>Test edge cases: what if all scores are 100? What if all are 60?</li>
+</ol>
+<p><strong>Common Stuck Points:</strong>
+- <strong>"I don't understand variables."</strong> → Real-world analogy: "A variable is a box. You put data in it, label it, and later you take the data out."
+- <strong>"How do I know which loop to use?"</strong> → "For loop if you know how many times. While loop if you know the stopping condition but not the count."
+- <strong>"What's the difference between = and ==?"</strong> → "Single = assigns a value. Double == compares two values."
+- <strong>"Arrays are confusing."</strong> → Show an array as a list: <code>const fruits = ["apple", "banana", "orange"]. Then:</code>fruits[0]` is "apple"."</p>
+<p><strong>Deliverable Check:</strong> 3 small programs (a greeting function, a loop, a conditional). Code should be readable, commented, and runnable.</p>
+<hr />
+<h3 id="module-6-developer-tools-setup-90-min"><strong>Module 6: Developer Tools Setup (90 min)</strong></h3>
+<p><strong>Critical:</strong> This module has the most blocking issues. Test your environment thoroughly beforehand.</p>
+<p><strong>The Opener (1 min):</strong>
+"You need a toolbox. Claude Code, GitHub, VS Code, and a shell. Let's get them all running."</p>
+<p><strong>Walk Them Through:</strong></p>
+<ol>
+<li><strong>Install Claude Code (15 min)</strong></li>
+<li>Run: <code>claude --version</code></li>
+<li>If it fails, troubleshoot (missing install, PATH issue, etc.)</li>
+<li>Run: <code>claude</code> and have them interact (ask it "what is today's date?")</li>
+<li>
+<p>Checkpoint: Everyone has a working Claude Code session</p>
+</li>
+<li>
+<p><strong>GitHub CLI (15 min)</strong></p>
+</li>
+<li>Install <code>gh</code>: <code>brew install gh</code> (macOS) or <code>choco install gh</code> (Windows) or <code>sudo apt install gh</code> (Linux)</li>
+<li>Authenticate: <code>gh auth login</code> (choose HTTPS)</li>
+<li>Verify: <code>gh auth status</code></li>
+<li>Clone a test repo: <code>gh repo clone octocat/Hello-World</code></li>
+<li>
+<p>Checkpoint: Everyone has successfully cloned a repo</p>
+</li>
+<li>
+<p><strong>VS Code Setup (10 min)</strong></p>
+</li>
+<li>Install VS Code</li>
+<li>Open a folder in VS Code</li>
+<li>Install 2-3 extensions: Markdown Preview, Git Graph, Prettier</li>
+<li>Show: syntax highlighting, preview pane</li>
+<li>
+<p>Checkpoint: Everyone has VS Code running</p>
+</li>
+<li>
+<p><strong>Environment Variables and .env (15 min)</strong></p>
+</li>
+<li>Create a <code>.env</code> file:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="nv">API_KEY</span><span class="o">=</span>my-secret-key-123
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="nv">DATABASE_URL</span><span class="o">=</span>postgres://localhost:5432/mydb
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="nv">DEBUG</span><span class="o">=</span><span class="nb">true</span>
+</code></pre></div></li>
+<li>Explain: "These are settings for your app. Never commit this to git."</li>
+<li>
+<p>Show: <code>.gitignore</code> should exclude <code>.env</code>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>.env
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>.env.local
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>*.log
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>node_modules/
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Verification Checklist (20 min)</strong></p>
+</li>
+<li>Have students run and screenshot:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>claude<span class="w"> </span>--version
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>node<span class="w"> </span>--version
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>git<span class="w"> </span>--version
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>gh<span class="w"> </span>--version
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>code<span class="w"> </span>--version
+</code></pre></div></li>
+<li>All should return a version number (not "command not found")</li>
+<li>
+<p>Checkpoint: Everyone has a complete checklist</p>
+</li>
+<li>
+<p><strong>Troubleshooting Practice (10 min)</strong></p>
+</li>
+<li>Walk through common issues:<ul>
+<li>"command not found" → Use <code>which</code> to check PATH, reinstall if needed</li>
+<li>"Permission denied" → Likely a shell script that needs <code>chmod +x</code></li>
+<li>"Module not found" → Missing dependency, need to install</li>
+</ul>
+</li>
+<li>Have them practice: "If you get 'command not found', what's the first thing you'd do?" (Answer: <code>which</code> + <code>echo $PATH</code>)</li>
+</ol>
+<p><strong>Common Stuck Points (This Module is CRITICAL):</strong>
+- <strong>Windows PATH issues:</strong> Windows doesn't update PATH automatically. Restart the terminal after install.
+- <strong>GitHub auth fails:</strong> They may not have a GitHub account or didn't install <code>gh</code>. Help them here.
+- <strong>Node/Python not installed:</strong> They'll need to install one or the other. Recommend Node (simpler for this cohort).
+- <strong>VS Code extensions not found:</strong> Extensions can be searched and installed from VS Code's extensions panel.</p>
+<p><strong>Deliverable Check:</strong> Checklist showing all tools installed and working (<code>claude --version</code>, etc.).</p>
+<hr />
+<h3 id="module-7-context-files-90-min"><strong>Module 7: Context Files (90 min)</strong></h3>
+<p><strong>The Opener (2 min):</strong>
+"CLAUDE.md is the instruction manual for your project. me.md is the manual for you. 
+Together, they tell Claude Code how to help you best."</p>
+<p><strong>Walk Them Through:</strong></p>
+<ol>
+<li><strong>Understanding CLAUDE.md (15 min)</strong></li>
+<li>Show an example CLAUDE.md (from d1-kit-alpha)</li>
+<li>Highlight sections:<ul>
+<li>Project name and goal</li>
+<li>What it's NOT (scope boundaries)</li>
+<li>Files Claude can modify</li>
+<li>Decision-making rules (if speed vs thoroughness matter)</li>
+</ul>
+</li>
+<li>
+<p>Key: <strong>CLAUDE.md constrains Claude's behavior. It says "this is what we're building and how."</strong></p>
+</li>
+<li>
+<p><strong>Understanding me.md (10 min)</strong></p>
+</li>
+<li>Show an example me.md</li>
+<li>Sections:<ul>
+<li>Name and role</li>
+<li>Decision style (fast/slow, risk tolerance)</li>
+<li>Communication preference (BLUF first, detail, examples)</li>
+<li>What you value</li>
+</ul>
+</li>
+<li>
+<p>Key: <strong>me.md tells Claude how YOU work. "I like BLUF first." "I prefer examples over theory."</strong></p>
+</li>
+<li>
+<p><strong>Conflict Resolution Matrix (15 min)</strong></p>
+</li>
+<li>When speed vs thoroughness collide, which wins in your world?</li>
+<li>Create a simple matrix:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>| Trade-off | Winner | Why |
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>|-----------|--------|-----|
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>| Speed vs Security | Security | We&#39;re building for the military |
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>| Simplicity vs Features | Simplicity | We launch in 2 weeks |
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>| Cost vs Performance | Cost | Budget is fixed |
+</code></pre></div></li>
+<li>
+<p>Students create their own for a hypothetical project</p>
+</li>
+<li>
+<p><strong>Write Your me.md (15 min)</strong></p>
+</li>
+<li>
+<p>Students complete their own me.md:</p>
+<ul>
+<li>Name: your role in the military or your civilian role</li>
+<li>Decision style: do you like fast / slow / data-driven / gut-feel?</li>
+<li>Communication: BLUF first, examples, details, jokes?</li>
+<li>Values: speed, clarity, thoroughness, innovation?</li>
+<li>Claude preference: "I like when Claude explains," "I prefer working code over explanation," etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>Write a Project CLAUDE.md (20 min)</strong></p>
+</li>
+<li>Scenario: "Simple task manager for Marines."</li>
+<li>
+<p>Students write a CLAUDE.md that includes:</p>
+<ul>
+<li>Project: Task manager for field teams</li>
+<li>Goal: Track 1-5 tasks per operator, mark complete</li>
+<li>Not: user auth, cloud sync, mobile app</li>
+<li>Constraints: Terminal only, no external dependencies, OPSEC safe</li>
+<li>Files Claude can modify: *.js, tests/, README.md</li>
+<li>Files Claude cannot modify: .env, package.json</li>
+<li>Success: MVP works, commits are clean</li>
+</ul>
+</li>
+<li>
+<p><strong>Set Up a Project (15 min)</strong></p>
+</li>
+<li>Create a folder: <code>my-practice-project</code></li>
+<li>Create <code>.claude/</code> inside it</li>
+<li>Add <code>CLAUDE.md</code> and <code>me.md</code></li>
+<li>Run Claude Code in that folder</li>
+<li>Ask Claude: "What are we building?" (It should cite your CLAUDE.md)</li>
+<li>Outcome: Claude acknowledges your context</li>
+</ol>
+<p><strong>Deliverable Check:</strong> CLAUDE.md + me.md for a real project (or hypothetical). Rubric: clarity, enforceability, usefulness.</p>
+<hr />
+<h3 id="module-8-capstone-project-180-min-across-multiple-days"><strong>Module 8: Capstone Project (180 min, across multiple days)</strong></h3>
+<p><strong>The Opener (2 min):</strong>
+"You're going to build and ship a real project. Not a tutorial, not a code-along. 
+A real thing that does something useful. Then you push it to GitHub."</p>
+<p><strong>Setup:</strong>
+- Have students pick their path (CLI tool, web app, or API integration)
+- Provide three template CLAUDE.md files (one per path)
+- Have them clone/fork a starter template (optional, not required)</p>
+<p><strong>Coaching Throughout (Not Direct Answers):</strong>
+- "What does the error message say?" (instead of "here's the fix")
+- "Can you draw what this should do?" (instead of "here's the code")
+- "What would you do if I wasn't here?" (instead of "use npm install")
+- "That's good progress. What's next?" (instead of "now do X")</p>
+<p><strong>Checkpoint Moments (Formative Assessment):</strong>
+- <strong>After planning (20 min):</strong> "Can you tell me in one sentence what you're building?"
+- <strong>After setup (40 min):</strong> "Show me your folder structure. What's in each file?"
+- <strong>After first feature (100 min):</strong> "Does it run? Show me it working."
+- <strong>After iteration (140 min):</strong> "What did you change after testing? Why?"
+- <strong>After push (170 min):</strong> "Show me your GitHub repo with your commits."</p>
+<p><strong>Deliverable Check:</strong>
+- GitHub repo link
+- Proof of 5+ commits (they used git)
+- README.md (documented)
+- Code runs (tested)
+- Rubric: Does it work (50%), documented (20%), commits (15%), iteration (10%), polish (5%), bonus (+5%)</p>
+<hr />
+<h2 id="troubleshooting-quick-reference">Troubleshooting Quick Reference</h2>
+<h3 id="student-cant-authenticate"><strong>Student Can't Authenticate</strong></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="c1"># Check GitHub CLI</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>gh<span class="w"> </span>auth<span class="w"> </span>status
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="c1"># If not logged in</span>
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>gh<span class="w"> </span>auth<span class="w"> </span>login
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="c1"># Choose HTTPS (easier for beginners)</span>
+<a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a><span class="c1"># Authenticate in browser when prompted</span>
+<a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a>
+<a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a><span class="c1"># Check Claude Code</span>
+<a id="__codelineno-44-10" name="__codelineno-44-10" href="#__codelineno-44-10"></a>claude<span class="w"> </span>--version
+<a id="__codelineno-44-11" name="__codelineno-44-11" href="#__codelineno-44-11"></a>
+<a id="__codelineno-44-12" name="__codelineno-44-12" href="#__codelineno-44-12"></a><span class="c1"># If not working, reinstall</span>
+<a id="__codelineno-44-13" name="__codelineno-44-13" href="#__codelineno-44-13"></a><span class="c1"># macOS: brew install anthropic/cli/claude</span>
+<a id="__codelineno-44-14" name="__codelineno-44-14" href="#__codelineno-44-14"></a><span class="c1"># Windows: choco install claude</span>
+<a id="__codelineno-44-15" name="__codelineno-44-15" href="#__codelineno-44-15"></a><span class="c1"># Linux: Instructions vary by distro</span>
+</code></pre></div>
+<h3 id="command-not-found"><strong>"Command Not Found"</strong></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="c1"># Check if command exists</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>which<span class="w"> </span>&lt;command&gt;
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="c1"># If not found, install it or add to PATH</span>
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a><span class="c1"># Check PATH</span>
+<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$PATH</span>
+<a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>
+<a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a><span class="c1"># If tool was just installed, restart terminal</span>
+</code></pre></div>
+<h3 id="terminal-path-confusion"><strong>Terminal Path Confusion</strong></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="c1"># Show where you are</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="nb">pwd</span>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="c1"># List files in current directory</span>
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>ls
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a><span class="c1"># Move to a specific directory</span>
+<a id="__codelineno-46-8" name="__codelineno-46-8" href="#__codelineno-46-8"></a><span class="nb">cd</span><span class="w"> </span>/path/to/folder
+<a id="__codelineno-46-9" name="__codelineno-46-9" href="#__codelineno-46-9"></a>
+<a id="__codelineno-46-10" name="__codelineno-46-10" href="#__codelineno-46-10"></a><span class="c1"># Move up one level</span>
+<a id="__codelineno-46-11" name="__codelineno-46-11" href="#__codelineno-46-11"></a><span class="nb">cd</span><span class="w"> </span>..
+<a id="__codelineno-46-12" name="__codelineno-46-12" href="#__codelineno-46-12"></a>
+<a id="__codelineno-46-13" name="__codelineno-46-13" href="#__codelineno-46-13"></a><span class="c1"># Move to home</span>
+<a id="__codelineno-46-14" name="__codelineno-46-14" href="#__codelineno-46-14"></a><span class="nb">cd</span><span class="w"> </span>~
+</code></pre></div>
+<h3 id="git-merge-conflicts"><strong>Git Merge Conflicts</strong></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="c1"># See conflict status</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>git<span class="w"> </span>status
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a><span class="c1"># Edit the conflicted file, choose the version you want</span>
+<a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>
+<a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a><span class="c1"># Stage the resolved file</span>
+<a id="__codelineno-47-7" name="__codelineno-47-7" href="#__codelineno-47-7"></a>git<span class="w"> </span>add<span class="w"> </span>&lt;file&gt;
+<a id="__codelineno-47-8" name="__codelineno-47-8" href="#__codelineno-47-8"></a>
+<a id="__codelineno-47-9" name="__codelineno-47-9" href="#__codelineno-47-9"></a><span class="c1"># Complete the merge</span>
+<a id="__codelineno-47-10" name="__codelineno-47-10" href="#__codelineno-47-10"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Resolve conflict in &lt;file&gt;&quot;</span>
+</code></pre></div>
+<h3 id="vs-code-markdown-preview-not-working"><strong>VS Code Markdown Preview Not Working</strong></h3>
+<ul>
+<li>Install "Markdown Preview Enhanced" extension</li>
+<li>Or install "Markdown All in One" extension</li>
+<li>Restart VS Code</li>
+<li>Open a <code>.md</code> file and press <code>Cmd+Shift+V</code> (Mac) or <code>Ctrl+Shift+V</code> (Windows/Linux)</li>
+</ul>
+<h3 id="javascriptnode-issues"><strong>JavaScript/Node Issues</strong></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="c1"># Check if Node is installed</span>
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>node<span class="w"> </span>--version
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a><span class="c1"># If not, install from nodejs.org</span>
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>
+<a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a><span class="c1"># Run a JS file</span>
+<a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a>node<span class="w"> </span>filename.js
+<a id="__codelineno-48-8" name="__codelineno-48-8" href="#__codelineno-48-8"></a>
+<a id="__codelineno-48-9" name="__codelineno-48-9" href="#__codelineno-48-9"></a><span class="c1"># Run Node interactively</span>
+<a id="__codelineno-48-10" name="__codelineno-48-10" href="#__codelineno-48-10"></a>node
+<a id="__codelineno-48-11" name="__codelineno-48-11" href="#__codelineno-48-11"></a><span class="c1"># Type: console.log(&quot;Hello&quot;)</span>
+<a id="__codelineno-48-12" name="__codelineno-48-12" href="#__codelineno-48-12"></a><span class="c1"># Exit: Ctrl+D or .exit</span>
+</code></pre></div>
+<h3 id="git-push-fails"><strong>Git Push Fails</strong></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="c1"># Verify remote is set</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a>git<span class="w"> </span>remote<span class="w"> </span>-v
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a>
+<a id="__codelineno-49-4" name="__codelineno-49-4" href="#__codelineno-49-4"></a><span class="c1"># If origin missing</span>
+<a id="__codelineno-49-5" name="__codelineno-49-5" href="#__codelineno-49-5"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>&lt;URL&gt;
+<a id="__codelineno-49-6" name="__codelineno-49-6" href="#__codelineno-49-6"></a>
+<a id="__codelineno-49-7" name="__codelineno-49-7" href="#__codelineno-49-7"></a><span class="c1"># If wrong URL</span>
+<a id="__codelineno-49-8" name="__codelineno-49-8" href="#__codelineno-49-8"></a>git<span class="w"> </span>remote<span class="w"> </span>remove<span class="w"> </span>origin
+<a id="__codelineno-49-9" name="__codelineno-49-9" href="#__codelineno-49-9"></a>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>&lt;new-URL&gt;
+<a id="__codelineno-49-10" name="__codelineno-49-10" href="#__codelineno-49-10"></a>
+<a id="__codelineno-49-11" name="__codelineno-49-11" href="#__codelineno-49-11"></a><span class="c1"># Try again</span>
+<a id="__codelineno-49-12" name="__codelineno-49-12" href="#__codelineno-49-12"></a>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<hr />
+<h2 id="timing-and-pacing-guide">Timing and Pacing Guide</h2>
+<h3 id="for-a-cohort-moving-at-standard-pace"><strong>For a Cohort Moving at Standard Pace</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Day</th>
+<th>Morning</th>
+<th>Afternoon</th>
+<th>Evening</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>D1</strong></td>
+<td>M1 (90m) + M2 (120m) = 210m</td>
+<td>M3-Part1 (60m) + Break + M3-Part2 (60m) + M4 (45m) = 165m</td>
+<td>Lab + review</td>
+</tr>
+<tr>
+<td><strong>D2</strong></td>
+<td>M4-finish + M5 (120m) = 165m</td>
+<td>M6 (90m) + M7 (90m) = 180m</td>
+<td>Capstone prep</td>
+</tr>
+<tr>
+<td><strong>D3</strong></td>
+<td>M8-Capstone (AM) = 240m</td>
+<td>M8-Capstone (PM) + presentations = 180m</td>
+<td>Celebration</td>
+</tr>
+</tbody>
+</table>
+<h3 id="for-a-cohort-moving-faster-skip-stretch-content"><strong>For a Cohort Moving Faster (Skip Stretch Content)</strong></h3>
+<ul>
+<li>Skip "optional" demos (context window experiment, em-dash preservation in Markdown)</li>
+<li>Combine M1 + M2 into one "morning block" if group knows terminal</li>
+<li>Do capstone in one long day (10 hours) instead of two</li>
+</ul>
+<h3 id="for-a-cohort-moving-slower"><strong>For a Cohort Moving Slower</strong></h3>
+<ul>
+<li>Add a "Terminal Mastery" day between M2 and M3 (extra 90 min practice)</li>
+<li>Extend M5 into two half-days (programming concepts are dense)</li>
+<li>Allow capstone to roll into a "bonus day 4" if needed</li>
+</ul>
+<hr />
+<h2 id="assessment-and-grading">Assessment and Grading</h2>
+<h3 id="per-module-rubric-simplified"><strong>Per-Module Rubric (Simplified)</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Artifact</th>
+<th>Pass Criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M1</strong></td>
+<td>5 prompts</td>
+<td>4/5 are clear, specific, coherent</td>
+</tr>
+<tr>
+<td><strong>M2</strong></td>
+<td>Terminal transcript</td>
+<td>8/10 commands correct, navigation successful</td>
+</tr>
+<tr>
+<td><strong>M3</strong></td>
+<td>Commits + push</td>
+<td>Commits have messages, push succeeds</td>
+</tr>
+<tr>
+<td><strong>M4</strong></td>
+<td>Markdown doc</td>
+<td>5+ syntax elements, readable</td>
+</tr>
+<tr>
+<td><strong>M5</strong></td>
+<td>3 programs</td>
+<td>All run, logic is correct</td>
+</tr>
+<tr>
+<td><strong>M6</strong></td>
+<td>Checklist</td>
+<td>All tools installed, all version checks pass</td>
+</tr>
+<tr>
+<td><strong>M7</strong></td>
+<td>CLAUDE.md + me.md</td>
+<td>Both complete, coherent, enforceable</td>
+</tr>
+<tr>
+<td><strong>M8</strong></td>
+<td>GitHub repo</td>
+<td>5+ commits, README, code runs</td>
+</tr>
+</tbody>
+</table>
+<h3 id="overall-grade-calculation"><strong>Overall Grade Calculation</strong></h3>
+<ul>
+<li>7/8 modules passed = <strong>Passed, course complete</strong></li>
+<li>8/8 modules passed + capstone &gt;80% = <strong>Honors</strong></li>
+<li>&lt;7/8 = Offer remediation or next cohort</li>
+</ul>
+<hr />
+<h2 id="resources-for-instructors">Resources for Instructors</h2>
+<h3 id="slides-and-demos"><strong>Slides and Demos</strong></h3>
+<ul>
+<li>Keep demo files in a shared GitHub repo (<code>_classroom-demos/</code>)</li>
+<li>Slides should be copy-paste friendly (include all commands)</li>
+<li>Record one demo of each module for students to rewatch later (optional but high value)</li>
+</ul>
+<h3 id="handout-templates"><strong>Handout Templates</strong></h3>
+<ul>
+<li>Terminal cheat sheet (common commands)</li>
+<li>Git workflow diagram (init → add → commit → push)</li>
+<li>Markdown quick reference</li>
+<li>JavaScript syntax cheat sheet (variables, functions, loops)</li>
+</ul>
+<h3 id="bonus-materials-if-time"><strong>Bonus Materials (If Time)</strong></h3>
+<ul>
+<li>"Debugging Mindset" worksheet (how to think when code breaks)</li>
+<li>"Pseudocode Planning" template (fill-in form for breaking down problems)</li>
+<li>"Code Review Checklist" (what to look for when reviewing student projects)</li>
+</ul>
+<hr />
+<h2 id="common-instructor-questions">Common Instructor Questions</h2>
+<p><strong>Q: A student is way ahead. What do I give them?</strong>
+A: Capstone stretch goals (deploy to Vercel, add tests, second feature). Or pair them with a struggling student as a peer mentor.</p>
+<p><strong>Q: A student is falling way behind.</strong>
+A: Assess where they got lost (usually terminal or git). Pair them with you during lab time for a 30-min focused catch-up. Don't slow the whole group.</p>
+<p><strong>Q: Can I skip Module X?</strong>
+A: No. Every module is a prerequisite for the next. M2 (terminal) is required for M3 (git). M5 (programming) is required for M8 (capstone). Can't skip.</p>
+<p><strong>Q: Can I teach this online?</strong>
+A: Yes, with adjustments. Use breakout rooms for pair programming. Record demos. Use screen-sharing for troubleshooting. Assign 1-on-1 office hours for tool setup (authentication, PATH issues).</p>
+<p><strong>Q: What's the hardest part for students?</strong>
+A: <strong>Tie:</strong> Terminal path concepts and programming logic. Give these modules extra time and practice.</p>
+<hr />
+<h2 id="instructor-success-checklist">Instructor Success Checklist</h2>
+<p>Before teaching your first cohort, verify:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You've completed all 8 modules yourself</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You've hit the main bugs in your environment and fixed them</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Demo files are ready in <code>_classroom-demos/</code></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You have working examples of every exercise</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You've written instructor notes for each module</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You've set up your screen layout (code editor + terminal visible)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You have a timer (visible to students, for pacing)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You've practiced one 5-minute demo (do it fast, confidently)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You know your "unstuck" phrases: "What does the error say?", "What did you expect?", "Try it yourself first."</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> You have a system for capturing student questions and parking them (whiteboard?)</li>
+</ul>
+<hr />
+<p><strong>End of Instructor Guide</strong></p>
+<p>You're ready to teach. The course works. The students will learn. Help them stay stuck just long enough to solve it themselves—that's where learning lives.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

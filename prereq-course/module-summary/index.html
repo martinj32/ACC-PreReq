@@ -1,0 +1,2215 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../course-design/">
+      
+      
+        <link rel="next" href="../../instructor/teaching-guide/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Module Quick Reference - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-and-agentics-basics-module-quick-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Module Quick Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedules
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bedrock/ai-literacy/" class="md-tabs__link">
+          
+  
+  
+  Bedrock
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../terminal-basics/the-machine/" class="md-tabs__link">
+          
+  
+  
+  Terminal Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../agentic-ai/agent-concepts/" class="md-tabs__link">
+          
+  
+  
+  Agentic AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mental-models/core-content/" class="md-tabs__link">
+          
+  
+  
+  Mental Models
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../course-design/" class="md-tabs__link">
+          
+  
+  
+  Technical Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../instructor/teaching-guide/" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedrock
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bedrock
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bedrock/ai-literacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Literacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bedrock/personalizing-your-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personalizing Your AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terminal Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal-basics/the-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal-basics/the-terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentic AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agentic-ai/agent-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mental Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/core-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/workbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technical Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../course-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Design (M1-M8)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#module-1-llm-prompts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 1: LLM &amp; Prompts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-2-terminal-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 2: Terminal Basics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-3-git-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 3: Git Basics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-4-markdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 4: Markdown
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-5-programming-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 5: Programming Concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-6-developer-tools-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 6: Developer Tools Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-7-context-files-claudemd-memd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 7: Context Files — CLAUDE.md &amp; me.md
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-8-capstone-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module 8: Capstone Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisite-dependency-map" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisite Dependency Map
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daily-time-allocation-for-2-3-day-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Time Allocation (for 2-3 day format)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Daily Time Allocation (for 2-3 day format)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#day-1-foundations-8-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 1: Foundations (8 hours)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-2-intermediate-8-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 2: Intermediate (8 hours)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-3-optional-capstone-6-8-hours" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 3 (Optional): Capstone (6-8 hours)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#success-indicators-by-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Success Indicators by Module
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grading-rubric-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grading Rubric Summary
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grading Rubric Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#module-level-grading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module-Level Grading
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#course-level-grading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course-Level Grading
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stretch-goals-if-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stretch Goals (If Time)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stretch Goals (If Time)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-fast-finishers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For Fast Finishers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-misconceptions-and-corrections" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Misconceptions and Corrections
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#materials-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materials Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources-for-instructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Resources for Instructors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-completion-and-next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course Completion and Next Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-level-readiness-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Course-Level Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/teaching-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/mental-models-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/prereq-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/day0-scaffold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 0 Teaching Scaffold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ai-and-agentics-basics-module-quick-reference">AI and Agentics Basics — Module Quick Reference</h1>
+<p><strong>BLUF.</strong> Condensed view of all 8 modules -- use this for planning, pacing, and quick prep before each session.</p>
+<hr />
+<h2 id="module-1-llm-prompts">Module 1: LLM &amp; Prompts</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duration</strong></td>
+<td>90 minutes</td>
+</tr>
+<tr>
+<td><strong>Learning Goal</strong></td>
+<td>Understand LLMs, write clear prompts, iterate based on feedback</td>
+</tr>
+<tr>
+<td><strong>Key Concepts</strong></td>
+<td>Prompt → response, system prompts, specificity, context windows, temperature, tokens</td>
+</tr>
+<tr>
+<td><strong>Materials</strong></td>
+<td>Claude (web or Code), text editor</td>
+</tr>
+<tr>
+<td><strong>Hands-On</strong></td>
+<td>5 exercises: bad vs good prompts, system prompt experiment, clarity exercise, context boundary, iterative prompting</td>
+</tr>
+<tr>
+<td><strong>Deliverable</strong></td>
+<td>5 well-written prompts</td>
+</tr>
+<tr>
+<td><strong>Key Insight</strong></td>
+<td>"Specificity wins. Vague prompts get vague answers."</td>
+</tr>
+<tr>
+<td><strong>Common Stumble</strong></td>
+<td>"Context windows? How big is too big?" Reassure: for this course, assume ~200k tokens. Advanced limit-testing is later.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="module-2-terminal-basics">Module 2: Terminal Basics</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duration</strong></td>
+<td>120 minutes</td>
+</tr>
+<tr>
+<td><strong>Learning Goal</strong></td>
+<td>Navigate filesystem, manipulate files, use command flags, pipe/redirect</td>
+</tr>
+<tr>
+<td><strong>Key Concepts</strong></td>
+<td>pwd, cd, ls, mkdir, touch, cp, mv, rm, &gt;, &gt;&gt;, |, man pages, PATH</td>
+</tr>
+<tr>
+<td><strong>Materials</strong></td>
+<td>Terminal, any shell (bash, zsh, PowerShell)</td>
+</tr>
+<tr>
+<td><strong>Hands-On</strong></td>
+<td>6 exercises: navigation walk, file manipulation sprint, path puzzle, help system, piping/redirection, real-world scenario</td>
+</tr>
+<tr>
+<td><strong>Deliverable</strong></td>
+<td>Terminal transcript showing 6 completed exercises</td>
+</tr>
+<tr>
+<td><strong>Key Insight</strong></td>
+<td>"The terminal is just another interface. Same files, same folders—just words instead of mouse clicks."</td>
+</tr>
+<tr>
+<td><strong>Common Stumble</strong></td>
+<td><strong>Path confusion.</strong> Students mix absolute (<code>/home/user/file.txt</code>) and relative (<code>./file.txt</code>, <code>../docs/</code>). Practice this 5+ times.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="module-3-git-basics">Module 3: Git Basics</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duration</strong></td>
+<td>120 minutes (split: 60 min local, 60 min remote/conflicts)</td>
+</tr>
+<tr>
+<td><strong>Learning Goal</strong></td>
+<td>Init repos, commit changes, branch, merge, push to GitHub, resolve conflicts</td>
+</tr>
+<tr>
+<td><strong>Key Concepts</strong></td>
+<td>git init, git add, git commit, git log, git branch, git checkout/switch, git merge, git push, merge conflicts, <code>.gitignore</code></td>
+</tr>
+<tr>
+<td><strong>Materials</strong></td>
+<td>Terminal, Git CLI, GitHub account, <code>gh</code> CLI</td>
+</tr>
+<tr>
+<td><strong>Hands-On</strong></td>
+<td>6 exercises: init &amp; commit, branching sprint, cloning &amp; pushing, merge conflicts, commit messages, <code>.gitignore</code></td>
+</tr>
+<tr>
+<td><strong>Deliverable</strong></td>
+<td>GitHub repo with 5+ commits, successful push</td>
+</tr>
+<tr>
+<td><strong>Key Insight</strong></td>
+<td>"Git is a time machine. Every commit is a snapshot. You can jump back, try new ideas on branches, and merge them in."</td>
+</tr>
+<tr>
+<td><strong>Common Stumble</strong></td>
+<td><strong>Merge conflicts.</strong> Students panic. Walk through once slowly, let them do one practice conflict. It gets comfortable fast.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="module-4-markdown">Module 4: Markdown</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duration</strong></td>
+<td>90 minutes</td>
+</tr>
+<tr>
+<td><strong>Learning Goal</strong></td>
+<td>Write clear, structured Markdown documents</td>
+</tr>
+<tr>
+<td><strong>Key Concepts</strong></td>
+<td>Headers, bold/italic, lists, code blocks, tables, links, YAML frontmatter</td>
+</tr>
+<tr>
+<td><strong>Materials</strong></td>
+<td>Text editor, Markdown preview (VS Code extension)</td>
+</tr>
+<tr>
+<td><strong>Hands-On</strong></td>
+<td>6 exercises: markdown anatomy, personal README, code blocks with syntax, tables, documentation project, YAML frontmatter</td>
+</tr>
+<tr>
+<td><strong>Deliverable</strong></td>
+<td>One complete Markdown document (README, documentation, or personal bio)</td>
+</tr>
+<tr>
+<td><strong>Key Insight</strong></td>
+<td>"Markdown is the lingua franca of developers. You'll use it everywhere: READMEs, docs, prompts, even commit messages."</td>
+</tr>
+<tr>
+<td><strong>Common Stumble</strong></td>
+<td>"Tables are annoying to write in Markdown." True. Show them a table generator online, or just accept the slightly ugly raw format.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="module-5-programming-concepts">Module 5: Programming Concepts</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duration</strong></td>
+<td>120 minutes</td>
+</tr>
+<tr>
+<td><strong>Learning Goal</strong></td>
+<td>Understand variables, logic, loops, functions, debugging</td>
+</tr>
+<tr>
+<td><strong>Key Concepts</strong></td>
+<td>Variables, types (string, number, boolean), operators, if/else, for/while loops, functions, pseudocode, debugging, arrays</td>
+</tr>
+<tr>
+<td><strong>Materials</strong></td>
+<td>Code editor, Node.js (or Python), terminal</td>
+</tr>
+<tr>
+<td><strong>Hands-On</strong></td>
+<td>6 exercises: variables &amp; types, if/else, loops (for/while), functions, debugging buggy code, pseudocode planning → implementation</td>
+</tr>
+<tr>
+<td><strong>Deliverable</strong></td>
+<td>3 small programs (greeting function, conditional logic, loop example)</td>
+</tr>
+<tr>
+<td><strong>Key Insight</strong></td>
+<td>"Programming is problem-solving. Pseudocode (English-like) comes first. Syntax is just translating that to code."</td>
+</tr>
+<tr>
+<td><strong>Common Stumble</strong></td>
+<td><strong>Logic confusion.</strong> Students understand syntax but get confused by logic flow (off-by-one errors, infinite loops). Use pseudocode-first approach rigorously.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="module-6-developer-tools-setup">Module 6: Developer Tools Setup</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duration</strong></td>
+<td>90 minutes</td>
+</tr>
+<tr>
+<td><strong>Learning Goal</strong></td>
+<td>Install and authenticate all required tools; understand PATH and environment variables</td>
+</tr>
+<tr>
+<td><strong>Key Concepts</strong></td>
+<td>Claude Code, <code>gh</code> CLI, VS Code, Node.js (or Python), git, environment variables, <code>.env</code> files, <code>.gitignore</code>, authentication tokens</td>
+</tr>
+<tr>
+<td><strong>Materials</strong></td>
+<td>Computer with admin access, package manager (brew, apt, choco, etc.)</td>
+</tr>
+<tr>
+<td><strong>Hands-On</strong></td>
+<td>6 exercises: install Claude Code, GitHub auth, VS Code setup, .env files &amp; .gitignore, tool verification checklist, troubleshooting practice</td>
+</tr>
+<tr>
+<td><strong>Deliverable</strong></td>
+<td>Checklist showing all tools installed and authenticated</td>
+</tr>
+<tr>
+<td><strong>Key Insight</strong></td>
+<td>"You need a toolbox. Every tool works together: Claude writes code, git tracks it, GitHub stores it, VS Code edits it."</td>
+</tr>
+<tr>
+<td><strong>Common Stumble</strong></td>
+<td><strong>Windows PATH:</strong> Windows doesn't auto-update PATH after install. Solution: restart the terminal or restart computer. <strong>GitHub auth:</strong> Make sure <code>gh</code> is installed before trying <code>gh auth login</code>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="module-7-context-files-claudemd-memd">Module 7: Context Files — CLAUDE.md &amp; me.md</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duration</strong></td>
+<td>90 minutes</td>
+</tr>
+<tr>
+<td><strong>Learning Goal</strong></td>
+<td>Write CLAUDE.md and me.md; understand how context shapes Claude's behavior</td>
+</tr>
+<tr>
+<td><strong>Key Concepts</strong></td>
+<td>System prompts, project context, personal operating profile, conflict resolution matrices, scope boundaries, decision rules</td>
+</tr>
+<tr>
+<td><strong>Materials</strong></td>
+<td>Text editor, examples of CLAUDE.md and me.md files</td>
+</tr>
+<tr>
+<td><strong>Hands-On</strong></td>
+<td>6 exercises: analyze example CLAUDE.md, write personal me.md, write project CLAUDE.md, conflict resolution matrix, set up project context, verify context is read</td>
+</tr>
+<tr>
+<td><strong>Deliverable</strong></td>
+<td>CLAUDE.md + me.md for a real (or hypothetical) project</td>
+</tr>
+<tr>
+<td><strong>Key Insight</strong></td>
+<td>"CLAUDE.md tells Claude what to build. me.md tells Claude how you work. Together, they make Claude your perfect teammate."</td>
+</tr>
+<tr>
+<td><strong>Common Stumble</strong></td>
+<td>Students write generic CLAUDE.md (doesn't constrain anything). Fix: "What SHOULDN'T Claude modify? What's out of scope?" Real constraints are powerful.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="module-8-capstone-project">Module 8: Capstone Project</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duration</strong></td>
+<td>180 minutes (can span 1-2 days or 1 long day)</td>
+</tr>
+<tr>
+<td><strong>Learning Goal</strong></td>
+<td>Integrate all concepts: plan → code → commit → push; troubleshoot real problems; ship something real</td>
+</tr>
+<tr>
+<td><strong>Key Concepts</strong></td>
+<td>Project planning, full git workflow, iterative development, documentation, testing, pushing to GitHub</td>
+</tr>
+<tr>
+<td><strong>Materials</strong></td>
+<td>All tools from modules 1-7</td>
+</tr>
+<tr>
+<td><strong>Hands-On</strong></td>
+<td>Choose one path: CLI tool, web app, or API integration. Build it. Test it. Document it. Push to GitHub.</td>
+</tr>
+<tr>
+<td><strong>Deliverable</strong></td>
+<td>Working project on GitHub with 5+ commits, README, and working code</td>
+</tr>
+<tr>
+<td><strong>Key Insight</strong></td>
+<td>"You're not building a tutorial project. You're building something real, shipping it, and proving you can do this."</td>
+</tr>
+<tr>
+<td><strong>Common Stumble</strong></td>
+<td>Students under-scope (build something too simple) or over-scope (try to build too much). Instructor guidance: "Can you demo this in 2 minutes? If not, it's too big."</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div class="admonition note">
+<p class="admonition-title">Critical Path</p>
+<p>M1 → M2 → M3 → M5 → M8 is the non-negotiable sequence. M4 (Markdown) can run in parallel once M1 is done. M6 and M7 must complete before M8 begins.</p>
+</div>
+<h2 id="prerequisite-dependency-map">Prerequisite Dependency Map</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>                Module 1
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                  LLM &amp; Prompts
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                      |
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                      v
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    Module 2               Module 4
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    Terminal Basics        Markdown
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>         |                     |
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>         v                     v
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    Module 3         [can run in parallel]
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    Git Basics
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>         |
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>         +---&gt; Module 5
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>         |     Programming
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>         |         |
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>         |         v
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>         +---&gt; Module 6
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>         |     Tools Setup
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>         |         |
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>         +---&gt; Module 7
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>         |     Context Files
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>         |         |
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>         v---------v
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>       Module 8
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>       Capstone Project
+</code></pre></div>
+<p><strong>Critical path:</strong> M1 → M2 → M3 → M5 → M8 (avoid skipping any)</p>
+<p><strong>Can run in parallel:</strong> M4 (Markdown) while others are sinking in</p>
+<p><strong>Must complete before M8:</strong> M5, M6, M7</p>
+<hr />
+<h2 id="daily-time-allocation-for-2-3-day-format">Daily Time Allocation (for 2-3 day format)</h2>
+<h3 id="day-1-foundations-8-hours"><strong>Day 1: Foundations (8 hours)</strong></h3>
+<ul>
+<li>8:00-9:30: <strong>M1</strong> (90 min)</li>
+<li>9:30-10:00: Break</li>
+<li>10:00-12:00: <strong>M2</strong> (120 min)</li>
+<li>12:00-1:00: Lunch</li>
+<li>1:00-2:30: <strong>M3 Part 1</strong> (90 min, first half)</li>
+<li>2:30-2:45: Break</li>
+<li>2:45-4:15: <strong>M3 Part 2</strong> (90 min, second half)</li>
+<li>4:15-5:00: <strong>M4</strong> (45 min, intro)</li>
+<li>5:00-6:00: Lab + troubleshooting</li>
+</ul>
+<p><strong>Homework:</strong> Finish M4, preview M5</p>
+<h3 id="day-2-intermediate-8-hours"><strong>Day 2: Intermediate (8 hours)</strong></h3>
+<ul>
+<li>8:00-9:30: <strong>M4 finish + M5 intro</strong> (90 min)</li>
+<li>9:30-10:00: Break</li>
+<li>10:00-12:00: <strong>M5</strong> (120 min)</li>
+<li>12:00-1:00: Lunch</li>
+<li>1:00-2:30: <strong>M6</strong> (90 min)</li>
+<li>2:30-2:45: Break</li>
+<li>2:45-4:15: <strong>M7</strong> (90 min)</li>
+<li>4:15-5:00: Readiness check</li>
+<li>5:00-6:00: Lab + capstone prep</li>
+</ul>
+<p><strong>Homework:</strong> Finalize context files, pick capstone project</p>
+<h3 id="day-3-optional-capstone-6-8-hours"><strong>Day 3 (Optional): Capstone (6-8 hours)</strong></h3>
+<ul>
+<li>8:00-12:00: <strong>M8 Part 1</strong> (240 min, planning + first half of build)</li>
+<li>12:00-1:00: Lunch</li>
+<li>1:00-5:00: <strong>M8 Part 2</strong> (240 min, second half + presentations)</li>
+</ul>
+<hr />
+<h2 id="success-indicators-by-module">Success Indicators by Module</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Student Can…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M1</strong></td>
+<td>Write a specific prompt, iterate on feedback, explain why context matters</td>
+</tr>
+<tr>
+<td><strong>M2</strong></td>
+<td>Navigate the terminal, create/delete files, use pipes and redirects</td>
+</tr>
+<tr>
+<td><strong>M3</strong></td>
+<td>Create commits with clear messages, create and merge branches, push to GitHub</td>
+</tr>
+<tr>
+<td><strong>M4</strong></td>
+<td>Write Markdown with 5+ syntax elements, toggle preview, see the HTML output</td>
+</tr>
+<tr>
+<td><strong>M5</strong></td>
+<td>Write pseudocode, translate it to code, debug a syntax or logic error</td>
+</tr>
+<tr>
+<td><strong>M6</strong></td>
+<td>Run version checks on all tools, authenticate to GitHub, set up a .env file</td>
+</tr>
+<tr>
+<td><strong>M7</strong></td>
+<td>Write a CLAUDE.md that constrains behavior, write a me.md that reflects their style</td>
+</tr>
+<tr>
+<td><strong>M8</strong></td>
+<td>Build, test, document, commit, and push a real project to GitHub</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="grading-rubric-summary">Grading Rubric Summary</h2>
+<h3 id="module-level-grading"><strong>Module-Level Grading</strong></h3>
+<ul>
+<li><strong>Pass:</strong> Deliverable is complete and meets 80%+ of rubric</li>
+<li><strong>Pass with revision:</strong> Deliverable has gaps; student needs to revise</li>
+<li><strong>Not yet:</strong> Deliverable is incomplete; significant work remains</li>
+</ul>
+<h3 id="course-level-grading"><strong>Course-Level Grading</strong></h3>
+<ul>
+<li><strong>7/8 modules passed:</strong> Course completion</li>
+<li><strong>8/8 modules passed + capstone &gt;80%:</strong> Honors (distinguished mastery)</li>
+<li><strong>&lt;7/8:</strong> Remediation needed; not yet at completion level</li>
+</ul>
+<hr />
+<h2 id="stretch-goals-if-time">Stretch Goals (If Time)</h2>
+<h3 id="for-fast-finishers"><strong>For Fast Finishers</strong></h3>
+<p><strong>Module 1:</strong> Prompt engineering with vision (multimodal prompts)</p>
+<p><strong>Module 2:</strong> Advanced piping (<code>find</code>, <code>grep</code>, <code>sed</code> combinations)</p>
+<p><strong>Module 3:</strong> Rebase workflow, stashing, orphan branches</p>
+<p><strong>Module 4:</strong> Markdown for slides (Reveal.js or similar)</p>
+<p><strong>Module 5:</strong> Recursion, higher-order functions (map/filter/reduce)</p>
+<p><strong>Module 6:</strong> Docker basics (optional, advanced)</p>
+<p><strong>Module 7:</strong> Multi-repo configuration, shared context templates</p>
+<p><strong>Module 8:</strong> Deployment (Vercel for web, npm publish for CLI, GitHub releases)</p>
+<hr />
+<div class="admonition warning">
+<p class="admonition-title">The Two OPSEC Stumbles That Matter Most</p>
+<p><strong>Module 1 -- Scrubbing:</strong> Students paste real unit designations, names, or grid coordinates before understanding scrub discipline. Run the Data Hygiene section before the first exercise.</p>
+<p><strong>Module 3 -- .gitignore timing:</strong> Students commit a <code>.env</code> file before creating <code>.gitignore</code>. Once a credential is in git history, it stays there. Create <code>.gitignore</code> before the first commit. This is not a recoverable mistake.</p>
+</div>
+<h2 id="common-misconceptions-and-corrections">Common Misconceptions and Corrections</h2>
+<table>
+<thead>
+<tr>
+<th>Misconception</th>
+<th>Reality</th>
+<th>Clarification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Terminal is dangerous."</td>
+<td>It's just an interface.</td>
+<td>You can't break anything by typing. Worst case: delete a file (recoverable with git).</td>
+</tr>
+<tr>
+<td>"Git is complicated."</td>
+<td>It's simpler than you think.</td>
+<td>Three commands get you 90% of the way: <code>git add</code>, <code>git commit</code>, <code>git push</code>.</td>
+</tr>
+<tr>
+<td>"I have to memorize syntax."</td>
+<td>No. Look it up every time.</td>
+<td>Real developers use <code>git --help</code> and Stack Overflow constantly.</td>
+</tr>
+<tr>
+<td>"Markdown is for documentation only."</td>
+<td>It's everywhere.</td>
+<td>Prompts, slides, READMEs, chat, static site generators. Learn it once, use it forever.</td>
+</tr>
+<tr>
+<td>"Programming is for people who are 'math people.'"</td>
+<td>False.</td>
+<td>It's problem-solving, not math. Logic &gt; algebra.</td>
+</tr>
+<tr>
+<td>"I don't have the right computer."</td>
+<td>Probably you do.</td>
+<td>Windows, Mac, Linux all work. Cloud VMs work. Even Chromebooks can do most of this (harder).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="materials-checklist">Materials Checklist</h2>
+<p><strong>Instructor provides:</strong>
+- [ ] Slides (one per module)
+- [ ] Demo files (<code>_classroom-demos/</code> folder)
+- [ ] Rubrics (one per module)
+- [ ] Troubleshooting guide (this document + more)
+- [ ] Example CLAUDE.md and me.md files
+- [ ] Capstone project examples (one per path)
+- [ ] Solutions guide (for grading + office hours)</p>
+<p><strong>Students provide:</strong>
+- [ ] Computer (any OS)
+- [ ] GitHub account
+- [ ] Time and attention</p>
+<hr />
+<h2 id="additional-resources-for-instructors">Additional Resources for Instructors</h2>
+<p><strong>Recording of Past Cohorts:</strong>
+- Record at least one demo per module for students to rewatch
+- Archive in shared folder (Dropbox, Google Drive, or GitHub)</p>
+<p><strong>Recorded Q&amp;A Sessions:</strong>
+- Hold async office hours; record common questions + answers
+- Post in course repo for future cohorts</p>
+<p><strong>Community Forum / Slack:</strong>
+- Create a channel for students to ask questions and help each other
+- Reduces "stuck" feelings and builds community</p>
+<p><strong>Cheat Sheets for Students:</strong>
+- Terminal command reference (one page)
+- Git workflow diagram (one page)
+- Markdown quick reference (one page)
+- JavaScript/Python syntax cheat sheet (one page)</p>
+<hr />
+<h2 id="course-completion-and-next-steps">Course Completion and Next Steps</h2>
+<p><strong>Upon completion of this course, students will be able to:</strong></p>
+<p>✓ Understand what LLMs are and how to prompt them clearly<br />
+✓ Navigate the terminal confidently<br />
+✓ Use Git and GitHub for version control<br />
+✓ Write clear Markdown documentation<br />
+✓ Apply basic programming concepts (variables, logic, functions)<br />
+✓ Have all developer tools installed and authenticated<br />
+✓ Create and manage context files (CLAUDE.md, me.md)<br />
+✓ Ship a real working project to GitHub  </p>
+<p><strong>These are the core skills for AI-assisted development.</strong> Students who complete all 8 modules are ready for advanced agentic work.</p>
+<hr />
+<h2 id="course-level-readiness-check">Course-Level Readiness Check</h2>
+<p>Before advancing to agentic work, a student should be able to:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Write a specific, structured prompt and iterate on it</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Navigate the terminal and manipulate files without help</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Commit, branch, merge, and push using Git</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Write clean Markdown documentation</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Read and write basic programming logic (variables, loops, functions)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Verify all developer tools are installed and authenticated</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Write a CLAUDE.md that constrains Claude's behavior for a real project</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ship a working project to GitHub with meaningful commits</li>
+</ul>
+<hr />
+<p><strong>End of Module Summary</strong></p>
+<p>Use this as a quick reference during planning and teaching. Detailed guidance is in the full Prerequisite Course Design and Instructor Guide.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

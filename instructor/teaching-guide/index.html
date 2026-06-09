@@ -1,0 +1,2348 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../prereq-course/module-summary/">
+      
+      
+        <link rel="next" href="../style-guide/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Consolidated Teaching Guide - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ai-and-agentics-basics-consolidated-teaching-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Consolidated Teaching Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedules
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../bedrock/ai-literacy/" class="md-tabs__link">
+          
+  
+  
+  Bedrock
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../terminal-basics/the-machine/" class="md-tabs__link">
+          
+  
+  
+  Terminal Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../agentic-ai/agent-concepts/" class="md-tabs__link">
+          
+  
+  
+  Agentic AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mental-models/core-content/" class="md-tabs__link">
+          
+  
+  
+  Mental Models
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../prereq-course/course-design/" class="md-tabs__link">
+          
+  
+  
+  Technical Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedrock
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bedrock
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bedrock/ai-literacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Literacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../bedrock/personalizing-your-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personalizing Your AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terminal Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal-basics/the-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal-basics/the-terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentic AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agentic-ai/agent-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mental Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/core-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/workbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technical Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prereq-course/course-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Design (M1-M8)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prereq-course/module-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Use This Guide
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-course-prep-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pre-Course Prep Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mental-models-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prereq-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../day0-scaffold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 0 Teaching Scaffold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ai-and-agentics-basics-consolidated-teaching-guide">AI and Agentics Basics — Consolidated Teaching Guide</h1>
+<p><strong>For:</strong> Instructors delivering the full course start to finish<br />
+<strong>Use:</strong> Run alongside student-facing content. This doc tells you what to do, say, watch for, and hand off — not what to read aloud.</p>
+<hr />
+<h2 id="how-to-use-this-guide">How to Use This Guide</h2>
+<ul>
+<li>One section per module, in nav order.</li>
+<li>Durations are instructional time, not clock time (add breaks separately).</li>
+<li>Instructor notes pulled from the <code>??? note</code> blocks in student content are surfaced here — students do not see them.</li>
+<li>Hands-on activities are listed with brief instructor direction; full student instructions live in the course pages.</li>
+<li>Every section ends with a transition note to the next module.</li>
+</ul>
+<hr />
+<h2 id="pre-course-prep-checklist">Pre-Course Prep Checklist</h2>
+<p>Before any session:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Verify current model names and context window sizes at docs.anthropic.com — these change with releases</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Verify current pricing structure at anthropic.com/pricing — do not teach specific dollar amounts</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Run all version checks on your machine (<code>claude --version</code>, <code>git --version</code>, <code>gh --version</code>, <code>node --version</code>, <code>code --version</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Create <code>_classroom-demos/</code> folder with prepared files for each module (see prereq-guide.md for folder structure)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Screen setup: code editor and terminal visible simultaneously</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Have a timer students can see</li>
+</ul>
+<p><strong>Total instructor prep time before first cohort:</strong> ~4-6 hours.</p>
+<hr />
+<h1 id="bedrock">BEDROCK</h1>
+<h2 id="module-ai-literacy">Module: AI Literacy</h2>
+<p><strong>Estimated duration:</strong> Multi-week, short daily reps (15-30 min/day)<br />
+<strong>Audience:</strong> Someone who uses AI by feel and has never thought about what is happening underneath.</p>
+<h3 id="learning-objectives">Learning Objectives</h3>
+<ul>
+<li>State in one sentence what an LLM does (predicts text from patterns)</li>
+<li>Explain "trained not programmed" in plain terms</li>
+<li>Name the four core failure modes (hallucination, confident-wrong, nondeterminism, knowledge cutoff)</li>
+<li>Produce a hallucination with their own hands</li>
+<li>Name the four elements of a deliberate prompt (role, context, example, output spec)</li>
+<li>Identify which of three AI delivery models they are currently using</li>
+<li>State the bright line for data handling: what never goes into an unauthorized system</li>
+</ul>
+<h3 id="key-concepts-to-emphasize">Key Concepts to Emphasize</h3>
+<p><strong>What an LLM is:</strong>
+- The only accurate verb is <em>predicts</em>. Not "knows," "thinks," or "lies." Interrupt anthropomorphism every time it surfaces — it is a wired cognitive shortcut and will re-train with repetition.
+- "Brain in a jar" framing: fluent and capable, but no memory between chats, no live data, no ability to act without external tools.
+- Do not open with transformers, attention heads, or parameter counts. The mental model that survives contact with a real tool is the deliverable.</p>
+<p><strong>Tokens and context:</strong>
+- Context window = whiteboard with finite space. New writing crowds out old.
+- Symptoms of a full window: the model hedges on things it stated confidently, contradicts earlier instructions, drifts.
+- Practical rule: start a fresh chat when (1) direction has changed and earlier turns are dead weight, or (2) the model is drifting.
+- Do not spend time on token math. "Shorter and focused beats long and sprawling" is the instinct to build.</p>
+<p><strong>How LLMs fail:</strong>
+- Do not let this tip into cynicism. The goal is calibrated trust, not distrust. Both "extraordinarily capable" and "hallucinates" are simultaneously true.
+- Students who hear about hallucination without producing it themselves do not internalize it. The hands-on exercise is not optional.
+- Three behaviors around knowledge cutoff: (a) flags uncertainty (honest), (b) answers confidently with stale data (dangerous), (c) uses a retrieval tool. All three look identical from the outside.</p>
+<p><strong>Prompt engineering:</strong>
+- The four elements are a structure, not a script. The durable skill is clarity.
+- Resist turning this into "prompt tricks" hour. Students who chase tricks hit a ceiling fast.
+- Iteration is the habit that matters most. A rough ask the model can build on beats silence.</p>
+<p><strong>Delivery and cost:</strong>
+- Teach the structure (subscription / pay-per-token / org key; cloud / local; fast / balanced / powerful tiers), not specific prices. Prices change within a quarter.
+- "Always use the biggest model" is wrong. Match the model to the job.</p>
+<p><strong>Data handling:</strong>
+- This module does not get softened. Soften it and students hear "be careful sometimes." The message is a hard rule.
+- For military/intel audiences: state the "paraphrase and summarize" loophole explicitly — it does not exist.
+- Authorization is a property of the system, not the tool's capability. Impressive and authorized are not the same.</p>
+<h3 id="hands-on-activities">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>Prediction demo</strong> — Type an incomplete sentence, submit. Add "definitely" to the same sentence, submit again. Compare outputs. Then ask a factual question and ask how you would verify the answer without the model's help.</p>
+</li>
+<li>
+<p><strong>Context window probe</strong> — Paste several pages of dense text into a fresh chat. Ask about something near the top, then something near the bottom. Start a new chat and ask the same bottom question. Compare quality.</p>
+</li>
+<li>
+<p><strong>Hallucination on demand</strong> — Ask for 5 peer-reviewed papers on a narrow topic with full citations (author, journal, year). Pick one and try to verify it in Google Scholar or PubMed. The citation will be unverifiable. Debrief: "What would you have done if you had not checked?"<br />
+<em>Instructor note: Use a topic where you know the correct answer. Never demo on live operational content.</em></p>
+</li>
+<li>
+<p><strong>Before/after prompting</strong> — Write a one-line version of a real task, submit it, save the output. Then add role, context, an example of good output, and an output spec. Submit again. Compare side by side. Identify which element changed the result most.</p>
+</li>
+<li>
+<p><strong>Delivery model identification</strong> — Open your chatbot's settings. Find the model name. If API access is available, open the pricing page — read for structure, not numbers.</p>
+</li>
+<li>
+<p><strong>Personal bright line</strong> — Think about the last three things you pasted into an AI tool. For each: was the system authorized? Identify one category of content you handle regularly that will never go into an unauthorized tool. Write it down.</p>
+</li>
+</ol>
+<h3 id="discussion-questions-knowledge-checks">Discussion Questions / Knowledge Checks</h3>
+<ul>
+<li>"The model just gave you a confident-sounding answer. What would it take to verify it?"</li>
+<li>"You set an important constraint at the start of a long conversation. Ten exchanges later, the model seems to have forgotten it. What happened?"</li>
+<li>"You just watched the model invent a source. What does that mean for the next time it gives you a fact you have not heard before?"</li>
+<li>"You need to run an analysis task with a long document and several back-and-forths. What factors determine the cost, and how would you reduce it?"</li>
+<li>"You have a borderline-sensitive document and an unauthorized but capable AI tool that would save hours. What is the correct call?"</li>
+</ul>
+<p>Each section also has an embedded single-answer quiz in the student content — use these to check comprehension before moving on.</p>
+<h3 id="transition-to-personalizing-your-ai">Transition to Personalizing Your AI</h3>
+<p>Students now have a working mental model of the engine and know where it breaks. The next module converts that into a persistent setup — so every session starts with the model already knowing who they are and how they work.</p>
+<hr />
+<h2 id="module-personalizing-your-ai">Module: Personalizing Your AI</h2>
+<p><strong>Estimated duration:</strong> 1-2 sessions (30-60 min total)</p>
+<h3 id="learning-objectives_1">Learning Objectives</h3>
+<ul>
+<li>Find custom instruction settings in their tool of choice (ChatGPT or Claude)</li>
+<li>Write at least three instructions: who they are, how they want responses, what to never do</li>
+<li>Observe a before/after difference in output</li>
+<li>Set up at least one Project or named configuration for recurring work</li>
+<li>Confirm no sensitive or controlled information is in their instructions</li>
+</ul>
+<h3 id="key-concepts-to-emphasize_1">Key Concepts to Emphasize</h3>
+<ul>
+<li>Custom instructions = persistent context loaded before every message. One-time investment, pays back on every session after.</li>
+<li>Custom instructions count against the context window. Keep them under 500 words. Use Project documents for heavier reference material.</li>
+<li>Platform UI changes frequently. Verify the menu path before teaching. The concept is stable; the interface is not.</li>
+<li>Remind students of the data handling module before they write: everything in a custom instruction goes to the platform's servers on every request.</li>
+<li>The difference between proactive (custom instructions — you set them deliberately) and reactive (ChatGPT memory — it records what comes up). Use both.</li>
+</ul>
+<h3 id="hands-on-activities_1">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>Custom instructions setup</strong> — Open the tool, find the settings, write three instructions (who you are + what you do, how you like responses formatted, one thing to never do). Start a new chat. Compare to a chat without instructions.</p>
+</li>
+<li>
+<p><strong>Project or memory setup</strong> — Claude users: create a Project for a recurring task type, add instructions and at least one reference document. ChatGPT users: open memory settings, delete anything outdated, add one manual memory entry for something the model should always know.</p>
+</li>
+</ol>
+<h3 id="discussion-questions-knowledge-checks_1">Discussion Questions / Knowledge Checks</h3>
+<ul>
+<li>"You wrote a custom instruction that says 'always lead with a one-sentence summary.' On one response, the model ignores it. What are the two most likely causes?"</li>
+<li>"You create a Project for analysis work with detailed instructions. Three months later, your role changes. What do you need to update, and where?"</li>
+</ul>
+<h3 id="transition-to-terminal-basics">Transition to Terminal Basics</h3>
+<p>Students now have the AI side calibrated. The next phase is entirely different: no AI, plain computer literacy. This is where the course gets uncomfortable for some people. Frame it early: the terminal is not a detour — it is the terrain the agent will move across.</p>
+<hr />
+<h1 id="terminal-basics">TERMINAL BASICS</h1>
+<h2 id="module-the-machine">Module: The Machine</h2>
+<p><strong>Estimated duration:</strong> Multi-week, short daily reps (3 sessions, ~30 min each)<br />
+<strong>Critical setup step:</strong> Before the first session, have students turn on file extension visibility. Windows: File Explorer → View → Show → File name extensions. Do not skip this — it prevents confusion in every downstream module.</p>
+<h3 id="learning-objectives_2">Learning Objectives</h3>
+<ul>
+<li>Navigate the filesystem without using search</li>
+<li>Describe the difference between plaintext and rich text and give an example of each</li>
+<li>Install VS Code and open a folder in it</li>
+<li>Toggle the Markdown preview in VS Code</li>
+</ul>
+<h3 id="key-concepts-to-emphasize_2">Key Concepts to Emphasize</h3>
+<p><strong>Files, folders, and the tree:</strong>
+- Many casual users have never navigated the folder tree — they find files through search or recent items. Test before assuming.
+- A path is a route, not a name. Read it left to right, one slash = one step down the tree.
+- Connecting to Phase 3: "Phase 3 is the same moves, typed."</p>
+<p><strong>Plaintext vs rich text:</strong>
+- "Plaintext is honest, rich text hides things" is the entire lesson. Do not go into encodings (UTF-8, ASCII, etc.).
+- The practical consequence: never write Markdown in Word. Write it in VS Code.
+- Smart quotes, em-dashes, non-breaking spaces — all travel silently with pasted Word content and break things downstream.</p>
+<p><strong>Code editor:</strong>
+- Today's scope: open, view, close. Do not install extensions, change settings, or edit files. Comfort at the front door is the goal.
+- If the VS Code install is broken on one machine, use Notepad++ and move on. Do not stall the room.</p>
+<h3 id="hands-on-activities_2">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>Tree walk</strong> — Open File Explorer or Finder. Navigate from home to Downloads by clicking only — no search. Find a file. Read its full path in the address bar. Create a <code>practice</code> folder on the Desktop. Move a file into it by dragging.</p>
+</li>
+<li>
+<p><strong>Plaintext vs rich text</strong> — Open Notepad, type a few sentences, save as <code>test.txt</code>. Open it in VS Code. Then open a <code>.docx</code> file in VS Code (not Word) and look at what is inside.</p>
+</li>
+<li>
+<p><strong>VS Code orientation</strong> — Install VS Code. Open the <code>practice</code> folder (File → Open Folder). Click the <code>.txt</code> file. Find a <code>.md</code> file anywhere on the machine. Open it. Toggle the preview with <code>Ctrl+Shift+V</code>.</p>
+</li>
+</ol>
+<h3 id="discussion-questions-knowledge-checks_2">Discussion Questions / Knowledge Checks</h3>
+<ul>
+<li>"You just moved a file by dragging. Write out the path to where it now lives. Could you give someone else those directions and have them find it?"</li>
+<li>"You paste a block of text from a Word document into your AI chatbot and the formatting looks off. What is the most likely cause?"</li>
+<li>"You are looking at the same Markdown file in two panes — raw on the left, rendered on the right. Which version does the machine work with?"</li>
+</ul>
+<h3 id="transition-to-the-terminal">Transition to The Terminal</h3>
+<p>The Machine gave students the map. The Terminal is the same moves, typed. Anxiety is normal and expected — name it before they feel it.</p>
+<hr />
+<h2 id="module-the-terminal">Module: The Terminal</h2>
+<p><strong>Estimated duration:</strong> Multi-week, heaviest calendar weight (~6 sessions, 30-45 min each)<br />
+<strong>This is the spine of the course.</strong> Most students need more reps here than anywhere else. Do not rush.</p>
+<h3 id="learning-objectives_3">Learning Objectives</h3>
+<ul>
+<li>Open the terminal without hesitation</li>
+<li>Navigate the filesystem using <code>pwd</code>, <code>ls</code>, <code>cd</code></li>
+<li>Create, copy, and move files using <code>mkdir</code>, <code>touch</code>/<code>New-Item</code>, <code>cp</code>, <code>mv</code></li>
+<li>Write and use absolute and relative paths</li>
+<li>Use tab-completion on every path</li>
+<li>Add flags to commands and use <code>--help</code> to find flags they do not know</li>
+<li>Stop a running command with <code>Ctrl+C</code></li>
+<li>Explain version control as a logbook of file changes they can rewind</li>
+</ul>
+<h3 id="key-concepts-to-emphasize_3">Key Concepts to Emphasize</h3>
+<p><strong>Terminal orientation:</strong>
+- Address the bait-and-switch out loud before a student says it: "Some of you are wondering why an AI course spent two weeks on the command line." Then make the connection explicit: the agent acts through the terminal. Students who do not understand the terrain cannot supervise someone navigating it.
+- Nothing in this module and the next three can hurt the machine. Say this explicitly.
+- One command, fully understood, beats ten demoed. Do not show off. Return the prompt, explain what happened, ask for questions, move on.</p>
+<p><strong>Navigation (<code>pwd</code>, <code>ls</code>, <code>cd</code>):</strong>
+- <code>pwd</code> is the reset button. Lost in the terminal? Type <code>pwd</code>. You can never be permanently lost.
+- Reps over coverage. Same three commands, many short repetitions, spread across several days. Do not introduce file creation until navigation is solid.
+- Getting "lost" is the number-one beginner panic. Normalize it. Make students run the <code>pwd</code>→<code>ls</code>→<code>cd</code>→<code>pwd</code>→<code>cd ..</code>→<code>pwd</code> cycle until it feels routine.</p>
+<p><strong>File operations (make, move, copy):</strong>
+- Build the verify-after-acting habit here. After every command: <code>ls</code>. Check the target. "Trust the action, not the narration" runs through all agentic work — build it at the command line before the agent is involved.
+- No deletion in this phase. Deletion is irreversible at the command line. It comes later, behind heavy framing.
+- Typos in filenames create new files without erroring. This is why <code>ls</code> after every action is the standard.</p>
+<p><strong>Paths and tab-completion:</strong>
+- The terminal's unforgiving exactness is the lesson, not the frustration. A student annoyed that a capital letter breaks a path is learning the right thing. Name it: "Yes, the space matters. That is why tab-completion exists."
+- Tab-completion is not a shortcut — it is standard operating procedure. Use it on every path, every time.
+- Absolute path: works from anywhere. Relative path: only works from the right starting position.</p>
+<p><strong>Flags and <code>--help</code>:</strong>
+- Do not memorize flags. The concept (flags exist, <code>--help</code> finds them) is the lesson.
+- <code>Ctrl+C</code>: name it as a control mechanism, not an emergency. Students who know they can stop something are less afraid to start it.</p>
+<p><strong>Version control concept:</strong>
+- No commands today. Load the reason before the commands. If a student asks "how do I actually do this?" — "You will do it later. Today you need to know why."
+- For military audiences: duty logbook framing. For civilian audiences: "undo button for your whole project." Read the room.</p>
+<h3 id="hands-on-activities_3">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>Terminal orientation</strong> — Open the terminal. Sit with the blinking cursor for ten seconds. Name the feeling. Run <code>date</code>/<code>Get-Date</code>, <code>whoami</code>, <code>pwd</code>, <code>ls</code>, <code>echo "hello"</code>. Close and reopen. Re-run one command from memory.</p>
+</li>
+<li>
+<p><strong>Navigation drill</strong> — Run <code>pwd</code> → <code>ls</code> → <code>cd</code> into a folder → <code>pwd</code> → <code>ls</code> → <code>cd ..</code> → <code>pwd</code>. Repeat until routine.</p>
+</li>
+<li>
+<p><strong>Make, move, copy</strong> — Create <code>terminal-practice</code> folder, navigate into it, create <code>day1.txt</code>, copy to <code>day1-backup.txt</code>, rename to <code>day1-v1.txt</code>. Run <code>ls</code> after each step.</p>
+</li>
+<li>
+<p><strong>Path puzzle</strong> — Navigate to a folder using the full absolute path (type it by hand). Navigate to the same folder using tab-completion. Compare.</p>
+</li>
+<li>
+<p><strong>Flags and help</strong> — Run <code>ls --help</code> or <code>Get-Help ls</code>. Read the first ten lines without panic. Find the flag that shows hidden files. Run <code>ls</code> with that flag. Run <code>ping google.com</code> for five seconds. Press <code>Ctrl+C</code>.</p>
+</li>
+<li>
+<p><strong>Version control reflection</strong> — No commands. Think of a file edited multiple times last month. Ask: "If I needed to see what it looked like three weeks ago, could I?" That gap is what version control fills.</p>
+</li>
+</ol>
+<h3 id="discussion-questions-knowledge-checks_3">Discussion Questions / Knowledge Checks</h3>
+<ul>
+<li>"You typed a command and saw a response. What is the difference between that and clicking a button in an app?"</li>
+<li>"You typed <code>cd Documents</code> and then <code>pwd</code>. What does <code>pwd</code> tell you?"</li>
+<li>"You ran <code>mv report.txt final-report.txt</code> and then <code>ls</code>. What are you checking for?"</li>
+<li>"You are deep in a nested folder and need to copy a file three levels up. Absolute or relative path?"</li>
+<li>"You run a command and nothing happens for thirty seconds. What are the two possibilities?"</li>
+<li>"An agent just ran a batch edit on 40 files. You look at one and it is not right. Without version control, what are your options?"</li>
+</ul>
+<h3 id="transition-to-agentic-ai">Transition to Agentic AI</h3>
+<p>Students can now navigate and operate in the filesystem from the command line. Agentic AI is the payoff module — this is where Phases 2 and 3 pay off. Make the connection explicit: every command they learned is what the agent runs when it works in their filesystem.</p>
+<hr />
+<h1 id="agentic-ai">AGENTIC AI</h1>
+<h2 id="module-core-concepts">Module: Core Concepts</h2>
+<p><strong>Estimated duration:</strong> 1-2 sessions (~60-90 min total)</p>
+<h3 id="learning-objectives_4">Learning Objectives</h3>
+<ul>
+<li>State the one-line difference between a chatbot and an agent</li>
+<li>Explain what read, write, and execute access means in practice</li>
+<li>Connect the Terminal Basics modules to why agents need that access</li>
+<li>Name the three parts of the engine-harness-operator model</li>
+<li>Explain version control as a logbook of agent actions they can rewind</li>
+<li>State the three duties of the supervisor: delegate, verify, own</li>
+</ul>
+<h3 id="key-concepts-to-emphasize_4">Key Concepts to Emphasize</h3>
+<p><strong>Chatbot vs agent:</strong>
+- Do not assume students connect the dots. Say it explicitly: "Every command you learned in Terminal Basics — <code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>mkdir</code>, <code>mv</code> — that is what the agent runs when it works in your filesystem. You learned to navigate the terrain so you can supervise someone else navigating it."
+- Read, write, execute is a lot of trust. This is not abstract — an agent with write and execute access can create, modify, or delete files on a real machine.</p>
+<p><strong>Engine-harness-operator:</strong>
+- Engine = the LLM (reasoning, generates, plans)
+- Harness = the tool layer (gives the engine access to files, commands, external systems)
+- Operator = you (directs the mission, approves consequential actions, carries accountability)
+- All three are required. The engine cannot act without a harness. The harness cannot direct without an operator.</p>
+<p><strong>Version control:</strong>
+- Repeat the "why" here — the agent is about to start editing files. The logbook is how you keep accountability over a teammate that works fast and never sleeps.
+- Still no git commands. The commands come in M3. Today is the reason.
+- For military audiences: duty logbook. For civilian audiences: "undo button for your whole project."</p>
+<p><strong>Supervisor mindset:</strong>
+- This is the through-line of the entire course. Do not treat it as a capstone topic to introduce once at the end. Every agentic action in later modules should be framed with the supervisor loop.
+- The agent is a motivated junior with file-system access: capable, fast, willing to fill ambiguity with plausible-sounding assumptions.
+- Two failure modes to name and counter:
+  - <em>Blind trust:</em> "It sounds right." Confident narration ≠ verified execution.
+  - <em>Learned helplessness:</em> "I can't check this, it's too technical." You do not need to replicate the agent's work. You need to check whether the output makes sense, whether constraints were honored, whether anything looks wrong. Human judgment call, not a technical skill.
+- Optimize the capstone for the loop, not the polish. A rough artifact that was checked beats a finished artifact that was not.</p>
+<h3 id="hands-on-activities_4">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>Chatbot vs agent comparison</strong> — Open a web chatbot. Ask: "Rename the folder 'project' to 'project-v1'." Note whether it renamed anything or described how. If Claude Code is available, ask the same thing in a project folder. Compare what happens. Write one sentence on the difference.</p>
+</li>
+<li>
+<p><strong>Delegate-verify-own loop</strong> — Give the agent (or chatbot if agent is not available) a small real task. Write a clear brief: who you are, what you need, what good output looks like, what is off-limits. Submit. Verify: does it do what you asked? Did it make any assumptions you did not authorize? If something is off, correct it. Identify what you should have specified more precisely.</p>
+</li>
+</ol>
+<h3 id="discussion-questions-knowledge-checks_4">Discussion Questions / Knowledge Checks</h3>
+<ul>
+<li>"You just asked a chatbot to rename a folder. What would an agent do differently — and what are you trusting it with when it does?"</li>
+<li>"An agent completes a task and narrates what it did in clear, confident language. What do you do next?"</li>
+<li>"An agent just ran a batch edit on 40 files. You look at one and it is not right. Without version control, what are your options?"</li>
+<li>"The agent completed a task and the output looks correct at first glance. What would you actually check to verify it?"</li>
+</ul>
+<h3 id="transition-to-mental-models">Transition to Mental Models</h3>
+<p>Students can now place the agent in the context of the terrain they learned. Mental Models is a standalone 35-minute conceptual block — the six frameworks that make every Technical Foundations module make sense. It should be read before touching the Technical Foundations modules.</p>
+<hr />
+<h1 id="mental-models">MENTAL MODELS</h1>
+<h2 id="module-core-content">Module: Core Content</h2>
+<p><strong>Estimated duration:</strong> 35 minutes (standalone, self-contained)<br />
+<strong>Note:</strong> The Quick Reference and Workbook are student-facing support materials, not additional sessions. Assign the Workbook as homework or in-class practice after delivery.</p>
+<h3 id="learning-objectives_5">Learning Objectives</h3>
+<ul>
+<li>Explain the harness model: LLM + tools = agency</li>
+<li>Describe what a context window is and what happens when tool results accumulate</li>
+<li>Treat tokens as a resource with real cost</li>
+<li>Explain what a tool call is and why it enables verification</li>
+<li>Adopt active supervision as the default posture</li>
+<li>Build cost-consciousness as a core habit</li>
+</ul>
+<h3 id="key-concepts-to-emphasize_5">Key Concepts to Emphasize</h3>
+<p><strong>The six models in brief:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Core idea</th>
+<th>Common misconception to counter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>The Harness</strong></td>
+<td>LLM + tools = agency. Without tools, it is a chatbot.</td>
+<td>"Claude can do anything if I ask it well enough." It can only do what it can see and act on through tools.</td>
+</tr>
+<tr>
+<td><strong>Context Windows</strong></td>
+<td>Working memory (~200k tokens). Not infinite. Tool results accumulate.</td>
+<td>"More context = better answers." Targeted context + smart sampling beats massive dumps.</td>
+</tr>
+<tr>
+<td><strong>Tokens as Currency</strong></td>
+<td>Every token costs money and time. Concise structured prompts save iterations.</td>
+<td>"Verbose prompts get better results." Relevant detail + clarity = efficiency. Rambling = waste.</td>
+</tr>
+<tr>
+<td><strong>Tool Calls</strong></td>
+<td>Structured requests to execute something external. Results return to Claude. Enables verification.</td>
+<td>"Claude will tell me if the code works." Claude does not know unless it can see execution results.</td>
+</tr>
+<tr>
+<td><strong>Operator Posture</strong></td>
+<td>Active supervision. You review at each step and intervene before consequential actions.</td>
+<td>"I'll ask Claude and come back later." Stay present. Review immediately. Decide next steps.</td>
+</tr>
+<tr>
+<td><strong>Cost-Consciousness</strong></td>
+<td>Efficiency as a skill. Planning beats iterating. Tight loops beat loose ones.</td>
+<td>"Efficiency is about being cheap." It is about moving fast and shipping quality.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Golden rules to repeat:</strong>
+- "If you don't understand what Claude is about to do, don't let it do it."
+- Tool calls are your audit trail. Every read, write, and execute is traceable.
+- Context fills silently. Watch for the model contradicting itself or missing earlier instructions — start a fresh session proactively.</p>
+<p><strong>Teaching structure (35 min):</strong>
+- Opening hook (3 min): "Miss these six models and you'll write inefficient code, waste tokens, and blame the AI. With them, you move fast and confidently."
+- Six models (5-6 min each): key point → common misconception → check for understanding
+- Worked examples from Section 7 (5 min): read one aloud, pause, ask "what went wrong / what went right?"
+- Exercise from Section 8 (5-10 min): SECTION A together as a class, B and C individually or as homework</p>
+<p><strong>Live demo (if Claude Code is available):</strong>
+- Ask Claude to read a file (show the tool call)
+- Ask Claude to write a file (show the tool call)
+- Ask Claude to run a command (show the tool call)
+- Narrate: "Notice — Claude is not guessing. It is seeing. It is acting. It is verifying."</p>
+<h3 id="hands-on-activities_5">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>Harness demo</strong> — Ask chatbot to rename a folder. Ask Claude Code the same question in a project folder. Identify: which response required you to do the work?</p>
+</li>
+<li>
+<p><strong>Model landscape check</strong> — Go to anthropic.com/claude. Find the current tier names (fast, balanced, powerful). Do they match what the course lists? Pick one task and decide which tier is appropriate. Write one sentence explaining why.</p>
+</li>
+<li>
+<p><strong>Hallucination / failure mode drill</strong> — Ask Claude: "What is the current price per million tokens for Claude Sonnet?" Then check anthropic.com/pricing. Compare. Ask Claude for its knowledge cutoff. Ask what major models were released after that cutoff. You have just demonstrated all three failure modes.</p>
+</li>
+<li>
+<p><strong>Context window test</strong> — Start a fresh chat. Say "My name is [name]. Remember this." Have 10-20 exchanges on any topic. Ask: "What was my name?" Observe whether it still knows.</p>
+</li>
+<li>
+<p><strong>Token efficiency comparison</strong> — Write a vague prompt. Write a structured prompt (task, context, constraints, output format). Count words. Submit both. Which required fewer follow-up iterations?</p>
+</li>
+<li>
+<p><strong>Operator posture</strong> — Give Claude a vague brief: "Improve my code." Read the result. Give the same task with a specific brief: file name, improvement goal, constraint, success criteria. Compare. Label the vague brief with the supervision failure mode it most resembles.</p>
+</li>
+</ol>
+<h3 id="discussion-questions-knowledge-checks_5">Discussion Questions / Knowledge Checks</h3>
+<ul>
+<li>"You give Claude a mission without tools. Can it read your actual files? Why not?"</li>
+<li>"You have a 1,000-file codebase. Should you paste all 1,000 files into a prompt?"</li>
+<li>"You're about to send a 500-word rambling prompt to Claude. What should you do first?"</li>
+<li>"Claude says it has verified your code works. Without tool calls, what does that actually mean?"</li>
+<li>"Claude proposes to 'clean up the database by removing duplicate records.' What questions do you ask before approving?"</li>
+</ul>
+<p><strong>Passing bar:</strong> Students should rate themselves 4+/5 on at least 5 of 6 models on the workbook self-assessment.</p>
+<h3 id="transition-to-technical-foundations">Transition to Technical Foundations</h3>
+<p>Mental models are now loaded. Technical Foundations (M1-M8) is where students apply all six models in hands-on work over 2-3 days. Remind them: the mental models are not a checklist to review once — they should become instinctive. Point them out as they appear in each module.</p>
+<hr />
+<h1 id="technical-foundations">TECHNICAL FOUNDATIONS</h1>
+<h2 id="module-m1-llm-prompts">Module M1: LLM &amp; Prompts</h2>
+<p><strong>Estimated duration:</strong> 90 minutes<br />
+<strong>Instructional mode:</strong> Demo + hands-on. Lecture/discussion: 5 min max.</p>
+<h3 id="learning-objectives_6">Learning Objectives</h3>
+<ul>
+<li>Distinguish between a user prompt and a system prompt</li>
+<li>Write a clear, specific prompt using the RGCOA structure (Role, Goal, Context, Output, Asks)</li>
+<li>Identify at least one LLM failure mode and explain how to verify for it</li>
+<li>Understand what a context window is and when it becomes a constraint</li>
+</ul>
+<h3 id="key-concepts-to-emphasize_6">Key Concepts to Emphasize</h3>
+<ul>
+<li><strong>RGCOA structure:</strong> Role, Goal, Context, Output, Asks. The Asks element is where you give the model permission to surface uncertainty instead of papering over it. "If you need information I haven't provided, ask me before proceeding. Do not invent facts."</li>
+<li>Specificity wins. Vague prompts get vague answers. Show both and let the difference speak.</li>
+<li>Typing "You are a [role]" in the user turn is persona injection — visible in chat history. A true system prompt is loaded by the platform before the conversation. The distinction matters later when students configure harness files.</li>
+<li>Nondeterminism: the same prompt submitted twice produces different output. Do not treat one output as "the answer" for high-stakes work.</li>
+<li>Context windows: for Claude, roughly 200k tokens. Do not test the limits obsessively — the instinct ("keep focused input") is the deliverable.</li>
+</ul>
+<p><strong>Data hygiene — run this before the first exercise:</strong>
+- What never goes in: classified, CUI, PII (name + any identifier), operational planning detail, credentials, personnel records.
+- CUI defined: FOUO markings are being replaced by CUI across the federal government. If it carries any marking, or describes real people, real units, real operations, or real capabilities, it does not get pasted into a consumer AI tool.
+- Bracketed placeholder technique: replace specifics with [NCO], [LOCATION], [UNIT], [DATE]. The model does not need the real identifier to help.
+- <strong>Scrub drill:</strong> Provide a realistic-but-fabricated document (soldier's name and rank, unit designation, base name, grid coordinate, date, marking). Students produce a paste-safe version using bracketed placeholders. Debrief: what was removed, what category, can the model still accomplish the task with scrubbed input?</p>
+<h3 id="hands-on-activities_6">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>Ice-breaker prompt</strong> — "What is the weather?" vs "I live in [city]. What outdoor activities are good this time of year?" Observe how specificity changes the answer. Write a one-paragraph reflection.</p>
+</li>
+<li>
+<p><strong>System prompt experiment</strong> — Same interview question answered by "a Marine Corps drill sergeant" and "a kindergarten teacher" (use "You are a…" at the start). Screenshot both. Note 3 differences in tone, vocabulary, and detail level.</p>
+</li>
+<li>
+<p><strong>Clarity exercise</strong> — Given a list of 3 vague prompts, rewrite each using RGCOA. Submit both versions. Save a before/after comparison.</p>
+</li>
+<li>
+<p><strong>Context window boundary</strong> — Paste a 10,000-word document. Ask Claude questions about it. Note where quality starts to degrade.</p>
+</li>
+<li>
+<p><strong>Iterative prompting</strong> — Start with a vague prompt. Iterate 3 times, refining based on what missed. Track what changed each round.</p>
+</li>
+</ol>
+<p><strong>Deliverable:</strong> 5 well-written prompts, one per learning objective.</p>
+<h3 id="discussion-questions-knowledge-checks_6">Discussion Questions / Knowledge Checks</h3>
+<ul>
+<li>"You ask the model to 'write a report.' It produces something generic and too long. What is the most effective fix?"</li>
+<li>"You run the same prompt twice in two separate chats and get different answers. What is the most accurate explanation?"</li>
+</ul>
+<p><strong>Common confusions:</strong>
+- "Isn't it just a chatbot?" → "It is more like a sophisticated next-word predictor. You are steering it with prompts."
+- "Will it always give the same answer?" → "No. It uses probability. Temperature is real."
+- "How much context can I use?" → "Roughly 200k tokens for Claude. If a document is longer than a short novel, you might hit the limit."</p>
+<p><strong>Timing note:</strong> If running long, skip the context window experiment and state the number directly.</p>
+<h3 id="transition-to-m2">Transition to M2</h3>
+<p>Students now understand the LLM side. M2 is the terminal — the interface the agent uses on their machine. The skills are directly connected.</p>
+<hr />
+<h2 id="module-m2-terminal-basics">Module M2: Terminal Basics</h2>
+<p><strong>Estimated duration:</strong> 120 minutes<br />
+<strong>Instructional mode:</strong> Guided labs. Instructor demos, students follow.</p>
+<h3 id="learning-objectives_7">Learning Objectives</h3>
+<ul>
+<li>Navigate directories and list files from the terminal</li>
+<li>Create, copy, move, and delete files and folders</li>
+<li>Understand absolute vs relative paths</li>
+<li>Use command flags and look up unknown flags with <code>--help</code></li>
+<li>Pipe and redirect command output</li>
+<li>Stop a running command with <code>Ctrl+C</code></li>
+</ul>
+<p><strong>Windows students:</strong> Use WSL, not native PowerShell. Install: open PowerShell, run <code>wsl --install</code>. All exercises assume a Linux/Unix environment. Windows files are accessible inside WSL at <code>/mnt/c/Users/YourName/</code>. Path conversion rule: <code>C:\Users\Jake\Documents</code> → <code>/mnt/c/Users/jake/documents</code> (backslashes to forward slashes, drive letter lowercase after <code>/mnt/</code>). VS Code + WSL extension: from a WSL terminal, type <code>code .</code> to open VS Code with full WSL integration.</p>
+<h3 id="key-concepts-to-emphasize_7">Key Concepts to Emphasize</h3>
+<ul>
+<li>The terminal is just another interface. Same files, same folders — words instead of mouse clicks.</li>
+<li><strong><code>Ctrl+C</code> is the most important shortcut.</strong> Name it explicitly and drill it before anything else. Students need this reflex.</li>
+<li>Path confusion (relative vs absolute) is where ~30% of students stall. Practice this 5+ times.</li>
+<li>"Command not found" means it is not on PATH. <code>which &lt;command&gt;</code> to check. Restart terminal after installs.</li>
+</ul>
+<h3 id="hands-on-activities_7">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>Orientation walk</strong> (15 min) — Start in home directory. Navigate to 5 different locations. <code>pwd</code> after each move. <code>ls</code> to see what is in each folder. Create a simple text file in one.</p>
+</li>
+<li>
+<p><strong>File manipulation sprint</strong> (25 min) — Create <code>projects/acc-prep/module-2/</code> folder structure. Create 3 text files. Copy one to another location. Rename a file. Delete a file. List the final structure.</p>
+</li>
+<li>
+<p><strong>Path puzzle</strong> (20 min) — Given a file at <code>/home/user/projects/claude/config.txt</code>, write the absolute path, the relative path from <code>/home/user/</code>, and the relative path from <code>/home/user/projects/</code>. Navigate using those paths to verify they work.</p>
+</li>
+<li>
+<p><strong>Help system</strong> (15 min) — Use <code>man ls</code>, <code>ls --help</code>, <code>help cd</code> to answer: "What does the -l flag do? What about -a? How do you list by file size?" Build a help reference card for <code>ls</code>, <code>cd</code>, <code>mkdir</code>, <code>cp</code>, <code>mv</code>.</p>
+</li>
+<li>
+<p><strong>Piping and redirection</strong> (25 min) — Create a text file with 10 lines. List files and save output to a file. Count files in a directory using piping. Append text to a file.</p>
+</li>
+<li>
+<p><strong>Real-world scenario</strong> (20 min) — "You have a folder with 50 files. Find all <code>.txt</code> files, sort by date, move to an archive folder." Create the fake scenario, then solve it.</p>
+</li>
+</ol>
+<p><strong>Deliverable:</strong> Terminal transcript showing all 6 exercises completing.</p>
+<p><strong>Common stuck points:</strong>
+- "Permission denied" → redirected to system files. Move to a safe sandbox folder.
+- "No such file or directory" → wrong folder or wrong path. <code>pwd</code> and <code>ls</code> to verify location.
+- Relative path confusion → practice 5 times in a row with different folders.</p>
+<p><strong>Timing:</strong> This is the slowest module for absolute beginners. Do not rush.</p>
+<h3 id="transition-to-m3">Transition to M3</h3>
+<p>Students can operate in the filesystem. M3 introduces version control — the logbook that records every change the agent makes to their files. The "why" was already loaded in Terminal Basics. Now come the commands.</p>
+<hr />
+<h2 id="module-m3-git-basics">Module M3: Git Basics</h2>
+<p><strong>Estimated duration:</strong> 120 minutes (split: 60 min local, 60 min remote + conflicts)<br />
+<strong>Instructional mode:</strong> Guided labs. Demo first, students follow.</p>
+<h3 id="learning-objectives_8">Learning Objectives</h3>
+<ul>
+<li>Initialize a local Git repository</li>
+<li>Stage changes, commit with clear messages, view history</li>
+<li>Create, switch, and merge branches</li>
+<li>Clone a repository and push changes to GitHub</li>
+<li>Recognize and resolve a simple merge conflict</li>
+<li>Write meaningful commit messages</li>
+<li>Create a <code>.gitignore</code> before the first commit</li>
+</ul>
+<h3 id="key-concepts-to-emphasize_8">Key Concepts to Emphasize</h3>
+<ul>
+<li>Git is a time machine. Every commit is a snapshot you can jump back to.</li>
+<li><strong><code>.gitignore</code> must be created before the first commit.</strong> If a credential file is committed first, adding it to <code>.gitignore</code> later does NOT remove it from history. The file remains recoverable. This is the OPSEC enforcement layer for git. State this clearly, state it early.</li>
+<li>Minimum <code>.gitignore</code> entries for any project: <code>.env</code>, any credential files, <code>.DS_Store</code>, <code>__pycache__/</code>, <code>.venv/</code></li>
+<li>Merge conflicts: students panic. Walk through one example slowly, then make them create a practice conflict. It gets comfortable fast.</li>
+<li>Pull requests: a PR is how you review agent-produced changes before they touch main. When an agent creates changes on a branch, the PR diff is your verification checkpoint.</li>
+</ul>
+<h3 id="hands-on-activities_8">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>Your first repository</strong> (20 min) — Create folder, <code>git init</code>, create <code>README.md</code>, stage, commit, view log, make changes, stage, commit, view diff.</p>
+</li>
+<li>
+<p><strong>Branching sprint</strong> (20 min) — Create a branch <code>feature/add-content</code>, make changes, commit, switch back to main, verify file is unchanged, merge, delete the branch.</p>
+</li>
+<li>
+<p><strong>Cloning and pushing</strong> (20 min) — Clone a public repo. Create your own GitHub repo, clone it, make changes, push successfully. Verify on GitHub.</p>
+</li>
+<li>
+<p><strong>Merge conflicts</strong> (25 min) — Create a repo with a file. Create two branches from main, each modifying the same line. Merge one (succeeds). Merge the other (conflict). Resolve manually. Complete the merge.</p>
+</li>
+<li>
+<p><strong>Commit messages</strong> (15 min) — Given bad examples ("fix stuff", "update"), and good examples ("Add authentication logic to login form"), write 5 commit messages for provided scenarios. Verify: present tense, action-focused, informative.</p>
+</li>
+<li>
+<p><strong><code>.gitignore</code></strong> (25 min) — Create a repo. Create <code>.gitignore</code> first. Add <code>.env</code>, <code>node_modules/</code>, <code>*.log</code>. Verify ignored files do not appear in <code>git status</code>.</p>
+</li>
+<li>
+<p><strong>Pull request</strong> (20 min) — Create a branch, make changes, push the branch, open a PR using <code>gh pr create</code>. Review the diff in GitHub web interface. Merge from the GitHub interface.</p>
+</li>
+</ol>
+<p><strong>Deliverable:</strong> GitHub repo with 5+ commits, successful push, <code>.gitignore</code> in place.</p>
+<p><strong>Common stuck points:</strong>
+- "fatal: origin already exists" → <code>git remote -v</code> to check, <code>git remote remove origin</code> if needed.
+- Authentication fails → <code>gh auth status</code>. If not logged in, <code>gh auth login</code>.
+- "I lost my commits!" → They did a <code>git reset --hard</code>. Reassure: commits are still there via <code>git reflog</code>. This is advanced — do not open it now. Prevention: do not do that.</p>
+<h3 id="transition-to-m4">Transition to M4</h3>
+<p>Students can track changes to their files. M4 is Markdown — the plaintext format they will use everywhere: READMEs, documentation, prompts, commit messages. This is the language of the tools they are learning.</p>
+<hr />
+<h2 id="module-m4-markdown">Module M4: Markdown</h2>
+<p><strong>Estimated duration:</strong> 90 minutes<br />
+<strong>Instructional mode:</strong> Show (demo in VS Code) → student practice.</p>
+<h3 id="learning-objectives_9">Learning Objectives</h3>
+<ul>
+<li>Write a properly formatted Markdown document with 5+ syntax elements</li>
+<li>Follow the critical spacing rules (# space, blank lines before lists and code blocks)</li>
+<li>Write Markdown in VS Code, not Word or Google Docs</li>
+<li>Create tables, code blocks, and task lists</li>
+</ul>
+<h3 id="key-concepts-to-emphasize_9">Key Concepts to Emphasize</h3>
+<ul>
+<li>Markdown is the lingua franca of developers. Used in READMEs, documentation, prompts, static site generators, and slides.</li>
+<li><strong>Critical spacing rules — most beginner errors live here:</strong></li>
+<li>Space required between <code>#</code> and heading text</li>
+<li>Blank line required before any list</li>
+<li>Blank line required before a fenced code block</li>
+<li>Tables require both a header row and a separator row (<code>|---|---|</code>)</li>
+<li>Do not write Markdown in Word or Google Docs. Auto-replaced smart quotes and em-dashes break code blocks and inline code silently.</li>
+<li>Show first: open a raw <code>.md</code> file (ugly), then toggle preview (formatted). "Markdown is the source, preview is the output."</li>
+</ul>
+<h3 id="hands-on-activities_9">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>Markdown anatomy</strong> (15 min) — Read a well-formatted markdown file. Identify all syntax. Recreate from scratch with 10+ different syntax elements.</p>
+</li>
+<li>
+<p><strong>Personal README</strong> (20 min) — Write a Markdown file: heading, bullet list, link, bold/italic, code block. Fields: name, role, skills, interests, favorite terminal command. Commit to git.</p>
+</li>
+<li>
+<p><strong>Code blocks with syntax</strong> (15 min) — Create code examples in at least 3 languages with proper syntax highlighting (<code>```python</code>, <code>```bash</code>, <code>```javascript</code>).</p>
+</li>
+<li>
+<p><strong>Tables</strong> (15 min) — Create a table comparing features of 3 tools. Create a second table for a simple project plan. Practice alignment.</p>
+</li>
+<li>
+<p><strong>Documentation project</strong> (20 min) — Document a simple process in Markdown: main heading, sections (h2), numbered steps, code blocks, table of contents. Target: 300-500 words.</p>
+</li>
+<li>
+<p><strong>YAML frontmatter</strong> (5 min) — Add <code>---title/author/date---</code> frontmatter to the README.</p>
+</li>
+</ol>
+<p><strong>Deliverable:</strong> One complete Markdown document using 5+ syntax elements.</p>
+<p><strong>Common confusions:</strong>
+- "Can I mix HTML?" → Yes, but stick to Markdown unless you need HTML.
+- "Tables are annoying." → True. Show a table generator online, or accept the slightly ugly raw format.</p>
+<h3 id="transition-to-m5">Transition to M5</h3>
+<p>Students can document their work. M5 introduces programming concepts — the logic layer underneath the code Claude writes. Even non-coders need this module: it covers problem-solving and debugging mindset, not just syntax.</p>
+<hr />
+<h2 id="module-m5-programming-concepts">Module M5: Programming Concepts</h2>
+<p><strong>Estimated duration:</strong> 120 minutes<br />
+<strong>Instructional mode:</strong> Pseudocode first. Always. Code is translation of logic, not the logic itself.</p>
+<h3 id="learning-objectives_10">Learning Objectives</h3>
+<ul>
+<li>Write pseudocode before writing real code</li>
+<li>Understand variables, conditionals, loops, and functions</li>
+<li>Read a buggy snippet and identify the error type</li>
+<li>Write a working function with a clear name and documented purpose</li>
+</ul>
+<h3 id="key-concepts-to-emphasize_10">Key Concepts to Emphasize</h3>
+<ul>
+<li><strong>Pseudocode first.</strong> If students can think through the logic, syntax is just typing. Enforce this rigorously. Do not let students open a code editor before they have written pseudocode.</li>
+<li>Programming is problem-solving, not math. Logic &gt; algebra.</li>
+<li>Common misconceptions:</li>
+<li>"I have to memorize syntax." → No. Look it up every time. Real developers use <code>--help</code> and documentation constantly.</li>
+<li>"Programming is for 'math people.'" → False. It is problem-solving.</li>
+<li>Debugging mindset: "What does the error message say?" and "What did you expect vs. what happened?" — not "it's broken."</li>
+<li>Use JavaScript (recommended for accessibility with Node.js in browser/terminal) or Python. The goal is concepts, not language mastery.</li>
+</ul>
+<h3 id="hands-on-activities_10">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>Variables and types</strong> (15 min) — Pseudocode: store name, age, whether you code; calculate next year's age; combine name and age in a sentence. Then implement in JavaScript/Python.</p>
+</li>
+<li>
+<p><strong>Control flow: if/else</strong> (20 min) — Scenario: coffee machine pricing by size. Write pseudocode with if/else logic. Implement. Test with different inputs.</p>
+</li>
+<li>
+<p><strong>Loops</strong> (20 min) — Print numbers 1-10. Print "I will learn to code" 5 times. Sum all numbers 1-100. Loop through an array of words.</p>
+</li>
+<li>
+<p><strong>Functions</strong> (20 min) — Write: greeting function, sum function, password length check, vowel counter.</p>
+</li>
+<li>
+<p><strong>Debugging</strong> (20 min) — Given 5 buggy snippets (syntax errors, logic errors, off-by-one), read, identify the bug, fix it, test. Annotate what was wrong.</p>
+</li>
+<li>
+<p><strong>Pseudocode planning</strong> (25 min) — Scenario: grade calculator. Input: test scores. Output: average + letter grade. Write pseudocode first. Implement. Test edge cases.</p>
+</li>
+</ol>
+<p><strong>Deliverable:</strong> 3 small programs (a greeting function, a conditional, a loop). Logic correct, readable, commented.</p>
+<p><strong>Common stuck points:</strong>
+- "I don't understand variables." → Box analogy: "A variable is a labeled box. You put data in, label it, take data out later."
+- "What's the difference between = and ==?" → "Single = assigns. Double == compares."
+- "Infinite loop" → They forgot the stopping condition. Check the loop boundary.</p>
+<h3 id="transition-to-m6">Transition to M6</h3>
+<p>Students understand the code layer. M6 is tool setup — getting Claude Code, GitHub, and VS Code running and authenticated so M7 and M8 can proceed. This module has the most blocking issues. Test your environment before class.</p>
+<hr />
+<h2 id="module-m6-developer-tools">Module M6: Developer Tools</h2>
+<p><strong>Estimated duration:</strong> 90 minutes<br />
+<strong>Instructional mode:</strong> Lab + troubleshooting. This module has the most blocking issues. Test your environment thoroughly beforehand.</p>
+<h3 id="learning-objectives_11">Learning Objectives</h3>
+<ul>
+<li>Install and run Claude Code (<code>claude --version</code> passes)</li>
+<li>Authenticate with GitHub CLI (<code>gh auth status</code> passes)</li>
+<li>Have VS Code installed with preferred extensions</li>
+<li>Understand <code>.env</code> files and why they must not be committed</li>
+</ul>
+<h3 id="key-concepts-to-emphasize_11">Key Concepts to Emphasize</h3>
+<ul>
+<li>You need a toolbox. Every tool works together: Claude writes code, git tracks it, GitHub stores it, VS Code edits it.</li>
+<li><strong><code>.env</code> files:</strong> Never commit. Never under any circumstances. This is the OPSEC enforcement layer for credentials. Show <code>.gitignore</code> exclusion explicitly.</li>
+<li>Authentication: recommend HTTPS for beginners. SSH is fine for advanced students.</li>
+<li>"Command not found" means it is not on PATH. Restart terminal after installs.</li>
+<li>Windows PATH: Windows does not auto-update PATH after install. Restart the terminal, or restart the computer.</li>
+</ul>
+<h3 id="hands-on-activities_11">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>Install Claude Code</strong> (15 min) — <code>claude --version</code>. Run <code>claude</code>. Interact. Confirm it connects.</p>
+</li>
+<li>
+<p><strong>GitHub CLI</strong> (20 min) — Install <code>gh</code>. Authenticate: <code>gh auth login</code> (choose HTTPS). Verify: <code>gh auth status</code>. Clone a test repo.</p>
+</li>
+<li>
+<p><strong>VS Code setup</strong> (15 min) — Install VS Code. Open a folder. Install 2-3 extensions (Markdown Preview, Git Graph, Prettier). Create a simple file and view it.</p>
+</li>
+<li>
+<p><strong>Environment variables</strong> (20 min) — Create a <code>.env</code> file with sample variables. Show how <code>.gitignore</code> excludes it. Explain: these are settings for your app. They never get committed.</p>
+</li>
+<li>
+<p><strong>Verification sprint</strong> (15 min) — Run and screenshot: <code>claude --version</code>, <code>node --version</code> (or <code>python --version</code>), <code>git --version</code>, <code>gh --version</code>, <code>code --version</code>. All should return version numbers.</p>
+</li>
+<li>
+<p><strong>Troubleshooting practice</strong> (5 min) — "Command not found" → <code>which &lt;command&gt;</code> + <code>echo $PATH</code>. "Permission denied" → likely needs <code>chmod +x</code>. "Module not found" → missing dependency, need to install.</p>
+</li>
+</ol>
+<p><strong>Deliverable:</strong> Verification checklist showing all tools installed and authenticated.</p>
+<p><strong>Common stuck points:</strong>
+- Windows PATH → restart terminal after install
+- GitHub auth fails → check they have a GitHub account and <code>gh</code> is installed
+- Node/Python not installed → install Node (simpler for most cohorts)</p>
+<h3 id="transition-to-m7">Transition to M7</h3>
+<p>Toolbox is in place. M7 is context files — teaching Claude Code what the project is and how the operator works. This is where agentic work goes from generic to specific.</p>
+<hr />
+<h2 id="module-m7-context-files-claudemd-and-memd">Module M7: Context Files — CLAUDE.md and me.md</h2>
+<p><strong>Estimated duration:</strong> 90 minutes<br />
+<strong>Instructional mode:</strong> Template + iteration.</p>
+<h3 id="learning-objectives_12">Learning Objectives</h3>
+<ul>
+<li>Write a CLAUDE.md that specifies project scope, rules, and constraints</li>
+<li>Write a personal me.md with communication preferences and working style</li>
+<li>Confirm Claude Code reads the context files and references them in conversation</li>
+<li>Understand how Markdown formatting affects how the model reads instructions</li>
+</ul>
+<h3 id="key-concepts-to-emphasize_12">Key Concepts to Emphasize</h3>
+<ul>
+<li>CLAUDE.md = the instruction manual for the project. me.md = the instruction manual for the operator. Together, they tell Claude Code how to help without being re-briefed every session.</li>
+<li>Every element in CLAUDE.md is Markdown syntax from M4. If formatting breaks — a header without a space, a list without a blank line — the model reads a wall of text instead of structured instructions.</li>
+<li>The most common CLAUDE.md failure: it is too generic and does not constrain anything. Push students to specify: "What SHOULD Claude NOT modify? What is out of scope? What is off-limits?" Real constraints are powerful.</li>
+<li>The <code>.claude/</code> folder is where context files live. Claude Code reads them at the start of every session.</li>
+</ul>
+<h3 id="hands-on-activities_12">Hands-On Activities</h3>
+<ol>
+<li>
+<p><strong>CLAUDE.md anatomy</strong> (15 min) — Read the provided example CLAUDE.md. Annotate each section and what behavior each element produces. Identify: project name, goals, constraints, deliverables.</p>
+</li>
+<li>
+<p><strong>Write your me.md</strong> (20 min) — Fields: name and role, decision style (fast/slow, risk tolerance), communication preference (BLUF, examples, details), what you value, how you prefer Claude to interact.</p>
+</li>
+<li>
+<p><strong>Write a project CLAUDE.md</strong> (25 min) — Scenario: simple task manager for field teams. Write a CLAUDE.md including: what the project is, what it is NOT (scope boundary), key constraints, files Claude can modify, files Claude cannot modify, success criteria.</p>
+</li>
+<li>
+<p><strong>Conflict resolution matrix</strong> (15 min) — When requirements conflict, which wins? Build a matrix for the scenario project: Speed vs Security, Simplicity vs Features, Completeness vs Time-to-delivery.</p>
+</li>
+<li>
+<p><strong>Set up project context</strong> (10 min) — Create a folder. Create <code>.claude/</code> inside it. Add CLAUDE.md and me.md. Run Claude Code in that folder.</p>
+</li>
+<li>
+<p><strong>Context verification</strong> (5 min) — Ask Claude about the project. It should reference your CLAUDE.md. Observe how context influences its behavior.</p>
+</li>
+</ol>
+<p><strong>Deliverable:</strong> CLAUDE.md + me.md for a real or hypothetical project. Rubric: clarity, completeness, enforceability, practical usefulness.</p>
+<p><strong>Common stumble:</strong> Students write generic CLAUDE.md that does not constrain anything. Fix: "What should Claude NOT modify? What is out of scope?" Push for real constraints.</p>
+<h3 id="transition-to-m8">Transition to M8</h3>
+<p>All prerequisites are in place. M8 is the capstone — plan, build, commit, push. Remind students: the supervisor loop (delegate, verify, own) is the frame for the entire capstone, not the polish.</p>
+<hr />
+<h2 id="module-m8-capstone-project">Module M8: Capstone Project</h2>
+<p><strong>Estimated duration:</strong> 180 minutes (can span across Day 2 into Day 3)<br />
+<strong>Instructional mode:</strong> Mentored project. Coach, do not give answers.</p>
+<h3 id="learning-objectives_13">Learning Objectives</h3>
+<ul>
+<li>Integrate all 7 prior modules into one working project</li>
+<li>Practice the full workflow: plan → code → commit → push</li>
+<li>Troubleshoot real problems independently</li>
+<li>Demonstrate the supervisor loop: delegate, verify, own</li>
+</ul>
+<h3 id="key-concepts-to-emphasize_13">Key Concepts to Emphasize</h3>
+<ul>
+<li>Not a tutorial or a code-along. A real thing that does something useful, shipped to GitHub.</li>
+<li>Optimize for the loop, not the polish. A checked rough artifact beats an unchecked polished one.</li>
+<li>Coaching phrases (do not give direct answers):</li>
+<li>"What does the error message say?"</li>
+<li>"Can you draw what this should do?"</li>
+<li>"What would you do if I wasn't here?"</li>
+<li>"That's good progress. What's next?"</li>
+<li>Scope discipline: "Can you demo this in 2 minutes? If not, it's too big."</li>
+</ul>
+<p><strong>Three paths (student choice):</strong>
+- <strong>Path A (CLI tool):</strong> Takes input from user or file, processes with logic, outputs result, basic error handling, documented, 3+ commits. Tech: JavaScript (Node.js) or Python.
+- <strong>Path B (Web app):</strong> HTML + CSS + JavaScript, takes user input, does something with it, runs locally, documented, 3+ commits.
+- <strong>Path C (API integration):</strong> Calls a free public API, handles errors, displays results, documented, 3+ commits. Tech: Node.js + fetch or Python + requests.</p>
+<p><strong>Workflow (all paths):</strong>
+1. <strong>Plan</strong> (20 min) — One-paragraph description. List 3-5 features. First commit: "Initial project plan."
+2. <strong>Setup</strong> (20 min) — Create <code>.claude/</code> with CLAUDE.md and me.md. Initialize git. Create basic file structure. Commit: "Project setup."
+3. <strong>Build Phase 1</strong> (60 min) — Core functionality first. Use Claude Code to help. At least one commit per feature.
+4. <strong>Test and iterate</strong> (40 min) — Use the tool. Find and fix bugs. Ask Claude to help improve error handling or efficiency. Commit each improvement.
+5. <strong>Document</strong> (20 min) — Write README.md: what it does, how to use it, requirements. Add comments to complex code. Final commit: "Update documentation."
+6. <strong>Push to GitHub</strong> (10 min) — Verify all commits are local. Push. Verify on GitHub.</p>
+<p><strong>Checkpoint moments (formative assessment):</strong>
+- After planning (20 min): "Tell me in one sentence what you're building."
+- After setup (40 min): "Show me your folder structure. What's in each file?"
+- After first feature (100 min): "Does it run? Show me it working."
+- After iteration (140 min): "What did you change after testing? Why?"
+- After push (170 min): "Show me your GitHub repo with your commits."</p>
+<p><strong>Deliverable:</strong> GitHub repo with 5+ commits, README, working code.</p>
+<p><strong>Assessment rubric:</strong>
+| Criterion | Weight |
+|---|---|
+| Code works | 50% |
+| Documented | 20% |
+| Commits meaningful | 15% |
+| Iterated based on feedback | 10% |
+| Polish (readable, no debug statements) | 5% |
+| Bonus: deployment, tests, second feature | +5% |</p>
+<p><strong>Common stumbles:</strong>
+- Under-scope (too simple) or over-scope (too big). Calibrate with: "Can you demo this in 2 minutes?"
+- Students wait for instructions instead of troubleshooting. Redirect: "What does the error say? What did you expect?"</p>
+<hr />
+<h1 id="course-at-a-glance">COURSE AT A GLANCE</h1>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Duration</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bedrock: AI Literacy</strong></td>
+<td>Multi-week, short daily reps</td>
+<td>LLM mental model, failure modes, deliberate prompting, delivery models, data handling hard rules</td>
+</tr>
+<tr>
+<td><strong>Bedrock: Personalizing Your AI</strong></td>
+<td>1-2 sessions</td>
+<td>Custom instructions and Projects/memory — stop re-briefing the model every session</td>
+</tr>
+<tr>
+<td><strong>Terminal Basics: The Machine</strong></td>
+<td>Multi-week, short daily reps</td>
+<td>Filesystem tree, plaintext vs rich text, VS Code orientation</td>
+</tr>
+<tr>
+<td><strong>Terminal Basics: The Terminal</strong></td>
+<td>Multi-week, heaviest calendar weight</td>
+<td>Navigation, file operations, paths, tab-completion, flags, Ctrl+C, version control concept</td>
+</tr>
+<tr>
+<td><strong>Agentic AI: Core Concepts</strong></td>
+<td>1-2 sessions</td>
+<td>Chatbot vs agent, read/write/execute access, engine-harness-operator model, supervisor mindset</td>
+</tr>
+<tr>
+<td><strong>Mental Models</strong></td>
+<td>35 minutes</td>
+<td>Six frameworks: Harness, Context Windows, Tokens, Tool Calls, Operator Posture, Cost-Consciousness</td>
+</tr>
+<tr>
+<td><strong>TF M1: LLM &amp; Prompts</strong></td>
+<td>90 minutes</td>
+<td>RGCOA prompting, system prompts, hallucination, data hygiene scrub drill, iterative prompting</td>
+</tr>
+<tr>
+<td><strong>TF M2: Terminal Basics</strong></td>
+<td>120 minutes</td>
+<td>Navigation, file manipulation, paths, piping, redirection, help system</td>
+</tr>
+<tr>
+<td><strong>TF M3: Git Basics</strong></td>
+<td>120 minutes</td>
+<td>Init, commit, branch, merge, push, <code>.gitignore</code> before first commit, pull requests</td>
+</tr>
+<tr>
+<td><strong>TF M4: Markdown</strong></td>
+<td>90 minutes</td>
+<td>Syntax elements, critical spacing rules, code blocks, tables, write in VS Code not Word</td>
+</tr>
+<tr>
+<td><strong>TF M5: Programming Concepts</strong></td>
+<td>120 minutes</td>
+<td>Pseudocode first, variables, loops, functions, debugging mindset</td>
+</tr>
+<tr>
+<td><strong>TF M6: Developer Tools</strong></td>
+<td>90 minutes</td>
+<td>Claude Code, GitHub CLI, VS Code, <code>.env</code> files, tool verification checklist</td>
+</tr>
+<tr>
+<td><strong>TF M7: Context Files</strong></td>
+<td>90 minutes</td>
+<td>CLAUDE.md (project constraints), me.md (operator profile), context verification</td>
+</tr>
+<tr>
+<td><strong>TF M8: Capstone Project</strong></td>
+<td>180 minutes</td>
+<td>Full workflow: plan → build → commit → push; supervisor loop is the frame</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total Technical Foundations instructional time:</strong> ~15 hours over 2-3 days<br />
+<strong>Critical path:</strong> M1 → M2 → M3 → M5 → M8. Do not skip any module in this sequence.<br />
+<strong>Can run in parallel:</strong> M4 (Markdown) while other modules are sinking in.<br />
+<strong>Must complete before M8:</strong> M5, M6, M7.</p>
+<hr />
+<h2 id="grading-summary">Grading Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Artifact</th>
+<th>Pass criteria</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M1</td>
+<td>5 prompts</td>
+<td>4/5 are clear, specific, coherent</td>
+</tr>
+<tr>
+<td>M2</td>
+<td>Terminal transcript</td>
+<td>8/10 commands correct, navigation successful</td>
+</tr>
+<tr>
+<td>M3</td>
+<td>Commits + push</td>
+<td>Commits have messages, push succeeds, <code>.gitignore</code> exists</td>
+</tr>
+<tr>
+<td>M4</td>
+<td>Markdown doc</td>
+<td>5+ syntax elements, readable</td>
+</tr>
+<tr>
+<td>M5</td>
+<td>3 programs</td>
+<td>All run, logic is correct</td>
+</tr>
+<tr>
+<td>M6</td>
+<td>Verification checklist</td>
+<td>All tools installed, all version checks pass</td>
+</tr>
+<tr>
+<td>M7</td>
+<td>CLAUDE.md + me.md</td>
+<td>Both complete, coherent, enforceable</td>
+</tr>
+<tr>
+<td>M8</td>
+<td>GitHub repo</td>
+<td>5+ commits, README, code runs</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Course completion:</strong> 7/8 modules passed. 8/8 + capstone &gt;80% = Honors.</p>
+<hr />
+<h2 id="quick-troubleshooting-reference">Quick Troubleshooting Reference</h2>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>First check</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Command not found"</td>
+<td><code>which &lt;command&gt;</code></td>
+<td>Not on PATH; restart terminal after install</td>
+</tr>
+<tr>
+<td>Path confusion</td>
+<td><code>pwd</code> + <code>ls</code></td>
+<td>Navigate to a known location and rebuild</td>
+</tr>
+<tr>
+<td>Git merge conflict</td>
+<td><code>git status</code></td>
+<td>Edit file, keep your version, <code>git add</code>, <code>git commit</code></td>
+</tr>
+<tr>
+<td>Auth fails</td>
+<td><code>gh auth status</code></td>
+<td><code>gh auth login</code>, choose HTTPS</td>
+</tr>
+<tr>
+<td>Claude Code not connecting</td>
+<td><code>claude --version</code></td>
+<td>Reinstall if not found</td>
+</tr>
+<tr>
+<td>Markdown not rendering</td>
+<td>Check extension</td>
+<td>Install "Markdown All in One" in VS Code, restart</td>
+</tr>
+<tr>
+<td>JS/Node error</td>
+<td><code>node --version</code></td>
+<td>Install from nodejs.org if missing</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>End of Teaching Guide</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

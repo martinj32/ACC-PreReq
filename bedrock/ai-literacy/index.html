@@ -1,0 +1,2070 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../overview/">
+      
+      
+        <link rel="next" href="../personalizing-your-ai/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>AI Literacy - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bedrock-ai-literacy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AI Literacy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedules
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Bedrock
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../terminal-basics/the-machine/" class="md-tabs__link">
+          
+  
+  
+  Terminal Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../agentic-ai/agent-concepts/" class="md-tabs__link">
+          
+  
+  
+  Agentic AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mental-models/core-content/" class="md-tabs__link">
+          
+  
+  
+  Mental Models
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../prereq-course/course-design/" class="md-tabs__link">
+          
+  
+  
+  Technical Foundations
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../instructor/teaching-guide/" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedules
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bedrock
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bedrock
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Literacy
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Literacy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-an-llm-actually-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What an LLM Actually Is
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What an LLM Actually Is">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokens-and-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tokens and Context
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tokens and Context">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-llms-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How LLMs Fail
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How LLMs Fail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prompt Engineering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-ai-is-delivered-and-paid-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How AI Is Delivered and Paid For
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How AI Is Delivered and Paid For">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-handling-what-never-to-paste" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Handling: What Never to Paste
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Handling: What Never to Paste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../personalizing-your-ai/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Personalizing Your AI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Terminal Basics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Terminal Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal-basics/the-machine/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Machine
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terminal-basics/the-terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agentic AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Agentic AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agentic-ai/agent-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mental Models
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/core-content/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    The Module
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/quick-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mental-models/workbook/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workbook
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Foundations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Technical Foundations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prereq-course/course-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Design (M1-M8)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prereq-course/module-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Module Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/teaching-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/mental-models-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mental Models Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/prereq-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/day0-scaffold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 0 Teaching Scaffold
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bedrock-ai-literacy">Bedrock — AI Literacy</h1>
+<p><strong>Who this is for:</strong> Someone who uses AI by feel and wants to understand what is actually happening. No prior technical knowledge required.</p>
+<p><strong>What you will leave with:</strong> A working mental model of how LLMs work, where they fail, how to prompt deliberately, how AI is delivered and paid for, and what you must never send to an AI tool.</p>
+<hr />
+<h2 id="what-an-llm-actually-is">What an LLM Actually Is</h2>
+<p><strong>BLUF.</strong> An LLM predicts text from learned patterns — not rules, not memory, not live data — and that single fact explains both why it is extraordinarily capable and exactly how it fails.</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>You already use one. What you have been doing by feel — type a request, read a response — is about to get a mental model underneath it. That model will not slow you down. It will make everything that follows click immediately instead of slowly.</p>
+<h3 id="concepts">Concepts</h3>
+<p>The model reads a sequence of text and predicts what comes next. One chunk at a time. No lookup table. No truth check. Given everything written so far, what is the statistically most likely next piece?</p>
+<div class="admonition example">
+<p class="admonition-title">What Prediction Looks Like</p>
+<p>Open your chatbot. Type: "The capital of France is" — and submit before you finish the sentence.</p>
+<p>The model completes it. Now type: "The capital of France is definitely" and watch the completion shift slightly.</p>
+<p>That is prediction. The word "definitely" changed the statistical context. The model did not look anything up.</p>
+</div>
+<p><strong>Trained, not programmed.</strong> No one wrote a rule that says "Paris is the capital of France." The model was trained on enough text containing that fact that its weights now make it the likely completion. The upside: it generalizes to almost anything. The failure mode: if the training data was wrong, biased, or thin in some domain, the model learned those patterns too. There is no rulebook to audit.</p>
+<p><strong>The LLM is the engine.</strong> By itself, it is a brain in a jar — capable of reasoning in text, incapable of acting on its own. It reads text and writes text. No body, no memory between chats, no live connection to the world unless something external gives it one. Fluent, confident output is not the same as correct output. Both are true at the same time.</p>
+<div class="admonition warning">
+<p class="admonition-title">Swap the Verb</p>
+<p>The model does not "know," "want," "think," or "lie." Those words will mislead you at every later step. It <strong>predicts</strong>. That is the only accurate verb. Catch yourself using the others and swap it in.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Architecture Questions</summary>
+<p>Do not open with attention heads, transformers, or parameter counts. A casual user needs a mental model that survives contact with a real tool, not the mechanism behind it. If a student asks, acknowledge it as a real question and defer: "That is a deeper topic — let's come back to it."</p>
+</details>
+<details class="note">
+<summary>Instructor Note — Anthropomorphism Runs Deep</summary>
+<p>Students told "it just predicts" will still say "it knew the answer" thirty seconds later. Anthropomorphism is a wired cognitive shortcut. Interrupt it every time it appears in the first two weeks. It re-trains faster than you expect.</p>
+</details>
+<h3 id="hands-on">Hands-On</h3>
+<p>The lab is the chatbot you already have open.</p>
+<ol>
+<li>Type an incomplete sentence on a topic you know well and submit it. Read what the model predicts comes next.</li>
+<li>Add the word "definitely" or "obviously" to the same sentence and submit again. Does the completion change?</li>
+<li>Ask the model a factual question you already know the answer to. Check the output for accuracy.</li>
+<li>Ask the exact same question again in a new chat. Is the answer identical, or slightly different?</li>
+<li>Ask yourself: "How would I verify any of these outputs if I did not already know the answer?"</li>
+</ol>
+<p>You are watching prediction happen in real time — and building the verification reflex before you need it.</p>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>The model just gave you a confident-sounding answer. What would it take to verify it? Where would you check?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">A language model was never given a rule that says "Paris is the capital of France." How does it produce that answer?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">It searched the internet for the answer</li>
+    <li data-correct="false">A programmer hard-coded that fact into its rules</li>
+    <li data-correct="true">It was trained on enough text containing that fact that the pattern was learned into its weights</li>
+    <li data-correct="false">It remembered it from a previous conversation</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can state in one sentence what an LLM does</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain "trained not programmed" in plain terms</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know that confident output and correct output are not the same thing</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I have watched the model predict — not just heard about it</li>
+</ul>
+<hr />
+<h2 id="tokens-and-context">Tokens and Context</h2>
+<p><strong>BLUF.</strong> The model reads and writes in tokens — roughly 0.75 of an English word each — and can only hold a fixed number at once; fill that limit and earlier content starts to fall out, which is why long sprawling chats get worse, not better.</p>
+<h3 id="why-this-matters_1">Why This Matters</h3>
+<p>This is the first place the engine's behavior surprises people. They expect a longer conversation to give the model more to work with. The opposite happens once you pass the limit. Knowing why changes how you work.</p>
+<h3 id="concepts_1">Concepts</h3>
+<p><strong>Tokens.</strong> The model does not read words; it reads chunks of text called tokens. In English prose, one token is roughly three-quarters of a word. Code and non-English text tokenize less efficiently — more tokens per word. You do not need to count tokens precisely; the instinct to keep input focused is the deliverable.</p>
+<p><strong>The context window.</strong> Every model has a hard ceiling on how many tokens it can hold in a single conversation. That ceiling is the context window. Think of it as a whiteboard with finite space: new writing crowds out old writing once it fills.</p>
+<div class="admonition example">
+<p class="admonition-title">Watching the Window Fill</p>
+<p>Open a long document — several pages — and paste it into a fresh chat. Ask a detailed question about something near the top.</p>
+<p>Now open a new chat, paste the same document, and ask about something near the bottom.</p>
+<p>Compare the quality. Models attend better to the beginning and end of their context window than to the middle. Critical instructions buried mid-conversation may be partially ignored.</p>
+</div>
+<p><strong>What a full window looks like.</strong> The model starts hedging. It contradicts something it stated confidently ten turns ago. It forgets a constraint you set at the start. That is not a bug; it is the whiteboard running out of space.</p>
+<div class="admonition tip">
+<p class="admonition-title">The Practical Rule</p>
+<p>Start a fresh chat when: (1) the task has changed direction and earlier turns are dead weight, or (2) the model is drifting — hedging on things it stated confidently before.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Context Window Sizes</summary>
+<p>Approximate sizes as of mid-2026 — verify before teaching, these change with releases: Claude: 200,000 tokens. GPT-4o: 128,000 tokens. Gemini 2.0: 1,000,000+ tokens. Bigger is not always better — a full million-token window degrades quality in the middle.</p>
+</details>
+<h3 id="hands-on_1">Hands-On</h3>
+<ol>
+<li>Open a fresh chat and paste several paragraphs of dense text.</li>
+<li>Ask the model to summarize just the first paragraph.</li>
+<li>In the same chat, ask it about something from the end of what you pasted.</li>
+<li>Start a new chat and ask the same question. Compare.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You set an important constraint at the start of a long conversation. Ten exchanges later, the model seems to have forgotten it. What happened, and what would you do differently next time?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You are in a long chat and the model starts contradicting instructions you gave at the start. What is the most likely cause?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">The model changed its mind</li>
+    <li data-correct="false">You used the wrong model for this task</li>
+    <li data-correct="true">Earlier content has been crowded out of the context window</li>
+    <li data-correct="false">The model is testing whether you notice</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_1">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can define a token in plain terms</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain what a context window is and what happens when it fills</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know the two situations that warrant starting a fresh chat</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I have observed the window effect — not just read about it</li>
+</ul>
+<hr />
+<h2 id="how-llms-fail">How LLMs Fail</h2>
+<p><strong>BLUF.</strong> The model will state false things with total confidence, give different answers to the same question, and know nothing past its training cutoff — none of this is a malfunction, and seeing it fail on purpose is the most important thing you can do in this section.</p>
+<h3 id="why-this-matters_2">Why This Matters</h3>
+<p>You are about to trust this tool with real work. Calibrated trust requires knowing exactly where it breaks. Read this module and then produce a hallucination with your own hands before moving on.</p>
+<h3 id="concepts_2">Concepts</h3>
+<p>Four failure modes. Know all four.</p>
+<p><strong>Hallucination.</strong> The model has no truth-checking step. It generates tokens that are statistically likely to follow prior context. It cannot distinguish "information I was trained on accurately" from "information I am completing plausibly." Confident output and correct output are entirely unrelated. This is expected behavior of the system, not a rare bug.</p>
+<p><strong>Confident-wrong.</strong> Hallucination is not always dramatic. The model may state a subtly wrong date, a slightly wrong statistic, or a plausible-sounding citation that does not exist. The tone stays equally confident whether the claim is right or wrong. Never use the model's confidence as a signal of accuracy.</p>
+<p><strong>Nondeterminism.</strong> The model uses a temperature parameter that introduces variation. Same prompt, different run, different result — by design. Do not treat one output as "the answer" for high-stakes work. Run important prompts more than once and compare.</p>
+<p><strong>Knowledge cutoff.</strong> The model was trained on data up to a point in time. It does not know what happened after that. Ask about a recent event and it may refuse, guess, or confidently describe something that did not happen.</p>
+<div class="admonition warning">
+<p class="admonition-title">Build the Verification Reflex Now</p>
+<p>Anything that matters gets checked before you act on it. Not because the model is bad at its job — because this is how the system works. The operator who skips verification is the weak link, not the model.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Eliciting Hallucinations on Demand</summary>
+<p>Make students produce a hallucination with their own hands. Reliable methods:</p>
+<ul>
+<li><strong>Invented citations:</strong> Ask for 5 peer-reviewed papers on a narrow topic with authors and publication years. The model produces plausible-sounding but fabricated citations. Ask for a DOI — it will be invented.</li>
+<li><strong>Biographical detail:</strong> Ask for the detailed career history of a real but not-famous person. The model fills gaps with plausible-sounding detail.</li>
+<li><strong>Recent events past cutoff:</strong> Ask about something you know happened after the training cutoff.</li>
+</ul>
+<p>Pick a topic where you know the correct answer. Never demo on live operational content.</p>
+</details>
+<details class="note">
+<summary>Instructor Note — Don't Let It Tip Into Cynicism</summary>
+<p>The point is calibrated trust, not distrust. The model is extraordinarily capable <em>and</em> it hallucinates. Both are true simultaneously.</p>
+</details>
+<h3 id="hands-on_2">Hands-On</h3>
+<ol>
+<li>Ask the model for 5 peer-reviewed sources on a specific narrow topic. Ask for author names, journal names, and publication years.</li>
+<li>Pick one citation and try to verify it exists.</li>
+<li>Ask the same question in a new chat. Compare the answers.</li>
+<li>Ask about something you know happened recently. Watch how it responds.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You just watched the model invent a source. What does that mean for the next time it gives you a fact you have not heard before?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You run the same prompt twice in two separate chats and get different answers. What is the most accurate explanation?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">One of the chats had a longer context window</li>
+    <li data-correct="false">The model updated itself between the two runs</li>
+    <li data-correct="true">The model uses randomness by design — the same input does not guarantee the same output</li>
+    <li data-correct="false">You phrased the prompt slightly differently without noticing</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_2">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the four core failure modes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I have produced a hallucination with my own hands</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand that confidence and correctness are unrelated in model output</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know why this is the reason a human stays in the loop</li>
+</ul>
+<hr />
+<h2 id="prompt-engineering">Prompt Engineering</h2>
+<p><strong>BLUF.</strong> Converting prompting-by-feel into method means telling the model who to be, giving it the context it needs, showing it an example, and saying what good output looks like — the same as briefing a person, not typing into a search box.</p>
+<h3 id="why-this-matters_3">Why This Matters</h3>
+<p>A vague prompt is a vague order, and a vague order gets a vague result from a junior who fills the gaps with assumptions. You have already seen what the model does when it guesses wrong. Deliberate prompting is how you reduce that surface area.</p>
+<h3 id="concepts_3">Concepts</h3>
+<p>The model meets you halfway the moment you give it structure. Without context, it must guess: who you are, what you need, what "good" looks like. Guessing produces generic output. Four elements close that gap:</p>
+<ul>
+<li><strong>Role.</strong> Tell the model who to be. "You are a plain-language editor" produces different output than no framing at all.</li>
+<li><strong>Context.</strong> Tell it what it needs to know that it cannot infer. What is the task, who is the audience, what constraints apply.</li>
+<li><strong>Example.</strong> Show it what good output looks like before asking for it. One strong example beats three paragraphs of description.</li>
+<li><strong>Output spec.</strong> Tell it the format, length, and tone you want.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Before and After</p>
+<p><strong>Weak prompt:</strong> "Write me a summary."</p>
+<p><strong>Strong prompt:</strong> "You are summarizing this for a senior leader who has two minutes. Pull out the three most important points. Use bullet points. No jargon. Max 100 words."</p>
+<p>Same model. Different brief. Different result.</p>
+</div>
+<p>The iterative habit matters more than the perfect prompt. A rough ask the model can build on beats silence. Read the output, tighten the next ask based on what missed, repeat.</p>
+<div class="admonition tip">
+<p class="admonition-title">If You Are Stuck, Ask the Model to Interview You</p>
+<p>Type: "I need help with [task]. Ask me the questions you need answered before you start."</p>
+<p>The model surfaces what context it is missing. Answer the questions, then ask it to proceed.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">The Template Trap</p>
+<p>The four elements are a structure, not a script to recite. The durable skill is clarity — giving the model what it needs to not guess. How you deliver that varies by task.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Prompt Engineering Creep</summary>
+<p>Resist turning this into a "prompt engineering tricks" hour. Magic phrases are not the lesson. The lesson is clarity. Students who focus on tricks over structure will hit a ceiling fast.</p>
+</details>
+<h3 id="hands-on_3">Hands-On</h3>
+<ol>
+<li>Pick a real task you need help with.</li>
+<li>Write a one-line version of the request. Submit it. Save the output.</li>
+<li>Add role, context, an example of what good looks like, and an output spec. Submit again.</li>
+<li>Compare the two outputs side by side.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>What specifically changed between your first output and your second? Which of the four elements made the biggest difference for your task?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You ask the model to "write a report." It produces something generic and too long. What is the most effective fix?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Switch to a more powerful model</li>
+    <li data-correct="false">Ask the same question again and hope for a better result</li>
+    <li data-correct="true">Add role, context, an example of good output, and a length/format spec to the prompt</li>
+    <li data-correct="false">Break the report into smaller pieces and ask for each separately</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_3">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the four elements of a deliberate prompt</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I have run a before/after comparison with my own real task</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I treat prompting as a conversation, not a one-shot command</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know the difference between prompting by feel and prompting by structure</li>
+</ul>
+<hr />
+<h2 id="how-ai-is-delivered-and-paid-for">How AI Is Delivered and Paid For</h2>
+<p><strong>BLUF.</strong> The same model reaches you through different doors — flat-rate app, pay-per-token API, or your organization's cloud account — and tokens cost money, so model choice and conversation length have a price.</p>
+<h3 id="why-this-matters_4">Why This Matters</h3>
+<p>You will be selecting models and making decisions about how to use them. Understanding the cost and delivery model behind the tool prevents both waste and surprise.</p>
+<h3 id="concepts_4">Concepts</h3>
+<p><strong>Three ways AI is paid for:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Delivery model</th>
+<th>What it means</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Subscription app</strong></td>
+<td>Flat monthly fee, model access included</td>
+<td>ChatGPT Plus, Claude.ai Pro</td>
+</tr>
+<tr>
+<td><strong>Pay-per-token API</strong></td>
+<td>You pay per token sent and received</td>
+<td>Anthropic API, OpenAI API</td>
+</tr>
+<tr>
+<td><strong>Bring-your-own-key</strong></td>
+<td>Your organization's API key foots the bill</td>
+<td>Enterprise deployments, Claude Code</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cloud vs. local delivery.</strong> Most models run in the cloud — your input goes to a remote server, the model runs there, the response comes back. Some smaller models can run entirely on your machine. Local delivery: no connectivity required, data stays local. Trade-off: local models are smaller and less capable.</p>
+<p><strong>The cost ladder.</strong> Token cost scales with model size and reasoning effort. A small, fast model costs less per token than a large frontier model. "Always use the biggest model" is wrong — match the model to the job.</p>
+<div class="admonition tip">
+<p class="admonition-title">Match the Model to the Job</p>
+<p>Drafting a quick message: small, fast model. Analyzing a complex document: larger model. Writing and running code in an agentic environment: frontier model with tool use. Using the biggest model for everything is like running a diesel generator to charge a phone.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Cost Is Real</p>
+<p>On a pay-per-token plan, a long conversation with a large model costs more than a short one. Know your billing model before you start a long task.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Skip the Pricing Tables</summary>
+<p>Specific token prices change frequently. Do not teach current prices — they will be wrong within a quarter. Teach the structure: tokens cost money, bigger models cost more, match the model to the job.</p>
+</details>
+<h3 id="hands-on_4">Hands-On</h3>
+<ol>
+<li>Open your chatbot's settings or account page. Find which model you are currently using and note the name.</li>
+<li>Open anthropic.com/pricing (or your provider's equivalent). Find two models — one fast/small, one large/powerful. Read the price difference. Do not memorize numbers; notice the structure.</li>
+<li>Identify which delivery model you are on: subscription app, pay-per-token API, or organization-managed key.</li>
+<li>Optional: paste a paragraph of text into a tokenizer tool (such as platform.openai.com/tokenizer). Count the tokens. Note how the token count compares to the word count.</li>
+<li>Pick one task you might use AI for this week. Decide which model tier is appropriate for that task and write one sentence explaining why.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You need to run an analysis task with a very long document and several back-and-forth exchanges. What factors determine the cost of that task, and how would you reduce it?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">Why is "always use the most powerful model" not good advice?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Powerful models make more mistakes than smaller ones</li>
+    <li data-correct="false">Powerful models are slower and less reliable</li>
+    <li data-correct="true">Larger models cost more per token — for simple tasks, the cost is not justified by the capability difference</li>
+    <li data-correct="false">You can only access the most powerful models through a paid subscription</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_4">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the three ways AI is paid for</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand that tokens cost money and model choice affects cost</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know the difference between cloud and local delivery</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can identify which delivery model I am currently using</li>
+</ul>
+<hr />
+<h2 id="data-handling-what-never-to-paste">Data Handling: What Never to Paste</h2>
+<p><strong>BLUF.</strong> Once you are pasting real work into a cloud-connected tool, what you paste matters — personal data, sensitive material, and anything above the system's authorization ceiling must never go in, and that rule does not expire.</p>
+<h3 id="why-this-matters_5">Why This Matters</h3>
+<p>The previous module established that most AI delivery is cloud-based. This module establishes what that means for what you can send. The capability is real. The boundary is real. Both are true at the same time.</p>
+<h3 id="concepts_5">Concepts</h3>
+<p>Authorization is a property of the system, not the impressiveness of the tool. A highly capable model running on an unauthorized system does not become authorized because it is impressive. The boundary is set by policy, not capability.</p>
+<p><strong>What must never go into an unauthorized system:</strong></p>
+<ul>
+<li>Personally identifiable information (PII): names combined with identifiers, Social Security Numbers, DOBs, home addresses</li>
+<li>Sensitive, controlled, or classified material of any kind</li>
+<li>Anything above the system's authorization ceiling</li>
+</ul>
+<p><strong>The default posture:</strong> When in doubt, do not paste. Ask someone who can authorize it before you proceed.</p>
+<p><strong>The classify-before-you-paste habit.</strong> Before pasting anything into an AI tool, take two seconds: what is this, and is this system authorized for it? Build that pause until it is automatic.</p>
+<div class="admonition danger">
+<p class="admonition-title">This Bright Line Does Not Expire</p>
+<p>It does not expire at the end of this course. It does not expire under time pressure. It does not move because the tool is impressive. One careless paste in an unauthorized system is the kind of mistake that has real and lasting consequences. Default to no until you hear yes from someone who can authorize it.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Audience Calibration</summary>
+<p>For a military or intel audience, state this explicitly — including the "paraphrase and summarize" loophole, which does not exist. For a civilian audience, use concrete examples: medical records, financial data, HR files, client information.</p>
+</details>
+<details class="note">
+<summary>Instructor Note — Do Not Soften This Module</summary>
+<p>Soften it and students hear "be careful sometimes." The message is: this is a hard rule.</p>
+</details>
+<h3 id="hands-on_5">Hands-On</h3>
+<p>No prompting today. Do this instead:</p>
+<ol>
+<li>Think about the last three things you pasted into an AI tool.</li>
+<li>For each one: was the system authorized for that type of content?</li>
+<li>Identify one category of content you work with regularly that you will never paste into an unauthorized tool.</li>
+</ol>
+<p>Write that category down. It is your personal bright line.</p>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You are under a deadline and want to paste a document into your AI tool to summarize it quickly. You are not sure whether the system is authorized for that content. What do you do?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You have a borderline-sensitive document and an unauthorized but highly capable AI tool that would save hours of work. What is the correct call?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Paste it — the efficiency gain justifies a judgment call</li>
+    <li data-correct="false">Summarize the key points in your head first, then paste the summary</li>
+    <li data-correct="true">Do not paste. Authorization does not change based on capability or time pressure. Ask before proceeding.</li>
+    <li data-correct="false">Paste it, but delete the conversation immediately after</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_5">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can identify the categories that must never go into an unauthorized system</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know the default posture: when in doubt, do not paste</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand that authorization is a property of the system, not the tool's capability</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I have identified my personal bright line for content I handle regularly</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>
