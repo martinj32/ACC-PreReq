@@ -1,7 +1,7 @@
 ---
 title: ACC Course Build Plan
 created: 2026-06-06
-status: active
+status: complete
 ---
 
 # ACC Course Build Plan
@@ -16,12 +16,10 @@ Transform existing ACC prerequisite markdown files into a full multi-day course 
 
 ## Scope
 
-Scope is being determined incrementally as Jake provides additional material. Current source files cover:
+This build covers the ACC prerequisite material only:
 
 - Mental Models for AI-Assisted Development (conceptual scaffolding, pre-req to everything)
 - ACC Prerequisite Course (8 modules, 2-3 days)
-
-ACC main course (3-day) content does not exist yet -- will be built when source material is provided.
 
 ## Tech Stack
 
@@ -71,10 +69,10 @@ C:\Users\jmart\ACC-Content\
 ## Decisions Made
 
 - Slide format: .pptx (PowerShell/Windows compatible, instructor-portable)
-- Website hosting: local only for now (no deployment until scope is finalized)
+- Website hosting: local only
 - Teaching guide: single consolidated doc, not split per module
-- Scope: expand incrementally as Jake provides more source material
 
 ## Session Notes
 
-- 2026-06-06: Initial session. Files moved from WSL PreReq folder to C:\Users\jmart\ACC-Content\. Plan built. Stack selected. Awaiting additional source material from Jake to finalize course scope.
+- 2026-06-06: Initial session. Files moved from WSL PreReq folder to C:\Users\jmart\ACC-Content\. Plan built. Stack selected.
+- 2026-06-09: All 9 tasks complete. Site verified, all 6 decks confirmed. Teaching guide wired into nav. Build closed out.
