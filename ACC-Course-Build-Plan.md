@@ -58,15 +58,15 @@ C:\Users\jmart\ACC-Content\
 
 ## Task Checklist
 
-- [ ] 1. Set up project folder structure in ACC-Content (slides/, site/, teaching-guide/, source/)
-- [ ] 2. Install and configure MkDocs + Material theme; verify it serves locally
-- [ ] 3. Configure site navigation structure (Mental Models, Prereq M1-M8, Teaching Guide sections)
-- [ ] 4. Build website pages from existing markdown source files
-- [ ] 5. Build Mental Models slide deck (.pptx)
-- [ ] 6. Build M1-M8 slide decks (.pptx, one per module)
-- [ ] 7. Build consolidated Teaching Guide document
-- [ ] 8. Wire Teaching Guide into the website as its own section
-- [ ] 9. End-to-end test: serve site, open slides, verify all links
+- [x] 1. Set up project folder structure in ACC-Content (slides/, site/, teaching-guide/, source/)
+- [x] 2. Install and configure MkDocs + Material theme; verify it serves locally
+- [x] 3. Configure site navigation structure (Mental Models, Prereq M1-M8, Teaching Guide sections)
+- [x] 4. Build website pages from existing markdown source files
+- [x] 5. Build Mental Models slide deck (.pptx)
+- [x] 6. Build M1-M8 slide decks (.pptx, one per module)
+- [x] 7. Build consolidated Teaching Guide document
+- [x] 8. Wire Teaching Guide into the website as its own section
+- [x] 9. End-to-end test: serve site, open slides, verify all links
 
 ## Decisions Made
 

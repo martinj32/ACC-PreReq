@@ -57,6 +57,7 @@ nav:
     - Course Design (M1-M8): prereq-course/course-design.md
     - Module Quick Reference: prereq-course/module-summary.md
   - Instructor Handbooks:
+    - Consolidated Teaching Guide: instructor/teaching-guide.md
     - Content Style Guide: instructor/style-guide.md
     - Mental Models Teaching Guide: instructor/mental-models-guide.md
     - Course Instructor Guide: instructor/prereq-guide.md
