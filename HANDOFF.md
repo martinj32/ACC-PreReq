@@ -1,54 +1,36 @@
 ---
-session: 2026-06-08
+session: 2026-06-09
 status: clean — all changes committed and pushed to origin/master
 ---
 
-# Session Handoff — AI and Agentics Basics
+# Session Handoff — ACC Course Build (COMPLETE)
 
 ## What Was Completed This Session
 
-- **5 module slide decks built** via 7-agent parallel build (agents spawned their own sub-agents):
-  - `slides/Finished/bedrock-ai-literacy.pptx` — 44 slides
-  - `slides/Finished/bedrock-personalizing.pptx` — 21 slides
-  - `slides/Finished/terminal-machine.pptx` — 30 slides
-  - `slides/Finished/terminal-terminal.pptx` — 42 slides
-  - `slides/Finished/agentic-concepts.pptx` — 26 slides
-  - Total: 163 slides across 5 decks. Army Cyber dark theme throughout.
-
-- **All builder scripts committed** to `slides/` — one per module + `build_mental_models.py` (the master template)
-
-- **Teaching guide converted to HTML** — `docs/instructor/teaching-guide.html`
-  - Self-contained, print-ready, Army Cyber dark theme section banners, color-coded callout boxes
-
-- **Atlas updated** — ACC Content and Team Deliverables Roadmap projects:
-  - Slide deck tasks marked done
-  - Phase 3 milestone (Slide Decks Complete) marked completed
-  - python-pptx styling risk marked mitigated
-  - Session note added to ACC Content
-
-- **Commits pushed:**
-  - `3663bfb` feat: add slide deck builder scripts and 5 completed .pptx outputs
-  - `e614017` feat: convert teaching guide to standalone HTML document
+- **Teaching guide wired into MkDocs nav** — `docs/instructor/teaching-guide.md` added as first entry under Instructor Handbooks in `mkdocs.yml`
+- **End-to-end QA complete** — site served locally, all nav sections verified, all pages load correctly
+- **All 6 slide decks spot-checked** — Army Cyber dark theme confirmed across all decks
+- **mental-models.pptx verified current** — pptx timestamp post-dates last script edit; no rebuild needed
+- **ACC main course descoped** — removed all references to the 3-day ACC main course from build plan, scope, decisions, and session notes. Prereq build is scope-complete.
+- **Build plan closed** — `ACC-Course-Build-Plan.md` status set to `complete`, all 9 tasks marked `[x]`
+- **GitHub Pages deployed** — repo made public, `mkdocs gh-deploy` run; site live at:
+  **https://martinj32.github.io/ACC-PreReq/**
+  GitHub Pages settings page: https://github.com/martinj32/ACC-PreReq/settings/pages (verify gh-pages branch is set as source if not already done)
 
 ---
 
 ## What Is Still In Progress
 
-- **Mental Models slide deck** — not built. `docs/mental-models/core-content.md` was intentionally excluded from the agent run. The template (`build_mental_models.py`) was built specifically for this module.
-- **Wire teaching guide into MkDocs nav** — `teaching-guide.html` exists but is not wired into `mkdocs.yml`. The `.md` version at `docs/instructor/teaching-guide.md` is already there but not confirmed in nav.
-- **End-to-end QA** — site, slides, and nav links not yet verified together.
-- **ACC main course (3-day)** — blocked on Jake providing source material.
+Nothing. This build is complete.
 
 ---
 
 ## Explicit Next Steps
 
-1. **Build Mental Models deck** — `python slides/build_mental_models.py`. Check if `slides/Finished/mental-models.pptx` is already current (it was present in Finished/ this session — verify it matches the current source).
-2. **Add teaching guide to MkDocs nav** — Edit `mkdocs.yml`, wire `instructor/teaching-guide.md` into the Instructor Handbooks nav section.
-3. **Run `mkdocs serve`** — Verify full site renders, all pages load, nav is correct.
-4. **Open all 5 .pptx files** — Spot-check slide formatting, confirm Army Cyber dark theme applied correctly.
-5. **End-to-end QA** — Complete task 9 from the build plan.
-6. **Await ACC main course source** — When Jake provides it, scope and build the 3-day main course content.
+1. **Verify GitHub Pages is serving** — open https://martinj32.github.io/ACC-PreReq/ and confirm the site loads in a browser. If it 404s, go to GitHub > Settings > Pages and set source to `gh-pages` branch / `/ (root)`.
+2. **Share the URL** with intended recipients.
+3. **Future updates** — any content changes: edit the relevant `.md` file in `docs/`, then run `python -m mkdocs gh-deploy` to push the updated site to GitHub Pages.
+4. **ACC main course** — if Jake eventually builds the 3-day main course, that would be a separate project/repo.
 
 ---
 
@@ -58,21 +40,20 @@ status: clean — all changes committed and pushed to origin/master
 |---|---|
 | Slide decks (output) | `C:\Users\jmart\ACC-Content\slides\Finished\` |
 | Builder scripts | `C:\Users\jmart\ACC-Content\slides\build_*.py` |
-| Master template | `C:\Users\jmart\ACC-Content\slides\build_mental_models.py` |
 | Teaching guide (MD) | `C:\Users\jmart\ACC-Content\docs\instructor\teaching-guide.md` |
-| Teaching guide (HTML) | `C:\Users\jmart\ACC-Content\docs\instructor\teaching-guide.html` |
+| Teaching guide (HTML, print-ready) | `C:\Users\jmart\ACC-Content\docs\instructor\teaching-guide.html` |
 | MkDocs config | `C:\Users\jmart\ACC-Content\mkdocs.yml` |
 | Build plan | `C:\Users\jmart\ACC-Content\ACC-Course-Build-Plan.md` |
-| Atlas project | http://localhost:3001 → ACC Content |
+| Live site | https://martinj32.github.io/ACC-PreReq/ |
+| GitHub repo | https://github.com/martinj32/ACC-PreReq |
 
 ---
 
 ## Context for Next Session
 
-- The 5 slide decks use the **Army Cyber dark theme** defined in `build_mental_models.py` — background `#0A0C14`, accents `#00B4FF` / `#FFAA00` / `#00E57A`. Do not change the theme.
-- `build_mental_models.py` is both the Mental Models deck builder AND the master template. Read it first before touching any slide script.
-- The Atlas app runs at `http://localhost:3001`. Start with `npm run dev` from `C:\Users\jmart\projects\project-atlas\`.
-- ACC-Content remote: `https://github.com/martinj32/ACC-PreReq.git`. Jake pushes manually — confirm before pushing.
-- **Repo:** `C:\Users\jmart\ACC-Content\` — branch `master`, working directly on master.
-- **Site:** Serve with `python -m mkdocs serve --dev-addr=127.0.0.1:8000`
-- **Style guide:** `docs/instructor/style-guide.md` — read before editing any module content.
+- **Repo:** `C:\Users\jmart\ACC-Content\` — branch `master`
+- **Serve locally:** `python -m mkdocs serve --dev-addr=127.0.0.1:8000`
+- **Deploy to GitHub Pages:** `python -m mkdocs gh-deploy`
+- **Slide theme:** Army Cyber dark — background `#0A0C14`, accents `#00B4FF` / `#FFAA00` / `#00E57A`. Do not change.
+- **Master slide template:** `slides/build_mental_models.py` — read before touching any slide script
+- **Known warning (non-blocking):** `instructor/prereq-guide.md` has a broken link to `image.jpg` (placeholder image reference, not a real file)
