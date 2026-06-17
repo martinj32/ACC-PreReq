@@ -40,25 +40,22 @@ markdown_extensions:
 
 nav:
   - Get Started: index.md
-  - Course Map & Schedules: overview.md
-  - Bedrock:
-    - AI Literacy: bedrock/ai-literacy.md
-    - Personalizing Your AI: bedrock/personalizing-your-ai.md
-  - Terminal Basics:
-    - The Machine: terminal-basics/the-machine.md
-    - The Terminal: terminal-basics/the-terminal.md
-  - Agentic AI:
-    - Core Concepts: agentic-ai/agent-concepts.md
-  - Mental Models:
-    - The Module: mental-models/core-content.md
-    - Quick Reference: mental-models/quick-reference.md
-    - Workbook: mental-models/workbook.md
-  - Technical Foundations:
-    - Course Design (M1-M8): prereq-course/course-design.md
-    - Module Quick Reference: prereq-course/module-summary.md
+  - Course Map & Schedule: overview.md
+  - Course Modules:
+    - "1 — Know Your Weapon: How AI Actually Works": modules/01-ai-foundations.md
+    - "2 — Briefing the Machine: Prompting as a Mission Order": modules/02-prompting.md
+    - "3 — Feeding the Machine: Grounding & Multimodality": modules/03-grounding-multimodality.md
+    - "4 — Standing Orders: Making the AI Know You": modules/04-personalizing.md
+    - "5 — Know the Terrain: Filesystem & Terminal": modules/05-terminal.md
+    - "6 — The Duty Logbook: Version Control with Git": modules/06-version-control.md
+    - "7 — From Advisor to Operator: Commanding an Agent": modules/07-commanding-an-agent.md
+    - "8 — Ammunition Discipline: Tokens, Context & Cost": modules/08-tokens-context-cost.md
+    - "9 — Rules of Engagement: Ethics & Responsible AI Use": modules/09-ethics.md
+    - "10 — Field Craft: Markdown, Code, Tools & Context Files": modules/10-field-craft.md
+    - "11 — The Proving Ground: Capstone Build": modules/11-capstone.md
+    - "12 — Crossing the LD: Bridge to Advanced Agentics": modules/12-bridge-advanced.md
+    - "Glossary & Quick Reference": modules/glossary.md
   - Instructor Handbooks:
     - Consolidated Teaching Guide: instructor/teaching-guide.md
     - Content Style Guide: instructor/style-guide.md
-    - Mental Models Teaching Guide: instructor/mental-models-guide.md
     - Course Instructor Guide: instructor/prereq-guide.md
-    - Day 0 Teaching Scaffold: instructor/day0-scaffold.md

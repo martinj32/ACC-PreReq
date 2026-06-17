@@ -1,182 +1,81 @@
-# Course Map & Schedules
+# Course Map & Schedule
 
-**AI and Agentics Basics** — full learning path, schedule, and readiness checklist.
+**Mission Brief: How This Course Runs.** AI and Agentics Basics is a single, linear path that takes you from no AI experience to confidently commanding an AI agent — and to the doorstep of advanced agentic work. One spine, each concept taught once, every module gated by a readiness check before you move on.
 
 ---
 
-## Course Structure
+## How This Course Is Built
+
+This is a **single ascending track**, not a menu. Each module assumes you completed the one before it. Concepts are introduced exactly where they become load-bearing, practiced immediately, then built on — never re-taught.
 
 ```
-┌─────────────────────────────────────────────────────┐
-│   Bedrock                                           │
-│   AI literacy, prompt engineering,                  │
-│   personalizing your AI, delivery, data handling    │
-│   Multi-week, short daily reps                      │
-└──────────────────┬──────────────────────────────────┘
-                   ↓
-┌─────────────────────────────────────────────────────┐
-│   Terminal Basics                                   │
-│   Filesystem, plaintext, code editor,               │
-│   terminal navigation, file operations,             │
-│   version control concept                           │
-│   Multi-week, short daily reps                      │
-└──────────────────┬──────────────────────────────────┘
-                   ↓
-┌─────────────────────────────────────────────────────┐
-│   Agentic AI                                        │
-│   Chatbot vs. agent, supervisor mindset             │
-│   1-2 sessions                                      │
-└──────────────────┬──────────────────────────────────┘
-                   ↓
-┌─────────────────────────────────────────────────────┐
-│   Mental Models (35 minutes)                        │
-│   6 conceptual frameworks for working with AI       │
-└──────────────────┬──────────────────────────────────┘
-                   ↓
-┌─────────────────────────────────────────────────────┐
-│   Technical Foundations (2-3 days)                  │
-│   Module 1: LLM & Prompts                           │
-│   Module 2: Terminal Basics                         │
-│   Module 3: Git Basics                              │
-│   Module 4: Markdown                                │
-│   Module 5: Programming Concepts                    │
-│   Module 6: Developer Tools                         │
-│   Module 7: Context Files                           │
-│   Module 8: Capstone Project                        │
-└─────────────────────────────────────────────────────┘
+ 1  Know Your Weapon            How AI Actually Works
+ 2  Briefing the Machine        Prompting as a Mission Order
+ 3  Feeding the Machine         Grounding & Multimodality
+ 4  Standing Orders             Making the AI Know You
+        ── conceptual foundation complete; tools now enter ──
+ 5  Know the Terrain            Filesystem & Terminal
+ 6  The Duty Logbook            Version Control with Git
+ 7  From Advisor to Operator    Commanding an Agent
+ 8  Ammunition Discipline       Tokens, Context & Cost
+ 9  Rules of Engagement         Ethics & Responsible AI Use
+        ── integrate ──
+10  Field Craft                 Markdown, Code, Tools & Context Files
+11  The Proving Ground          Capstone Build
+12  Crossing the LD             Bridge to Advanced Agentics
 ```
 
 ---
 
-## Section Descriptions
+## The Modules
 
-### Bedrock
-
-Built for someone who uses AI by feel and has never thought about what is actually happening. Delivered in short daily sessions over multiple weeks.
-
-| Module | Focus |
-|---|---|
-| AI Literacy | What an LLM is, tokens, failure modes, prompt engineering, delivery, data handling |
-| Personalizing Your AI | Custom instructions, projects, memory — stop re-briefing the model every session |
-
-**What Bedrock builds:** A working mental model of the engine, calibrated trust, and deliberate prompting habits. Everything after this assumes this foundation.
-
----
-
-### Terminal Basics
-
-Genuinely new material for most of this audience. No AI here — plain computer and command-line literacy. Delivered in short daily reps alongside Bedrock.
-
-| Page | Focus | Modules |
+| # | Module | What you leave with |
 |---|---|---|
-| The Machine | Files, folders, plaintext vs rich text, code editor | 3 modules |
-| The Terminal | Terminal navigation, file operations, paths, flags, version control concept | 6 modules |
+| 1 | **Know Your Weapon: How AI Actually Works** | A working model of the engine: prediction, tokens/context, the four failure modes, how to verify output, when to use AI and when not to, and the data-handling bright line. |
+| 2 | **Briefing the Machine: Prompting as a Mission Order** | Deliberate prompting — the four-element brief plus intermediate technique (few-shot, chain-of-thought, decomposition, structured output, system vs. user). |
+| 3 | **Feeding the Machine: Grounding & Multimodality** | How to give the model real information (web search, file upload, retrieval) and work with images, documents, and voice — and the failure modes of each. |
+| 4 | **Standing Orders: Making the AI Know You** | Persistent context — custom instructions, projects, memory — so you stop re-briefing the model every session. |
+| 5 | **Know the Terrain: Filesystem & Terminal** | Confident file and command-line navigation. This is the ground the agent operates on. |
+| 6 | **The Duty Logbook: Version Control with Git** | Git as the logbook: commit, branch, merge, push — and why it is mandatory once an agent can write to your files. |
+| 7 | **From Advisor to Operator: Commanding an Agent** | The engine-harness-operator stack, read/write/execute access, tool calls, and the delegate-verify-own loop. |
+| 8 | **Ammunition Discipline: Tokens, Context & Cost** | Operating efficiently: model selection, context management, and cost discipline under a real agent session. |
+| 9 | **Rules of Engagement: Ethics & Responsible AI Use** | Accountability for output, bias, disclosure, dual-use awareness, and the DoD AI ethical principles. |
+| 10 | **Field Craft: Markdown, Code, Tools & Context Files** | Markdown, basic programming logic, a verified toolbox, and CLAUDE.md + me.md for a real project. |
+| 11 | **The Proving Ground: Capstone Build** | A real project shipped to GitHub — built, supervised, and defended, including a recovered agent mistake. |
+| 12 | **Crossing the LD: Bridge to Advanced Agentics** | A map of what advanced agentic work adds — grounding/RAG, MCP, guardrails, workflow patterns, multi-agent — and how your foundation maps onto it. |
 
-**Critical path:** The Terminal is the spine. It receives the most calendar time and is the most common point where students need extra reps. Frame every rep as: "This is how the agent moves around your computer."
-
----
-
-### Agentic AI
-
-The bridge that makes Bedrock and Terminal Basics pay off. Short — 1-2 sessions. This is where it all connects.
-
-| Module | Focus |
-|---|---|
-| Chatbot vs Agent | Read, write, execute access — why Terminal Basics existed |
-| Version Control | The logbook you need before the agent edits your files |
-| Supervisor Mindset | Delegate, verify, own — the through-line of the entire course |
+A [Glossary & Quick Reference](modules/glossary.md) anchors every term as you go.
 
 ---
 
-### Mental Models (35 minutes)
+## Dependency Chain (do not skip)
 
-A standalone conceptual module covering the six frameworks that make everything else in the course make sense.
-
-| Model | What it teaches |
-|---|---|
-| The Harness | LLM + tools = agency. The engine needs a body. |
-| Context Windows | Working memory is finite. Load it with the right gear. |
-| Tokens as Currency | Cost and context are the same problem. |
-| Tool Calls | How an agent reaches out and does something real. |
-| Operator Posture | You direct, approve, and own the result. |
-| Cost-Consciousness | Efficiency is a skill. Match model to task. |
-
-Read this before starting Technical Foundations.
+- **Modules 1-4** are the conceptual foundation. Everything after assumes them.
+- **Module 5 (Terminal)** must precede **Module 7 (Commanding an Agent)** — you cannot supervise an agent navigating ground you do not know.
+- **Module 6 (Git)** must precede **Module 7** and **Module 11** — the supervisor mindset assumes you can rewind an agent's edits.
+- **Module 9 (Ethics)** lands after **Module 7** on purpose: you grasp accountability viscerally only after you have felt an agent take real action. The data-handling bright line still appears in Module 1 as a hard safety rule that cannot wait.
+- **Module 11 (Capstone)** requires Modules 6, 7, 9, and 10.
 
 ---
 
-### Technical Foundations (M1-M8)
+## Delivery & Pacing
 
-Eight hands-on modules. 2-3 days of active learning. Each module has a deliverable.
+The course runs in two phases:
 
-| Module | Topic | Duration | Deliverable |
-|---|---|---|---|
-| M1 | LLM & Prompts | 90 min | 5 structured prompts |
-| M2 | Terminal Basics | 120 min | Terminal transcript (6 exercises) |
-| M3 | Git Basics | 120 min | GitHub repo with 5+ commits |
-| M4 | Markdown | 90 min | One complete Markdown document |
-| M5 | Programming Concepts | 120 min | 3 small programs |
-| M6 | Developer Tools | 90 min | All tools installed and verified |
-| M7 | Context Files | 90 min | CLAUDE.md + me.md for a real project |
-| M8 | Capstone Project | 180 min | Working project on GitHub |
+**Phase 1 — Foundations (Modules 1-4): multi-week, short daily reps.** Built for someone who uses AI by feel. Delivered in short daily sessions over multiple weeks so the mental model sets before tools enter.
 
-**Learning progression:**
+**Phase 2 — Operator Block (Modules 5-12): 3-4 day intensive.** Hands-on. Each module has a deliverable.
 
-```
-M1: LLM Basics
-    ↓
-M2: Terminal ←→ M3: Git ←→ M4: Markdown
-    ↓
-M5: Programming
-    ↓
-M6: Tools Setup
-    ↓
-M7: Context Files
-    ↓
-M8: Capstone (integrates all)
-```
+### Sample Intensive Schedule
 
-Do not skip M3 (Git) — M8 depends on it. Do not skip M7 (Context Files) — it changes how you work with AI tools permanently.
-
----
-
-## Daily Schedule — Technical Foundations
-
-### Day 1: Foundations (8 hours)
-
-| Time | Activity |
+| Day | Modules |
 |---|---|
-| 8:00-9:30 | M1: LLM Basics |
-| 9:30-10:00 | Break |
-| 10:00-12:00 | M2: Terminal Basics |
-| 12:00-1:00 | Lunch |
-| 1:00-2:30 | M3: Git Part 1 |
-| 2:30-2:45 | Break |
-| 2:45-4:15 | M3: Git Part 2 |
-| 4:15-5:00 | M4: Markdown (intro) |
-| 5:00-6:00 | Lab + troubleshooting |
+| **Day 1 — Terrain & Logbook** | M5 Terminal, M6 Git |
+| **Day 2 — The Agentic Leap** | M7 Commanding an Agent, M8 Tokens/Context/Cost, M9 Ethics |
+| **Day 3 — Field Craft** | M10 Markdown, Programming, Tools, Context Files |
+| **Day 4 — Proving Ground** | M11 Capstone build + present, M12 Bridge brief |
 
-### Day 2: Intermediate (8 hours)
-
-| Time | Activity |
-|---|---|
-| 8:00-9:30 | M4: Markdown (finish) |
-| 9:30-10:00 | Break |
-| 10:00-12:00 | M5: Programming |
-| 12:00-1:00 | Lunch |
-| 1:00-2:30 | M6: Developer Tools |
-| 2:30-2:45 | Break |
-| 2:45-4:15 | M7: Context Files |
-| 4:15-5:00 | Readiness check |
-| 5:00-6:00 | Lab + capstone prep |
-
-### Day 3: Capstone (6-8 hours)
-
-| Time | Activity |
-|---|---|
-| 8:00-12:00 | M8: Build (part 1) |
-| 12:00-1:00 | Lunch |
-| 1:00-5:00 | M8: Build (part 2) + present |
+Durations are instructional time; add breaks separately.
 
 ---
 
@@ -187,52 +86,39 @@ You have completed this course when you can do all of the following without help
 **Conceptual**
 
 - [ ] Explain what an LLM is and why it sometimes produces wrong answers
-- [ ] Describe context windows and why they affect what you can paste
-- [ ] Explain tokens and why concise prompts save time and cost
-- [ ] Describe what tool calls are and how they enable an AI to act
-- [ ] Explain your role as operator and supervisor
-- [ ] Think cost-consciously about model choice and conversation length
+- [ ] Name the four failure modes and verify output with a repeatable method
+- [ ] Explain grounding — how to give the model real information instead of trusting its memory
+- [ ] Describe the engine-harness-operator stack and your role as operator
+- [ ] Apply the DoD AI ethical principles to your own use
 
 **Technical**
 
-- [ ] Write specific, iterative prompts
-- [ ] Customize your AI tool with persistent instructions
+- [ ] Write deliberate prompts, including intermediate technique
+- [ ] Personalize an AI tool with persistent instructions
 - [ ] Navigate the terminal confidently
-- [ ] Use git (init, add, commit, branch, merge, push)
-- [ ] Write Markdown with multiple syntax elements
-- [ ] Understand programming concepts (variables, logic, functions)
-- [ ] Have all developer tools installed and authenticated
-- [ ] Write CLAUDE.md and me.md files for a real project
+- [ ] Use git (init, add, commit, branch, merge, push) — and rewind a bad change
+- [ ] Write Markdown and read basic program logic
+- [ ] Write a CLAUDE.md that actually constrains an agent
 - [ ] Ship a working project to GitHub
 
 **Mindset**
 
-- [ ] Understand that AI tools require supervision, not trust
-- [ ] Know that you are responsible for the output
-- [ ] Be comfortable asking the model clarifying questions
-- [ ] Expect to iterate — one-shot prompts rarely produce final results
-- [ ] Recognize the difference between a chatbot and an agentic tool
+- [ ] Delegate, verify, and own — you sign for the result
+- [ ] Treat confidence as no evidence of correctness
+- [ ] Apply the data-handling bright line every time, under pressure
 
 ---
 
 ## Common Questions
 
-**Q: Do I have to complete Bedrock if I already know how LLMs work?**
+**Q: Can I skip a module?**
+No. This is a single ascending track. Module 11 (Capstone) specifically requires Modules 6, 7, 9, and 10. Skipping a dependency will stall you.
 
-If you are already past the "it's like a search engine" mental model and understand hallucination and context windows, you can move through AI Literacy quickly. Do not skip the Personalizing module — most people have not configured their tools deliberately. Do not skip Agentic AI regardless — the chatbot vs. agent distinction and supervisor mindset are load-bearing for everything that follows.
-
-**Q: Do I have to do Terminal Basics if I already use the command line?**
-
-If you are comfortable in a terminal, know what a path is, and can make and move files, you can skip The Terminal. Skim The Machine to confirm you have the file literacy foundation. Move straight to Agentic AI.
-
-**Q: Can I skip modules in Technical Foundations?**
-
-No. Every module builds on earlier ones. M8 (Capstone) specifically requires M3, M5, M6, and M7. Skipping any of those and attempting the capstone will stall you.
-
-**Q: What if I already code in Python or JavaScript?**
-
-M5 (Programming Concepts) will feel familiar. Read it anyway — it covers problem-solving and debugging mindset, not just syntax. All other modules are still required.
+**Q: I already use the command line / already prompt well.**
+Move through the relevant module quickly to confirm the foundation, but do not skip the readiness check. The agentic modules (7+) assume every prior concept.
 
 **Q: How long does the full course take?**
+Foundations (Modules 1-4) run multi-week in short daily reps; the Operator Block (Modules 5-12) is a 3-4 day intensive. Roughly 2-3 weeks of active learning if done consistently. The terminal and capstone phases need the most time.
 
-Bedrock + Terminal Basics (multi-week, short daily reps) + Agentic AI (1-2 sessions) + Technical Foundations (2-3 days) = roughly 2-3 weeks of active learning if done consistently. The terminal phase is where most students need extra time.
+**Q: What comes after this course?**
+The ACC main course — advanced agentic work. Module 12 is the bridge to it.
