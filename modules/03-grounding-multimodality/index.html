@@ -1,0 +1,1491 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../02-prompting/">
+      
+      
+        <link rel="next" href="../04-personalizing/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>3 — Feeding the Machine: Grounding & Multimodality - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#feeding-the-machine-grounding-multimodality" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3 — Feeding the Machine: Grounding & Multimodality
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-ai-foundations/" class="md-tabs__link">
+          
+  
+  
+  Course Modules
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../instructor/teaching-guide/" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Modules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course Modules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-ai-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 — Know Your Weapon: How AI Actually Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-prompting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 — Briefing the Machine: Prompting as a Mission Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 — Feeding the Machine: Grounding & Multimodality
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 — Feeding the Machine: Grounding & Multimodality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#grounding-punching-a-hole-in-the-jar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grounding: Punching a Hole in the Jar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grounding: Punching a Hole in the Jar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grounded-vs-generated-how-to-tell-the-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grounded vs. Generated: How to Tell the Difference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grounded vs. Generated: How to Tell the Difference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multimodality-more-ways-in-more-ways-to-misread" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multimodality: More Ways In, More Ways to Misread
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multimodality: More Ways In, More Ways to Misread">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-of-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End of Module
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-personalizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 — Standing Orders: Making the AI Know You
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 — Know the Terrain: Filesystem & Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-version-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 — The Duty Logbook: Version Control with Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-commanding-an-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 — From Advisor to Operator: Commanding an Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-tokens-context-cost/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 — Ammunition Discipline: Tokens, Context & Cost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-ethics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9 — Rules of Engagement: Ethics & Responsible AI Use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-field-craft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 — Field Craft: Markdown, Code, Tools & Context Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-capstone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 — The Proving Ground: Capstone Build
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-bridge-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 — Crossing the LD: Bridge to Advanced Agentics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary & Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/teaching-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/prereq-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="feeding-the-machine-grounding-multimodality">Feeding the Machine: Grounding &amp; Multimodality</h1>
+<p><strong>Who this is for:</strong> Anyone who has internalized Module 1's "brain in a jar" — a model with no live access and a knowledge cutoff — and now needs to know how modern tools punch holes in that jar, and what new failure modes come with them.</p>
+<p><strong>What you will leave with:</strong> A clear model of what <em>grounding</em> is (web search, file upload, connectors), how to tell grounded output from generated output, and why this is the practical fix for the knowledge-cutoff and hallucination problems — plus how the model now takes in images, screenshots, PDFs, charts, and voice, and the failure mode each of those inputs brings.</p>
+<hr />
+<h2 id="grounding-punching-a-hole-in-the-jar">Grounding: Punching a Hole in the Jar</h2>
+<p><strong>BLUF.</strong> A bare LLM is a brain in a jar with a knowledge cutoff and no live access — but grounding (web search, file upload, connectors) feeds it real, current, specific source material at request time, and that is the practical fix for both the knowledge-cutoff and hallucination problems you met in Module 1.</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>Module 1 gave you the correct baseline mental model: the LLM is an engine with no body, no memory between chats, and no live connection to the world. That model is still true of the <em>engine</em>. But the <em>tools wrapped around it</em> have changed, and if you keep treating every AI tool as a sealed jar, you will both miss what it can now do and — more dangerously — fail to check whether it actually did it. This section corrects and extends the mental model: the jar is still a jar, but grounding hands material in through a slot.</p>
+<h3 id="concepts">Concepts</h3>
+<p><strong>Grounding means giving the model real source material to work from, at request time.</strong> Instead of predicting from training data alone, a grounded model is handed actual text — a web page, your uploaded document, a record pulled from a connected system — and asked to answer <em>from that</em>. The prediction engine is unchanged; what changed is that you put real, specific, current information into its context window for this one request.</p>
+<p>Three common grounding paths:</p>
+<ul>
+<li><strong>Web search.</strong> The tool runs a live search, pulls back current pages, and the model answers from those results. This is the direct fix for the knowledge cutoff: the model is no longer limited to what it trained on.</li>
+<li><strong>File / document upload.</strong> You attach a PDF, spreadsheet, or text file. The model reads it and answers from its actual contents instead of guessing what a document like that probably says.</li>
+<li><strong>Connectors.</strong> The tool is wired into an external system — a document store, a wiki, a database, a drive — and can retrieve relevant records on demand. (Connecting tools and systems in depth, including the protocols that standardize it, is Module 12. Here, just know the category exists.)</li>
+</ul>
+<p><strong>Why grounding fixes the two big problems.</strong> Knowledge cutoff: web search and connectors bring in information from after the training date. Hallucination: when the model answers from a document actually in front of it, its claims can be traced back to a real source you can check — instead of being plausible completions from training. Grounding does not <em>guarantee</em> correctness, but it makes the output <strong>traceable</strong>, which is what makes verification possible.</p>
+<div class="admonition warning">
+<p class="admonition-title">Verify Before Teaching — Tool and Feature Specifics</p>
+<p>Which tools have web search, how upload works, what connectors exist, and how each is enabled all change frequently as products update. Treat every specific feature claim in this module as a snapshot. Confirm the current behavior of the actual tool in front of you before relying on it or teaching it.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Correct, Don't Contradict Module 1</summary>
+<p>Do not let students conclude Module 1 was wrong. The engine is still a brain in a jar — stateless, cutoff-bound, no native live access. Grounding is an external tool layer feeding the jar. Frame this as 'extend the model,' not 'replace it.' The distinction matters when they reach the harness in Module 7: grounding is a tool call, and tool calls are what make the jar useful.</p>
+</details>
+<h3 id="hands-on">Hands-On</h3>
+<ol>
+<li>Ask your tool a question about something that clearly happened <em>after</em> its training cutoff. Note whether it refuses, guesses, or searches.</li>
+<li>If it has web search, ask the same question again and require it to use search. Compare the two answers.</li>
+<li>Upload a short document and ask a question whose answer is only in that document. Confirm the answer actually came from your file, not from general knowledge.</li>
+<li>Ask: "Which parts of that answer came from the document, and which from your own knowledge?" See whether it can separate them.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>Module 1 told you the model is a brain in a jar with no live access. You just watched it answer a question about a recent event. Did the engine change — or did something feed the jar? What is the difference, and why does it matter for trust?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">What does "grounding" actually do to an LLM's behavior?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">It retrains the model on new data in real time</li>
+    <li data-correct="false">It removes the model's knowledge cutoff permanently</li>
+    <li data-correct="true">It feeds real source material into the model's context at request time so it answers from that, not just from training</li>
+    <li data-correct="false">It makes the model stop hallucinating entirely</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain grounding as feeding real source material into the model at request time</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name three grounding paths: web search, file upload, connectors</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand grounding is the practical fix for knowledge cutoff and hallucination</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand the engine is unchanged — grounding is an external tool layer feeding the jar</li>
+</ul>
+<hr />
+<h2 id="grounded-vs-generated-how-to-tell-the-difference">Grounded vs. Generated: How to Tell the Difference</h2>
+<p><strong>BLUF.</strong> A grounded answer and a generated answer look identical on the screen — confident either way — so before you trust an AI claim you have to confirm grounding actually happened and trace the claim to its source, because the tool will not always make that obvious.</p>
+<h3 id="why-this-matters_1">Why This Matters</h3>
+<p>Grounding only helps if it actually ran. Module 1 warned you that a model with stale data and a model that searched the web produce answers that look the same. The same trap applies here: a tool <em>capable</em> of grounding does not always <em>use</em> it, and an answer that reads like it came from your document may be half document, half training-data guess. The skill is telling the two apart.</p>
+<h3 id="concepts_1">Concepts</h3>
+<p><strong>Confirm the grounding fired.</strong> Capability is not the same as use. A tool with web search may answer a particular question straight from training without searching at all. Look for the signal that grounding happened: a search step, cited sources, a "based on the file you uploaded" reference, retrieved snippets. No signal means assume it answered from training until you check.</p>
+<p><strong>Trace claims to sources.</strong> When a tool cites sources or quotes a document, the value is that you can <em>follow</em> it. A grounded answer should let you ask "where did this specific claim come from?" and get a pointer you can verify. If a claim cannot be traced to the provided source, treat it as generated — the model may have blended in training-data filler.</p>
+<p><strong>Watch for the mixed answer.</strong> The most dangerous case is partial grounding: some of the answer is faithfully drawn from your source, and some is plausible completion bolted on. Because the tone is uniform, the seam is invisible. This is why "which parts came from the source?" is a question worth asking the model directly — and why a structured-output prompt (Module 2) that demands a source for every claim is so useful here.</p>
+<div class="admonition tip">
+<p class="admonition-title">Make It Cite, Then Check the Citation</p>
+<p>Ask the tool to answer only from the provided sources and to mark any claim it cannot support. Then actually open a citation and confirm it says what the model says it says. A cited source the model invented or misread is still a hallucination — citation is a starting point for verification, not a substitute for it.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">A Citation Is Not Proof</p>
+<p>Grounding can still go wrong: the tool can retrieve the wrong document, quote a real source inaccurately, or cite a page that does not support the claim. Trace-ability lowers risk; it does not remove the operator. You still own the output. (The verification techniques from Module 1 — cite-and-check, cross-source, second-tool — are exactly the drills you run here.)</p>
+</div>
+<details class="note">
+<summary>Instructor Note — This Is the Module 1 Reflex, Applied</summary>
+<p>Students may think grounding lets them stop verifying. It does the opposite: it gives them something checkable to verify against. Tie this section explicitly back to the five verification techniques from Module 1. Grounding makes those drills <em>possible</em>; it does not make them optional.</p>
+</details>
+<h3 id="hands-on_1">Hands-On</h3>
+<ol>
+<li>Ask a grounded question and look for the signal that grounding fired (search step, citations, file reference). Is it there?</li>
+<li>Pick one specific claim in the answer and ask the tool: "What is your source for that exact claim?"</li>
+<li>Open that source and confirm it actually supports the claim. Did it?</li>
+<li>Find one claim in the answer you <em>cannot</em> trace to a provided source. Treat it as generated — would you have caught it without checking?</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>Your tool gives you a confident, well-written answer with no visible sources, even though it has web search available. What is your safest assumption about where that answer came from — and what do you do next?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">A tool that has web search gives you a confident answer with no citations and no visible search step. What should you assume?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">It must have searched, because it has the capability</li>
+    <li data-correct="true">Assume it answered from training data until you confirm grounding actually fired</li>
+    <li data-correct="false">The answer is verified because it sounds confident</li>
+    <li data-correct="false">Citations are unnecessary when a tool has search enabled</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_1">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I confirm grounding actually fired before trusting a "grounded" answer</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can trace a grounded claim to its source and verify the source supports it</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know the mixed answer (part grounded, part generated) is the dangerous case</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I treat a citation as a starting point for verification, not as proof</li>
+</ul>
+<hr />
+<h2 id="multimodality-more-ways-in-more-ways-to-misread">Multimodality: More Ways In, More Ways to Misread</h2>
+<p><strong>BLUF.</strong> Modern tools take input as images, screenshots, PDFs, charts, and voice — not just typed text — which is powerful for real work, but each input mode carries its own failure mode, and a model that misreads a blurry table or a noisy recording will do it with the same confidence as everything else.</p>
+<h3 id="why-this-matters_2">Why This Matters</h3>
+<p>You will not always have clean text to paste. You will have a photo of a whiteboard, a screenshot of an error, a scanned PDF, a chart in a slide, or a question you would rather speak than type. Multimodality lets the model take those directly. But every new input channel is a new place for the model to go confidently wrong — and the failures here are easy to miss because you assume "it can see the image, so it read it correctly." It often did not.</p>
+<h3 id="concepts_2">Concepts</h3>
+<p><strong>The input modes you will actually use:</strong></p>
+<ul>
+<li><strong>Images and screenshots.</strong> Photos of documents, whiteboards, equipment, or a screen; screenshots of errors or interfaces. The model describes, extracts text from, or reasons about the picture.</li>
+<li><strong>PDFs and documents.</strong> Multi-page files read directly, including scanned ones. (This overlaps with file-upload grounding — a PDF is both a grounding source and a visual input.)</li>
+<li><strong>Charts and tables in images.</strong> Graphs, data tables, diagrams embedded in a picture rather than as clean data.</li>
+<li><strong>Voice input.</strong> You speak; the tool transcribes to text, then the model answers from the transcript.</li>
+</ul>
+<p><strong>Each mode has its own failure mode — know them before you rely on them:</strong></p>
+<ul>
+<li><strong>Blurry or low-quality images:</strong> the model fills in unreadable text with plausible guesses. A smudged digit becomes a confident wrong number.</li>
+<li><strong>Tables and charts:</strong> the model misreads which value sits in which cell, swaps rows and columns, or misjudges a value from a graph's axis. Tabular structure is exactly where it slips.</li>
+<li><strong>Dense or handwritten documents:</strong> transcription errors and skipped lines; the model may silently drop content it could not parse.</li>
+<li><strong>Voice:</strong> the transcription step can mishear words — especially names, jargon, callsigns, and numbers — and the model then answers a subtly different question than the one you asked.</li>
+<li><strong>Across all modes:</strong> the model rarely says "I couldn't read this." It produces a confident answer over an input it only partially understood.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Misreads Inherit the Confident Tone</p>
+<p>A model that misread a chart axis or transcribed a number wrong does not flag it. The wrong value comes out with the same fluent confidence as a correct one — the Module 1 confident-wrong failure mode, now riding in on a new input channel. Always sanity-check extracted numbers, names, and table values against the original.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">OPSEC Crosses Modes — The Module 1 Rule Still Holds</p>
+<p>A screenshot, a photo of a document, or a scanned PDF can carry exactly the sensitive content you would never paste as text — names, grids, unit designations, markings, faces. Uploading an image is a disclosure decision, identical to pasting text. Everything in Module 1's data-handling rule applies to every image, PDF, and voice clip you feed an unauthorized tool.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Verify the Read Before You Trust the Reasoning</p>
+<p>When the model extracts data from an image or chart, separate two questions: did it read the input correctly, and did it reason correctly from what it read? Check the read first. Good reasoning over a misread table is still wrong.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Demo a Misread Live</summary>
+<p>Hand the model a slightly blurry table or a chart and ask it to read specific cells/values. It will usually get at least one wrong with full confidence. Doing this once makes 'verify the read' stick far better than asserting it. Use a fabricated, non-sensitive image.</p>
+</details>
+<h3 id="hands-on_2">Hands-On</h3>
+<ol>
+<li>Screenshot a small table (fabricated, non-sensitive) and ask the model to read specific cells back to you. Check every value against the original.</li>
+<li>Give it a chart image and ask for a specific value off the graph. Was it right, or confidently close-but-wrong?</li>
+<li>If your tool supports voice, speak a sentence containing a name, a callsign, and a number. Check the transcription for errors before judging the answer.</li>
+<li>Upload a multi-page PDF and ask about content on a later page. Confirm it actually read that far rather than guessing.</li>
+<li>For each test, ask yourself: did the model flag any uncertainty about what it read? (It probably did not.)</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You upload a screenshot of a data table and the model gives you a clean analysis. Two different things could be wrong: how it <em>read</em> the table, and how it <em>reasoned</em> from it. Which do you check first, and why?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You give the model a photo of a slightly blurry data table and it returns specific numbers with full confidence. What is the right posture?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Trust the numbers — the model can see the image clearly</li>
+    <li data-correct="false">Assume it flagged anything it could not read</li>
+    <li data-correct="true">Verify the extracted values against the original; misreads come out with the same confident tone as correct reads</li>
+    <li data-correct="false">Re-upload the image until the answer changes</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-block">
+  <p class="quiz-question">You want to ask about a document marked with a unit designation and a grid coordinate. Does uploading it as a screenshot instead of pasting the text change the data-handling rule?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Yes — an image is not text, so the rule does not apply</li>
+    <li data-correct="true">No — uploading the image is a disclosure decision identical to pasting the text; the Module 1 rule still holds</li>
+    <li data-correct="false">Yes — the model cannot extract sensitive details from images</li>
+    <li data-correct="false">No, but only if you blur part of the image first</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_2">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the input modes: images/screenshots, PDFs, charts/tables, voice</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the characteristic failure mode of each input mode</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I check the model's <em>read</em> of an input separately from its <em>reasoning</em></li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I apply the Module 1 data-handling rule to images, PDFs, and voice — not just typed text</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Core Idea</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Grounding</strong></td>
+<td>Feed real source material into context at request time</td>
+<td>The practical fix for knowledge cutoff and hallucination — output becomes traceable.</td>
+</tr>
+<tr>
+<td><strong>Three Paths</strong></td>
+<td>Web search, file upload, connectors</td>
+<td>Three ways to hand the jar real, current, specific information.</td>
+</tr>
+<tr>
+<td><strong>Grounded vs. Generated</strong></td>
+<td>Confirm grounding fired; trace claims to sources</td>
+<td>Capability is not use. The mixed answer (part grounded, part generated) is the dangerous case.</td>
+</tr>
+<tr>
+<td><strong>A Citation Is Not Proof</strong></td>
+<td>Trace-ability lowers risk, does not remove the operator</td>
+<td>Run the Module 1 verification drills against the cited source.</td>
+</tr>
+<tr>
+<td><strong>Multimodality</strong></td>
+<td>Images, screenshots, PDFs, charts, voice as input</td>
+<td>More ways in for real work — and more ways to misread.</td>
+</tr>
+<tr>
+<td><strong>Per-Mode Failures</strong></td>
+<td>Blurry text, swapped cells, misheard names/numbers</td>
+<td>Misreads inherit the confident tone. Verify the read before the reasoning.</td>
+</tr>
+<tr>
+<td><strong>OPSEC Crosses Modes</strong></td>
+<td>An image/PDF/voice clip is a disclosure decision</td>
+<td>The Module 1 data-handling rule applies to every input channel.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="end-of-module">End of Module</h2>
+<p>You have corrected the "sealed jar" picture without throwing it away: the engine is still a brain in a jar, but grounding feeds it real source material and multimodality opens new slots to feed through. Both make the tool dramatically more useful for real work — and both add new places to go confidently wrong. Next steps:</p>
+<ol>
+<li>On your next real task, deliberately ground the model (search or upload) and trace one claim back to its source.</li>
+<li>Run a "verify the read" check on an image or chart before trusting any number it extracts.</li>
+<li>Carry the grounding idea forward: in Module 7 you will see it as a tool call, and in Module 12 it gets a name — retrieval — alongside the connectors that standardize it.</li>
+<li>Apply your Module 1 bright line to images, PDFs, and voice, not just text. The disclosure decision is the same.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

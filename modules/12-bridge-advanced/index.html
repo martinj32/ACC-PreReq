@@ -1,0 +1,1805 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../11-capstone/">
+      
+      
+        <link rel="next" href="../glossary/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>12 — Crossing the LD: Bridge to Advanced Agentics - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#crossing-the-ld-bridge-to-advanced-agentics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              12 — Crossing the LD: Bridge to Advanced Agentics
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-ai-foundations/" class="md-tabs__link">
+          
+  
+  
+  Course Modules
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../instructor/teaching-guide/" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Modules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course Modules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-ai-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 — Know Your Weapon: How AI Actually Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-prompting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 — Briefing the Machine: Prompting as a Mission Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-grounding-multimodality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 — Feeding the Machine: Grounding & Multimodality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-personalizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 — Standing Orders: Making the AI Know You
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 — Know the Terrain: Filesystem & Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-version-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 — The Duty Logbook: Version Control with Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-commanding-an-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 — From Advisor to Operator: Commanding an Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-tokens-context-cost/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 — Ammunition Discipline: Tokens, Context & Cost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-ethics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9 — Rules of Engagement: Ethics & Responsible AI Use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-field-craft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 — Field Craft: Markdown, Code, Tools & Context Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-capstone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 — The Proving Ground: Capstone Build
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 — Crossing the LD: Bridge to Advanced Agentics
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 — Crossing the LD: Bridge to Advanced Agentics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-read-this-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to Read This Module
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segment-0-recap-the-primitive" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segment 0 — Recap the Primitive
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segment 0 — Recap the Primitive">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segment-1-grounding-and-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segment 1 — Grounding and Retrieval
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segment 1 — Grounding and Retrieval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segment-2-connecting-tools-and-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segment 2 — Connecting Tools and MCP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segment 2 — Connecting Tools and MCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segment-3-permissions-and-guardrails" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segment 3 — Permissions and Guardrails
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segment 3 — Permissions and Guardrails">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segment-4-planning-and-decomposition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segment 4 — Planning and Decomposition
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segment 4 — Planning and Decomposition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segment-5-workflow-patterns-named" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segment 5 — Workflow Patterns, Named
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segment 5 — Workflow Patterns, Named">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segment-6-sub-agents-and-multi-agent-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segment 6 — Sub-Agents and Multi-Agent Systems
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segment 6 — Sub-Agents and Multi-Agent Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segment-7-evaluating-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segment 7 — Evaluating an Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Segment 7 — Evaluating an Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-deferred-and-what-you-carry-across" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's Deferred — and What You Carry Across
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What&#39;s Deferred — and What You Carry Across">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary & Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/teaching-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/prereq-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="crossing-the-ld-bridge-to-advanced-agentics">Crossing the LD: Bridge to Advanced Agentics</h1>
+<p><strong>Who this is for:</strong> An operator who has finished the proving ground and is about to step into the ACC main course — and wants a map of the terrain on the far side before crossing the line of departure.</p>
+<p><strong>What you will leave with:</strong> Recognition, not mastery. You will be able to <em>name</em> the patterns, components, and controls that the main course teaches you to <em>build</em> — grounding and retrieval, tools and MCP, permissions and guardrails, planning, the named workflow patterns, sub-agents, and agent evaluation — and you will know exactly which of these is deferred to the main course and why.</p>
+<hr />
+<h2 id="how-to-read-this-module">How to Read This Module</h2>
+<p><strong>BLUF.</strong> This is a recognition module: it gives you the vocabulary and the mental map for advanced agentics so the main course has something to build on, and it deliberately stops short of teaching you to build any of it.</p>
+<p>This module is different from the eleven before it. Those taught you to <em>do</em> things — prompt, command an agent, verify, ship. This one teaches you to <em>recognize</em> things. When the main course says "wrap that tool in an MCP server" or "use an orchestrator-workers pattern," you will already know what those words point at. That is the entire job of a bridge: get you across the gap with your footing, not turn you into an expert on the far bank.</p>
+<p>Everything here is built on the one primitive you already own. We recap that first, then walk the terrain.</p>
+<div class="admonition note">
+<p class="admonition-title">Recognition, Not Build</p>
+<p>Throughout this module, watch for the <strong>Deferred to the main course</strong> markers. They are not gaps — they are the boundary of this course. You are meant to leave able to name these, not implement them.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Hold the Altitude</summary>
+<p>The strongest temptation in this module is to start teaching. Don't. Every segment is a flyover. If students leave able to recognize the terms and say what is deferred, the module succeeded. Depth here steals time from the main course and overwhelms students who just finished a capstone.</p>
+</details>
+<hr />
+<h2 id="segment-0-recap-the-primitive">Segment 0 — Recap the Primitive</h2>
+<p><strong>BLUF.</strong> Everything advanced is the same primitive you already command — an engine in a harness, supervised by an operator running a delegate-verify-own loop — repeated, connected, and scaled, so nothing ahead is genuinely new in kind.</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>The fear at this stage is that "advanced agentics" is a different, harder thing. It is not. It is the primitive you proved in the capstone, composed at larger scale. Anchoring everything ahead to what you already own is what keeps the main course from feeling like a wall.</p>
+<h3 id="concepts">Concepts</h3>
+<p>You already hold the whole foundation:</p>
+<ul>
+<li><strong>Engine.</strong> The model — predicts text, reasons in language, has no body of its own (Module 1).</li>
+<li><strong>Harness.</strong> What gives the engine a body: tools, file access, the ability to act (Module 7).</li>
+<li><strong>Operator.</strong> You — the accountable supervisor who delegates, verifies, and owns the result (Modules 7 and 9).</li>
+<li><strong>The loop.</strong> Delegate, verify, own — the cycle you ran on a live build in the capstone (Module 11).</li>
+</ul>
+<p>Every advanced topic in this module is one of these, extended. More tools on the harness. A plan you approve before action. One operator-agent directing several worker-agents. The primitive does not change; the composition does.</p>
+<div class="admonition tip">
+<p class="admonition-title">Map Every New Term Back to the Primitive</p>
+<p>As each segment introduces a term, ask: is this a richer engine, a bigger harness, or a tighter operator loop? Almost everything sorts into one of those three. That sorting is the recognition skill this module builds.</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">What is the most accurate way to think about "advanced agentics" relative to what you already learned?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">A different and fundamentally harder technology that replaces the basics</li>
+    <li data-correct="true">The same engine-harness-operator primitive and delegate-verify-own loop, composed and scaled up</li>
+    <li data-correct="false">A way to remove the human operator from the loop entirely</li>
+    <li data-correct="false">A different model architecture that no longer predicts text</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="segment-1-grounding-and-retrieval">Segment 1 — Grounding and Retrieval</h2>
+<p><strong>BLUF.</strong> The pattern you used by hand in Module 7 — pulling real source material into the context so the agent answers from retrieved fact instead of memory — has a name: retrieval-augmented generation, and grounded output is the cited, traceable kind you can verify.</p>
+<h3 id="why-this-matters_1">Why This Matters</h3>
+<p>You already did this. When you fed an agent a document and had it answer from that document rather than its training, you performed retrieval by hand. Naming the pattern lets you recognize it when the main course automates it — and lets you tell, every time, whether an answer is grounded in a real source or generated from the model's memory.</p>
+<h3 id="concepts_1">Concepts</h3>
+<ul>
+<li><strong>Grounded vs. ungrounded.</strong> An <em>ungrounded</em> answer comes from the model's trained weights — fluent, but with no source you can check, and subject to every failure mode from Module 1. A <em>grounded</em> answer is produced from real material retrieved into the context: a document, a search result, a database record. Grounded output can be cited and traced.</li>
+<li><strong>RAG — retrieval-augmented generation.</strong> The general pattern: retrieve relevant real sources, put them in the context, and have the model answer from them. You did this manually in Module 7. The main course builds it into the harness so retrieval happens automatically.</li>
+<li><strong>Why it matters operationally.</strong> Grounding is the practical fix for two Module 1 failures at once: the knowledge cutoff (retrieve current sources) and hallucination (answer from real text, not plausible completion). It does not eliminate the verify step — you still confirm the retrieved source is real and the answer reflects it.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Grounded Is Verifiable; Generated Is Not</p>
+<p>The operator's question never changes: <em>where did this come from, and can I check it?</em> A grounded answer hands you the source. A generated one asks you to trust the model. Treat them differently.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Deferred to the main course</p>
+<p>Building a retrieval pipeline — embeddings, vector stores, automated chunking and ranking — is main-course material. Here you only need to recognize RAG as the named version of the by-hand grounding you already did.</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You used "RAG by hand" in an earlier module without knowing the name. What did that consist of?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Asking the model to be more accurate</li>
+    <li data-correct="true">Retrieving real source material into the context so the agent answered from it rather than from memory</li>
+    <li data-correct="false">Running the same prompt several times and averaging</li>
+    <li data-correct="false">Switching to a model with a larger context window</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="segment-2-connecting-tools-and-mcp">Segment 2 — Connecting Tools and MCP</h2>
+<p><strong>BLUF.</strong> The harness is extensible — you can give an agent new tools and data sources — and the emerging standard way to do that is the Model Context Protocol (MCP), which exposes capabilities as Tools, Resources, and Prompts; the concept is stable, but the specifics change fast, so verify before you teach or rely on any detail.</p>
+<h3 id="why-this-matters_2">Why This Matters</h3>
+<p>In the capstone, your agent's harness had a fixed set of abilities. The main course shows you how to <em>add</em> abilities — connect the agent to a database, an internal system, a search index. MCP is the standardized connector for that. You need to recognize the term and the three things it exposes; you do not yet need to build a server.</p>
+<h3 id="concepts_2">Concepts</h3>
+<ul>
+<li><strong>The harness is extensible.</strong> An agent's power comes from what its harness lets it touch. Adding a tool is how a general agent becomes useful for a specific job.</li>
+<li><strong>MCP — Model Context Protocol.</strong> An open standard for connecting agents to external tools and data through a consistent interface, so a capability written once can be reused across different agents and applications rather than wired up bespoke each time.</li>
+<li><strong>Three things an MCP server exposes:</strong><ul>
+<li><strong>Tools</strong> — actions the agent can invoke (query a database, send a request, run a search). The agent <em>does</em> something.</li>
+<li><strong>Resources</strong> — data the agent can read (files, records, documents). The agent <em>reads</em> something.</li>
+<li><strong>Prompts</strong> — reusable, pre-written prompt templates the server offers for common tasks. The agent <em>reuses</em> a known-good instruction.</li>
+</ul>
+</li>
+<li><strong>The mental sort:</strong> Tool = an action, Resource = readable data, Prompt = a canned instruction. That three-way distinction is the recognition target for this segment.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">MCP Is Version-Sensitive — Verify Before Teaching or Relying</p>
+<p>MCP is a fast-moving standard. The protocol details, transport mechanisms, available servers, security and governance model, and the exact Tool/Resource/Prompt semantics change between versions. <strong>Do not teach any specific MCP detail, server name, or capability from memory.</strong> Before any course run or operational use, verify the current state of the protocol at its official documentation and confirm what your organization has authorized. Treat anything specific in this segment as illustrative of the <em>concept</em>, not as current fact.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Connecting a Tool Expands the Attack and Disclosure Surface</p>
+<p>Every tool or resource you connect is a new path data can flow out of — or untrusted input can flow in. The data-handling bright line from Module 1 and the permissions discipline in the next segment apply in full. An extensible harness is powerful and is exactly why guardrails exist.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — The MCP Trap</summary>
+<p>This is the highest verify-before-teaching risk in the entire prerequisite course. The protocol genuinely shifts between releases. Teach the <em>shape</em> — harness is extensible; MCP standardizes the connection; Tools/Resources/Prompts are the three exposed types — and explicitly tell students that any concrete detail must be checked against current docs. Do not let a confident-sounding specific become a taught fact.</p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Deferred to the main course</p>
+<p>Building MCP servers, configuring transports, and wiring real tools and data into an agent's harness are all main-course material. Recognition of the concept and the three exposed types is the bar here.</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">In MCP terms, what is the difference between a <em>Tool</em> and a <em>Resource</em>?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">A Tool is free; a Resource costs tokens</li>
+    <li data-correct="true">A Tool is an action the agent can invoke; a Resource is data the agent can read</li>
+    <li data-correct="false">A Tool is for text; a Resource is for images</li>
+    <li data-correct="false">There is no difference — they are two words for the same thing</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="segment-3-permissions-and-guardrails">Segment 3 — Permissions and Guardrails</h2>
+<p><strong>BLUF.</strong> The supervisor mindset becomes concrete here: agents run inside scoped permissions, command allowlists, approval gates, and sandboxes — the technical "how" behind staying the accountable human in the loop.</p>
+<h3 id="why-this-matters_3">Why This Matters</h3>
+<p>You held the supervisor mindset by judgment in the capstone — reading diffs, marking files read-only. The main course makes that enforcement <em>technical</em>: the agent is structurally prevented from doing what it should not, not merely trusted to comply. Recognizing these controls tells you what to ask for when you scope an agent's authority.</p>
+<h3 id="concepts_3">Concepts</h3>
+<ul>
+<li><strong>Scoped permissions.</strong> An agent is granted specific read, write, and execute rights — and nothing more. A read-only agent cannot modify; a sandboxed agent cannot reach outside its box. Least privilege, applied to agents.</li>
+<li><strong>Command allowlists.</strong> Rather than letting an agent run anything, you permit a defined set of commands. Everything outside the list is blocked by default.</li>
+<li><strong>Approval gates.</strong> For consequential actions — writing a file, running a command, sending a request — the agent pauses and asks for human approval before proceeding. The gate is where your judgment enters the loop.</li>
+<li><strong>Sandboxes.</strong> The agent operates in an isolated environment where a mistake cannot damage anything real. This is what makes the deliberate-bad-edit drill from the capstone safe to do at scale.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Guardrails Are the Mechanism; You Are Still Accountable</p>
+<p>Permissions and gates reduce how much damage a mistake can do — they do not transfer accountability. You still own the output (Module 9). Guardrails make supervision <em>enforceable</em>; they do not make it <em>unnecessary</em>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Deferred to the main course</p>
+<p>Configuring permission scopes, writing allowlists, building approval workflows, and setting up sandboxes are main-course skills. Here you recognize them as the technical implementation of the supervisor mindset.</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">An <em>approval gate</em> in an agent workflow does what?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Speeds the agent up by skipping confirmation steps</li>
+    <li data-correct="true">Pauses the agent before a consequential action so a human can approve it</li>
+    <li data-correct="false">Removes the need for the operator to verify output</li>
+    <li data-correct="false">Grants the agent broader permissions automatically</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="segment-4-planning-and-decomposition">Segment 4 — Planning and Decomposition</h2>
+<p><strong>BLUF.</strong> A capable agent can produce a plan and present it for your approval before it acts — and that plan is a supervision artifact: a checkpoint where you steer the work before any change is made.</p>
+<h3 id="why-this-matters_4">Why This Matters</h3>
+<p>In the capstone you decomposed the build yourself, then delegated pieces. The main course shows agents that decompose a large task into ordered steps <em>and surface the plan for review</em>. Recognizing the plan-then-act pattern tells you where to insert your judgment most cheaply — before action, not after.</p>
+<h3 id="concepts_4">Concepts</h3>
+<ul>
+<li><strong>Decomposition.</strong> Breaking a large, ambiguous task into ordered, concrete sub-steps. You did this with pseudocode in Module 10; an agent can do it for a multi-step job.</li>
+<li><strong>Plan-then-act.</strong> The agent proposes a plan, you review and approve (or correct) it, and only then does it execute. Catching a flawed approach in the plan is far cheaper than catching it in finished work.</li>
+<li><strong>The plan as a supervision artifact.</strong> The plan is the earliest and cheapest place to apply oversight. It is the delegate step of the loop made visible: you see the agent's intended approach before any file is touched.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Steer at the Plan, Not the Wreckage</p>
+<p>Correcting a plan costs a sentence. Correcting completed work costs a rebuild. When an agent offers a plan, that is your highest-leverage moment to redirect.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Deferred to the main course</p>
+<p>Building agents that plan, structuring multi-step decomposition, and managing plan-execution workflows are main-course material. Recognizing the plan as an approval checkpoint is the bar here.</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">Why is an agent's proposed plan described as a "supervision artifact"?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Because it replaces the need to verify the final output</li>
+    <li data-correct="true">Because it is the earliest, cheapest checkpoint to apply your judgment — before any change is made</li>
+    <li data-correct="false">Because the agent cannot act without writing one down</li>
+    <li data-correct="false">Because it is automatically saved to version control</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="segment-5-workflow-patterns-named">Segment 5 — Workflow Patterns, Named</h2>
+<p><strong>BLUF.</strong> Advanced agentic systems are assembled from a small set of named, reusable patterns — prompt chaining, routing, orchestrator-workers, and evaluator-optimizer — and recognizing them by name is the goal here; you build them in the main course.</p>
+<h3 id="why-this-matters_5">Why This Matters</h3>
+<p>The main course will hand you these patterns as building blocks. Walking in able to recognize the four by name means you spend main-course time learning to <em>apply</em> them, not decoding the vocabulary. Each is just the primitive composed a particular way.</p>
+<h3 id="concepts_5">Concepts</h3>
+<p>Four recognition targets:</p>
+<ul>
+<li><strong>Prompt chaining.</strong> Break a task into a sequence of steps, where each step's output feeds the next. A pipeline: draft, then critique the draft, then revise from the critique. Order is the point.</li>
+<li><strong>Routing.</strong> Classify the incoming request first, then send it to the handler best suited for it. A triage step that directs simple queries to a fast path and complex ones to a heavier one.</li>
+<li><strong>Orchestrator-workers.</strong> One coordinating agent breaks a job into parts, hands each to a worker, and assembles the results. A team lead delegating to a section.</li>
+<li><strong>Evaluator-optimizer.</strong> One agent produces output; another evaluates it against criteria and sends back corrections; the first revises. A generate-and-critique loop that runs until the output meets the bar.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Recognize the Shape, Defer the Build</p>
+<p>You are learning to name these, not wire them. When the main course says "route this," you will know it means classify-then-dispatch. That recognition is the deliverable.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Deferred to the main course</p>
+<p>Implementing any of these patterns — chaining steps, building routers, orchestrating workers, running evaluator-optimizer loops — is main-course work. Naming the four on sight is the bar here.</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">A workflow classifies each incoming request and sends it to the handler best suited for it. Which named pattern is this?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Prompt chaining</li>
+    <li data-correct="true">Routing</li>
+    <li data-correct="false">Evaluator-optimizer</li>
+    <li data-correct="false">Orchestrator-workers</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="segment-6-sub-agents-and-multi-agent-systems">Segment 6 — Sub-Agents and Multi-Agent Systems</h2>
+<p><strong>BLUF.</strong> A single operator-agent can delegate to multiple worker-agents — one commander directing a team — and this preview is meant only to make the idea recognizable, not to teach you to orchestrate it.</p>
+<h3 id="why-this-matters_6">Why This Matters</h3>
+<p>The orchestrator-workers pattern points straight at this: systems where one agent commands others. It is where serious scale comes from, and where supervision gets genuinely harder, because now you are supervising a supervisor. You only need to recognize the shape now.</p>
+<h3 id="concepts_6">Concepts</h3>
+<ul>
+<li><strong>Sub-agents.</strong> Worker-agents a coordinating agent spawns and directs, each handling a bounded piece of a larger job.</li>
+<li><strong>The commander analogy.</strong> One agent acts as the commander — decomposing the mission, assigning tasks, integrating the results — while workers execute their slices. The same chain-of-command structure you already understand, expressed in agents.</li>
+<li><strong>Supervision gets harder, not optional.</strong> With multiple agents, the accountable human is now overseeing a delegation chain. The loop still applies; it just has more surface to cover. Owning the output of a multi-agent system is a real challenge the main course addresses directly.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">More Agents, More Surface to Verify</p>
+<p>Multi-agent systems multiply both capability and the places things can go wrong. The delegate-verify-own loop does not disappear at scale — it becomes more demanding. Do not read "the agents handle it" as "I can stop verifying."</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Deferred to the main course</p>
+<p>Designing, building, and orchestrating multi-agent systems is squarely main-course material. This segment is a preview so the term is familiar, nothing more.</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">What does adding sub-agents change about the operator's responsibility?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">It removes the need to verify, since agents check each other</li>
+    <li data-correct="true">It expands the surface the accountable human must supervise — the loop still applies, with more to cover</li>
+    <li data-correct="false">It transfers accountability to the commander agent</li>
+    <li data-correct="false">It makes verification optional for low-stakes tasks</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="segment-7-evaluating-an-agent">Segment 7 — Evaluating an Agent</h2>
+<p><strong>BLUF.</strong> Judging an agent means assessing its <em>whole</em> output, not a single answer — through spot-checks, regression testing against known-good results, and the evaluator-optimizer idea — a light preview of a discipline the main course develops fully.</p>
+<h3 id="why-this-matters_7">Why This Matters</h3>
+<p>The capstone graded one build with your own eyes. At scale, eyeballing every output stops working, and you need methods to judge an agent's performance systematically. Recognizing the basic ideas now sets up the main course's deeper treatment of evaluation.</p>
+<h3 id="concepts_7">Concepts</h3>
+<ul>
+<li><strong>Spot-checks.</strong> Sample a subset of outputs and verify them closely. You cannot read everything at scale; you can check enough to calibrate trust.</li>
+<li><strong>Regression testing.</strong> Keep a set of known-good results. When the agent or its setup changes, re-run them and confirm the outputs still match — catching when a change quietly breaks something that used to work.</li>
+<li><strong>Evaluator-optimizer, reused.</strong> The same pattern from Segment 5, applied to evaluation: one agent (or a rubric) judges another's output against criteria and drives improvement. A scalable version of the verify step.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Evaluation Is the Verify Step at Scale</p>
+<p>Everything here is the capstone's verify step, grown up. Spot-checks, regression sets, and evaluator loops are how you keep verifying when there is too much output to read by hand.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Deferred to the main course</p>
+<p>Building production evaluation harnesses, regression suites, and automated evaluator pipelines is main-course material. Recognizing that whole-output evaluation is a discipline — and naming spot-checks, regression, and the evaluator-optimizer idea — is the bar here.</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">Why is whole-output evaluation necessary instead of just reading every answer at scale?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Because agents are always correct, so reading is wasted effort</li>
+    <li data-correct="true">Because at scale you cannot read everything — you need spot-checks and regression tests to judge performance systematically</li>
+    <li data-correct="false">Because evaluation transfers accountability away from the operator</li>
+    <li data-correct="false">Because the model evaluates itself perfectly</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="whats-deferred-and-what-you-carry-across">What's Deferred — and What You Carry Across</h2>
+<p><strong>BLUF.</strong> You cross the line of departure with the vocabulary and the map; the main course is where you build. Carry the primitive and the loop — they are what everything ahead is made of.</p>
+<p>The boundary of this course, stated plainly. The main course teaches you to <em>build</em> all of these:</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>You can now recognize</th>
+<th>The main course teaches you to build</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grounding / Retrieval</td>
+<td>RAG as named, traceable grounding</td>
+<td>Retrieval pipelines (embeddings, vector stores)</td>
+</tr>
+<tr>
+<td>Tools &amp; MCP</td>
+<td>Harness is extensible; Tool/Resource/Prompt</td>
+<td>MCP servers and real tool/data connections</td>
+</tr>
+<tr>
+<td>Permissions &amp; Guardrails</td>
+<td>Scopes, allowlists, gates, sandboxes</td>
+<td>Configuring enforceable agent permissions</td>
+</tr>
+<tr>
+<td>Planning</td>
+<td>Plan-then-act as a supervision checkpoint</td>
+<td>Agents that decompose and plan</td>
+</tr>
+<tr>
+<td>Workflow Patterns</td>
+<td>The four patterns by name</td>
+<td>Implementing chaining, routing, orchestration, eval loops</td>
+</tr>
+<tr>
+<td>Sub-Agents</td>
+<td>One commander directing workers</td>
+<td>Designing multi-agent systems</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td>Spot-checks, regression, evaluator-optimizer</td>
+<td>Production evaluation harnesses</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">One Last Verify-Before-Teaching Reminder</p>
+<p>Model names, tiers, context-window sizes, MCP protocol details, and any DoD AI policy specifics all change between course runs. Nothing version-sensitive in this module — most of all MCP — should be delivered from memory. Verify against current official sources before you teach or rely on it.</p>
+</div>
+<h3 id="readiness-check">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can state that advanced agentics is the same engine-harness-operator primitive, scaled</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name RAG as the grounding pattern I already used by hand</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can describe MCP as the standard for extending the harness and name Tool / Resource / Prompt — and I know it is version-sensitive and must be verified</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the permission and guardrail controls behind the supervisor mindset</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain why an agent's plan is a supervision checkpoint</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the four workflow patterns: prompt chaining, routing, orchestrator-workers, evaluator-optimizer</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I recognize the sub-agent / multi-agent idea and that it expands, not removes, supervision</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name spot-checks, regression, and evaluator-optimizer as agent-evaluation ideas</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know which of these is deferred to the main course</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Segment</th>
+<th>Recognition Target</th>
+<th>Deferred to Main Course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 Primitive</td>
+<td>Engine-harness-operator + the loop, scaled</td>
+<td>— (you already own it)</td>
+</tr>
+<tr>
+<td>1 Grounding</td>
+<td>RAG = named, traceable grounding</td>
+<td>Retrieval pipelines</td>
+</tr>
+<tr>
+<td>2 Tools &amp; MCP</td>
+<td>Extensible harness; Tool/Resource/Prompt</td>
+<td>Building MCP servers (verify details)</td>
+</tr>
+<tr>
+<td>3 Guardrails</td>
+<td>Scopes, allowlists, gates, sandboxes</td>
+<td>Configuring permissions</td>
+</tr>
+<tr>
+<td>4 Planning</td>
+<td>Plan-then-act as a checkpoint</td>
+<td>Building planning agents</td>
+</tr>
+<tr>
+<td>5 Patterns</td>
+<td>Chaining, routing, orchestrator-workers, evaluator-optimizer</td>
+<td>Implementing them</td>
+</tr>
+<tr>
+<td>6 Sub-Agents</td>
+<td>One commander, many workers</td>
+<td>Multi-agent design</td>
+</tr>
+<tr>
+<td>7 Evaluation</td>
+<td>Spot-checks, regression, evaluator-optimizer</td>
+<td>Production eval harnesses</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">End of Module — and End of the Prerequisite Course</p>
+<p>You have crossed the line of departure with your footing. You command an agent, you verify and own its work, you recover from its mistakes, and you can now name the terrain ahead. The primitive and the loop are what every advanced topic is built from — carry them across. The main course is where you build.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

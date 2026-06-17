@@ -1,0 +1,1756 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../06-version-control/">
+      
+      
+        <link rel="next" href="../08-tokens-context-cost/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>7 — From Advisor to Operator: Commanding an Agent - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#from-advisor-to-operator-commanding-an-agent" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              7 — From Advisor to Operator: Commanding an Agent
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-ai-foundations/" class="md-tabs__link">
+          
+  
+  
+  Course Modules
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../instructor/teaching-guide/" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Modules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course Modules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-ai-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 — Know Your Weapon: How AI Actually Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-prompting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 — Briefing the Machine: Prompting as a Mission Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-grounding-multimodality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 — Feeding the Machine: Grounding & Multimodality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-personalizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 — Standing Orders: Making the AI Know You
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 — Know the Terrain: Filesystem & Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-version-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 — The Duty Logbook: Version Control with Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 — From Advisor to Operator: Commanding an Agent
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 — From Advisor to Operator: Commanding an Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-harness-what-turns-an-engine-into-an-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Harness: What Turns an Engine Into an Agent
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Harness: What Turns an Engine Into an Agent">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-calls-how-you-verify-instead-of-trust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool Calls: How You Verify Instead of Trust
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tool Calls: How You Verify Instead of Trust">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-operator-posture-delegate-verify-own" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Operator Posture: Delegate, Verify, Own
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Operator Posture: Delegate, Verify, Own">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-examples-the-operator-loop-on-real-missions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked Examples: The Operator Loop on Real Missions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked Examples: The Operator Loop on Real Missions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capstone-exercise-identify-the-mental-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Capstone Exercise: Identify the Mental Models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capstone Exercise: Identify the Mental Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-of-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End of Module
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-tokens-context-cost/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 — Ammunition Discipline: Tokens, Context & Cost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-ethics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9 — Rules of Engagement: Ethics & Responsible AI Use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-field-craft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 — Field Craft: Markdown, Code, Tools & Context Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-capstone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 — The Proving Ground: Capstone Build
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-bridge-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 — Crossing the LD: Bridge to Advanced Agentics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary & Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/teaching-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/prereq-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="from-advisor-to-operator-commanding-an-agent">From Advisor to Operator: Commanding an Agent</h1>
+<p><strong>Who this is for:</strong> Someone who has worked the terminal and version control and is ready to give an AI tool real access to their machine — and command it responsibly.</p>
+<p><strong>What you will leave with:</strong> A clean mental model of the harness (what turns an engine into an agent), the operator posture that agentic work depends on, how tool calls let you verify instead of trust, and the delegate-verify-own loop you will run on every agentic task for the rest of the course.</p>
+<hr />
+<h2 id="the-harness-what-turns-an-engine-into-an-agent">The Harness: What Turns an Engine Into an Agent</h2>
+<p><strong>BLUF.</strong> A chatbot gives advice; an agent takes action — and the thing that makes the difference is the harness: the tool layer that gives a text-only engine eyes, hands, and a body to read, write, and execute on your real machine.</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>This is the payoff module for Terminal Basics. If learning the filesystem and terminal commands felt like a detour, this is where it pays off. Everything the agent does, it does through the filesystem and the terminal. You learned to navigate the terrain so you can supervise someone else navigating it.</p>
+<h3 id="concepts">Concepts</h3>
+<p>Ask a chatbot to rename a folder: it tells you the command. Ask an agent: it renames the folder. That is the entire difference. The agent has access.</p>
+<p>You already met the engine in Module 1 — the LLM is a brain in a jar. It reads text and writes text. By itself it cannot read your files, write to disk, run a command, fetch a URL, or even check what time it is. It also cannot verify its own output against reality. It can only predict the next chunk of text.</p>
+<p><strong>The harness is what makes that engine an agent.</strong> It gives the engine three things:</p>
+<ul>
+<li><strong>Eyes</strong> — tools to read files, list directories, check git status, fetch URLs, query data.</li>
+<li><strong>Hands</strong> — tools to write files, create directories, modify code.</li>
+<li><strong>A body</strong> — tools to execute commands, run tests, move files.</li>
+</ul>
+<p>That maps to three levels of access you are granting:</p>
+<ul>
+<li><strong>Read.</strong> The agent can look at your files.</li>
+<li><strong>Write.</strong> The agent can create and modify your files.</li>
+<li><strong>Execute.</strong> The agent can run commands in your terminal.</li>
+</ul>
+<p><strong>The engine-harness-operator stack.</strong> This is the working vocabulary for the rest of the course:</p>
+<ul>
+<li><strong>Engine</strong> — the LLM. The reasoning brain. Generates, plans, decides.</li>
+<li><strong>Harness</strong> — the tool layer. Gives the engine reach into files, commands, and external systems.</li>
+<li><strong>Operator</strong> — you. Direct the mission, approve consequential actions, carry accountability for the result.</li>
+</ul>
+<p>The engine cannot act without a harness. The harness cannot direct without an operator. All three are required. Everything in advanced agentic work stacks on this one primitive.</p>
+<div class="admonition note">
+<p class="admonition-title">The Simple Formula</p>
+<p>Engine (knowledge, reasoning, generation) + Harness (sensors and actuators) = Agency.</p>
+<p>Without tools, the engine can write a script but cannot run it or read your actual filesystem. With tools, it reads your code, runs the tests, modifies the files, and iterates on the result. That feedback loop — see the world, act, observe, adjust — is what "agentic" means.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Read, Write, Execute Is a Lot of Trust</p>
+<p>This is not abstract. An agent with write and execute access can create, modify, or delete files on your real machine. You are extending significant trust. The operator posture in the next section is what keeps that from becoming a problem.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Make the Connection Explicit</summary>
+<p>Do not assume students connect the dots. Say it out loud: "Every command you learned in Terminal Basics — <code>pwd</code>, <code>ls</code>, <code>cd</code>, <code>mkdir</code>, <code>mv</code> — that is what the agent runs when it works in your filesystem. You learned to navigate the terrain so you can supervise someone else navigating it." Make the payoff land.</p>
+</details>
+<details class="note">
+<summary>Instructor Note — Vocabulary Will Drift</summary>
+<p>External resources use different labels — Anthropic's documentation says "model + tools + orchestration layer." Same concepts, different words. Teach engine-harness-operator as the course's shared language and tell students to expect synonyms in the wild.</p>
+</details>
+<h3 id="hands-on">Hands-On</h3>
+<p>This is the one hands-on where you watch the harness appear. You do it once, here.</p>
+<ol>
+<li>Open your AI chatbot (Claude web, ChatGPT, or equivalent).</li>
+<li>Ask it: "Rename the folder <code>project</code> to <code>project-v1</code>."</li>
+<li>Read the response. Note whether it renamed anything or told you <em>how</em> to rename it yourself.</li>
+<li>If Claude Code is available — open it in a project folder and ask the exact same question.</li>
+<li>Watch what it does. Does it call a tool? Does it ask for confirmation? Does the folder change on disk?</li>
+<li>Write one sentence describing what was different. Which response required you to do the work, and which one <em>did</em> the work?</li>
+</ol>
+<p>That gap — between advice and action — is the entire definition of an agent, and the harness is what closes it.</p>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You give the engine a mission: search 200 field reports for grid <code>38SMB4521</code> and return every matching excerpt.</p>
+<p>Without a harness, the engine cannot read the files. It can only generate plausible-sounding excerpts from memory — and you have no way to know which it did. With a harness, it calls tools against the actual files and returns real results you can trace.</p>
+<p>What does that difference mean for how you verify the output?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">In the engine-harness-operator model, what is the harness?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">The LLM — the reasoning brain that generates responses</li>
+    <li data-correct="true">The tool layer that gives the engine access to files, commands, and external systems</li>
+    <li data-correct="false">The human operator who directs the mission</li>
+    <li data-correct="false">The API endpoint the model connects to</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-block">
+  <p class="quiz-question">What is the key difference between a chatbot and an agent?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">An agent uses a more powerful language model</li>
+    <li data-correct="false">An agent can access the internet; a chatbot cannot</li>
+    <li data-correct="true">An agent can take action on your real system — read, write, and execute — not just give advice</li>
+    <li data-correct="false">An agent remembers previous conversations; a chatbot does not</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can state the one-line difference between a chatbot and an agent</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain what read, write, and execute access means in practice</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name all three parts of the engine-harness-operator model</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand why Terminal Basics was the prerequisite for this module</li>
+</ul>
+<hr />
+<h2 id="tool-calls-how-you-verify-instead-of-trust">Tool Calls: How You Verify Instead of Trust</h2>
+<p><strong>BLUF.</strong> A tool call is a structured request from the engine to an external system — "execute this action and return the result" — and it is what turns "trust me" into "here is the file I read and the test I ran," which is the only way to catch a hallucination before it reaches your product.</p>
+<h3 id="why-this-matters_1">Why This Matters</h3>
+<p>Every failure mode from Module 1 — hallucination, confident-wrong, nondeterminism — still applies once the engine is an agent. The difference is that now the output can touch real files and real systems. Tool calls are the mechanism that lets you verify an agent's reasoning against reality instead of taking its narration on faith.</p>
+<h3 id="concepts_1">Concepts</h3>
+<p>A tool call says: "Execute this specific action and return the result." The engine does not run the action itself — it requests that the harness run it, then reasons about what came back.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Tool Call 1: read(&quot;/home/user/project/app.js&quot;)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Result: [file contents come back]
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Tool Call 2: run(&quot;npm test&quot;)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Result: [test output comes back]
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>Tool Call 3: write(&quot;/home/user/project/config.json&quot;, &quot;[new content]&quot;)
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>Result: [confirmation the file was written]
+</code></pre></div>
+<p><strong>The four families of tool calls:</strong></p>
+<ul>
+<li><strong>Reading (eyes):</strong> read files, list directories, check git status, fetch URLs, query data.</li>
+<li><strong>Writing (hands):</strong> create, edit, move, or copy files.</li>
+<li><strong>Executing (body):</strong> run commands, run tests, call APIs.</li>
+<li><strong>Thinking:</strong> extended reasoning and multi-step planning before acting.</li>
+</ul>
+<p><strong>Why this enables verification.</strong> Without tools, the engine generates text and you cannot tell whether it is hallucinating, using stale training data, or reasoning correctly from assumptions you never validated. With tools, the engine reads the actual file, makes the change, runs the actual test, and reports a result you can trace.</p>
+<p><strong>The tool-call loop is the core of agentic work:</strong> the engine reasons, acts, observes the result, adjusts, and repeats. Each step produces a real artifact, not a guess.</p>
+<div class="admonition example">
+<p class="admonition-title">Verification in Action</p>
+<ul>
+<li>Agent: "Your function should handle edge case X."</li>
+<li>You: "How do you know?"</li>
+<li>Agent: "I read your code (tool call). Line 42 shows this behavior. It is vulnerable to that attack. Here is a fix (tool call: write file)."</li>
+<li>You: "Does it work?"</li>
+<li>Agent: "Yes. I ran the tests (tool call: <code>npm test</code>). All pass."</li>
+</ul>
+<p>That is the difference between a guess and a verified action.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tools Are Your Audit Trail</p>
+<p>Every tool call is a verifiable action. The agent read <em>that</em> specific file. Ran <em>that</em> specific test. Wrote <em>that</em> specific content. You can trace every step. That is not possible with pure text generation — and it is what makes an agent's product defensible.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Connect to the Module 1 Failure Modes</summary>
+<p>Students learned hallucination, confident-wrong, and nondeterminism as text problems. Reframe them here as <em>action</em> problems: an agent can hallucinate a file path, confidently run the wrong command, and produce a different plan on a second run. Tool calls are how the operator catches all three before they cause damage.</p>
+</details>
+<h3 id="hands-on_1">Hands-On</h3>
+<ol>
+<li>In Claude Code, ask: "What is in my current directory?" Watch it call the list tool and return real results — not a guess.</li>
+<li>Ask: "Read [name a specific file in your project]." Watch it read the actual file.</li>
+<li>Ask it to make a small edit. Before it writes, ask: "What exactly are you going to change, and why?" Verify before you approve.</li>
+</ol>
+<p>You are tracing the tool-call loop live. Every action is visible. That is the audit trail.</p>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>An agent tells you it has verified that your export script produces correctly formatted output.</p>
+<p>In scenario one, it reviewed an output description you pasted and said it looks correct. In scenario two, it called a read tool on the actual output file and checked it against the template.</p>
+<p>Which scenario gives you a defensible product? Why?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">What is the primary reason tool calls make agent behavior more trustworthy?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Tool calls force the model to use lower temperature settings</li>
+    <li data-correct="true">They let the agent verify its reasoning against actual system state instead of generating from memory</li>
+    <li data-correct="false">They prevent hallucinations by blocking uncertain outputs</li>
+    <li data-correct="false">They reset the context window between steps</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_1">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain what a tool call is in one sentence</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the four families of tool calls: read, write, execute, think</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand why tool calls enable verification and an audit trail</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know that an action narrated is not the same as an action verified</li>
+</ul>
+<hr />
+<h2 id="the-operator-posture-delegate-verify-own">The Operator Posture: Delegate, Verify, Own</h2>
+<p><strong>BLUF.</strong> You delegate to the agent, verify its work, and own the outcome — the agent is a motivated junior with filesystem access who will confidently fill any gap you leave, and your job is to command well and check, not to type more.</p>
+<h3 id="why-this-matters_2">Why This Matters</h3>
+<p>The agent is powerful, but it cannot read your mind, does not know your constraints, cannot test in your environment, and has no judgment about tradeoffs. You have all of those. The operator posture is what positions your judgment at the point where it matters — before a consequential action executes.</p>
+<h3 id="concepts_2">Concepts</h3>
+<p><strong>The motivated-junior model.</strong> The agent is a junior teammate with filesystem access — a motivated PFC who has been handed a mission. Capable. Fast. Eager. And it will execute confidently on an ambiguous brief rather than stop to ask. It will never push back or say "I'm not sure" unless you build that into the prompt. It executes your intent, including the parts you left implicit.</p>
+<p><strong>Human in the loop</strong> means a human is positioned to review and approve consequential actions <em>before</em> they execute. You are the decision point the loop depends on — not a passive observer. Active supervision is the correct posture for agentic work. Delegating-and-stepping-away is not.</p>
+<p><strong>Three duties of the operator:</strong></p>
+<ol>
+<li><strong>Delegate clearly.</strong> Vague intent produces confident but wrong execution. Say what you need, what good looks like, and what is off-limits.</li>
+<li><strong>Verify the work.</strong> Check what the agent actually did, not just what it said it did. These are not the same.</li>
+<li><strong>Own the outcome.</strong> The capability does not transfer the accountability. You are still the one who signs for the result.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Two Failure Modes to Name and Counter</p>
+<p><strong>Blind trust:</strong> "It sounds right." Confident output from an agent is not verified output. Check the work before you act on it.</p>
+<p><strong>Learned helplessness:</strong> "I can't check this, it's too technical." You do not need to replicate the agent's work. You need to check whether the output makes sense, whether constraints were honored, whether anything looks wrong. That is a human judgment call, not a technical skill.</p>
+</div>
+<p>The supervision loop breaks down in three recognizable ways:</p>
+<ul>
+<li><strong>Over-trust.</strong> You ask for a sweeping change and do not look for hours. When you review, there are twenty breaking changes you never expected. <em>Fix: review after each major step; have the agent show changes before committing.</em></li>
+<li><strong>Under-involvement.</strong> You ask a vague question and the agent burns tokens guessing. You iterate ten times without getting what you meant. <em>Fix: be specific — name the file, the goal, the constraint, and what success looks like.</em></li>
+<li><strong>Automation fallacy.</strong> You chain build-test-deploy and one step fails silently. Broken code ships. <em>Fix: verify intermediate results; put a check between each consequential action.</em></li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">If You Don't Understand It, Don't Approve It</p>
+<p>If the agent says "I'll refactor the database schema" and you do not understand the change, ask it to explain first. Review before execution. You are the operator. You are responsible. If you do not understand what the agent is about to do, do not let it do it.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">The Primary Lever for Steering an Agent Is a Context File</p>
+<p>The single most effective way to constrain a motivated junior is a standing-orders file the agent reads automatically — <code>CLAUDE.md</code>, <code>me.md</code>. It is how you bake in "do not delete anything," "always show the plan first," and your unit's conventions without re-typing them every session. You will build these deliberately in <strong>Module 10 — Field Craft</strong>. For now, just know the lever exists.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Reinforce Throughout, Not Just Here</summary>
+<p>This is the through-line of the entire course, not a capstone topic. Every agentic action in later modules should be framed with the operator loop. Students who only hear it once will not carry it forward. The "verify after acting" reflex is the one habit allowed to spiral: it is introduced in Terminal, reinforced here, and graded in the capstone.</p>
+</details>
+<h3 id="hands-on_2">Hands-On</h3>
+<p>Give the agent (or a chatbot, depending on available tooling) a small, real task and run the full loop once.</p>
+<ol>
+<li>Write a clear brief: who you are, what you need, what good output looks like, and what is off-limits.</li>
+<li>Submit it. Read the output.</li>
+<li>Verify: does it do what you asked? Did it make any assumption you did not authorize? Is anything wrong?</li>
+<li>If something is off, correct it — and identify what you should have specified more precisely.</li>
+<li>Label your first brief: which failure mode did it most resemble — over-trust, under-involvement, or automation fallacy?</li>
+</ol>
+<p>That loop — delegate, verify, correct — is the whole skill.</p>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>An agent has been running a long session and proposes to "clean up the database by removing duplicate records." It sounds reasonable.</p>
+<p>What do you ask before approving? What could go wrong if you approve without reviewing?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">An agent completes a task and narrates what it did in clear, confident language. What do you do next?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Accept the output — confident narration is a reliable signal of correct execution</li>
+    <li data-correct="false">Run the task again to confirm consistency</li>
+    <li data-correct="true">Verify the actual output against what you asked for — the narration describes intent, not necessarily what happened</li>
+    <li data-correct="false">Ask the agent to verify its own work</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-block">
+  <p class="quiz-question">Which best describes active supervision when working with an agent?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Give the agent a task and check back when it's done</li>
+    <li data-correct="true">Review outputs at each step and intervene before consequential actions execute</li>
+    <li data-correct="false">Let the agent make all technical decisions while you handle communication</li>
+    <li data-correct="false">Configure the agent to run without human review for efficiency</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_2">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can state the three duties of the operator: delegate, verify, own</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know the difference between a capable junior and a trustworthy one</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the three ways supervision breaks down and the fix for each</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know that context files are the primary lever for steering an agent (full treatment in Module 10)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I am the commander, not the typist</li>
+</ul>
+<hr />
+<h2 id="worked-examples-the-operator-loop-on-real-missions">Worked Examples: The Operator Loop on Real Missions</h2>
+<p><strong>BLUF.</strong> The harness, tool calls, and operator posture are not three separate ideas — they fire together on every real task, and these intel-shop scenarios show the difference between a defensible product and a pulled one.</p>
+<h3 id="why-this-matters_3">Why This Matters</h3>
+<p>You have the three concepts. Now watch them work as one system on missions that look like your day job: building a summary from sources, searching a pile of reports, and drafting a SITREP. The pattern in all three is identical — ground the work in real files, verify with tool calls, and keep the operator at the decision point.</p>
+<h3 id="concepts_3">Concepts</h3>
+<p>The examples below each contrast an unsupervised, ungrounded approach with a supervised, tool-grounded one. Read them as templates you will reuse.</p>
+<div class="admonition example">
+<p class="admonition-title">Example 1 — The Harness Makes Output Traceable</p>
+<p><strong>Scenario:</strong> Produce an intelligence summary from a folder of raw source documents. You need to know the output is actually grounded in the sources.</p>
+<p><strong>Without the harness:</strong> "Write a summary of adversary logistics activity." The engine generates from training data and general inference. You submit the brief. A reviewer flags two claims that are not in your source documents. You cannot trace them. The brief is pulled.</p>
+<p><strong>With the harness:</strong> "Read the source documents in <code>/reports/AO-North/</code> and base the summary only on what is in those files." The agent lists the folder (14 files), reads each, finds 3 have no logistics content, excludes them, and returns a summary with source citations by filename.</p>
+<p><strong>Why it matters:</strong> The first output may be accurate or hallucinated and you cannot tell. The second is traceable to actual sources — every claim defensible. (~200 tokens plus damage control vs. ~500 tokens and a product you can stand behind.)</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 2 — Smart Sampling Beats a Data Dump</p>
+<p><strong>Scenario:</strong> A folder of 500 field reports. You need every mention of grid <code>38SMB4521</code>.</p>
+<p><strong>Bad approach:</strong> Paste all 500 reports (100,000 tokens) and ask it to find every mention. The agent is overwhelmed, loses track, and returns incomplete results with no way to verify coverage.</p>
+<p><strong>Good approach:</strong> "Search the reports in <code>/reports/field/</code> and return every mention of <code>38SMB4521</code> with source filenames." The agent runs <code>find</code>, then <code>grep</code> (7 matching files), reads only those, and reports: "9 mentions across 7 reports. Three are from the same 72-hour window describing the same activity from different collection sources."</p>
+<p><strong>Why it matters:</strong> The bad approach burns 100,000 tokens with unverifiable coverage. The good approach reads only matching files (~10,000 tokens) with complete, traceable coverage.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 3 — Operator Supervision Prevents a Bad Product</p>
+<p><strong>Scenario:</strong> Draft and format a SITREP from unstructured notes.</p>
+<p><strong>Without supervision (over-trust):</strong> "Draft a SITREP from my notes." The agent infers details not in the notes to fill gaps. You submit to the operations center. It includes a casualty figure the agent inferred from context — not in your notes, not accurate. Correction required.</p>
+<p><strong>With supervision:</strong> "Draft a SITREP from my notes in <code>/notes/0600-update.txt</code>. Use only information in that file. Flag any required field you cannot fill from the source." The agent reads the file and replies: "Draft complete. I could not fill friendly forces count (Section 3) or next reporting period (Section 6) — both flagged <code>[REQUIRED — NOT IN SOURCE]</code>. Do not submit until filled." You confirm the enemy-activity section traces line-by-line to your notes, supply the missing fields, and the agent finalizes with no inferred content.</p>
+<p><strong>Why it matters:</strong> Over-trust lets the agent fill gaps with plausible inference and you ship inaccurate reporting. Supervision keeps <em>you</em> in control of what enters the product; the agent flags gaps instead of inventing answers.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You receive an intelligence summary from an agent with three specific claims about adversary activity, all stated confidently. You cannot tell whether they came from source documents the agent read or from training-data pattern-matching.</p>
+<p>What do you do before you include the summary in a product — and which of the three examples above is the template for doing it right?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You need an agent to review 10 field reports for mentions of a specific location. What is the most defensible and cost-effective approach?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Paste all 10 reports into the chat and ask the agent to search them</li>
+    <li data-correct="false">Ask the agent to summarize each report individually in 10 separate conversations</li>
+    <li data-correct="true">Ask the agent to use tools to search the report files and read only the matching sections</li>
+    <li data-correct="false">Use the most capable model available to ensure the best results</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_3">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain why a tool-grounded summary is defensible and a generated one is not</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand why searching beats pasting for a large collection of files</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can describe how supervision stops an agent from inventing content in a product</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the shared pattern across all three: ground in real files, verify with tools, keep the operator at the decision point</li>
+</ul>
+<hr />
+<h2 id="capstone-exercise-identify-the-mental-models">Capstone Exercise: Identify the Mental Models</h2>
+<p><strong>BLUF.</strong> Reading a real transcript and naming which models are in play — harness, tool calls, operator posture — is how you prove the concepts are habits and not just vocabulary.</p>
+<h3 id="why-this-matters_4">Why This Matters</h3>
+<p>You can recite the engine-harness-operator stack. The test is whether you can spot it firing — or failing — in a transcript that looks like work. Naming the models on demand is the bridge from "I read about this" to "I do this."</p>
+<h3 id="hands-on_3">Hands-On</h3>
+<p>Read the three transcript sections below. For each, identify which model(s) are in play and what the developer did right or wrong. Work it before opening the answers.</p>
+<p><strong>[SECTION A]</strong></p>
+<p>Developer: "I have a bug in my payment processing. It's failing silently. Here's the code [pastes 2,000 tokens]. What's wrong?"</p>
+<p>Agent: "I see the issue. The <code>processPayment</code> function doesn't catch network timeouts. Here's a fix — add a try-catch around the API call."</p>
+<p>Developer: "Thanks. I'll test it locally." [Leaves. Tests later. The fix doesn't handle all edge cases.]</p>
+<p><strong>[SECTION B]</strong></p>
+<p>Developer: "There's a bug in payment processing. It fails silently on network timeouts. Read <code>/src/payment.js</code> and identify it."</p>
+<p>Agent: [reads the file] "Found it. Lines 42–45 don't catch network errors. Here's the fix." [writes the file] [runs <code>npm test -- payment</code>] "Tests pass. All edge cases covered: ECONNRESET, ECONNREFUSED, timeout, retry."</p>
+<p>Developer: "Great. Merge it."</p>
+<p><strong>[SECTION C]</strong></p>
+<p>Developer: "My user profile page loads in 5 seconds. How do I optimize the queries?"</p>
+<p>Agent: "Depends on your schema and queries. Can you share them?"</p>
+<p>Developer: [shares schema and the slow query]</p>
+<p>Agent: "Missing index on <code>users.id</code> and an inefficient join." [reads migration format] [writes a migration] [runs the migration] [runs the benchmark] "Page load: 200ms, down from 5000ms. 25x faster."</p>
+<p>Developer: "How long will the migration take in production?"</p>
+<p>Agent: "The index is additive — no data movement. Under one second even with millions of rows."</p>
+<p>Developer: "Approved. Ship it."</p>
+<div class="admonition question">
+<p class="admonition-title">Analyze the Transcript</p>
+<ol>
+<li><strong>Section A:</strong> Which models are being violated? What should the developer have done differently?</li>
+<li><strong>Section B:</strong> Which models are in play? How does the harness change the outcome?</li>
+<li><strong>Section C:</strong> Identify every model and explain each.</li>
+</ol>
+</div>
+<details class="tip">
+<summary>Model Answers</summary>
+<p><strong>Section A — Violations.</strong> The harness is unused: the agent generates a fix without reading the file or testing it. No tool calls means no verification — it <em>guesses</em> the fix works. Operator posture is broken: the developer is under-involved and does not review before walking away. It is also less efficient — pasting code instead of asking the agent to read the file. What should have happened: "There's a bug in <code>/src/payment.js</code>. Fix it and verify with tests" → read → diagnose → write → run tests → report.</p>
+<p><strong>Section B — Correct use.</strong> The harness is working: the agent read the file (eyes), changed it (hands), ran tests (body), and verified. Tool calls do all the verification. Operator posture is sound: the developer supervised and approved the merge after a real result. Efficient — only the needed file was read.</p>
+<p><strong>Section C — Full stack.</strong> Smart sampling: the agent reads the schema and the specific query, not the whole database. Operator supervision: the developer asks a clarifying question before approving and only ships after understanding production impact. Tool calls for verification: the migration and benchmark run in a safe environment before deploy. Cost-consciousness: specific questions, targeted fix, tight iteration, no waste.</p>
+</details>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>In one sentence each, which model was <em>most</em> decisive in turning Section A's outcome around in Section B — and which model carried Section C?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">In Section A, the agent proposes a fix without reading the file or running tests. Which model is most directly violated?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Cost-consciousness — the prompt was too short</li>
+    <li data-correct="true">Tool calls / the harness — the fix is a guess, never verified against the real file or tests</li>
+    <li data-correct="false">Context windows — the file was too large</li>
+    <li data-correct="false">None — the agent answered correctly</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_4">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can read a transcript and name which models are in play</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can spot a violated model and state the fix</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain how the harness changes an outcome from "guess" to "verified"</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I am comfortable naming the models out loud during a real session</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Core Idea</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>The Harness</strong></td>
+<td>Engine + tools = agency</td>
+<td>Without tools the engine is a brain in a jar. With tools it acts on your real machine.</td>
+</tr>
+<tr>
+<td><strong>Engine-Harness-Operator</strong></td>
+<td>Three required parts</td>
+<td>The engine reasons, the harness reaches, the operator owns. All three or it breaks.</td>
+</tr>
+<tr>
+<td><strong>Tool Calls</strong></td>
+<td>Requests that execute outside the engine</td>
+<td>Verification and an audit trail become possible — hallucinations get caught.</td>
+</tr>
+<tr>
+<td><strong>Operator Posture</strong></td>
+<td>Delegate, verify, own</td>
+<td>You sign for the result. Review before consequential actions. Intervene early.</td>
+</tr>
+<tr>
+<td><strong>Delegate-Verify-Own Loop</strong></td>
+<td>Brief, check the real output, fix and learn</td>
+<td>The whole skill of commanding an agent, run on every task.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="end-of-module">End of Module</h2>
+<p>You have moved from advisor to operator. You know what the harness is, how tool calls let you verify instead of trust, and the loop you run on every agentic task: delegate clearly, verify the real output, own the result.</p>
+<p>Two forward pointers: the mechanics of tokens, context, and cost — how to spend the agent's "ammunition" — are <strong>Module 8</strong>. The context files that are your primary lever for steering an agent (<code>CLAUDE.md</code>, <code>me.md</code>) get their full treatment in <strong>Module 10 — Field Craft</strong>.</p>
+<p>The "verify after acting" reflex you reinforced here is the habit graded in the capstone. Carry it forward into every session: you are the commander, not the typist.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

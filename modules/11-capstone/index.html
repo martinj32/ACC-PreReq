@@ -1,0 +1,1644 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../10-field-craft/">
+      
+      
+        <link rel="next" href="../12-bridge-advanced/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>11 — The Proving Ground: Capstone Build - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#the-proving-ground-capstone-build" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              11 — The Proving Ground: Capstone Build
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-ai-foundations/" class="md-tabs__link">
+          
+  
+  
+  Course Modules
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../instructor/teaching-guide/" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Modules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course Modules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-ai-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 — Know Your Weapon: How AI Actually Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-prompting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 — Briefing the Machine: Prompting as a Mission Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-grounding-multimodality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 — Feeding the Machine: Grounding & Multimodality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-personalizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 — Standing Orders: Making the AI Know You
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 — Know the Terrain: Filesystem & Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-version-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 — The Duty Logbook: Version Control with Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-commanding-an-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 — From Advisor to Operator: Commanding an Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-tokens-context-cost/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 — Ammunition Discipline: Tokens, Context & Cost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-ethics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9 — Rules of Engagement: Ethics & Responsible AI Use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-field-craft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 — Field Craft: Markdown, Code, Tools & Context Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 — The Proving Ground: Capstone Build
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 — The Proving Ground: Capstone Build
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-mission" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Mission
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Mission">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set-the-standing-orders-a-claudemd-that-constrains-a-real-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set the Standing Orders: A CLAUDE.md That Constrains a Real Run
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set the Standing Orders: A CLAUDE.md That Constrains a Real Run">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-loop-delegate-verify-own" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Loop: Delegate, Verify, Own
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Loop: Delegate, Verify, Own">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rewind-recovering-a-bad-agent-edit-with-version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Rewind: Recovering a Bad Agent Edit With Version Control
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Rewind: Recovering a Bad Agent Edit With Version Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ship-it-document-push-and-sign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ship It: Document, Push, and Sign
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ship It: Document, Push, and Sign">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rubric" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Rubric
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-bridge-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 — Crossing the LD: Bridge to Advanced Agentics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary & Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/teaching-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/prereq-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="the-proving-ground-capstone-build">The Proving Ground: Capstone Build</h1>
+<p><strong>Who this is for:</strong> An operator who has worked every prior module and is ready to stop practicing the pieces and prove them — under their own command, on a real artifact.</p>
+<p><strong>What you will leave with:</strong> A working project on GitHub, built and shipped through the full workflow — but more than that, evidence that you commanded an agent correctly: a <code>CLAUDE.md</code> that genuinely constrained a real run, one complete delegate-verify-own loop, and a deliberate recovery from a bad agent edit using version control. The artifact is the easy part. The proof is the loop.</p>
+<hr />
+<h2 id="the-mission">The Mission</h2>
+<p><strong>BLUF.</strong> The capstone is not a tutorial project — it is the integration of everything: plan, command an agent, verify its work, recover from its mistakes, and ship something real to GitHub, with the grade weighted on <em>how you supervised the build</em>, not just on whether the artifact runs.</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>Every prior module taught one skill in isolation. The proving ground is where they combine under realistic pressure — where a vague <code>CLAUDE.md</code> lets the agent wander, where an unverified edit slips a bug into your artifact, where a bad agent change has to be rolled back without panic. Anyone can get a demo to run. The course is certifying something harder: that you can put a capable agent to work, stay the accountable supervisor, and produce a product you can sign for. That is the readiness gate to the main course.</p>
+<h3 id="concepts">Concepts</h3>
+<p>Choose <strong>one</strong> build path. Keep it small enough to demo in two minutes — under-scoping is recoverable, over-scoping kills the loop.</p>
+<ul>
+<li><strong>Path A — CLI tool.</strong> A password-strength checker, a Markdown-to-HTML converter, a task logger. Takes input, applies logic, returns output, handles a basic error.</li>
+<li><strong>Path B — Web app.</strong> A note-taker, a unit converter, a quote generator. HTML/CSS/JS, takes user input, does something with it, runs locally.</li>
+<li><strong>Path C — API integration.</strong> A CLI or web app that calls a free public API (weather, jokes, conversions). Authenticates or calls a real endpoint, handles errors gracefully.</li>
+</ul>
+<p><strong>Every path, the same standard:</strong> a README, at least five commits with meaningful messages, no credentials in history, and a working product on GitHub.</p>
+<div class="admonition tip">
+<p class="admonition-title">The Two-Minute Test</p>
+<p>If you cannot demo it in two minutes, it is too big. Scope down until the loop — command, verify, ship — fits inside the time you have. A small project built with clean supervision beats an ambitious one you never finished verifying.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Scope Is the Whole Game</summary>
+<p>Students fail this module two ways: they over-scope and never reach the verify loop, or they under-scope into something with no decisions for the agent to get wrong. Push them toward a project with at least one real constraint and at least one place the agent could plausibly make a mistake — that is where the graded loop lives.</p>
+</details>
+<h3 id="hands-on">Hands-On</h3>
+<ol>
+<li>Pick a path. Write a one-paragraph description and list three to five features.</li>
+<li>Apply the two-minute test out loud. Cut scope until it passes.</li>
+<li>Commit the plan: <code>git commit -m "Initial project plan"</code>.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>Your project has to do two things at once: be impressive <em>and</em> leave room for you to verify the agent's work inside your time budget. Which one do you protect when they conflict, and why?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">What is the capstone primarily certifying?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">That you can write production-grade code by hand</li>
+    <li data-correct="true">That you can command an agent, verify its work, recover from its mistakes, and sign for the result</li>
+    <li data-correct="false">That you can build the most ambitious project possible</li>
+    <li data-correct="false">That your project has zero bugs</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="set-the-standing-orders-a-claudemd-that-constrains-a-real-run">Set the Standing Orders: A CLAUDE.md That Constrains a Real Run</h2>
+<p><strong>BLUF.</strong> Before the agent writes a line, you author a <code>CLAUDE.md</code> that actually binds it — real scope, real prohibitions, real read-only files — and then you watch it hold during the build, because a context file that constrains nothing is not graded as steering.</p>
+<h3 id="why-this-matters_1">Why This Matters</h3>
+<p>This is where the Module 10 lesson meets a live agent. A weak <code>CLAUDE.md</code> — a warm description with no boundaries — produces an agent that does whatever it wants, and you find out only when it has modified a file it should never have touched. The proving ground requires a context file that <em>demonstrably</em> changed agent behavior. That is a NET-NEW capstone requirement: the build is now an agentic deliverable, not a solo coding exercise.</p>
+<h3 id="concepts_1">Concepts</h3>
+<p>Your capstone <code>CLAUDE.md</code> must do real work, not describe the project warmly:</p>
+<ul>
+<li><strong>Scope boundary.</strong> State what the project is and, explicitly, what it is NOT.</li>
+<li><strong>Hard prohibitions.</strong> At least two enforceable "never" rules — a file the agent may not modify, an output rule it must obey, a pattern it must not introduce.</li>
+<li><strong>Modifiable surface.</strong> Name which files the agent may change and which are read-only.</li>
+<li><strong>Done criteria.</strong> What "working" means, so the agent and you share a finish line.</li>
+<li><strong>Conflict rule.</strong> When two requirements collide, say which wins (e.g., "security beats speed").</li>
+</ul>
+<p>You set up the project context exactly as in Module 10: a <code>.claude/</code> folder, your <code>CLAUDE.md</code>, your <code>me.md</code>. Then you run the agent inside it and confirm it reads them.</p>
+<div class="admonition example">
+<p class="admonition-title">A Constraint That Earns Its Place</p>
+<p>Add a read-only file to your project — say <code>config.example.json</code> — and a <code>CLAUDE.md</code> rule: "Never modify <code>config.example.json</code>; it is the reference template." Later, ask the agent to "update the config." A constrained agent refuses or asks; an ungoverned one edits the protected file. That single interaction is graded evidence that your standing orders held.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">The Context File Is Sent to the Provider</p>
+<p>Everything in <code>CLAUDE.md</code> and <code>me.md</code> ships with every request. The data-handling bright line from Module 1 applies: no real names, no real units, no credentials, nothing above the system's authorization ceiling — not in the project, not in the context files, not in the prompts you give the agent during the build. This is graded (see the rubric).</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Make the Constraint Testable</summary>
+<p>Require at least one prohibition the instructor can test live: a read-only file, a forbidden output. If a student's <code>CLAUDE.md</code> has no rule you can deliberately try to make the agent violate, it has no constraint worth grading. Have them demonstrate the agent honoring the boundary on camera or in a transcript.</p>
+</details>
+<h3 id="hands-on_1">Hands-On</h3>
+<ol>
+<li>Create the project's <code>.claude/</code> folder; add your <code>CLAUDE.md</code> and <code>me.md</code>.</li>
+<li>Write a <code>CLAUDE.md</code> with a scope boundary, at least two prohibitions, a named read-only file, done criteria, and a conflict rule.</li>
+<li>Add an actual read-only file to the repo that the prohibition protects.</li>
+<li>Run the agent in the folder. Ask it to summarize the project; confirm it cites your <code>CLAUDE.md</code>.</li>
+<li>Commit: <code>git commit -m "Project setup with constrained context files"</code>.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You ask the agent to "clean up the config," and your <code>CLAUDE.md</code> marks the reference config read-only. What should a correctly governed agent do — and what does it tell you if it edits the file anyway?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">Why must the capstone <code>CLAUDE.md</code> include at least one enforceable prohibition?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Because longer context files always perform better</li>
+    <li data-correct="false">Because the agent will not start without one</li>
+    <li data-correct="true">Because a context file that constrains nothing is not evidence of supervision, and the rubric grades whether it actually steered the agent</li>
+    <li data-correct="false">Because prohibitions reduce token cost</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="the-loop-delegate-verify-own">The Loop: Delegate, Verify, Own</h2>
+<p><strong>BLUF.</strong> The graded heart of the capstone is one complete delegate-verify-own loop — you hand the agent a real task, you check the output against the work it claims to have done, and you accept accountability for the result — performed deliberately and documented, not done by reflex.</p>
+<h3 id="why-this-matters_2">Why This Matters</h3>
+<p>Module 7 named the loop; Module 9 made owning the output an ethical duty. The proving ground is where you execute it on a live build and leave evidence. This is the single highest-weighted item in the rubric, because it is the skill the whole course exists to certify. A finished artifact with no visible verification is an ungoverned build — it fails the loop even if the code runs.</p>
+<h3 id="concepts_2">Concepts</h3>
+<p>One full turn of the loop, made explicit:</p>
+<ol>
+<li><strong>Delegate.</strong> Give the agent a concrete, bounded task with the context it needs — the same deliberate prompting from earlier modules. Vague order, vague result.</li>
+<li><strong>Verify.</strong> Do not accept "done" on the agent's word. Read the code it wrote and narrate it back (Module 10 literacy). Run it. Confirm it does what was asked and nothing it was forbidden. Check that the files it claims to have changed are the files it actually changed. This is the "verify after acting" reflex you first met in the terminal and carried through Module 7 — here it is graded.</li>
+<li><strong>Own.</strong> You sign for the result. If a claim is wrong, a file is unexpectedly modified, or an edit is subtly off, that is yours to catch and yours to answer for. "The agent did it" is not a defense (Module 9).</li>
+</ol>
+<div class="admonition danger">
+<p class="admonition-title">Verify Against the Work, Not the Summary</p>
+<p>An agent will tell you it did the thing. The summary is not the evidence — the diff is. Read what actually changed. The most expensive capstone failures come from accepting a confident "done" without checking the artifact underneath it.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Make the Loop Visible</p>
+<p>Capture the loop so it can be graded: the task you delegated, the verification you performed (what you read, what you ran, what you checked), and your explicit acceptance. A short transcript or a few commit messages that name the check are enough.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Grade the Loop, Not the Artifact</summary>
+<p>The temptation is to grade whether the project runs. Resist it. A working artifact with no evidence of verification scores low; a modest artifact with a clean, documented delegate-verify-own loop scores high. Look specifically for the student checking the diff against the agent's claim — that is the certifiable skill.</p>
+</details>
+<h3 id="hands-on_2">Hands-On</h3>
+<ol>
+<li><strong>Delegate:</strong> give the agent one concrete build task scoped by your <code>CLAUDE.md</code>.</li>
+<li><strong>Verify:</strong> read the produced code and narrate it; run it; confirm it does the task and violates no prohibition; check the diff matches the agent's claim.</li>
+<li><strong>Own:</strong> if it is correct, commit it with a message that names what you verified (e.g., <code>Add input validation — verified rejects empty input, no protected files touched</code>). If it is wrong, send it back with specific correction.</li>
+<li>Repeat for at least one more feature so the loop becomes a habit, not a one-off.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>The agent reports "Done — added the feature and updated the tests." What is the difference between trusting that sentence and verifying it, and what exactly do you look at?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">During the verify step, the agent says it changed only <code>app.js</code>, but the diff also shows an edit to a file your <code>CLAUDE.md</code> marked read-only. What does a correct owner do?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Accept it — the feature works, so the extra edit is fine</li>
+    <li data-correct="false">Commit it and note the discrepancy for later</li>
+    <li data-correct="true">Treat it as a failed verification: reject the change, restore the protected file, and re-issue the task with the boundary restated</li>
+    <li data-correct="false">Ask the agent whether the edit was necessary and trust its answer</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="the-rewind-recovering-a-bad-agent-edit-with-version-control">The Rewind: Recovering a Bad Agent Edit With Version Control</h2>
+<p><strong>BLUF.</strong> You will deliberately let (or cause) the agent to make a bad edit, then recover from it cleanly using git — because the operator who can roll back a mistake works without fear, and the one who cannot is one bad edit from losing the build.</p>
+<h3 id="why-this-matters_3">Why This Matters</h3>
+<p>Module 6 framed git as the duty logbook — a time machine where every commit is a recoverable snapshot. The capstone makes you use it under the exact condition it exists for: an agent edit went wrong and you need to get back to known-good. This is a NET-NEW capstone requirement and a graded one. It converts git from a concept you practiced into a reflex you can reach for when an agent breaks something mid-build.</p>
+<h3 id="concepts_3">Concepts</h3>
+<p>The rewind, start to finish:</p>
+<ul>
+<li><strong>Commit known-good first.</strong> You can only rewind to a snapshot you took. This is why the loop commits after each verified feature — every clean commit is a recovery point. The discipline pays off precisely here.</li>
+<li><strong>Recognize the bad edit.</strong> During a verify step, the agent introduces something wrong — a broken function, a deleted line you needed, an edit to a protected file.</li>
+<li><strong>Roll back.</strong> Use version control to return the file (or the working tree) to the last good commit. The bad edit is undone; your verified history is intact.</li>
+<li><strong>Re-issue.</strong> Hand the task back with a tighter instruction, and run the loop again.</li>
+</ul>
+<div class="admonition danger">
+<p class="admonition-title">You Can Only Recover to a Commit You Made</p>
+<p>The rewind only works if you committed known-good state <em>before</em> the bad edit. This is the operational reason the delegate-verify-own loop commits after every verified feature. Skip the commits and there is nothing to rewind to. Frequent, verified commits are what make agent supervision survivable.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">The .gitignore Caveat Still Applies</p>
+<p>A rewind recovers tracked files. It does not protect a credential you committed by mistake — that is already in history. The Module 10 rule holds: <code>.env</code> in <code>.gitignore</code> before the first commit. Version control saves you from bad edits, not from leaked secrets.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Make Them Cause the Failure</summary>
+<p>Require a deliberate bad-edit-and-recover, not a hypothetical. Have the student either prompt the agent into a clearly wrong change or hand-break a file, then recover to the last good commit and show the clean working tree. The learning is in feeling that a mistake is reversible — fear of breaking things is what makes junior operators over-cautious or, worse, reckless without a safety net.</p>
+</details>
+<h3 id="hands-on_3">Hands-On</h3>
+<ol>
+<li>Confirm you have a verified, committed known-good state (from the loop).</li>
+<li>Deliberately induce a bad edit: prompt the agent into a change you know is wrong, or break a file by hand.</li>
+<li>Confirm the damage — run the project, see it fail or misbehave.</li>
+<li>Roll back to the last good commit using version control; confirm the working tree is clean and the project works again.</li>
+<li>Re-issue the task with a tighter instruction and run the loop to a correct result.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>An agent edit just broke your build, and the last thing you did was commit a working version ten minutes ago. Walk through your recovery. Now answer: what would your options be if you had <em>not</em> committed?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">An agent makes a bad edit that breaks your project. What single prior habit determines whether you can cleanly recover?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Having used the most powerful model available</li>
+    <li data-correct="true">Having committed a verified known-good snapshot before the bad edit</li>
+    <li data-correct="false">Having a very detailed README</li>
+    <li data-correct="false">Having asked the agent to be careful</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="ship-it-document-push-and-sign">Ship It: Document, Push, and Sign</h2>
+<p><strong>BLUF.</strong> You finish the build the way every real deliverable ends — a clear README, a clean commit history pushed to GitHub, and a final accountable sign-off that the product is yours and verified.</p>
+<h3 id="why-this-matters_4">Why This Matters</h3>
+<p>Shipping is where the work becomes a product someone else can use and you can be held to. The README is how the next person runs it; the commit history is the record of how you supervised the build; the push makes it real and visible. This is the same data-handling and accountability discipline you have carried since Module 1, applied at the moment of delivery.</p>
+<h3 id="concepts_4">Concepts</h3>
+<ul>
+<li><strong>Document.</strong> A README that states what the project does, how to run it, and any requirements. Comments on any non-obvious logic.</li>
+<li><strong>Push.</strong> Verify all commits are local, then push to GitHub. Confirm it appears on GitHub.com.</li>
+<li><strong>Final scrub.</strong> Before the push goes public, re-check: no real names, no credentials, no <code>.env</code> in history. The bright line does not relax at the finish line.</li>
+<li><strong>Sign.</strong> You are vouching for the product. You have read what it does and verified it works — the Module 9 authorship duty, applied to the whole artifact.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">No Credentials in History — Final Check</p>
+<p>Run a last pass for secrets before you push. A credential in a public repository is compromised the moment it lands. If you find one, it is already in history — rotate it and clean the repo; do not just delete the file.</p>
+</div>
+<h3 id="hands-on_4">Hands-On</h3>
+<ol>
+<li>Write the README: what it does, how to run it, requirements.</li>
+<li>Add comments to any logic that is not self-evident.</li>
+<li>Final scrub for names, credentials, and <code>.env</code> in history.</li>
+<li>Push to GitHub; confirm the repo is visible with your full commit history.</li>
+<li>Write a one-line sign-off: what you built, what you verified, and that you stand behind it.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You are about to push. What is the last check you run before the repository goes public, and why can it not wait until after?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You discover an old commit in your history contains a real API key. The file is already deleted in the latest commit. What is the correct response?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Nothing — the key is gone from the current version</li>
+    <li data-correct="false">Add the file to <code>.gitignore</code> and push</li>
+    <li data-correct="true">Treat the key as compromised: rotate it immediately and clean it from history before publishing</li>
+    <li data-correct="false">Make the repository private and leave the key in history</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<hr />
+<h2 id="the-rubric">The Rubric</h2>
+<p><strong>BLUF.</strong> The grade is weighted toward supervision — the delegate-verify-own loop and data-handling/ethics discipline carry real points, so a verified modest build outscores an impressive un-supervised one.</p>
+<p>This rubric grades <em>how you commanded the build</em>, not only whether the artifact runs.</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Points</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Delegate-verify-own loop</strong></td>
+<td>30</td>
+<td>At least one full, documented loop: a delegated task, a real verification of the diff against the agent's claim, and explicit ownership. The certifiable skill.</td>
+</tr>
+<tr>
+<td><strong>CLAUDE.md actually constrained the run</strong></td>
+<td>15</td>
+<td>A context file with a testable prohibition and scope boundary that demonstrably steered (or correctly stopped) the agent.</td>
+</tr>
+<tr>
+<td><strong>Git rewind of a bad agent edit</strong></td>
+<td>15</td>
+<td>A deliberate bad edit recovered to a known-good commit, with a clean working tree shown afterward.</td>
+</tr>
+<tr>
+<td><strong>Data-handling &amp; ethics discipline</strong></td>
+<td>15</td>
+<td>No real names, units, or credentials anywhere; no <code>.env</code> in history; an accountable sign-off vouching for the output (Module 9).</td>
+</tr>
+<tr>
+<td><strong>Working artifact</strong></td>
+<td>15</td>
+<td>The project runs and does what it promised, with basic error handling.</td>
+</tr>
+<tr>
+<td><strong>Documentation &amp; commits</strong></td>
+<td>10</td>
+<td>Clear README; 5+ meaningful commit messages; pushed to GitHub.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Passing:</strong> 70+ points. <strong>Honors:</strong> 90+ with a clean loop and a recovered rewind.</p>
+<div class="admonition note">
+<p class="admonition-title">Why the Loop Outweighs the Artifact</p>
+<p>A flawless artifact built by an unsupervised agent is exactly the failure mode this course exists to prevent. The points follow the supervision because that is the skill that transfers to the main course.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Weighting Is Deliberate</summary>
+<p>If a student protests that their app runs perfectly but scored mid-range, the answer is in the weighting: the loop, the constraint, the rewind, and the ethics discipline are 75 of the 100 points. Working code is table stakes, not the certification. Hold the line.</p>
+</details>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>What You Prove</th>
+<th>Graded Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The Mission</td>
+<td>Scoped a real, demo-able project</td>
+<td>One-paragraph plan, two-minute test passed</td>
+</tr>
+<tr>
+<td>Standing Orders</td>
+<td>A CLAUDE.md that constrains a live agent</td>
+<td>Testable prohibition + scope boundary that held</td>
+</tr>
+<tr>
+<td>The Loop</td>
+<td>Delegate, verify, own — on a real build</td>
+<td>Documented loop: task, diff-check, ownership</td>
+</tr>
+<tr>
+<td>The Rewind</td>
+<td>Recover a bad agent edit with git</td>
+<td>Deliberate bad edit rolled back to known-good</td>
+</tr>
+<tr>
+<td>Ship It</td>
+<td>Deliver and sign for the product</td>
+<td>README, clean history pushed, no secrets, sign-off</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">End of Module</p>
+<p>You have proven it — not the artifact, the command. You set standing orders an agent obeyed, ran the loop and caught what needed catching, recovered cleanly from a bad edit, and signed for a product that is yours. That is the readiness gate. One module remains: the bridge that names what comes next on the far side of the line of departure.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

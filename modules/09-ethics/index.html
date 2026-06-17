@@ -1,0 +1,2142 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../08-tokens-context-cost/">
+      
+      
+        <link rel="next" href="../10-field-craft/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>9 — Rules of Engagement: Ethics & Responsible AI Use - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rules-of-engagement-ethics-responsible-ai-use" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              9 — Rules of Engagement: Ethics & Responsible AI Use
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-ai-foundations/" class="md-tabs__link">
+          
+  
+  
+  Course Modules
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../instructor/teaching-guide/" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Modules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course Modules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-ai-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 — Know Your Weapon: How AI Actually Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-prompting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 — Briefing the Machine: Prompting as a Mission Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-grounding-multimodality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 — Feeding the Machine: Grounding & Multimodality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-personalizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 — Standing Orders: Making the AI Know You
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 — Know the Terrain: Filesystem & Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-version-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 — The Duty Logbook: Version Control with Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-commanding-an-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 — From Advisor to Operator: Commanding an Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-tokens-context-cost/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 — Ammunition Discipline: Tokens, Context & Cost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9 — Rules of Engagement: Ethics & Responsible AI Use
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9 — Rules of Engagement: Ethics & Responsible AI Use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-accountability-authorship-you-sign-for-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Accountability &amp; Authorship: You Sign for It
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Accountability &amp; Authorship: You Sign for It">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-hallucination-as-an-ethical-failure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Hallucination as an Ethical Failure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Hallucination as an Ethical Failure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-over-reliance-automation-bias-deskilling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Over-Reliance, Automation Bias &amp; Deskilling
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Over-Reliance, Automation Bias &amp; Deskilling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-bias-fairness-in-ai-assisted-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Bias &amp; Fairness in AI-Assisted Analysis
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Bias &amp; Fairness in AI-Assisted Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-disclosure-attribution-provenance-of-your-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Disclosure &amp; Attribution: Provenance of Your Product
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Disclosure &amp; Attribution: Provenance of Your Product">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-dual-use-misuse-awareness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Dual-Use &amp; Misuse Awareness
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Dual-Use &amp; Misuse Awareness">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-privacy-collection-ethics-beyond-opsec" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Privacy &amp; Collection Ethics Beyond OPSEC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Privacy &amp; Collection Ethics Beyond OPSEC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-dod-ai-ethical-principles-lawful-use-close" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. DoD AI Ethical Principles &amp; Lawful-Use Close
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. DoD AI Ethical Principles &amp; Lawful-Use Close">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-of-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End of Module
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-field-craft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 — Field Craft: Markdown, Code, Tools & Context Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-capstone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 — The Proving Ground: Capstone Build
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-bridge-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 — Crossing the LD: Bridge to Advanced Agentics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary & Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/teaching-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/prereq-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="rules-of-engagement-ethics-responsible-ai-use">Rules of Engagement: Ethics &amp; Responsible AI Use</h1>
+<p><strong>Who this is for:</strong> An analyst or operator who can already prompt, ground, command an agent, and handle data correctly — and now needs the rulebook for <em>what you do with the output and whether the use is right, lawful, and accountable.</em></p>
+<p><strong>What you will leave with:</strong> A working ethic for AI-assisted work: you sign for every product, you treat a hallucination in a consequential deliverable as authored harm, you judge before you consult, you spot biased output and own the duty to correct it, you disclose AI assistance when policy or honesty requires it, you stay inside the lawful-use boundary, you respect privacy beyond OPSEC, and you can map all of it back to the DoD AI Ethical Principles.</p>
+<hr />
+<div class="admonition danger">
+<p class="admonition-title">Ethics Is Not OPSEC — Do Not Confuse the Two</p>
+<p>Module 1 taught <strong>data handling</strong>: what flows <em>in</em> — what you are allowed to paste into a system. That is security. <strong>This module is the opposite direction.</strong> Ethics is what you do with what comes <em>out</em>, and whether the use itself is right, lawful, and accountable. You can be perfectly OPSEC-compliant — paste nothing sensitive, use only an authorized system — and still commit an ethical failure by signing for a fabricated claim, hiding that AI wrote your product, or using generation to deceive. Clean inputs do not make an output honest. This module owns the output side.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Verify Currency Before Delivery — This Is Not Legal Advice</p>
+<p>This module references DoD AI policy by name (the five AI Ethical Principles, CDAO Responsible AI guidance, DoDI 5400.19, NIST AI RMF). <strong>All of it is in active revision.</strong> Names, numbers, and requirements change. Nothing here is legal advice or a substitute for your unit's policy. Before any course run — and before you act on any framework cited here — verify the current version against the authoritative source, and when a real situation is unclear, <strong>ask your chain of command or your legal/ethics advisor.</strong> Treat every framework reference below as "confirm before you rely on it."</p>
+</div>
+<hr />
+<h2 id="1-accountability-authorship-you-sign-for-it">1. Accountability &amp; Authorship: You Sign for It</h2>
+<p><strong>BLUF.</strong> Capability does not transfer accountability — the moment your name, your unit, or your judgment rides on a product, you are its author no matter how much of it a model drafted, and "the model said so" is not a defense that exists.</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>You already met the supervisor's third duty in the agent module: <em>delegate, verify, </em><em>own.</em>** This section is where "own" stops being a slogan and becomes a signature. In analysis and operations, products carry weight: a SITREP a commander acts on, an assessment that shapes a decision, a paragraph that ends up in a higher-echelon product. When that product is wrong, no one upstream cares which tool drafted it. They care whose name is on it. That name is yours.</p>
+<h3 id="concepts">Concepts</h3>
+<p><strong>Authorship attaches to the signer, not the drafter.</strong> A model can draft a paragraph faster than you can type it. That speed is real and useful. What it does not do is move the accountability onto the model. The instant you forward, brief, or sign a product, you have adopted every claim in it as your own assertion. You are not "passing along what the AI produced." You are <em>asserting it.</em></p>
+<p><strong>There is no "the model said so" defense.</strong> Imagine explaining a bad call to your commander: "The assessment was wrong because the AI hallucinated it." That sentence does not reduce your responsibility — it <em>adds</em> to it, because it admits you signed for a claim you never verified. The model is a tool, like a calculator or a junior analyst. You do not get to blame the calculator. You ran it; you signed for the answer.</p>
+<p><strong>Vouching is per-claim, not per-document.</strong> Signing for a product does not mean "it reads well" or "it sounds right." It means: for <em>every</em> checkable claim in it — every name, date, figure, citation, causal link — you have either verified it or you are personally willing to be accountable for it being wrong. A product is only as signed-for as its least-checked sentence.</p>
+<div class="admonition warning">
+<p class="admonition-title">Fluent Is Not Verified</p>
+<p>A model produces confident, polished prose whether the underlying claim is true or fabricated (you saw this in Module 1's failure modes). Polish is not a signal of accuracy. The better the writing, the <em>more</em> careful you must be — good prose is exactly what makes an unverified claim slide through review.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">The Signature Test</p>
+<p>Before you forward any AI-assisted product, ask one question: <em>"If every claim in this turned out to be something I have to personally defend in front of my commander, am I ready to defend it?"</em> If the answer is no, you have not finished — you have a draft, not a product.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Make the Signature Literal</summary>
+<p>Have students physically initial the AI-drafted paragraph in the hands-on before they "release" it, and tell them the initials mean <em>I vouch for every claim here.</em> The physical act of signing makes the abstract accountability concrete. Several students will sign, then catch themselves and pull it back to check — that hesitation is the lesson landing.</p>
+</details>
+<details class="note">
+<summary>Instructor Note — Connect Back, Don't Re-Teach</summary>
+<p>This is the supervisor mindset's "own the outcome" duty, now made specific to authored products. Name the link out loud so students see the spiral, but do not re-teach delegate-verify-own from scratch — they have it.</p>
+</details>
+<h3 id="hands-on">Hands-On</h3>
+<p>You will sign for a product — correctly.</p>
+<ol>
+<li>Ask a model to draft a short analytic paragraph (4–6 sentences) on a <strong>non-sensitive, unclassified topic you know well</strong> — a historical event, a piece of doctrine, a technical process. Do not use operational content.</li>
+<li>Read the paragraph and find <strong>every checkable claim</strong>: every name, date, number, and causal "because."</li>
+<li>For each claim, verify it against a source you trust, or mark it "cannot verify."</li>
+<li>The instructor (or a partner) has planted — or you now deliberately introduce — <strong>one false claim</strong> that reads as plausible. Find it. If you signed before checking, you would have asserted it.</li>
+<li>Only after every claim is verified or struck, <strong>initial the paragraph.</strong> Those initials mean: <em>I vouch for every claim here.</em></li>
+</ol>
+<p>You just experienced the difference between <em>receiving</em> output and <em>authoring</em> a product.</p>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>A model drafted a flawless-sounding assessment and you forwarded it under your name. One figure in it was fabricated and a decision was made on it. Who is accountable, and what specifically did you fail to do?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">An AI-drafted assessment you signed and forwarded contained a fabricated statistic that led to a bad decision. What is the correct accounting of responsibility?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">The model is responsible — it generated the false statistic</li>
+    <li data-correct="false">Responsibility is shared equally between you and the AI vendor</li>
+    <li data-correct="true">You are accountable — signing and forwarding the product made you its author, and the duty to verify every claim was yours</li>
+    <li data-correct="false">No one is at fault because hallucination is a known limitation of the technology</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain why capability does not transfer accountability</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand that "the model said so" is not a defense — it is an admission</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know that vouching is per-claim, not "it reads well"</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I have signed for a product only after verifying every checkable claim in it</li>
+</ul>
+<hr />
+<h2 id="2-hallucination-as-an-ethical-failure">2. Hallucination as an Ethical Failure</h2>
+<p><strong>BLUF.</strong> Module 1 taught hallucination as a technical fact about how the engine works; this section reframes it as an <em>ethical event</em> — when a fabricated claim rides into a consequential product under your name, the harm is authored, and your duty to verify scales with the stakes.</p>
+<h3 id="why-this-matters_1">Why This Matters</h3>
+<p>You already know <em>that</em> models hallucinate — you produced one with your own hands in Module 1. What you have not yet been asked is the ethical question that follows: <em>so what do you owe because of it?</em> A hallucination in a sandbox is a curiosity. The same hallucination in an intelligence assessment, a target package, or a product a commander acts on is not a curiosity — it is harm with a person's name attached. This section is about that obligation.</p>
+<h3 id="concepts_1">Concepts</h3>
+<p><strong>The same mechanism, two completely different stakes.</strong> The model has no truth-checking step — it generates statistically likely tokens regardless of whether they are true (Module 1's lesson, not re-taught here). The <em>technical</em> event is identical whether you are asking about trivia or drafting a SITREP. The <em>ethical</em> weight is not. The fabrication that is harmless in one context is consequential in the other. Knowing the mechanism does not discharge the duty — it <em>creates</em> it, because now you cannot claim you didn't know.</p>
+<p><strong>Hallucination becomes authored harm at the point of release.</strong> A false claim sitting in a chat window has harmed no one. The moment you adopt it into a product and release it, you have converted a model's statistical artifact into <em>your assertion</em>, and any harm that follows is harm you authored. The model generated the tokens; you authored the claim by signing for it (Section 1).</p>
+<p><strong>Your verification duty scales with the stakes.</strong> Not every output needs the same scrutiny — that would be paralysis. The principle is proportional: the more consequential the product, the higher the bar before you sign.</p>
+<table>
+<thead>
+<tr>
+<th>Stakes</th>
+<th>Example</th>
+<th>Verification owed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low</td>
+<td>Brainstorming, rough draft you will rewrite</td>
+<td>Sanity-check; obvious errors</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>Internal summary others will read</td>
+<td>Verify key claims, citations, figures</td>
+</tr>
+<tr>
+<td>High</td>
+<td>Product a decision is made on</td>
+<td>Verify <em>every</em> checkable claim against trusted sources, independently</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition danger">
+<p class="admonition-title">The Stakes Set the Standard — Not Your Schedule</p>
+<p>The duty to verify scales with consequence, not with how busy you are. A deadline does not lower the bar on a high-stakes product; it only raises the temptation to skip the check. The fabricated citation that gets a deadline-pressured analyst is exactly the one that ends up in the brief.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Same Fabrication, Different Worlds</p>
+<p>A model invents a plausible source: <em>"per the 2024 regional stability report, cross-border incidents rose 40%."</em> There was no such report; the figure is fabricated.</p>
+<ul>
+<li><strong>In a study note to yourself:</strong> you catch it later, no harm done.</li>
+<li><strong>In an assessment your commander briefs upward:</strong> a 40% figure with a citation is the kind of concrete claim decisions get built on. By the time anyone discovers the report does not exist, the decision has already been made — on your authored claim.</li>
+</ul>
+<p>Same token-generation event. One is a curiosity. One is a failure you signed for.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Don't Let This Become Cynicism</summary>
+<p>The point is calibrated duty, not distrust. The model is extraordinarily useful <em>and</em> a hallucination in a consequential product is an ethical failure. Both are true. A student who walks away refusing to use the tool has missed the lesson as badly as one who signs without checking.</p>
+</details>
+<h3 id="hands-on_1">Hands-On</h3>
+<ol>
+<li>Take a model output that contains a specific factual claim with a citation (reuse one from Module 1's hallucination exercise, or generate a fresh one on a non-sensitive topic).</li>
+<li>Write two sentences: <em>"If this rode into a low-stakes product, the consequence would be <strong><em>. If it rode into a high-stakes product, the consequence would be </em></strong>."</em></li>
+<li>For the high-stakes version, write the verification you would owe before signing.</li>
+<li>Now actually do that verification on the claim. Did it survive?</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You know the model can fabricate. You are on a deadline drafting a product a commander will act on. What does knowing the mechanism <em>obligate</em> you to do that you would not be obligated to do if you didn't know?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">Why is a hallucination in a consequential product framed as an *ethical* failure and not just a technical limitation?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Because the model should have known the claim was false and chose to generate it anyway</li>
+    <li data-correct="false">Because hallucination can always be eliminated with a better prompt</li>
+    <li data-correct="true">Because once you adopt and release a fabricated claim, you have authored the harm — and knowing the mechanism creates a duty to verify that scales with the stakes</li>
+    <li data-correct="false">Because using AI for consequential products is itself prohibited</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_1">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain how a technical fact (hallucination) becomes an ethical event (authored harm)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know the harm attaches at the point of release, when I adopt the claim</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can state how verification duty scales with stakes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand that a deadline raises the temptation, not lowers the standard</li>
+</ul>
+<hr />
+<h2 id="3-over-reliance-automation-bias-deskilling">3. Over-Reliance, Automation Bias &amp; Deskilling</h2>
+<p><strong>BLUF.</strong> Judge first, consult second — automation bias is the documented human tendency to defer to a machine's output over your own assessment, and the antidote is to form and record your own judgment <em>before</em> you see the model's, so the AI sharpens your thinking instead of replacing it.</p>
+<h3 id="why-this-matters_2">Why This Matters</h3>
+<p>The most dangerous failure in AI-assisted analysis is not the model being wrong. It is <em>you</em> going quiet. When a confident output arrives before you have formed your own view, it anchors you — and your independent judgment, the thing the military actually needs from you, never gets exercised. Do that for months and the skill atrophies. The analyst who can no longer assess without the tool has become a relay, not an analyst.</p>
+<h3 id="concepts_2">Concepts</h3>
+<p><strong>Automation bias.</strong> Humans systematically over-trust automated output, especially when it is fluent and fast. You defer to the machine even when your own knowledge should override it. This is well-documented across aviation, medicine, and intelligence — it is a property of human psychology, not a personal weakness, which is exactly why you have to counter it with a <em>procedure</em> rather than willpower.</p>
+<p><strong>Anchoring.</strong> Whatever you see first sets your reference point. If the model's assessment arrives before your own, every subsequent thought is a reaction to it. You are no longer assessing the problem — you are editing the machine's take. Your independent read is gone before it ever existed.</p>
+<p><strong>Deskilling.</strong> A skill you stop exercising decays. If the model forms every assessment and you only approve them, your own analytic muscle weakens over time. The tool was supposed to be a force multiplier; used this way it becomes a substitute, and the day it is unavailable — or wrong in a way only your judgment would catch — you have nothing to fall back on.</p>
+<p><strong>The countermeasure: judge first, consult second.</strong> Form your own assessment and <em>write it down</em> before you see the model's. This single ordering change defeats anchoring (you have a reference point of your own), exercises your skill (you did the analysis), and turns the model into what it should be — a second opinion you compare against, reconcile with, or reject.</p>
+<div class="admonition tip">
+<p class="admonition-title">Where the Disagreements Live the Real Learning</p>
+<p>When your written assessment and the model's disagree, that gap is the most valuable thing on the page. Either the model caught something you missed, or you caught something it fabricated. Investigate every disagreement — do not just default to the machine. Defaulting to the machine <em>is</em> automation bias.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Speed Is the Trap</p>
+<p>The model's biggest selling point — instant output — is exactly what triggers automation bias. The faster the answer arrives, the more tempting it is to skip your own. Discipline means accepting a slower start (your own assessment first) to get a better, owned result.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Make the Ordering Non-Negotiable</summary>
+<p>The whole lesson lives in the <em>sequence.</em> If students peek at the model first, the exercise is worthless and automation bias wins silently. Enforce it: own assessment written and visible <em>before</em> the model's is revealed. Have them keep both so they can compare.</p>
+</details>
+<h3 id="hands-on_2">Hands-On</h3>
+<p>This exercise only works if you do the steps in order. Do not peek ahead.</p>
+<ol>
+<li>Pick an analytic question on a non-sensitive topic you have some knowledge of (e.g., "what were the main drivers of [historical event]?").</li>
+<li><strong>Before touching any AI:</strong> write your own assessment. Three to five sentences. Commit to it.</li>
+<li><em>Now</em> ask the model the same question.</li>
+<li>Compare. Where do you agree? Where do you disagree?</li>
+<li>For every disagreement, decide <em>with reasoning</em> who is right — and verify, do not default to the machine.</li>
+<li>Write one sentence: did the model sharpen your assessment, or were you about to let it replace it?</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You have started reaching for the model <em>before</em> forming your own view on every problem. What skill is quietly eroding, and what is the one-step fix?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">What is the single most effective discipline against automation bias in AI-assisted analysis?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Always run the prompt twice and average the two answers</li>
+    <li data-correct="false">Use the most powerful model so its output is more trustworthy</li>
+    <li data-correct="true">Form and write down your own assessment before you see the model's, then compare</li>
+    <li data-correct="false">Accept the model's output whenever it sounds more confident than you feel</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_2">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can define automation bias and explain why it is psychology, not weakness</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand how anchoring erases my independent judgment</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain deskilling and why it is a long-term operational risk</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I have run a judge-first, consult-second loop and compared the two</li>
+</ul>
+<hr />
+<h2 id="4-bias-fairness-in-ai-assisted-analysis">4. Bias &amp; Fairness in AI-Assisted Analysis</h2>
+<p><strong>BLUF.</strong> A model learned its patterns from human-produced text, so it inherited human biases — and in analysis that surfaces as output that matches a stereotype instead of the evidence, which you have an ethical duty to recognize and refuse to launder into your product.</p>
+<h3 id="why-this-matters_3">Why This Matters</h3>
+<p>Module 1 taught you the <em>literacy</em> — outputs can be skewed by training data, and you learned to <em>spot</em> it. This section is the <em>duty.</em> Spotting a biased output and shrugging is not neutral; if you pass it into an assessment, you have laundered a stereotype into an official product and given it the credibility of your signature. In intelligence work, that can mean assessing a person, group, or population based on what the training data assumed rather than what the evidence shows — which is both an analytic failure and an ethical one.</p>
+<h3 id="concepts_3">Concepts</h3>
+<p><strong>Where the bias comes from.</strong> The model was <em>trained, not programmed</em> (Module 1). It learned statistical patterns from a vast body of human text — and that text carries human assumptions, stereotypes, and skews. There is no rulebook to audit; the bias is baked into the weights. The model is not malicious. It is a mirror of its training data, and that data was not neutral.</p>
+<p><strong>Stereotype-matching vs. evidence-based output.</strong> This is the distinction to internalize. A <em>stereotype-matching</em> output fills a gap with the statistically common assumption — it tells you what the training data expected, dressed up as analysis. An <em>evidence-based</em> output is anchored to the specific facts you provided. The danger is that both arrive in the same confident voice. Your job is to ask: <em>is this conclusion coming from the evidence in front of us, or from a pattern the model absorbed about people like this?</em></p>
+<p><strong>The laundering risk.</strong> Bias is most dangerous when it is invisible. The model produces a fluent assessment; you adopt it; now a stereotype wears the authority of an official product and a human signature. The fluency is exactly what hides the bias. You are the filter that stops it — or the conduit that passes it on.</p>
+<div class="admonition example">
+<p class="admonition-title">Spotting Stereotype-Matching</p>
+<p>You ask a model to profile the likely behavior of a group based on a thin description. It returns a confident, detailed assessment.</p>
+<ul>
+<li><strong>Test:</strong> strip out the group label and ask what <em>specific evidence</em> in your input supports each claim.</li>
+<li>If the claims survive only because of the label — not the facts — the model is matching a stereotype, not analyzing evidence. That assessment does not go in your product.</li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Bias Is Not Always About Demographics</p>
+<p>Stereotype-matching shows up anywhere the training data had a strong prior: which actor is "probably" responsible, what a situation "usually" means, what a pattern "typically" indicates. Anytime the model reaches a confident conclusion that the specific evidence does not support, treat it as a possible inherited bias and check it against the facts.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Hold the Line Between M1 and M9</summary>
+<p>Module 1 owns <em>spotting</em> skewed output (literacy). This module owns the <em>ethical duty</em> not to launder it (policy/conduct). Do not re-teach the mechanism of bias here — students have it. Teach the obligation: spotting without correcting is a choice, and it is the wrong one.</p>
+</details>
+<h3 id="hands-on_3">Hands-On</h3>
+<ol>
+<li>Ask a model to make an assessment or prediction about a group or actor from a deliberately thin, non-sensitive description (use a fictional or historical scenario — never real operational subjects).</li>
+<li>Read the output and underline every confident conclusion.</li>
+<li>For each one, ask: <em>what specific fact in my input supports this?</em> Mark the ones that survive only on assumption.</li>
+<li>Rewrite the assessment using only evidence-supported claims. Note how much shorter — and more honest — it gets.</li>
+<li>Write one sentence on what you would have laundered into a product if you had accepted the first output.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>A model hands you a confident profile of a group. How do you tell whether it is reading the evidence you gave it or replaying a stereotype from its training data — and what do you owe once you can tell?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">A model produces a confident assessment of a group that goes beyond the evidence you provided. What is the ethical duty?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Use it — the model processed more data than any human could, so its priors are probably right</li>
+    <li data-correct="false">Spotting the bias is enough; recognizing it discharges the responsibility</li>
+    <li data-correct="true">Test each claim against the specific evidence, strip out anything supported only by assumption, and refuse to pass a stereotype into the product</li>
+    <li data-correct="false">Soften the wording so the bias is less obvious, then include it</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_3">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain why a model inherits human bias from its training data</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can distinguish stereotype-matching from evidence-based output</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand the laundering risk — passing bias into a signed product</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know that spotting bias without correcting it is itself a failure</li>
+</ul>
+<hr />
+<h2 id="5-disclosure-attribution-provenance-of-your-product">5. Disclosure &amp; Attribution: Provenance of Your Product</h2>
+<p><strong>BLUF.</strong> Provenance is the answer to "where did this come from" — and when AI assistance is material to a product, honesty and policy can require you to disclose it; absent explicit guidance, default to traceability so the chain knows what touched your work.</p>
+<h3 id="why-this-matters_4">Why This Matters</h3>
+<p>A product's credibility depends on knowing how it was made. If a reviewer, a commander, or a downstream consumer assumes a human analyst hand-built an assessment that was in fact largely model-generated, they are calibrating their trust on a false premise. Disclosure is not an admission of weakness — it is what lets the people relying on your product weight it correctly. In public-facing work, it can also be a hard policy requirement.</p>
+<h3 id="concepts_4">Concepts</h3>
+<p><strong>Provenance.</strong> Where a product came from and what touched it along the way — sources, tools, and the role AI played. Provenance is what makes a product <em>traceable</em>, and traceability is one of the DoD AI Ethical Principles you will map in Section 8.</p>
+<p><strong>When disclosure matters most.</strong> Not every use of a spell-checker needs a footnote. Disclosure matters when AI assistance is <em>material</em> — when it shaped the substance, structure, or conclusions of the product, not just the polish. The test: <em>would a reasonable consumer of this product weight it differently if they knew how much of it the model produced?</em> If yes, the AI role is material.</p>
+<p><strong>Public affairs is a hard line.</strong> Content released to the public is governed by policy, not personal judgment. <strong>DoDI 5400.19 (Public Affairs Use of Artificial Intelligence)</strong> establishes that DoD personnel provide notice when generative AI is used to create public-facing content, that AI-generated or AI-modified visual information cites the technology's use, and that components exercise human oversight and approval of generative AI outputs before public release. If your product is going outside the wire to the public, AI involvement is not a judgment call — it is a labeling requirement.</p>
+<p><strong>Default to traceability when no policy is stated.</strong> Internal products often have no explicit AI-disclosure rule yet. The safe default is <em>traceability</em>: note that AI assisted, and how, so the chain can account for it. It is far easier to defend "I disclosed and it wasn't required" than "I didn't disclose and it was."</p>
+<div class="admonition warning">
+<p class="admonition-title">Verify Currency — DoDI 5400.19 Is in Active Revision</p>
+<p>DoDI 5400.19 and the broader DoD public-affairs and disclosure guidance change. Confirm the current version and your unit's implementing policy before you rely on any specific requirement stated here. This is not legal advice — when a disclosure question is real and unclear, ask your PAO, chain of command, or legal advisor.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">The One-Line Provenance Note</p>
+<p>When in doubt and no policy says otherwise, attach a one-line note to the product: <em>"Drafted with AI assistance; all claims verified by [you]."</em> It costs nothing, it preserves traceability, and it makes your verification explicit — which is also your Section 1 signature.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Disclosure ≠ Confession</summary>
+<p>Students often hear "disclose AI use" as "admit you cheated." Reframe it: disclosure is a <em>quality and trust</em> practice, the same as citing a source. The dishonest move is letting a consumer believe a product was built a way it wasn't. Pair this with the public-affairs requirement so they see it is also policy, not just etiquette.</p>
+</details>
+<h3 id="hands-on_4">Hands-On</h3>
+<ol>
+<li>Take a recent (non-sensitive) product you built with AI assistance, or build a short one now.</li>
+<li>Apply the materiality test: did AI shape the <em>substance</em> or just the polish? Write the one-sentence answer.</li>
+<li>Draft a one-line provenance note appropriate to the product.</li>
+<li>Decide its destination: internal-only, or public-facing? If public-facing, write what DoDI 5400.19's principles would require — and note that you would verify the current policy first.</li>
+<li>Identify who in your chain you would ask if you were unsure whether disclosure was required.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You used a model to draft most of an assessment, then verified and lightly edited it. There is no explicit disclosure policy for internal products in your unit. What is your default, and why is it the safer call?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You are preparing AI-assisted content for public release. What does the existence of DoDI 5400.19 mean for you?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Nothing — disclosure of AI use is always a personal judgment call</li>
+    <li data-correct="false">You may disclose if you want, but public release is exempt from labeling</li>
+    <li data-correct="true">Public-facing AI-generated or AI-modified content carries notice/labeling and human-oversight requirements — verify the current policy and follow it, it is not optional</li>
+    <li data-correct="false">You only need to disclose if someone specifically asks how the product was made</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_4">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can define provenance and connect it to traceability</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can apply the materiality test for when AI use must be disclosed</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know DoDI 5400.19 governs AI use in public-facing content (and that I must verify its current form)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I default to traceability when no policy is stated</li>
+</ul>
+<hr />
+<h2 id="6-dual-use-misuse-awareness">6. Dual-Use &amp; Misuse Awareness</h2>
+<p><strong>BLUF.</strong> The same generative capability that drafts your assessment can fabricate convincing deception and synthetic media — this section is awareness of that dual-use reality and the lawful-use boundary, not a how-to, so you recognize misuse and stay on the right side of the line.</p>
+<h3 id="why-this-matters_5">Why This Matters</h3>
+<p>Generative AI is a dual-use capability: the feature that helps you also enables harm. You do not need to know <em>how</em> to misuse it — and this course will not teach that. You do need to recognize that the capability exists, that it has a lawful-use boundary, and that your job is to stay inside that boundary and recognize when something has crossed it. An operator who does not know synthetic media is trivially generated is an operator who can be deceived by it.</p>
+<h3 id="concepts_5">Concepts</h3>
+<p><strong>Dual-use.</strong> A capability with both legitimate and harmful applications. A model that can write a fluent report can also write fluent disinformation. A model that can edit an image to clarify it can also fabricate one that never happened. The capability is neutral; the <em>use</em> is what is governed.</p>
+<p><strong>Synthetic media and fabricated deception.</strong> Generative tools can produce convincing fake text, images, audio, and video. This matters to you in two directions:
+- <strong>As a potential target:</strong> adversaries can use it against you and your sources. Calibrate your trust in unverified media accordingly.
+- <strong>As an operator:</strong> generating deceptive content is governed by law, authorities, and policy — it is not something an individual freelances. "I could make this" is never the same as "I am authorized to make this."</p>
+<p><strong>The lawful-use boundary.</strong> This is the line. Whether a given use of generative capability is permitted depends on law, on your unit's authorities, and on policy — not on whether the tool <em>can</em> do it. Technical capability is not authorization. When you are near the line — anything involving deception, impersonation, fabricated media, or influence — stop and route it through your chain and legal, not your own judgment.</p>
+<div class="admonition danger">
+<p class="admonition-title">Capability Is Not Authorization</p>
+<p>The single most important idea in this section: <em>the tool being able to do something tells you nothing about whether you are allowed to.</em> Authorization comes from law and policy and your chain — never from the model's willingness to comply. This mirrors the data-handling lesson (capability ≠ authorization) but points the other direction: there, the question was what you can put in; here, it is what you are permitted to produce.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Awareness, Not Instruction</p>
+<p>This section deliberately does not teach techniques for generating deceptive content. The objective is recognition and the boundary, full stop. If a task seems to call for fabricated or deceptive media, that is your cue to <em>stop and ask</em>, not to figure out how.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Keep It on the Boundary</summary>
+<p>Resist the pull toward either a how-to or a fearmongering session. The deliverable is a calibrated operator: knows the capability exists, knows it is dual-use, knows the boundary is set by law/policy/authorities, and knows the reflex is to route near-the-line questions upward. Do not let the discussion drift into specific generation methods.</p>
+</details>
+<h3 id="hands-on_5">Hands-On</h3>
+<p>No generation today — this is a recognition exercise.</p>
+<ol>
+<li>List three legitimate uses of generative AI in your work and three ways the <em>same</em> capabilities could be misused. Notice they are the same features.</li>
+<li>For each misuse, write one sentence on who sets the boundary (law, authorities, policy, chain).</li>
+<li>Write down the reflex: when a task approaches deception, impersonation, or fabricated media, <em>I stop and route it to ___.</em></li>
+<li>Reflect: how would you verify a piece of media before trusting it, knowing how easily it can be synthesized?</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>A tasking could be accomplished by generating a convincing piece of fabricated media, and the model would do it without complaint. What does the model's willingness tell you about whether you are authorized — and what is your next move?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">A generative tool will readily produce a piece of fabricated media that would help with a tasking. What does that tell you about whether the use is permitted?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">It is permitted — if the tool allows it, the use is within bounds</li>
+    <li data-correct="false">It is permitted as long as no sensitive data went into the prompt</li>
+    <li data-correct="true">Nothing — technical capability is not authorization; permissibility is set by law, authorities, and policy, and near-the-line tasks get routed up the chain</li>
+    <li data-correct="false">It is prohibited only if the output will be released to the public</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_5">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can define dual-use and give an example from my own work</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand synthetic media as both a threat to me and a boundary on me</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can state the lawful-use boundary: capability is not authorization</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know my reflex is to stop and route near-the-line tasks up the chain</li>
+</ul>
+<hr />
+<h2 id="7-privacy-collection-ethics-beyond-opsec">7. Privacy &amp; Collection Ethics Beyond OPSEC</h2>
+<p><strong>BLUF.</strong> OPSEC and data handling protect <em>your</em> sensitive information; privacy and collection ethics govern <em>other people's</em> — and "technically collectible" is not the same as "ethically and lawfully appropriate to collect, retain, or aggregate."</p>
+<h3 id="why-this-matters_6">Why This Matters</h3>
+<p>Module 1's data-handling rule was about protecting what flows in — keeping sensitive material out of unauthorized systems. This is the adjacent but distinct duty: respecting the privacy of third parties whose data you <em>could</em> gather. AI makes collection and aggregation dramatically easier, which means the ethical and legal questions arrive faster and at larger scale. The fact that a tool can vacuum up and cross-reference data about people does not mean you should — and in many cases, law and policy say you must not.</p>
+<h3 id="concepts_6">Concepts</h3>
+<div class="admonition note">
+<p class="admonition-title">Connecting to Module 1 — Once</p>
+<p>Module 1 owns <em>data handling</em>: what sensitive material you may put <strong>into</strong> a system (the inbound, OPSEC/classification question). This section is the other side: the ethics of the data you <strong>collect and use</strong> about other people. Same care for information, opposite direction. We connect here and do not re-teach the inbound rule — you have it.</p>
+</div>
+<p><strong>Third-party and incidental data.</strong> Collection and analysis frequently sweep in people who are not the target — bystanders, contacts, family members, whole populations. That incidental data carries privacy obligations even though you were not seeking it. "It was already in the dataset" does not dissolve the obligation.</p>
+<p><strong>Consent and expectation.</strong> People have reasonable expectations about how their information is used. Data offered for one purpose does not become fair game for any purpose. AI tools that re-purpose, infer, and cross-reference can quietly blow past the original expectation — and that gap is an ethical (and often legal) problem.</p>
+<p><strong>Aggregation.</strong> This is the multiplier AI makes dangerous. Individually harmless data points — a location here, a name there, a public post — combine into a detailed picture of a person that none of the pieces revealed alone. The whole is far more sensitive than the parts. AI is exceptionally good at exactly this kind of correlation, which means you can build an intrusive profile without ever touching anything that looked sensitive on its own.</p>
+<p><strong>Technically collectible ≠ ethically/lawfully appropriate.</strong> This is the section's spine. That data <em>can</em> be gathered, correlated, or retained says nothing about whether you are <em>permitted</em> to. The boundary is set by law, authorities, and policy — including the rules governing U.S. persons information — not by what the tool makes easy.</p>
+<div class="admonition danger">
+<p class="admonition-title">Aggregation Is the Quiet Line-Crosser</p>
+<p>The most common way to cross a privacy line with AI is not one dramatic collection — it is assembling many innocuous pieces into something intrusive, fast, at scale, without noticing you crossed a threshold. Watch the <em>aggregate</em>, not just each input. When the picture you are building gets more detailed than the task requires, stop.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">U.S. Persons and Legal Boundaries — Ask, Don't Guess</p>
+<p>Rules governing the collection, retention, and dissemination of information — especially U.S. persons information — are strict, specific, and not yours to interpret on the fly. This is not legal advice. When a privacy or collection question touches these boundaries, route it to your chain of command and legal/oversight advisor <em>before</em> you act.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Distinguish Cleanly from OPSEC</summary>
+<p>Students conflate this with data handling constantly. Hold the distinction hard: OPSEC/data-handling = protecting <em>our</em> sensitive information (inbound). Privacy/collection ethics = respecting <em>others'</em> information and the limits on gathering it (outbound/about-others). The aggregation point is the one most students have never considered — spend time there.</p>
+</details>
+<h3 id="hands-on_6">Hands-On</h3>
+<p>No collection today — a reasoning exercise.</p>
+<ol>
+<li>Imagine a (fictional) task to build a profile of a person from open sources. List five individually-harmless data points.</li>
+<li>Combine them. Write down what the <em>aggregate</em> reveals that no single point did.</li>
+<li>Identify where in that aggregation you would want to stop and ask — and who you would ask.</li>
+<li>Write one sentence distinguishing this duty from the Module 1 data-handling rule, in your own words.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>Every individual data point about a person is publicly available and individually harmless. An AI tool can correlate them into a detailed profile in seconds. Why might that aggregation still cross an ethical or legal line — and what do you do when you sense it might?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">Why is "this data is technically collectible" not sufficient justification to collect and aggregate it?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Because collectible data is usually inaccurate</li>
+    <li data-correct="false">Because it always violates OPSEC to collect third-party data</li>
+    <li data-correct="true">Because ethical and lawful appropriateness — including consent, expectation, and the rules on U.S. persons information — is a separate question from technical capability, and aggregation can cross a line no single piece did</li>
+    <li data-correct="false">Because the AI tool might hallucinate parts of the profile</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_6">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can distinguish privacy/collection ethics from Module 1 data handling</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand third-party/incidental data carries obligations</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can explain why aggregation is the AI-amplified privacy risk</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know "technically collectible" is not "lawfully/ethically appropriate" — and to route hard cases up</li>
+</ul>
+<hr />
+<h2 id="8-dod-ai-ethical-principles-lawful-use-close">8. DoD AI Ethical Principles &amp; Lawful-Use Close</h2>
+<p><strong>BLUF.</strong> Everything in this module rolls up into five words the DoD adopted as its AI Ethical Principles — <strong>Responsible, Equitable, Traceable, Reliable, Governable</strong> — and this section maps each one back to the duties you just practiced, then closes with the standing order: this is not legal advice, follow unit policy, and ask the chain or legal when unsure.</p>
+<h3 id="why-this-matters_7">Why This Matters</h3>
+<p>You did not just learn seven disconnected habits. You practiced the operator-level expression of a coherent ethical framework the DoD has already adopted. Seeing the map does two things: it gives your habits an authoritative spine you can cite, and it gives you the vocabulary to recognize the same principles when they appear in policy, in guidance, and in the main course ahead.</p>
+<h3 id="concepts_7">Concepts</h3>
+<p><strong>The DoD AI Ethical Principles.</strong> The Department of Defense adopted five principles for the ethical use of AI: <strong>Responsible, Equitable, Traceable, Reliable, Governable.</strong> They were written for how the Department develops and fields AI capabilities — but every one of them has a direct, individual-operator expression, which is exactly what Sections 1–7 trained.</p>
+<p><strong>The map — your habits back to the principles:</strong></p>
+<table>
+<thead>
+<tr>
+<th>DoD Principle</th>
+<th>Plain meaning</th>
+<th>Where you practiced it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Responsible</strong></td>
+<td>Humans exercise appropriate judgment and remain accountable for AI use and outcomes</td>
+<td>§1 You sign for it; §3 judge first, consult second</td>
+</tr>
+<tr>
+<td><strong>Equitable</strong></td>
+<td>Deliberate steps to minimize unintended bias</td>
+<td>§4 Bias &amp; fairness — don't launder stereotype-matching into products</td>
+</tr>
+<tr>
+<td><strong>Traceable</strong></td>
+<td>Transparent, auditable methods, sources, and provenance</td>
+<td>§5 Disclosure &amp; provenance; §2 verifying claims to trusted sources</td>
+</tr>
+<tr>
+<td><strong>Reliable</strong></td>
+<td>Explicit, well-defined uses; safety and effectiveness tested within them</td>
+<td>§2 Hallucination as failure; §6 staying inside the lawful-use boundary</td>
+</tr>
+<tr>
+<td><strong>Governable</strong></td>
+<td>Detect and avoid unintended consequences; ability to disengage</td>
+<td>§6 dual-use boundary; §7 privacy/aggregation limits; the reflex to stop and route up</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The supporting frameworks (cite by name, verify currency).</strong> Beyond the five principles, three reference points anchor responsible use — all in active revision, none legal advice:</p>
+<ul>
+<li><strong>DoD CDAO Responsible AI guidance</strong> — the Chief Digital and Artificial Intelligence Office operationalizes the principles through Responsible AI guidance and generative-AI guardrails for DoD components. This is the "how we actually do it" layer under the five principles.</li>
+<li><strong>DoDI 5400.19</strong> — public-affairs disclosure/labeling for AI in public-facing content (Section 5).</li>
+<li><strong>NIST AI RMF</strong> — a light secondary reference: the AI Risk Management Framework's four core functions — <strong>Govern, Map, Measure, Manage</strong> — give a common vocabulary for managing AI risk across its lifecycle. You don't implement it as an individual; you recognize the language when it appears in policy.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Verify Currency Before Delivery — All Five Frameworks</p>
+<p>The DoD AI Ethical Principles, CDAO Responsible AI guidance, DoDI 5400.19, and the NIST AI RMF are all subject to revision. Confirm the current version and your unit's implementing policy before you rely on any specific wording here. <strong>None of this is legal advice.</strong> It is a literacy map, not a compliance checklist.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">The Standing Order — How This Module Closes</p>
+<p>Three sentences carry the whole module forward:
+<strong>(1)</strong> You sign for every AI-assisted product, and capability never transfers accountability.
+<strong>(2)</strong> Verify before you act, and your duty scales with the stakes.
+<strong>(3)</strong> When the right call is unclear — disclosure, dual-use, privacy, lawfulness — <strong>stop and ask your chain of command or legal/ethics advisor.</strong> This is not legal advice and does not replace unit policy. The operator who asks is never the one who fails the ethics check.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Land the Coherence</summary>
+<p>The payoff of this section is recognition: students realize the seven habits were one framework all along. Walk the map row by row so the principles stop being abstract words and become things they already did. Reinforce that "ask the chain/legal" is a <em>strength</em>, not an admission of incompetence — the whole module is permission to escalate.</p>
+</details>
+<h3 id="hands-on_7">Hands-On</h3>
+<ol>
+<li>Without looking back, try to name the five DoD AI Ethical Principles. Check yourself against the table.</li>
+<li>For each principle, write the one habit from Sections 1–7 that expresses it.</li>
+<li>Pick the principle you are personally weakest on and write one concrete change to your workflow.</li>
+<li>Write the standing-order sentence in your own words: <em>when ethics is unclear, I ___.</em></li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>Map one real (non-sensitive) AI-assisted task you expect to do this month onto the five principles. Which principle is most at risk in that task, and what will you do to honor it?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">Which set correctly names the five DoD AI Ethical Principles?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Accurate, Fast, Secure, Auditable, Approved</li>
+    <li data-correct="true">Responsible, Equitable, Traceable, Reliable, Governable</li>
+    <li data-correct="false">Legal, Ethical, Transparent, Tested, Supervised</li>
+    <li data-correct="false">Govern, Map, Measure, Manage, Monitor</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-block">
+  <p class="quiz-question">You face an AI-use decision where disclosure and lawfulness are genuinely unclear and no policy squarely covers it. What is the correct move?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Make your best personal judgment and proceed — escalating wastes time</li>
+    <li data-correct="false">Default to whatever the model recommends when asked about the policy</li>
+    <li data-correct="true">Stop and ask your chain of command or legal/ethics advisor — this is not legal advice and does not replace unit policy</li>
+    <li data-correct="false">Proceed as long as no sensitive data was entered into the tool</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_7">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the five DoD AI Ethical Principles from memory</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can map each principle to a habit I practiced in this module</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know CDAO RAI guidance, DoDI 5400.19, and NIST AI RMF by name — and that I must verify their currency</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know the standing order: verify, sign, and when unclear, ask the chain or legal</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Section</th>
+<th>The duty</th>
+<th>The one-line takeaway</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Accountability &amp; Authorship</td>
+<td>You sign for it</td>
+<td>Capability does not transfer accountability; "the model said so" is no defense</td>
+</tr>
+<tr>
+<td>2. Hallucination as Ethical Failure</td>
+<td>Verify to the stakes</td>
+<td>A fabricated claim you release is authored harm; duty scales with consequence</td>
+</tr>
+<tr>
+<td>3. Over-Reliance &amp; Automation Bias</td>
+<td>Judge first, consult second</td>
+<td>Form and write your own assessment before you see the model's</td>
+</tr>
+<tr>
+<td>4. Bias &amp; Fairness</td>
+<td>Don't launder bias</td>
+<td>Spot stereotype-matching vs. evidence; refuse to pass it into a product</td>
+</tr>
+<tr>
+<td>5. Disclosure &amp; Attribution</td>
+<td>Default to traceability</td>
+<td>Disclose material AI use; public-facing content is governed by DoDI 5400.19</td>
+</tr>
+<tr>
+<td>6. Dual-Use &amp; Misuse</td>
+<td>Capability ≠ authorization</td>
+<td>Recognize misuse; stay inside the lawful-use boundary; route near-line tasks up</td>
+</tr>
+<tr>
+<td>7. Privacy &amp; Collection Ethics</td>
+<td>Respect others' data</td>
+<td>"Technically collectible" ≠ "lawfully/ethically appropriate"; watch aggregation</td>
+</tr>
+<tr>
+<td>8. DoD Principles &amp; Lawful-Use Close</td>
+<td>Map it all back</td>
+<td>Responsible, Equitable, Traceable, Reliable, Governable — verify currency; ask when unsure</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="end-of-module">End of Module</h2>
+<p>You now hold the rulebook for <em>what you do with AI output and whether the use is right.</em> This is distinct from — and stacks on top of — the data-handling discipline from Module 1. Carry three things forward: <strong>you sign for every product, your verification duty scales with the stakes, and when the ethical call is unclear you stop and ask your chain or legal.</strong> None of the policy here is legal advice or a substitute for your unit's guidance — verify currency before you rely on it.</p>
+<p><strong>Next:</strong> Module 10 — <em>Field Craft: Markdown, Code, Tools &amp; Context Files</em>, where the responsible habits you just built get applied to real artifacts.
+</content>
+</invoke></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1751 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../07-commanding-an-agent/">
+      
+      
+        <link rel="next" href="../09-ethics/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>8 — Ammunition Discipline: Tokens, Context & Cost - AI and Agentics Basics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/quiz.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ammunition-discipline-tokens-context-cost" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AI and Agentics Basics" class="md-header__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AI and Agentics Basics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              8 — Ammunition Discipline: Tokens, Context & Cost
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Get Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../overview/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Course Map & Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-ai-foundations/" class="md-tabs__link">
+          
+  
+  
+  Course Modules
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../instructor/teaching-guide/" class="md-tabs__link">
+          
+  
+  
+  Instructor Handbooks
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AI and Agentics Basics" class="md-nav__button md-logo" aria-label="AI and Agentics Basics" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AI and Agentics Basics
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Get Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Map & Schedule
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Modules
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Course Modules
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-ai-foundations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1 — Know Your Weapon: How AI Actually Works
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-prompting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2 — Briefing the Machine: Prompting as a Mission Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-grounding-multimodality/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3 — Feeding the Machine: Grounding & Multimodality
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-personalizing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4 — Standing Orders: Making the AI Know You
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-terminal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5 — Know the Terrain: Filesystem & Terminal
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-version-control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6 — The Duty Logbook: Version Control with Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-commanding-an-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7 — From Advisor to Operator: Commanding an Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 — Ammunition Discipline: Tokens, Context & Cost
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    8 — Ammunition Discipline: Tokens, Context & Cost
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#spend-dont-just-count-from-knowing-a-token-to-using-one" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spend, Don't Just Count: From Knowing a Token to Using One
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spend, Don&#39;t Just Count: From Knowing a Token to Using One">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-model-landscape-families-tiers-and-the-selection-rule" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The Model Landscape: Families, Tiers, and the Selection Rule
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Model Landscape: Families, Tiers, and the Selection Rule">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#context-windows-operationally-the-window-that-fills-silently" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Context Windows, Operationally: The Window That Fills Silently
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Context Windows, Operationally: The Window That Fills Silently">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ammunition-discipline-the-habits-that-keep-cost-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ammunition Discipline: The Habits That Keep Cost Down
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ammunition Discipline: The Habits That Keep Cost Down">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-ai-is-delivered-and-paid-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How AI Is Delivered and Paid For
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How AI Is Delivered and Paid For">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Matters
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concepts_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Concepts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hands-on_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-On
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#readiness-check_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Readiness Check
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#end-of-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End of Module
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-ethics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    9 — Rules of Engagement: Ethics & Responsible AI Use
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-field-craft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10 — Field Craft: Markdown, Code, Tools & Context Files
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-capstone/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    11 — The Proving Ground: Capstone Build
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-bridge-advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 — Crossing the LD: Bridge to Advanced Agentics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary & Quick Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Instructor Handbooks
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Instructor Handbooks
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/teaching-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Consolidated Teaching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/style-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Content Style Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instructor/prereq-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Instructor Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ammunition-discipline-tokens-context-cost">Ammunition Discipline: Tokens, Context &amp; Cost</h1>
+<p><strong>Who this is for:</strong> Someone who already knows what a token is (Module 1) and now needs to spend tokens like a professional — choosing the right model, managing a context window that fills silently, and keeping cost under control on real work.</p>
+<p><strong>What you will leave with:</strong> A model-selection rule a junior can apply on the spot, an operational understanding of how context fills (and how to stop it from degrading your work), the four habits that keep token cost down, and a clear picture of how AI is delivered and paid for.</p>
+<hr />
+<h2 id="spend-dont-just-count-from-knowing-a-token-to-using-one">Spend, Don't Just Count: From Knowing a Token to Using One</h2>
+<p><strong>BLUF.</strong> You already know what a token <em>is</em> from Module 1 — a chunk of text the model reads and writes, roughly three-quarters of an English word. This module is about how to <em>spend</em> tokens like a pro: every token costs money and time, and discipline with them is the difference between fast, cheap, defensible work and slow, expensive, sloppy work.</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>Module 1 gave you the mechanics: the model reads and writes in tokens, and a context window is a finite whiteboard. That was literacy. This is fieldcraft. Once you are commanding an agent that reads files, runs commands, and iterates, tokens are ammunition — and ammunition discipline is what keeps you effective when the mission runs long.</p>
+<h3 id="concepts">Concepts</h3>
+<p>This whole module rests on one fact you already own from Module 1, so we do not re-teach it: <strong>a token is the unit of text the model processes, roughly 0.75 of an English word; code is denser, so it costs more tokens per line.</strong> That is the last time we define it. From here, everything is about <em>spending</em>.</p>
+<p>Three things scale with the tokens you spend:</p>
+<ul>
+<li><strong>Cost.</strong> Every input token and every output token costs money. Output tokens cost more than input tokens. Total cost = (input tokens x input price) + (output tokens x output price).</li>
+<li><strong>Speed.</strong> More tokens means a slower response. Long prompts and long histories drag.</li>
+<li><strong>Accuracy.</strong> Longer is not better. Verbose prompts add noise. A tight, well-structured prompt often beats a rambling one.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">The Mental Shift</p>
+<p>In Module 1 you learned to <em>recognize</em> a token. Here you learn to <em>budget</em> it. The operator who treats tokens as free will blow through context, overpay, and iterate ten times. The operator who treats them as ammunition gets the same result in one disciplined pass.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Do Not Re-Define the Token</summary>
+<p>Resist the urge to re-run the Module 1 token explanation. Students who hear "a token is roughly 0.75 words" twice tune out the new material. Open by <em>asserting</em> the prior knowledge ("you already know what a token is") and move immediately to spending it. If a student is shaky on the definition, route them back to Module 1, do not re-teach it here.</p>
+</details>
+<h3 id="hands-on">Hands-On</h3>
+<ol>
+<li>Take a prompt you would normally send. Optionally paste it into a tokenizer (such as <code>platform.openai.com/tokenizer</code>) and note the token count next to the word count.</li>
+<li>Now rewrite the same request as a structured prompt: task, context, constraint, output format. Count again.</li>
+<li>Notice which version is <em>longer in the right way</em> — more structure, not more noise.</li>
+</ol>
+<p>You are not learning what a token is. You are learning to feel its weight.</p>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>In Module 1 you watched a context window fill and degrade. Knowing that a token costs money and time, what does a sprawling 80-turn conversation cost you that a tight one does not?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">This module deliberately does not re-define what a token is. Why?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Tokens are too complex to define in a prerequisite course</li>
+    <li data-correct="true">You already learned the definition in Module 1 — this module is about spending tokens well, not defining them</li>
+    <li data-correct="false">The definition changes with every model release</li>
+    <li data-correct="false">Tokens only matter for agents, not chatbots</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can state, from Module 1, what a token is without re-reading it</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand that cost, speed, and accuracy all scale with tokens spent</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know output tokens cost more than input tokens</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I treat tokens as ammunition, not as free</li>
+</ul>
+<hr />
+<h2 id="the-model-landscape-families-tiers-and-the-selection-rule">The Model Landscape: Families, Tiers, and the Selection Rule</h2>
+<p><strong>BLUF.</strong> Model families each offer a fast/cheap tier, a balanced tier, and a powerful/expensive tier — and the single most useful cost skill a junior can learn is matching the tier to the task instead of reaching for the biggest model every time.</p>
+<h3 id="why-this-matters_1">Why This Matters</h3>
+<p>The biggest lever on cost is not prompt length — it is which model you point at the job. Reaching for the most powerful model on every task is like running a diesel generator to charge a phone: expensive, slow, and unnecessary. A simple decision rule fixes most of it.</p>
+<h3 id="concepts_1">Concepts</h3>
+<p>Three major families dominate current agentic work: <strong>Claude</strong> (Anthropic), <strong>GPT</strong> (OpenAI), and <strong>Gemini</strong> (Google). Each offers multiple tiers — a fast/cheap option, a powerful/expensive option, and one or two in between.</p>
+<p><strong>Claude's tiers — the standard working toolchain:</strong></p>
+<ul>
+<li><strong>Haiku</strong> — fast and cheap. Evaluation loops, simple formatting, high-volume tasks.</li>
+<li><strong>Sonnet</strong> — balanced. The standard working model for most tasks.</li>
+<li><strong>Opus</strong> — powerful and expensive. Reserve for the hardest reasoning.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Verify Before You Run</p>
+<p>Model names, tiers, pricing, and context-window sizes change with every release. The <em>tier concept</em> is durable; the specific names and numbers are not. Verify current model IDs, prices, and context sizes at the provider's documentation (anthropic.com/pricing, docs.anthropic.com) before any course run. Every model name and number in this module carries this flag.</p>
+</div>
+<p><strong>The model-selection heuristic (apply this on the spot).</strong> Sort the task into one of three buckets:</p>
+<ul>
+<li><strong>Fast / cheap tier</strong> — the job is mechanical and low-judgment: summarize, reformat, classify, extract, run a tight evaluation loop. Pick the smallest tier that meets the quality bar.</li>
+<li><strong>Reasoning tier</strong> — the job needs real analysis, planning, or multi-step logic: assess options, write or refactor non-trivial code, reason over a hard problem. Use the balanced or powerful tier.</li>
+<li><strong>Big-context tier</strong> — the job needs a large body of material held at once: a long document, a sprawling codebase, a multi-source comparison. Choose the model whose context window comfortably fits the material, then verify the size before you rely on it.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">The Decision Rule in One Line</p>
+<p>Match the model to the task: mechanical work goes to the fast tier, hard thinking goes to the reasoning tier, and large material goes to the big-context tier. "Always use the biggest model" is the wrong instinct — it is expensive, slower, and usually unnecessary.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Name Drift Is Real</summary>
+<p>The specific tier names (Haiku/Sonnet/Opus) will drift, and competitor names will change too. Teach the <em>shape</em> — fast, balanced, powerful — and make bookmarking the provider docs part of the job. Do not let students memorize current model IDs as if they were permanent.</p>
+</details>
+<h3 id="hands-on_1">Hands-On</h3>
+<ol>
+<li>Go to the provider's model page (e.g., anthropic.com/claude) and find the current tiers. Note the current names for fast, balanced, and powerful. Do they match what this section lists?</li>
+<li>Pick three tasks you might actually do: a format conversion, a complex analysis, and a long-document read.</li>
+<li>Assign each to a tier using the heuristic, and write one sentence per task explaining why.</li>
+</ol>
+<p>Name drift is real. Bookmarking the docs is part of the discipline.</p>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You have a high-volume task: classify 2,000 short messages as urgent or routine. The work is simple but there is a lot of it. Which tier, and why is reaching for the most powerful model the wrong call here?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">You need to convert 500 records from one format to another — mechanical, no judgment, but high volume. Which tier fits?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">The most powerful tier — accuracy matters at volume</li>
+    <li data-correct="true">The fast/cheap tier — the task is mechanical, so use the smallest tier that meets the quality bar</li>
+    <li data-correct="false">The big-context tier — there are a lot of records</li>
+    <li data-correct="false">It does not matter which tier you choose</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<div class="quiz-block">
+  <p class="quiz-question">Why is "always use the most powerful model" bad advice?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Powerful models make more mistakes than smaller ones</li>
+    <li data-correct="false">Powerful models are slower and less reliable</li>
+    <li data-correct="true">Larger models cost more per token — for simple tasks the cost is not justified by the capability difference</li>
+    <li data-correct="false">You can only access powerful models through a paid subscription</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_1">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the three tiers in a model family: fast, balanced, powerful</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can apply the fast / reasoning / big-context heuristic to a real task</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know that model names, tiers, pricing, and context sizes must be verified before use</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand why the biggest model is the wrong default</li>
+</ul>
+<hr />
+<h2 id="context-windows-operationally-the-window-that-fills-silently">Context Windows, Operationally: The Window That Fills Silently</h2>
+<p><strong>BLUF.</strong> You know from Module 1 that a context window is finite working memory; the operational reality is that in an agentic session it fills <em>silently</em> — every tool result accumulates — and your job is to manage what is in it through smart sampling, not to cram everything in.</p>
+<h3 id="why-this-matters_2">Why This Matters</h3>
+<p>Module 1 showed you a long chat degrade. In agentic work the same thing happens faster and more quietly, because the agent is reading files and running commands, and every result lands back in the window. By the time the model starts contradicting itself, you are already deep in a session. Managing context is an operator skill.</p>
+<h3 id="concepts_2">Concepts</h3>
+<p>You already know the shape from Module 1: a finite whiteboard, and once it fills, old content gets crowded out. Here is what changes when an agent is doing the work.</p>
+<p><strong>The three operational rules:</strong></p>
+<ol>
+<li><strong>Context is not infinite.</strong> A multi-day conversation, long documents, and verbose reasoning add up fast against the window.</li>
+<li><strong>Tool results accumulate.</strong> The filesystem operation itself does not consume context — but every tool <em>result</em> returns into the running window and stays. A long session that reads many files or runs many commands can fill the window through tool-result accumulation, not just conversation.</li>
+<li><strong>You control what is in context.</strong> You decide which documents to include, how verbose to be, how much history to keep. Strategic use of context is a skill, not an accident.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Context Fills Silently</p>
+<p>Most operators do not notice the window filling until it causes a problem — the model starts contradicting itself, missing earlier instructions, or degrading in quality. By then you are already deep in. Watch for the signals and start a fresh session <em>proactively</em>.</p>
+</div>
+<p><strong>Smart sampling beats cramming.</strong> The fix for nearly every context problem is the same: do not pour everything in. Let the agent <em>sample</em> what it needs.</p>
+<ul>
+<li><strong>Single conversation getting long?</strong> Start fresh, paste only the relevant context, or have the agent read from files instead of carrying everything in history.</li>
+<li><strong>System prompt bloated?</strong> Keep it concise. Rely on files (<code>CLAUDE.md</code>, <code>me.md</code>) the agent reads on demand rather than stuffing everything into every request.</li>
+<li><strong>File-heavy work?</strong> Do not ask the agent to "read the whole codebase." Have it use <code>find</code>/<code>grep</code> to locate the relevant 10–20 files, then read only those.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Why the Agent Doesn't Drown in a Big Codebase</p>
+<p>When an agent calls a tool, it gets fresh information at each step: it reads what it needs, reasons, acts, and reads again. It does not hold the entire codebase in context at once. That is <em>why</em> an agent can work on large projects — it is designed around the window limit. The operator's job is to keep it sampling, not dumping.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Bigger Is Not Always Better</p>
+<p>A model with a very large context window still attends better to the beginning and end than to the middle. Filling a huge window with everything does not improve results — critical instructions buried in the middle can be partially ignored. (Context-window sizes are version-sensitive — verify current numbers before teaching.)</p>
+</div>
+<h3 id="hands-on_2">Hands-On</h3>
+<ol>
+<li>In Claude Code (or any agent), start a session and ask it to find and read only the files relevant to a specific question, using search rather than reading everything. Watch it sample.</li>
+<li>Run a longer session with several file reads and commands. Then ask it to summarize what it has done so far. Check the accuracy — that is the window under pressure.</li>
+<li>Notice the first sign of drift (a contradiction, a forgotten constraint). That is your cue to start fresh.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You are two hours into an agent session: 30 files read, 15 commands run, a long back-and-forth. The agent starts contradicting what it said an hour ago. What filled the window — and what do you do?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">Which statement about tool calls and the context window is correct?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Tool calls reset the context window, giving you more space</li>
+    <li data-correct="false">Tool execution consumes the most context tokens of any operation</li>
+    <li data-correct="true">Tool-call results return into the context window and accumulate over the session</li>
+    <li data-correct="false">Context windows only fill from conversation text, not tool results</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_2">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can state the three operational context rules</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand that tool results accumulate and fill the window silently</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the smart-sampling fix for long chats, bloated prompts, and file-heavy work</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know the signs of a full window and that I should start fresh proactively</li>
+</ul>
+<hr />
+<h2 id="ammunition-discipline-the-habits-that-keep-cost-down">Ammunition Discipline: The Habits That Keep Cost Down</h2>
+<p><strong>BLUF.</strong> Cost-consciousness is not penny-pinching — it is the operator habit of getting the result in one disciplined pass instead of ten loose ones, and it comes down to four principles and a short list of behaviors a junior can run today.</p>
+<h3 id="why-this-matters_3">Why This Matters</h3>
+<p>Developing with AI is not free. Each token costs money, each tool call takes time, and at scale — across a team, across months — it adds up. The waste rarely hides in a single big prompt. It hides in <em>iteration</em>: ten vague passes where one clear pass would do.</p>
+<h3 id="concepts_3">Concepts</h3>
+<p><strong>The three cost dimensions:</strong></p>
+<ul>
+<li><strong>Token cost.</strong> Every input token costs; every output token costs more. A 10,000-token conversation costs a fraction of a 100,000-token one.</li>
+<li><strong>Time cost.</strong> Longer conversations and more tool calls take longer. Waiting is dead time.</li>
+<li><strong>Iteration cost.</strong> Ten passes to get it right is 10x the tokens. Clear the first time is 1x.</li>
+</ul>
+<p><strong>Four principles:</strong></p>
+<ol>
+<li><strong>Concision is a feature.</strong> A tight, well-structured prompt often beats a long one — less noise, faster thinking, lower cost.</li>
+<li><strong>Repetition is waste.</strong> Asking the same thing three times is 3x the tokens. Iterate once, deliberately.</li>
+<li><strong>Cheap vs. expensive operations matter.</strong> A tool call that reads a file returns a small result. Pasting a 30,000-token file into the prompt costs 30,000 input tokens <em>plus</em> the reasoning cost.</li>
+<li><strong>Plan before you prompt.</strong> Decide what context the agent needs, what it should read via tools instead of you pasting, and how many iterations you expect — then prompt once, strategically.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Use Tools Instead of Pasting</p>
+<p>Bad: paste a 50,000-token codebase and ask for a refactor — 50,000 input tokens and a partial result. Good: "There's a bug in the auth module. Read <code>/src/auth/login.js</code> and identify it." The agent reads only what it needs (~5,000 tokens) and gives you a focused answer.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Iteration Is Where Cost Hides</p>
+<p>A vague 80-token prompt that needs five clarifying rounds costs far more than a structured 120-token prompt that lands the first time. Longer in the <em>right</em> way is cheaper than short and vague. One clear prompt beats five loose ones every time.</p>
+</div>
+<p><strong>A few more cost-conscious behaviors:</strong></p>
+<ul>
+<li><strong>Iterate tightly, not loosely.</strong> Review immediately and correct in the same session — tight loops keep context warm and avoid re-reads.</li>
+<li><strong>Know when to ask the agent vs. solve it yourself.</strong> Use the agent for architecture, complex logic, and unfamiliar code. Use a quick search for syntax lookups and trivial API usage.</li>
+<li><strong>Plan before you build.</strong> Five minutes of "here is my plan, any red flags?" often saves fifty minutes of iteration.</li>
+</ul>
+<details class="note">
+<summary>Instructor Note — Frame It as Discipline, Not Stinginess</summary>
+<p>The point is not to spend as few tokens as possible — it is to get a defensible result efficiently. Tie it back to the operator posture from Module 7: a clear brief is cost-conscious <em>and</em> good supervision. The two habits reinforce each other.</p>
+</details>
+<h3 id="hands-on_3">Hands-On</h3>
+<ol>
+<li>Take a prompt you would normally send. Apply the four principles: cut repetition, add structure, narrow scope, specify output format.</li>
+<li>Count words before and after. Is the revised version clearer <em>and</em> tighter?</li>
+<li>Submit the revised prompt. Did you get a usable first response, or still need follow-ups?</li>
+<li>For one task this week, decide up front: what should the agent read via tools instead of you pasting?</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You need to debug a slow API endpoint. You have the source file, the database schema, and the server logs. What is the most cost-efficient way to give the agent what it needs — and what would the expensive version look like?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">Which behavior is the most cost-conscious?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Always use the most capable model for every task</li>
+    <li data-correct="false">Paste full documents into the prompt so the agent has complete context</li>
+    <li data-correct="true">Ask the agent to read specific files via tools rather than pasting large documents</li>
+    <li data-correct="false">Repeat key instructions several times so the agent doesn't forget them</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_3">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the three cost dimensions: token, time, iteration</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can apply the four cost principles to a real prompt</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know that tools beat pasting for large material</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand that iteration is where most cost hides</li>
+</ul>
+<hr />
+<h2 id="how-ai-is-delivered-and-paid-for">How AI Is Delivered and Paid For</h2>
+<p><strong>BLUF.</strong> The same model reaches you through different doors — a flat-rate app, a pay-per-token API, or your organization's managed key — and whether it runs in the cloud or on your machine changes both the cost and what you are allowed to send it.</p>
+<h3 id="why-this-matters_4">Why This Matters</h3>
+<p>You will be selecting models and deciding how to use them. Understanding the delivery and billing model behind the tool prevents both waste and surprise — and connects directly to the data-handling boundary you learned in Module 1.</p>
+<h3 id="concepts_4">Concepts</h3>
+<p><strong>Three ways AI is paid for:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Delivery model</th>
+<th>What it means</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Subscription app</strong></td>
+<td>Flat monthly fee, model access included</td>
+<td>ChatGPT Plus, Claude.ai Pro</td>
+</tr>
+<tr>
+<td><strong>Pay-per-token API</strong></td>
+<td>You pay per token sent and received</td>
+<td>Anthropic API, OpenAI API</td>
+</tr>
+<tr>
+<td><strong>Bring-your-own-key</strong></td>
+<td>Your organization's API key foots the bill</td>
+<td>Enterprise deployments, Claude Code</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cloud vs. local delivery.</strong> Most models run in the cloud — your input goes to a remote server, the model runs there, the response comes back. Some smaller models run entirely on your machine: no connectivity required, data stays local. The trade-off is capability — local models are smaller and less capable than cloud frontier models.</p>
+<p><strong>The cost ladder.</strong> Token cost scales with model size and reasoning effort. A small, fast tier costs less per token than a large frontier tier. This is the same ladder the model-selection heuristic walks — match the model to the job and you are also matching the cost to the job.</p>
+<div class="admonition warning">
+<p class="admonition-title">Cost Is Real on Pay-Per-Token</p>
+<p>On a pay-per-token plan, a long conversation with a large model costs more than a short one with a small model. Know your billing model <em>before</em> you start a long task. On a flat-rate app the marginal cost is hidden, but on an API or a managed key it is real and it accrues.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Delivery Connects to Data Handling</p>
+<p>Cloud delivery means your input leaves your machine. That is exactly why the Module 1 data-handling rule exists: authorization is a property of the <em>system</em>, not the impressiveness of the model. A capable model on an unauthorized cloud system does not become authorized because it is capable. This is a one-line reminder, not a re-teach — the full rule lives in Module 1 and the ethics treatment is Module 9.</p>
+</div>
+<details class="note">
+<summary>Instructor Note — Skip the Pricing Tables</summary>
+<p>Specific token prices change every quarter. Do not teach current numbers — teach the structure: tokens cost money, bigger models cost more, cloud sends your data off-machine, match the model and the delivery to the job. (All specific prices and tiers carry the verify-before-teaching flag.)</p>
+</details>
+<h3 id="hands-on_4">Hands-On</h3>
+<ol>
+<li>Open your chatbot's settings or account page. Find which model you are currently using and note the name.</li>
+<li>Open the provider's pricing page. Find one fast/small and one large/powerful model and read the price difference. Notice the <em>structure</em>, do not memorize numbers.</li>
+<li>Identify which delivery model you are on: subscription app, pay-per-token API, or organization-managed key.</li>
+<li>Pick one task you might do this week. Decide which tier <em>and</em> which delivery model fit, and write one sentence explaining why.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Before You Continue</p>
+<p>You need to run an analysis on a very long document with several back-and-forth exchanges, on a pay-per-token plan. What factors determine the cost of that task, and how would you reduce it?</p>
+</div>
+<div class="quiz-block">
+  <p class="quiz-question">Why does cloud delivery connect directly to data handling?</p>
+  <ul class="quiz-options">
+    <li data-correct="false">Cloud models are less accurate, so output must be checked</li>
+    <li data-correct="true">Cloud delivery sends your input off your machine to a remote server — so authorization of the system, not the model's capability, governs what you may send</li>
+    <li data-correct="false">Local models are always authorized for any content</li>
+    <li data-correct="false">Cloud delivery is free, so there is no reason not to use it</li>
+  </ul>
+  <div class="quiz-feedback"></div>
+</div>
+
+<h3 id="readiness-check_4">Readiness Check</h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can name the three ways AI is paid for</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I know the difference between cloud and local delivery and the trade-off</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I can identify which delivery model I am currently using</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I understand that cloud delivery is why the data-handling boundary matters (full rule in Module 1)</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Core Idea</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Spending Tokens</strong></td>
+<td>You know what a token is — now budget it</td>
+<td>Cost, speed, and accuracy all scale with tokens spent.</td>
+</tr>
+<tr>
+<td><strong>Model Tiers</strong></td>
+<td>Fast, balanced, powerful in every family</td>
+<td>Matching tier to task is the biggest lever on cost.</td>
+</tr>
+<tr>
+<td><strong>Selection Heuristic</strong></td>
+<td>Fast / reasoning / big-context buckets</td>
+<td>A junior can pick the right model on the spot.</td>
+</tr>
+<tr>
+<td><strong>Context, Operationally</strong></td>
+<td>The window fills silently as tool results accumulate</td>
+<td>Smart sampling beats cramming; start fresh proactively.</td>
+</tr>
+<tr>
+<td><strong>Cost Discipline</strong></td>
+<td>Four principles, tight iteration</td>
+<td>Iteration is where cost hides — one clear pass beats ten.</td>
+</tr>
+<tr>
+<td><strong>Delivery &amp; Payment</strong></td>
+<td>App, API, or managed key; cloud vs. local</td>
+<td>Billing affects cost; cloud delivery governs what you may send.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Verify Before Delivery</p>
+<p>Every model name, tier, price, and context-window size in this module is version-sensitive and changes with releases. Verify all of them at the provider's documentation before any course run. The concepts are durable; the numbers are not.</p>
+</div>
+<hr />
+<h2 id="end-of-module">End of Module</h2>
+<p>You can now spend tokens like a professional: pick the right tier with a heuristic a junior can apply, keep a silently-filling context window under control with smart sampling, run the four cost-discipline habits, and read the delivery door you are working through.</p>
+<p>This closes the loop opened in Module 1: you learned what a token <em>is</em> there, and you learned how to <em>spend</em> it here. Carry the ammunition-discipline mindset into every session — the operator who wastes tokens is slower and more expensive than the one who does not, and both are doing the same work.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/quiz.js"></script>
+      
+    
+  </body>
+</html>
