@@ -1,20 +1,31 @@
 # AI and Agentics Basics
 
-A self-contained course for anyone starting from zero with AI tools and agentic systems.
+A self-contained course for anyone starting from zero with AI tools and agentic systems — and ending ready to command an AI agent.
 
-No prior technical experience required. Work through the material in sequence — each section builds on the one before it.
+No prior technical experience required. This is a single linear path: work through it in order, because each module builds on the one before it.
 
 ---
 
 ## Course Sequence
 
-| Section | Content | Pace |
+One ascending spine of 12 modules, taught in two phases. Each concept is taught once, where it becomes load-bearing.
+
+| # | Module | Pace |
 |---|---|---|
-| **Bedrock** | What AI is, how it works, how to use it deliberately, how to personalize it | Multi-week, short daily reps |
-| **Terminal Basics** | The computer underneath: filesystem, command line, version control concept | Multi-week, short daily reps |
-| **Agentic AI** | Chatbot vs. agent, the supervisor mindset | 1-2 sessions |
-| **Mental Models** | 6 conceptual frameworks for working with AI | 35 minutes |
-| **Technical Foundations** | 8 hands-on modules (M1-M8) | 2-3 days |
+| 1 | Know Your Weapon: How AI Actually Works | Phase 1 — multi-week, short daily reps |
+| 2 | Briefing the Machine: Prompting as a Mission Order | Phase 1 |
+| 3 | Feeding the Machine: Grounding & Multimodality | Phase 1 |
+| 4 | Standing Orders: Making the AI Know You | Phase 1 |
+| 5 | Know the Terrain: Filesystem & Terminal | Phase 2 — 3-4 day intensive |
+| 6 | The Duty Logbook: Version Control with Git | Phase 2 |
+| 7 | From Advisor to Operator: Commanding an Agent | Phase 2 |
+| 8 | Ammunition Discipline: Tokens, Context & Cost | Phase 2 |
+| 9 | Rules of Engagement: Ethics & Responsible AI Use | Phase 2 |
+| 10 | Field Craft: Markdown, Code, Tools & Context Files | Phase 2 |
+| 11 | The Proving Ground: Capstone Build | Phase 2 |
+| 12 | Crossing the LD: Bridge to Advanced Agentics | Phase 2 |
+
+A [Glossary & Quick Reference](modules/glossary.md) anchors every term as you go.
 
 ---
 
@@ -22,16 +33,19 @@ No prior technical experience required. Work through the material in sequence �
 
 By the end of this course you will be able to:
 
-- Explain what an LLM is, how it fails, and why you verify its output
-- Write deliberate, structured prompts and iterate on them
+- Explain what an LLM is, how it fails, and verify its output with a repeatable method
+- Write deliberate prompts, including intermediate technique (few-shot, chain-of-thought, decomposition, structured output)
+- Ground a model in real information — web search, file upload, retrieval — and work with images, documents, and voice
 - Customize your AI tool so it already knows how to work with you
 - Navigate a filesystem and run commands from a terminal without fear
-- Use git to save, version, and share your work
-- Understand the difference between a chatbot and an agentic tool
-- Operate AI tools with a supervisory mindset — delegate, verify, own the result
+- Use git to save, version, and recover your work — including rewinding a bad agent edit
+- Command an AI agent with a supervisory mindset: delegate, verify, own the result
+- Apply an ethical and responsible-use framework, including the DoD AI ethical principles
+- Ship a real working project to GitHub
+- Recognize what advanced agentic work adds, and how your foundation maps onto it
 
 ---
 
 ## Before You Start
 
-Read the [Course Map & Schedules](overview.md) for the full learning path, schedule, and readiness checklist.
+Read the [Course Map & Schedule](overview.md) for the full learning path, the phase pacing, the dependency chain, and the completion checklist.

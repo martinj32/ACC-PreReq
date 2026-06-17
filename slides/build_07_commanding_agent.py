@@ -68,7 +68,7 @@ def build():
         ("The harness cannot direct without an operator.", True),
         ("All three are required. Everything in advanced agentic work "
          "stacks on this primitive.", True),
-    ], note="This is the payoff for Terminal Basics. Every command students learned — "
+    ], note="This is the payoff for Module 5 (Know the Terrain). Every command students learned — "
             "pwd, ls, cd, mkdir, mv — is what the agent runs in their filesystem. "
             "Vocabulary drifts in the wild (Anthropic says 'model + tools + orchestration "
             "layer'); same concepts.")

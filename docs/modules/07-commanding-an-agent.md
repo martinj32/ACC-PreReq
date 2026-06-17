@@ -12,7 +12,7 @@
 
 ### Why This Matters
 
-This is the payoff module for Terminal Basics. If learning the filesystem and terminal commands felt like a detour, this is where it pays off. Everything the agent does, it does through the filesystem and the terminal. You learned to navigate the terrain so you can supervise someone else navigating it.
+This is the payoff module for the terminal work in Module 5 (Know the Terrain). If learning the filesystem and terminal commands felt like a detour, this is where it pays off. Everything the agent does, it does through the filesystem and the terminal. You learned to navigate the terrain so you can supervise someone else navigating it.
 
 ### Concepts
 
@@ -49,7 +49,7 @@ The engine cannot act without a harness. The harness cannot direct without an op
     This is not abstract. An agent with write and execute access can create, modify, or delete files on your real machine. You are extending significant trust. The operator posture in the next section is what keeps that from becoming a problem.
 
 ??? note "Instructor Note — Make the Connection Explicit"
-    Do not assume students connect the dots. Say it out loud: "Every command you learned in Terminal Basics — `pwd`, `ls`, `cd`, `mkdir`, `mv` — that is what the agent runs when it works in your filesystem. You learned to navigate the terrain so you can supervise someone else navigating it." Make the payoff land.
+    Do not assume students connect the dots. Say it out loud: "Every command you learned in Module 5 (Know the Terrain) — `pwd`, `ls`, `cd`, `mkdir`, `mv` — that is what the agent runs when it works in your filesystem. You learned to navigate the terrain so you can supervise someone else navigating it." Make the payoff land.
 
 ??? note "Instructor Note — Vocabulary Will Drift"
     External resources use different labels — Anthropic's documentation says "model + tools + orchestration layer." Same concepts, different words. Teach engine-harness-operator as the course's shared language and tell students to expect synonyms in the wild.
@@ -101,7 +101,7 @@ That gap — between advice and action — is the entire definition of an agent,
 - [ ] I can state the one-line difference between a chatbot and an agent
 - [ ] I can explain what read, write, and execute access means in practice
 - [ ] I can name all three parts of the engine-harness-operator model
-- [ ] I understand why Terminal Basics was the prerequisite for this module
+- [ ] I understand why the terminal module (Know the Terrain) was the prerequisite for this module
 
 ---
 
