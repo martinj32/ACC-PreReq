@@ -7,11 +7,37 @@
 
 ## How to Use This Guide
 
-- One section per module, in nav order.
+- One section per module, in the new linear spine order (Modules 1–12), plus the glossary.
+- The course is a single ascending track. Each module assumes the one before it; concepts are taught once in their canonical home. Do not re-teach a concept another module owns — reference it in a line and move on.
 - Durations are instructional time, not clock time (add breaks separately).
-- Instructor notes pulled from the `??? note` blocks in student content are surfaced here — students do not see them.
+- Instructor notes pulled from the `??? note "Instructor Note…"` blocks in student content are surfaced here — students do not see them.
 - Hands-on activities are listed with brief instructor direction; full student instructions live in the course pages.
 - Every section ends with a transition note to the next module.
+
+### The Two-Phase Delivery Model
+
+The course runs in two phases (see `docs/overview.md` for the authoritative map):
+
+- **Phase 1 — Foundations (Modules 1–4): multi-week, short daily reps.** Built for someone who uses AI by feel. Delivered in short daily sessions over multiple weeks so the mental model sets before tools enter.
+- **Phase 2 — Operator Block (Modules 5–12): 3–4 day intensive.** Hands-on. Each module has a deliverable.
+
+**Sample intensive schedule (Operator Block):**
+
+| Day | Modules |
+|---|---|
+| **Day 1 — Terrain & Logbook** | M5 Terminal, M6 Git |
+| **Day 2 — The Agentic Leap** | M7 Commanding an Agent, M8 Tokens/Context/Cost, M9 Ethics |
+| **Day 3 — Field Craft** | M10 Markdown, Programming, Tools, Context Files |
+| **Day 4 — Proving Ground** | M11 Capstone build + present, M12 Bridge brief |
+
+### Dependency Chain (do not skip)
+
+- **Modules 1–4** are the conceptual foundation. Everything after assumes them.
+- **Module 5 (Terminal)** must precede **Module 7 (Commanding an Agent)** — you cannot supervise an agent navigating ground you do not know.
+- **Module 6 (Git)** must precede **Module 7** and **Module 11** — the supervisor mindset assumes you can rewind an agent's edits.
+- **Module 9 (Ethics)** lands after **Module 7** on purpose: accountability lands viscerally only after a student has felt an agent take real action. The Module 1 data-handling bright line still appears in Module 1 as a hard safety rule that cannot wait.
+- **Module 11 (Capstone)** requires Modules 6, 7, 9, and 10.
+- **The one deliberate spiral:** the "verify after acting" reflex is introduced in Module 5, reinforced in Module 7, and graded in Module 11. Let it spiral; do not let any other concept re-teach.
 
 ---
 
@@ -19,847 +45,617 @@
 
 Before any session:
 
-- [ ] Verify current model names and context window sizes at docs.anthropic.com — these change with releases
-- [ ] Verify current pricing structure at anthropic.com/pricing — do not teach specific dollar amounts
-- [ ] Run all version checks on your machine (`claude --version`, `git --version`, `gh --version`, `node --version`, `code --version`)
-- [ ] Create `_classroom-demos/` folder with prepared files for each module (see prereq-guide.md for folder structure)
-- [ ] Screen setup: code editor and terminal visible simultaneously
-- [ ] Have a timer students can see
+- [ ] **Verify current model names, tiers, and context-window sizes** at docs.anthropic.com — these change with every release. Every model name/number in the course carries a verify-before-teaching flag.
+- [ ] **Verify current pricing structure** at anthropic.com/pricing — teach the structure (subscription / pay-per-token / managed key; cloud vs. local; fast / balanced / powerful tiers), not specific dollar amounts. Prices change within a quarter.
+- [ ] **Verify MCP specifics** (Tool/Resource/Prompt semantics, transport, governance, server availability) at the official MCP documentation before delivering Module 12 — this is the highest verify-before-teaching risk in the course.
+- [ ] **Verify currency of DoD AI policy** for Module 9 — the five AI Ethical Principles, CDAO Responsible AI / generative-AI guardrails, DoDI 5400.19, and NIST AI RMF are all in active revision. Nothing in Module 9 is legal advice; when a real situation is unclear, students route to chain of command or legal.
+- [ ] Run all version checks on your machine (`claude --version`, `git --version`, `gh --version`, `node --version`, `code --version`).
+- [ ] Create a `_classroom-demos/` folder with prepared files for each module (see prereq-guide.md for folder structure).
+- [ ] Screen setup: code editor and terminal visible simultaneously.
+- [ ] Have a timer students can see.
 
-**Total instructor prep time before first cohort:** ~4-6 hours.
+**Total instructor prep time before first cohort:** ~4–6 hours.
 
 ---
 
-# BEDROCK
+# PHASE 1 — FOUNDATIONS (Modules 1–4)
 
-## Module: AI Literacy
+Multi-week, short daily reps. The mental model must set before tools enter.
 
-**Estimated duration:** Multi-week, short daily reps (15-30 min/day)  
-**Audience:** Someone who uses AI by feel and has never thought about what is happening underneath.
+---
+
+## Module 1 — Know Your Weapon: How AI Actually Works
+
+**Estimated duration:** Multi-week, short daily reps (15–30 min/day across the foundations phase)  
+**Audience:** Anyone who has used an AI chatbot by feel and is about to use one for real work.
 
 ### Learning Objectives
 
-- State in one sentence what an LLM does (predicts text from patterns)
+- State in one sentence what an LLM does (predicts text from learned patterns)
 - Explain "trained not programmed" in plain terms
-- Name the four core failure modes (hallucination, confident-wrong, nondeterminism, knowledge cutoff)
-- Produce a hallucination with their own hands
-- Name the four elements of a deliberate prompt (role, context, example, output spec)
-- Identify which of three AI delivery models they are currently using
-- State the bright line for data handling: what never goes into an unauthorized system
+- Explain conversation mechanics and statelessness — the model re-reads the whole transcript each turn, with no cross-chat memory by default
+- Name the five failure modes (hallucination, confident-wrong, nondeterminism, knowledge cutoff, bias) and produce a hallucination by hand
+- Verify AI output with five repeatable techniques
+- Run the four-question "when to use AI / when not" checklist before reaching for the tool
+- State the data-handling bright line: what never goes into an unauthorized system
 
-### Key Concepts to Emphasize
+### Instructor Notes (from this module's `??? note` blocks)
 
-**What an LLM is:**
-- The only accurate verb is *predicts*. Not "knows," "thinks," or "lies." Interrupt anthropomorphism every time it surfaces — it is a wired cognitive shortcut and will re-train with repetition.
-- "Brain in a jar" framing: fluent and capable, but no memory between chats, no live data, no ability to act without external tools.
-- Do not open with transformers, attention heads, or parameter counts. The mental model that survives contact with a real tool is the deliverable.
+- **Architecture questions:** Do not open with attention heads, transformers, or parameter counts. The mental model that survives contact with a real tool is the deliverable. If asked, acknowledge and defer.
+- **Anthropomorphism runs deep:** Students told "it just predicts" will say "it knew the answer" thirty seconds later. Interrupt it every time in the first two weeks — it re-trains faster than you expect. The only accurate verb is *predicts*.
+- **Context window sizes:** Approximate, version-sensitive — verify before teaching. Drill the instinct ("keep input focused"), not the numbers.
+- **Kill the "person on the other end" model early:** Replace the chat-app mental model with the right one — a stateless engine handed a fresh transcript each turn. Once it clicks, statelessness, context limits, and "why won't it remember my other chat" become the same one fact.
+- **Eliciting hallucinations on demand:** Use invented citations (ask for 5 papers with DOIs), biographical detail on a real-but-not-famous person, or recent events past cutoff. Pick a topic where you know the answer. Never demo on live operational content.
+- **Don't let it tip into cynicism:** The goal is calibrated trust, not distrust. Extraordinarily capable *and* hallucinates are simultaneously true. Same for bias-spotting — name the skew, don't conclude the tool is useless.
+- **Make them run the verification drills:** Verification only sticks as muscle memory. Have students run all five techniques on one planted false claim in one session.
+- **When-to-use is a pre-decision, not a post-mortem:** Drill the four-question checklist as something run *before* typing.
+- **Data handling — audience calibration:** For military/intel audiences state it explicitly, including the "paraphrase and summarize" loophole — which does not exist. For civilian audiences use concrete examples (medical, financial, HR, client data).
+- **Do not soften the data-handling module:** Soften it and students hear "be careful sometimes." It is a hard rule.
 
-**Tokens and context:**
-- Context window = whiteboard with finite space. New writing crowds out old.
-- Symptoms of a full window: the model hedges on things it stated confidently, contradicts earlier instructions, drifts.
-- Practical rule: start a fresh chat when (1) direction has changed and earlier turns are dead weight, or (2) the model is drifting.
-- Do not spend time on token math. "Shorter and focused beats long and sprawling" is the instinct to build.
+### Hands-On Direction
 
-**How LLMs fail:**
-- Do not let this tip into cynicism. The goal is calibrated trust, not distrust. Both "extraordinarily capable" and "hallucinates" are simultaneously true.
-- Students who hear about hallucination without producing it themselves do not internalize it. The hands-on exercise is not optional.
-- Three behaviors around knowledge cutoff: (a) flags uncertainty (honest), (b) answers confidently with stale data (dangerous), (c) uses a retrieval tool. All three look identical from the outside.
+1. **Prediction demo** — Type an incomplete sentence; submit. Add "definitely"; submit again. Compare. Then ask a factual question and ask how they'd verify it without the model.
+2. **Context window probe** — Paste dense text into a fresh chat; ask about the top, then the bottom; repeat in a new chat. Compare quality. (Models attend better to the beginning and end than the middle.)
+3. **Statelessness drill** — Give the model a fact ("callsign Raptor-6"), continue, ask it to repeat. Open a new chat and ask for the fact — it has no idea. Edit an early message and watch later turns regenerate.
+4. **Hallucination on demand** — Ask for 5 peer-reviewed papers with citations and DOIs; try to verify one. Debrief: "What would you have done if you hadn't checked?"
+5. **Verification drills** — Run all five techniques (cite-and-check, cross-source, re-run for consistency, second-tool, lateral reading) against one planted false claim.
+6. **When-to-use checklist** — Run the last five AI uses through the four questions; flag wrong-tool cases (precise math, live facts, authoritative citation, sensitive content).
+7. **Personal bright line** — Review the last three things pasted into an AI tool; identify one category that never goes into an unauthorized tool. Write it down.
 
-**Prompt engineering:**
-- The four elements are a structure, not a script. The durable skill is clarity.
-- Resist turning this into "prompt tricks" hour. Students who chase tricks hit a ceiling fast.
-- Iteration is the habit that matters most. A rough ask the model can build on beats silence.
+### Common Stumbles
 
-**Delivery and cost:**
-- Teach the structure (subscription / pay-per-token / org key; cloud / local; fast / balanced / powerful tiers), not specific prices. Prices change within a quarter.
-- "Always use the biggest model" is wrong. Match the model to the job.
+- Reverting to "it knew / it thinks / it lied." Re-anchor on *predicts* every time.
+- Treating two AIs agreeing as corroboration — it is not; they read overlapping training data.
+- Hearing the data-handling rule as a soft suggestion. It is a bright line that does not expire under deadline pressure.
 
-**Data handling:**
-- This module does not get softened. Soften it and students hear "be careful sometimes." The message is a hard rule.
-- For military/intel audiences: state the "paraphrase and summarize" loophole explicitly — it does not exist.
-- Authorization is a property of the system, not the tool's capability. Impressive and authorized are not the same.
+### Deliverable
 
-### Hands-On Activities
+No formal artifact, but the readiness gate is real: a produced hallucination, all five verification techniques run once, the four-question checklist applied to real uses, and a written personal bright line.
 
-1. **Prediction demo** — Type an incomplete sentence, submit. Add "definitely" to the same sentence, submit again. Compare outputs. Then ask a factual question and ask how you would verify the answer without the model's help.
+### Transition to Module 2
 
-2. **Context window probe** — Paste several pages of dense text into a fresh chat. Ask about something near the top, then something near the bottom. Start a new chat and ask the same bottom question. Compare quality.
-
-3. **Hallucination on demand** — Ask for 5 peer-reviewed papers on a narrow topic with full citations (author, journal, year). Pick one and try to verify it in Google Scholar or PubMed. The citation will be unverifiable. Debrief: "What would you have done if you had not checked?"  
-   *Instructor note: Use a topic where you know the correct answer. Never demo on live operational content.*
-
-4. **Before/after prompting** — Write a one-line version of a real task, submit it, save the output. Then add role, context, an example of good output, and an output spec. Submit again. Compare side by side. Identify which element changed the result most.
-
-5. **Delivery model identification** — Open your chatbot's settings. Find the model name. If API access is available, open the pricing page — read for structure, not numbers.
-
-6. **Personal bright line** — Think about the last three things you pasted into an AI tool. For each: was the system authorized? Identify one category of content you handle regularly that will never go into an unauthorized tool. Write it down.
-
-### Discussion Questions / Knowledge Checks
-
-- "The model just gave you a confident-sounding answer. What would it take to verify it?"
-- "You set an important constraint at the start of a long conversation. Ten exchanges later, the model seems to have forgotten it. What happened?"
-- "You just watched the model invent a source. What does that mean for the next time it gives you a fact you have not heard before?"
-- "You need to run an analysis task with a long document and several back-and-forths. What factors determine the cost, and how would you reduce it?"
-- "You have a borderline-sensitive document and an unauthorized but capable AI tool that would save hours. What is the correct call?"
-
-Each section also has an embedded single-answer quiz in the student content — use these to check comprehension before moving on.
-
-### Transition to Personalizing Your AI
-
-Students now have a working mental model of the engine and know where it breaks. The next module converts that into a persistent setup — so every session starts with the model already knowing who they are and how they work.
+Students have a working model of the engine, know how a conversation actually works, and know where it breaks. Module 2 converts that into deliberate prompting — briefing the machine like a mission order instead of typing into a search box.
 
 ---
 
-## Module: Personalizing Your AI
+## Module 2 — Briefing the Machine: Prompting as a Mission Order
 
-**Estimated duration:** 1-2 sessions (30-60 min total)
+**Estimated duration:** 1–2 sessions (foundations phase)
 
 ### Learning Objectives
 
-- Find custom instruction settings in their tool of choice (ChatGPT or Claude)
+- Name the four elements of a deliberate prompt (role, context, example, output spec)
+- Treat prompting as iteration, not a one-shot command
+- Apply five intermediate techniques — few-shot, chain-of-thought, decomposition, structured output, system-vs-user prompt — as clarity, not tricks
+- Scrub real identifiers out of every prompt
+- Produce five structured prompts (one per intermediate technique) as the deliverable
+
+### Instructor Notes (from this module's `??? note` blocks)
+
+- **Prompt-engineering creep:** Resist turning this into a "prompt tricks" hour. Magic phrases are not the lesson — clarity is. The intermediate techniques are extensions of clarity; frame them that way every time.
+- **Keep chain-of-thought tied to verification:** Students treat it as a magic quality boost. Anchor it to supervision — the reason an operator asks for visible reasoning is to *check* it. That framing carries straight into the Module 7 supervisor mindset.
+- **Structured output as a gap detector:** The strongest selling point is not tidiness — a named-field schema forces missing information into the open (an empty "Source" cell, a "NONE"). Demo it explicitly; it connects prompting to the Module 1 verification reflex.
+
+### Hands-On Direction
+
+1. **Before/after prompting** — One-line request vs. the same request with role, context, example, and output spec. Compare. Identify which element changed the result most.
+2. **Few-shot** — A small classification/formatting task with three worked examples and a fourth unsolved item.
+3. **Chain-of-thought** — A multi-step problem with reasoning shown before the answer; ask whether they could catch an error in the steps.
+4. **Decomposition** — Break one big ask into an ordered sequence of smaller prompts.
+5. **Structured output** — Ask for JSON or a Markdown table with a required "Source"/"NONE" column; see what gaps the schema exposes.
+6. **System vs. user** — Set a standing instruction first, then send several task prompts; watch the standing order persist.
+
+### Common Stumbles
+
+- Chasing magic phrases instead of clarity — students who do hit a ceiling fast.
+- Forgetting to scrub. Reinforce: real names, units, locations, grids, op-tied dates, and credentials never go in, even inside a "good" structured prompt. Use `[UNIT]`, `[LOCATION]`, `[NCO]`.
+
+### Deliverable
+
+**Five structured prompts, one per intermediate technique.** Review for clarity and specificity, not perfection.
+
+### Transition to Module 3
+
+Students can brief the machine clearly. Module 3 addresses the engine's blind spot from Module 1 — no live data, a knowledge cutoff — by showing how grounding feeds it real source material, and how multimodality opens new (failure-prone) input channels.
+
+---
+
+## Module 3 — Feeding the Machine: Grounding & Multimodality
+
+**Estimated duration:** 1–2 sessions (foundations phase)
+
+### Learning Objectives
+
+- Explain grounding as feeding real source material into the model at request time
+- Name three grounding paths: web search, file upload, connectors
+- Tell grounded output from generated output — confirm grounding fired, trace claims to sources
+- Name the input modes (images/screenshots, PDFs, charts/tables, voice) and the characteristic failure mode of each
+- Apply the Module 1 data-handling rule to images, PDFs, and voice — not just typed text
+
+### Instructor Notes (from this module's `??? note` blocks)
+
+- **Correct, don't contradict Module 1:** Do not let students conclude Module 1 was wrong. The engine is still a brain in a jar — stateless, cutoff-bound, no native live access. Grounding is an external tool layer feeding the jar. Frame as "extend the model," not "replace it." This sets up the harness in Module 7: grounding is a tool call.
+- **This is the Module 1 reflex, applied:** Students may think grounding lets them stop verifying. It does the opposite — it gives them something checkable to verify against. Tie explicitly back to the five Module 1 verification techniques. Grounding makes the drills *possible*, not optional.
+- **Demo a misread live:** Hand the model a slightly blurry table or chart and ask it to read specific cells/values. It will usually get at least one wrong with full confidence. Doing this once makes "verify the read" stick. Use a fabricated, non-sensitive image.
+- **Verify before teaching — tool/feature specifics:** Which tools have web search, how upload works, what connectors exist all change frequently. Treat every feature claim as a snapshot; confirm the tool in front of you.
+
+### Hands-On Direction
+
+1. **Cutoff probe** — Ask about something after the training cutoff; note whether it refuses, guesses, or searches. Re-ask with search required; compare.
+2. **Grounded read** — Upload a short document; ask a question only answerable from it. Then ask "which parts came from the document vs. your own knowledge?"
+3. **Confirm-grounding-fired** — Look for the signal (search step, citations, file reference); pick one claim and ask for its source; open the source and confirm it supports the claim.
+4. **Multimodal misread** — Screenshot a fabricated table; ask the model to read specific cells; check every value. Repeat with a chart, and with voice if supported.
+
+### Common Stumbles
+
+- Assuming capability means use — a tool *with* search may answer straight from training. No visible signal = assume generated until checked.
+- The mixed answer (part grounded, part generated) — the dangerous case, because the seam is invisible under a uniform tone.
+- Forgetting OPSEC crosses modes — uploading an image/PDF/voice clip is a disclosure decision identical to pasting text.
+
+### Deliverable
+
+No formal artifact; readiness gate is a grounded read traced to source and a "verify the read" check on a multimodal input.
+
+### Transition to Module 4
+
+Students can hand the model real information. Module 4 makes the *setup* persistent — standing orders the model reads before every session so they stop re-briefing a stranger every chat.
+
+---
+
+## Module 4 — Standing Orders: Making the AI Know You
+
+**Estimated duration:** 1–2 sessions (30–60 min total)
+
+### Learning Objectives
+
+- Find custom-instruction / project settings in their tool of choice (ChatGPT or Claude)
 - Write at least three instructions: who they are, how they want responses, what to never do
-- Observe a before/after difference in output
+- Observe a before/after difference
 - Set up at least one Project or named configuration for recurring work
 - Confirm no sensitive or controlled information is in their instructions
 
-### Key Concepts to Emphasize
+### Instructor Notes (from this module's `??? note` blocks)
 
-- Custom instructions = persistent context loaded before every message. One-time investment, pays back on every session after.
-- Custom instructions count against the context window. Keep them under 500 words. Use Project documents for heavier reference material.
-- Platform UI changes frequently. Verify the menu path before teaching. The concept is stable; the interface is not.
-- Remind students of the data handling module before they write: everything in a custom instruction goes to the platform's servers on every request.
-- The difference between proactive (custom instructions — you set them deliberately) and reactive (ChatGPT memory — it records what comes up). Use both.
+- **Platform drift:** Custom-instruction interfaces change frequently. Verify the menu path before teaching — the concept is stable, the UI is not.
+- **Security back-reference, not a re-teach:** Do not re-teach data handling. Point back to the Module 1 bright line — everything in a custom instruction goes to the platform's servers on every request. One line, then keep going. It does not have an exception for settings fields.
+- **Memory feature availability:** Varies by subscription tier and region and changes over time. Verify availability before teaching.
 
-### Hands-On Activities
+### Hands-On Direction
 
-1. **Custom instructions setup** — Open the tool, find the settings, write three instructions (who you are + what you do, how you like responses formatted, one thing to never do). Start a new chat. Compare to a chat without instructions.
+1. **Custom-instructions setup** — Find the settings; write three instructions (who you are, how you like responses, one thing to never do). Compare a new chat to one without instructions.
+2. **Project / memory setup** — Claude: create a Project for a recurring task with instructions and at least one reference document. ChatGPT: review and prune memory, add one manual entry.
 
-2. **Project or memory setup** — Claude users: create a Project for a recurring task type, add instructions and at least one reference document. ChatGPT users: open memory settings, delete anything outdated, add one manual memory entry for something the model should always know.
+### Common Stumbles
 
-### Discussion Questions / Knowledge Checks
+- Writing a 1,000-word template copied from the internet that the model ignores after three turns. Start with one thing it gets wrong every time; keep instructions under 500 words.
+- Confusing proactive (custom instructions, deliberately set) with reactive (ChatGPT memory, recorded). Use both.
 
-- "You wrote a custom instruction that says 'always lead with a one-sentence summary.' On one response, the model ignores it. What are the two most likely causes?"
-- "You create a Project for analysis work with detailed instructions. Three months later, your role changes. What do you need to update, and where?"
+### Deliverable
 
-### Transition to Terminal Basics
+Custom instructions written and at least one Project/named configuration set up, with no sensitive content.
 
-Students now have the AI side calibrated. The next phase is entirely different: no AI, plain computer literacy. This is where the course gets uncomfortable for some people. Frame it early: the terminal is not a detour — it is the terrain the agent will move across.
+### Transition to Module 5
+
+The AI side is now calibrated. Phase 2 is entirely different: no AI, plain computer literacy. Frame it early — the terminal is not a detour, it is the terrain the agent will move across.
 
 ---
 
-# TERMINAL BASICS
+# PHASE 2 — OPERATOR BLOCK (Modules 5–12)
 
-## Module: The Machine
+3–4 day intensive. Hands-on. Each module has a deliverable.
 
-**Estimated duration:** Multi-week, short daily reps (3 sessions, ~30 min each)  
-**Critical setup step:** Before the first session, have students turn on file extension visibility. Windows: File Explorer → View → Show → File name extensions. Do not skip this — it prevents confusion in every downstream module.
+---
+
+## Module 5 — Know the Terrain: Filesystem & Terminal
+
+**Estimated duration:** Heaviest hands-on weight of the operator block (plan most of Day 1; absolute beginners need the most reps here)  
+**Critical setup step:** Before the first session, have students turn on file-extension visibility (Windows: File Explorer → View → Show → File name extensions). Do not skip — it prevents confusion downstream.
 
 ### Learning Objectives
 
-- Navigate the filesystem without using search
-- Describe the difference between plaintext and rich text and give an example of each
-- Install VS Code and open a folder in it
-- Toggle the Markdown preview in VS Code
+- Read a path as a route through the folder tree; navigate without search
+- Distinguish plaintext from rich text and give an example of each
+- Install VS Code, open a folder, toggle Markdown preview
+- Navigate with `pwd`, `ls`, `cd`, `cd ..`
+- Create, copy, and move files (`mkdir`, `touch`/`New-Item`, `cp`, `mv`) — no deletion yet
+- Write absolute and relative paths; use tab-completion and the up-arrow
+- Add flags, use `--help`/`man`, pipe and redirect, stop a command with `Ctrl+C`
+- **Verify after every action — the through-line habit introduced here**
 
-### Key Concepts to Emphasize
+### Instructor Notes (from this module's `??? note` blocks)
 
-**Files, folders, and the tree:**
-- Many casual users have never navigated the folder tree — they find files through search or recent items. Test before assuming.
-- A path is a route, not a name. Read it left to right, one slash = one step down the tree.
-- Connecting to Phase 3: "Phase 3 is the same moves, typed."
+- **Extension visibility:** Turning extensions on prevents confusion in the plaintext-vs-rich-text section where `.txt` vs `.docx` is the whole lesson. Do not skip.
+- **Encodings:** Do not go into UTF-8/ASCII. "Plaintext is honest, rich text hides things" is the entire lesson.
+- **Install problems:** A broken VS Code install on one machine should not stall the room. Keep Notepad++ as a backup viewer and move on.
+- **Environment choice (WSL vs PowerShell):** Hands-on transcripts assume a Linux/Unix shell. On Windows the recommended environment is WSL (`wsl --install`, no admin on Windows 11); Windows files appear at `/mnt/c/Users/YourName/`. Native PowerShell uses different commands (`New-Item` for `touch`); the per-tab tables give equivalents.
+- **Address the bait-and-switch out loud:** Name the frustration before a student does — "Some of you wonder why an AI course spent time on the command line." Then make the connection: the agent acts through the terminal; the student who does not understand it cannot supervise it.
+- **Reps over coverage:** Same three navigation commands, many short reps across several days. Do not introduce file creation until navigation is solid.
+- **The verify habit is the through-line:** "Trust the action, not the narration" runs through all agentic work. Build it here deliberately and name it. Introduced here, reinforced in Module 7, graded in Module 11 — do not let it stay implicit.
+- **Exactness as frustration:** A student annoyed that a capital letter breaks a path is learning the right thing. Name it: "Yes, the space matters — that's why tab-completion exists." On Windows/WSL, drill the `/mnt/c/...` translation here — the number-one path stumble.
 
-**Plaintext vs rich text:**
-- "Plaintext is honest, rich text hides things" is the entire lesson. Do not go into encodings (UTF-8, ASCII, etc.).
-- The practical consequence: never write Markdown in Word. Write it in VS Code.
-- Smart quotes, em-dashes, non-breaking spaces — all travel silently with pasted Word content and break things downstream.
+### Hands-On Direction (six exercises = the Module 5 deliverable)
 
-**Code editor:**
-- Today's scope: open, view, close. Do not install extensions, change settings, or edit files. Comfort at the front door is the goal.
-- If the VS Code install is broken on one machine, use Notepad++ and move on. Do not stall the room.
+1. **Tree walk** (clicking, no search) — read a path in the address bar; create a `practice` folder; drag a file in.
+2. **Plaintext vs rich text** — type and save `.txt` in Notepad, open in VS Code; open a `.docx` in VS Code to see what's inside.
+3. **Orientation walk** — `pwd` → `ls` → `cd` → `pwd` → `cd ..` cycle until routine.
+4. **File manipulation sprint** — build `projects/acc-prep/module-5/`; create, copy, rename; `ls` after every step.
+5. **Path puzzle** — write absolute and two relative paths to the same file; redo with tab-completion; recall with the up-arrow.
+6. **Help / piping / real-world scenario** — find a flag with `--help`; pipe and redirect; find `.txt` files and move them to an `archive`, verifying both folders; press `Ctrl+C` on a long-running command.
 
-### Hands-On Activities
+### Common Stumbles
 
-1. **Tree walk** — Open File Explorer or Finder. Navigate from home to Downloads by clicking only — no search. Find a file. Read its full path in the address bar. Create a `practice` folder on the Desktop. Move a file into it by dragging.
+- "Permission denied" → wandered into system files; move to a safe sandbox.
+- "No such file or directory" → wrong folder/path; `pwd` and `ls` to verify.
+- Relative-path confusion (~30% stall here) → practice 5+ times with different folders.
+- Typos creating new files silently → `ls` after every action.
 
-2. **Plaintext vs rich text** — Open Notepad, type a few sentences, save as `test.txt`. Open it in VS Code. Then open a `.docx` file in VS Code (not Word) and look at what is inside.
+### Deliverable
 
-3. **VS Code orientation** — Install VS Code. Open the `practice` folder (File → Open Folder). Click the `.txt` file. Find a `.md` file anywhere on the machine. Open it. Toggle the preview with `Ctrl+Shift+V`.
+**Six terminal transcripts** (one per exercise) showing the work and its verification.
 
-### Discussion Questions / Knowledge Checks
+### Transition to Module 6
 
-- "You just moved a file by dragging. Write out the path to where it now lives. Could you give someone else those directions and have them find it?"
-- "You paste a block of text from a Word document into your AI chatbot and the formatting looks off. What is the most likely cause?"
-- "You are looking at the same Markdown file in two panes — raw on the left, rendered on the right. Which version does the machine work with?"
-
-### Transition to The Terminal
-
-The Machine gave students the map. The Terminal is the same moves, typed. Anxiety is normal and expected — name it before they feel it.
+Students can navigate and act in the filesystem. Module 6 adds the logbook: once an agent can change files at speed, you want a recoverable record of every change. That is version control.
 
 ---
 
-## Module: The Terminal
+## Module 6 — The Duty Logbook: Version Control with Git
 
-**Estimated duration:** Multi-week, heaviest calendar weight (~6 sessions, 30-45 min each)  
-**This is the spine of the course.** Most students need more reps here than anywhere else. Do not rush.
+**Estimated duration:** Plan roughly half of Day 1 (split: local repo, then remote + conflicts)
 
 ### Learning Objectives
 
-- Open the terminal without hesitation
-- Navigate the filesystem using `pwd`, `ls`, `cd`
-- Create, copy, and move files using `mkdir`, `touch`/`New-Item`, `cp`, `mv`
-- Write and use absolute and relative paths
-- Use tab-completion on every path
-- Add flags to commands and use `--help` to find flags they do not know
-- Stop a running command with `Ctrl+C`
-- Explain version control as a logbook of file changes they can rewind
+- Explain version control as a duty logbook of file changes they can rewind, and why it matters once an agent can write to files
+- Distinguish the local logbook from the remote copy
+- Init a repo; stage, commit, read `git log` / `git diff`; write present-tense, action-focused commit messages
+- Create, switch, and merge branches; resolve a merge conflict by hand
+- Create a `.gitignore` **before the first commit**; push to GitHub; open and read a PR diff
 
-### Key Concepts to Emphasize
+### Instructor Notes (from this module's `??? note` blocks)
 
-**Terminal orientation:**
-- Address the bait-and-switch out loud before a student says it: "Some of you are wondering why an AI course spent two weeks on the command line." Then make the connection explicit: the agent acts through the terminal. Students who do not understand the terrain cannot supervise someone navigating it.
-- Nothing in this module and the next three can hurt the machine. Say this explicitly.
-- One command, fully understood, beats ten demoed. Do not show off. Return the prompt, explain what happened, ask for questions, move on.
+- **Audience framing:** Military audiences — the duty-logbook framing lands immediately. Civilian audiences — "undo button for your whole project." The concept was loaded at the end of Module 5; this module turns it into commands.
+- **The three-state model is the stumble:** Students mix up `add` and `commit`. Run `git status` between every step so they watch a change move from working directory → staged → committed. Make the state visible.
+- **Walk one conflict live:** Students panic at conflict markers. Create the conflict on purpose, project it, resolve it once slowly, then have each student create and resolve their own.
+- **The two OPSEC stumbles that matter most:** The `.gitignore`-timing mistake is one of the two highest-consequence stumbles in the course (the other is pasting sensitive data into an unauthorized tool, Module 1). Run the `.gitignore` step before students make any commit they intend to push; verify ignored files do not appear in `git status` before anyone runs `git push`.
 
-**Navigation (`pwd`, `ls`, `cd`):**
-- `pwd` is the reset button. Lost in the terminal? Type `pwd`. You can never be permanently lost.
-- Reps over coverage. Same three commands, many short repetitions, spread across several days. Do not introduce file creation until navigation is solid.
-- Getting "lost" is the number-one beginner panic. Normalize it. Make students run the `pwd`→`ls`→`cd`→`pwd`→`cd ..`→`pwd` cycle until it feels routine.
+### Hands-On Direction (build one repo with 5+ commits = the deliverable)
 
-**File operations (make, move, copy):**
-- Build the verify-after-acting habit here. After every command: `ls`. Check the target. "Trust the action, not the narration" runs through all agentic work — build it at the command line before the agent is involved.
-- No deletion in this phase. Deletion is irreversible at the command line. It comes later, behind heavy framing.
-- Typos in filenames create new files without erroring. This is why `ls` after every action is the standard.
+1. **First repository** — `git init`; create a file; `git status` between `add` and `commit`; `git log`; edit, commit again, read `git diff`.
+2. **Branching + a real conflict** — branch, change, merge, delete; then force a conflict on the same line of one file and resolve the markers by hand.
+3. **.gitignore first, then push** — create `.gitignore` with `.env`/credential patterns **before any commit**; confirm a dummy `.env` does not appear in `git status`; make the real first commit; `gh repo create`; `git push`; optionally open a PR with `gh pr create` and review the diff.
 
-**Paths and tab-completion:**
-- The terminal's unforgiving exactness is the lesson, not the frustration. A student annoyed that a capital letter breaks a path is learning the right thing. Name it: "Yes, the space matters. That is why tab-completion exists."
-- Tab-completion is not a shortcut — it is standard operating procedure. Use it on every path, every time.
-- Absolute path: works from anywhere. Relative path: only works from the right starting position.
+### Common Stumbles
 
-**Flags and `--help`:**
-- Do not memorize flags. The concept (flags exist, `--help` finds them) is the lesson.
-- `Ctrl+C`: name it as a control mechanism, not an emergency. Students who know they can stop something are less afraid to start it.
+- "fatal: origin already exists" → `git remote -v`, then `git remote remove origin`.
+- Authentication fails → `gh auth status`, then `gh auth login` (HTTPS).
+- "I lost my commits!" → they ran `git reset --hard`; reassure (`git reflog`), but do not open that topic now.
+- Committing a secret first, then adding it to `.gitignore` — does not remove it from history. Sequence matters; too late is the same as never.
 
-**Version control concept:**
-- No commands today. Load the reason before the commands. If a student asks "how do I actually do this?" — "You will do it later. Today you need to know why."
-- For military audiences: duty logbook framing. For civilian audiences: "undo button for your whole project." Read the room.
+### Deliverable
 
-### Hands-On Activities
+**A GitHub repo with 5+ commits, a resolved conflict, a `.gitignore` created before the first commit, and a successful push.**
 
-1. **Terminal orientation** — Open the terminal. Sit with the blinking cursor for ten seconds. Name the feeling. Run `date`/`Get-Date`, `whoami`, `pwd`, `ls`, `echo "hello"`. Close and reopen. Re-run one command from memory.
+### Transition to Module 7
 
-2. **Navigation drill** — Run `pwd` → `ls` → `cd` into a folder → `pwd` → `ls` → `cd ..` → `pwd`. Repeat until routine.
-
-3. **Make, move, copy** — Create `terminal-practice` folder, navigate into it, create `day1.txt`, copy to `day1-backup.txt`, rename to `day1-v1.txt`. Run `ls` after each step.
-
-4. **Path puzzle** — Navigate to a folder using the full absolute path (type it by hand). Navigate to the same folder using tab-completion. Compare.
-
-5. **Flags and help** — Run `ls --help` or `Get-Help ls`. Read the first ten lines without panic. Find the flag that shows hidden files. Run `ls` with that flag. Run `ping google.com` for five seconds. Press `Ctrl+C`.
-
-6. **Version control reflection** — No commands. Think of a file edited multiple times last month. Ask: "If I needed to see what it looked like three weeks ago, could I?" That gap is what version control fills.
-
-### Discussion Questions / Knowledge Checks
-
-- "You typed a command and saw a response. What is the difference between that and clicking a button in an app?"
-- "You typed `cd Documents` and then `pwd`. What does `pwd` tell you?"
-- "You ran `mv report.txt final-report.txt` and then `ls`. What are you checking for?"
-- "You are deep in a nested folder and need to copy a file three levels up. Absolute or relative path?"
-- "You run a command and nothing happens for thirty seconds. What are the two possibilities?"
-- "An agent just ran a batch edit on 40 files. You look at one and it is not right. Without version control, what are your options?"
-
-### Transition to Agentic AI
-
-Students can now navigate and operate in the filesystem from the command line. Agentic AI is the payoff module — this is where Phases 2 and 3 pay off. Make the connection explicit: every command they learned is what the agent runs when it works in their filesystem.
+With the terrain mapped (Module 5) and the logbook running (Module 6), students are ready to hand the agent the keys — moving from advising a model to commanding one that acts.
 
 ---
 
-# AGENTIC AI
+## Module 7 — From Advisor to Operator: Commanding an Agent
 
-## Module: Core Concepts
-
-**Estimated duration:** 1-2 sessions (~60-90 min total)
+**Estimated duration:** Plan a substantial block of Day 2 (this is the agentic-leap module; the worked examples and the identify-the-models capstone exercise carry it)
 
 ### Learning Objectives
 
 - State the one-line difference between a chatbot and an agent
-- Explain what read, write, and execute access means in practice
-- Connect the Terminal Basics modules to why agents need that access
-- Name the three parts of the engine-harness-operator model
-- Explain version control as a logbook of agent actions they can rewind
-- State the three duties of the supervisor: delegate, verify, own
+- Explain read/write/execute access in practice
+- Name the three parts of the engine-harness-operator stack
+- Explain tool calls and why they enable verification and an audit trail
+- State the three duties of the operator: delegate, verify, own; name the three ways supervision breaks down
+- Know that context files are the primary lever for steering an agent (full treatment in Module 10)
 
-### Key Concepts to Emphasize
+### Instructor Notes (from this module's `??? note` blocks)
 
-**Chatbot vs agent:**
-- Do not assume students connect the dots. Say it explicitly: "Every command you learned in Terminal Basics — `pwd`, `ls`, `cd`, `mkdir`, `mv` — that is what the agent runs when it works in your filesystem. You learned to navigate the terrain so you can supervise someone else navigating it."
-- Read, write, execute is a lot of trust. This is not abstract — an agent with write and execute access can create, modify, or delete files on a real machine.
+- **Make the connection explicit:** Say it out loud — "Every command you learned in Module 5 — `pwd`, `ls`, `cd`, `mkdir`, `mv` — that is what the agent runs when it works in your filesystem. You learned the terrain so you can supervise someone navigating it." Make the payoff land.
+- **Vocabulary will drift:** External resources say "model + tools + orchestration layer." Same concepts, different words. Teach engine-harness-operator as the course's shared language and tell students to expect synonyms.
+- **Connect to the Module 1 failure modes:** Reframe hallucination, confident-wrong, and nondeterminism as *action* problems now — an agent can hallucinate a file path, confidently run the wrong command, produce a different plan on a second run. Tool calls are how the operator catches all three.
+- **Reinforce throughout, not just here:** The operator loop is the through-line of the entire course. Frame every later agentic action with it. The "verify after acting" reflex is the one habit allowed to spiral — introduced in Module 5, reinforced here, graded in Module 11.
 
-**Engine-harness-operator:**
-- Engine = the LLM (reasoning, generates, plans)
-- Harness = the tool layer (gives the engine access to files, commands, external systems)
-- Operator = you (directs the mission, approves consequential actions, carries accountability)
-- All three are required. The engine cannot act without a harness. The harness cannot direct without an operator.
+### Hands-On Direction
 
-**Version control:**
-- Repeat the "why" here — the agent is about to start editing files. The logbook is how you keep accountability over a teammate that works fast and never sleeps.
-- Still no git commands. The commands come in M3. Today is the reason.
-- For military audiences: duty logbook. For civilian audiences: "undo button for your whole project."
+1. **Harness appears** — Ask a web chatbot to "rename folder `project` to `project-v1`"; note it describes how. Ask Claude Code the same in a project folder; watch it call a tool and change the disk. Write one sentence on the difference. (This is the single "rename folder" hands-on — it lives here, once.)
+2. **Trace the tool-call loop** — In Claude Code: "what's in my current directory?"; "read [specific file]"; ask for a small edit and, before it writes, "what exactly will you change, and why?" Verify before approving.
+3. **Run the full loop once** — Give a small real task with a clear brief (who you are, what good looks like, what's off-limits). Verify the actual output vs. the brief. Label which failure mode the first brief most resembled (over-trust, under-involvement, automation fallacy).
+4. **Identify-the-models exercise** — Read the three transcript sections (A/B/C) and name which models are in play / violated and the fix. Use the worked intel/SITREP/grid examples as reusable templates.
 
-**Supervisor mindset:**
-- This is the through-line of the entire course. Do not treat it as a capstone topic to introduce once at the end. Every agentic action in later modules should be framed with the supervisor loop.
-- The agent is a motivated junior with file-system access: capable, fast, willing to fill ambiguity with plausible-sounding assumptions.
-- Two failure modes to name and counter:
-  - *Blind trust:* "It sounds right." Confident narration ≠ verified execution.
-  - *Learned helplessness:* "I can't check this, it's too technical." You do not need to replicate the agent's work. You need to check whether the output makes sense, whether constraints were honored, whether anything looks wrong. Human judgment call, not a technical skill.
-- Optimize the capstone for the loop, not the polish. A rough artifact that was checked beats a finished artifact that was not.
+### Common Stumbles
 
-### Hands-On Activities
+- Blind trust ("it sounds right") — confident narration is not verified execution.
+- Learned helplessness ("too technical to check") — they don't need to replicate the work, only judge whether output makes sense and constraints held. A human judgment call, not a technical skill.
+- Approving a change they don't understand. If you don't understand it, don't approve it — have the agent explain first.
 
-1. **Chatbot vs agent comparison** — Open a web chatbot. Ask: "Rename the folder 'project' to 'project-v1'." Note whether it renamed anything or described how. If Claude Code is available, ask the same thing in a project folder. Compare what happens. Write one sentence on the difference.
+### Deliverable
 
-2. **Delegate-verify-own loop** — Give the agent (or chatbot if agent is not available) a small real task. Write a clear brief: who you are, what you need, what good output looks like, what is off-limits. Submit. Verify: does it do what you asked? Did it make any assumptions you did not authorize? If something is off, correct it. Identify what you should have specified more precisely.
+No formal artifact; readiness gate is one completed delegate-verify-own loop and the ability to name the models firing in a transcript.
 
-### Discussion Questions / Knowledge Checks
+### Transition to Module 8
 
-- "You just asked a chatbot to rename a folder. What would an agent do differently — and what are you trusting it with when it does?"
-- "An agent completes a task and narrates what it did in clear, confident language. What do you do next?"
-- "An agent just ran a batch edit on 40 files. You look at one and it is not right. Without version control, what are your options?"
-- "The agent completed a task and the output looks correct at first glance. What would you actually check to verify it?"
-
-### Transition to Mental Models
-
-Students can now place the agent in the context of the terrain they learned. Mental Models is a standalone 35-minute conceptual block — the six frameworks that make every Technical Foundations module make sense. It should be read before touching the Technical Foundations modules.
+Students command an agent. Module 8 is ammunition discipline — how to *spend* the tokens you learned about in Module 1: model selection, context management under a real session, and cost discipline.
 
 ---
 
-# MENTAL MODELS
+## Module 8 — Ammunition Discipline: Tokens, Context & Cost
 
-## Module: Core Content
-
-**Estimated duration:** 35 minutes (standalone, self-contained)  
-**Note:** The Quick Reference and Workbook are student-facing support materials, not additional sessions. Assign the Workbook as homework or in-class practice after delivery.
+**Estimated duration:** Plan a focused block of Day 2 after Module 7
 
 ### Learning Objectives
 
-- Explain the harness model: LLM + tools = agency
-- Describe what a context window is and what happens when tool results accumulate
-- Treat tokens as a resource with real cost
-- Explain what a tool call is and why it enables verification
-- Adopt active supervision as the default posture
-- Build cost-consciousness as a core habit
+- Treat tokens as ammunition — cost, speed, and accuracy all scale with tokens spent (does **not** re-define a token; that is Module 1)
+- Apply the fast / reasoning / big-context model-selection heuristic on the spot
+- State the three operational context rules; manage a silently-filling window with smart sampling
+- Apply the four cost-discipline principles; know iteration is where cost hides
+- Name the three ways AI is delivered and paid for; connect cloud delivery to the Module 1 data-handling rule
 
-### Key Concepts to Emphasize
+### Instructor Notes (from this module's `??? note` blocks)
 
-**The six models in brief:**
+- **Do not re-define the token:** Open by *asserting* prior knowledge ("you already know what a token is") and move straight to spending it. If a student is shaky, route them back to Module 1 — do not re-teach it here. This module is a deliberate spiral on Module 1.
+- **Name drift is real:** Tier names (Haiku/Sonnet/Opus) and competitor names will change. Teach the *shape* — fast, balanced, powerful — and make bookmarking the provider docs part of the job. Do not let students memorize current model IDs as permanent.
+- **Frame it as discipline, not stinginess:** The point is a defensible result efficiently, not minimum tokens. Tie back to the Module 7 operator posture — a clear brief is cost-conscious *and* good supervision.
+- **Skip the pricing tables:** Specific prices change every quarter. Teach the structure: tokens cost money, bigger models cost more, cloud sends data off-machine, match the model and delivery to the job. All prices/tiers carry the verify-before-teaching flag.
 
-| Model | Core idea | Common misconception to counter |
-|---|---|---|
-| **The Harness** | LLM + tools = agency. Without tools, it is a chatbot. | "Claude can do anything if I ask it well enough." It can only do what it can see and act on through tools. |
-| **Context Windows** | Working memory (~200k tokens). Not infinite. Tool results accumulate. | "More context = better answers." Targeted context + smart sampling beats massive dumps. |
-| **Tokens as Currency** | Every token costs money and time. Concise structured prompts save iterations. | "Verbose prompts get better results." Relevant detail + clarity = efficiency. Rambling = waste. |
-| **Tool Calls** | Structured requests to execute something external. Results return to Claude. Enables verification. | "Claude will tell me if the code works." Claude does not know unless it can see execution results. |
-| **Operator Posture** | Active supervision. You review at each step and intervene before consequential actions. | "I'll ask Claude and come back later." Stay present. Review immediately. Decide next steps. |
-| **Cost-Consciousness** | Efficiency as a skill. Planning beats iterating. Tight loops beat loose ones. | "Efficiency is about being cheap." It is about moving fast and shipping quality. |
+### Hands-On Direction
 
-**Golden rules to repeat:**
-- "If you don't understand what Claude is about to do, don't let it do it."
-- Tool calls are your audit trail. Every read, write, and execute is traceable.
-- Context fills silently. Watch for the model contradicting itself or missing earlier instructions — start a fresh session proactively.
+1. **Feel the weight** — Paste a prompt into a tokenizer; note token vs. word count; rewrite as a structured prompt and re-count. Notice "longer in the right way."
+2. **Model landscape check** — On the provider's model page, find current fast/balanced/powerful tiers; assign three sample tasks (format conversion, complex analysis, long-document read) to tiers with one-sentence rationale.
+3. **Context under pressure** — In an agent, have it find and read only the relevant files via search; run a longer session, then ask it to summarize what it did; watch for drift as the cue to start fresh.
+4. **Cost rewrite** — Apply the four principles to a real prompt; count words before/after; decide what the agent should read via tools instead of pasting.
 
-**Teaching structure (35 min):**
-- Opening hook (3 min): "Miss these six models and you'll write inefficient code, waste tokens, and blame the AI. With them, you move fast and confidently."
-- Six models (5-6 min each): key point → common misconception → check for understanding
-- Worked examples from Section 7 (5 min): read one aloud, pause, ask "what went wrong / what went right?"
-- Exercise from Section 8 (5-10 min): SECTION A together as a class, B and C individually or as homework
+### Common Stumbles
 
-**Live demo (if Claude Code is available):**
-- Ask Claude to read a file (show the tool call)
-- Ask Claude to write a file (show the tool call)
-- Ask Claude to run a command (show the tool call)
-- Narrate: "Notice — Claude is not guessing. It is seeing. It is acting. It is verifying."
+- Reaching for the biggest model by default — expensive, slower, usually unnecessary.
+- Pasting large files instead of having the agent read them via tools.
+- Not noticing the window fill until the model contradicts itself — tool results accumulate silently.
 
-### Hands-On Activities
+### Deliverable
 
-1. **Harness demo** — Ask chatbot to rename a folder. Ask Claude Code the same question in a project folder. Identify: which response required you to do the work?
+No formal artifact; readiness gate is applying the selection heuristic and the four cost principles to real tasks.
 
-2. **Model landscape check** — Go to anthropic.com/claude. Find the current tier names (fast, balanced, powerful). Do they match what the course lists? Pick one task and decide which tier is appropriate. Write one sentence explaining why.
+### Transition to Module 9
 
-3. **Hallucination / failure mode drill** — Ask Claude: "What is the current price per million tokens for Claude Sonnet?" Then check anthropic.com/pricing. Compare. Ask Claude for its knowledge cutoff. Ask what major models were released after that cutoff. You have just demonstrated all three failure modes.
-
-4. **Context window test** — Start a fresh chat. Say "My name is [name]. Remember this." Have 10-20 exchanges on any topic. Ask: "What was my name?" Observe whether it still knows.
-
-5. **Token efficiency comparison** — Write a vague prompt. Write a structured prompt (task, context, constraints, output format). Count words. Submit both. Which required fewer follow-up iterations?
-
-6. **Operator posture** — Give Claude a vague brief: "Improve my code." Read the result. Give the same task with a specific brief: file name, improvement goal, constraint, success criteria. Compare. Label the vague brief with the supervision failure mode it most resembles.
-
-### Discussion Questions / Knowledge Checks
-
-- "You give Claude a mission without tools. Can it read your actual files? Why not?"
-- "You have a 1,000-file codebase. Should you paste all 1,000 files into a prompt?"
-- "You're about to send a 500-word rambling prompt to Claude. What should you do first?"
-- "Claude says it has verified your code works. Without tool calls, what does that actually mean?"
-- "Claude proposes to 'clean up the database by removing duplicate records.' What questions do you ask before approving?"
-
-**Passing bar:** Students should rate themselves 4+/5 on at least 5 of 6 models on the workbook self-assessment.
-
-### Transition to Technical Foundations
-
-Mental models are now loaded. Technical Foundations (M1-M8) is where students apply all six models in hands-on work over 2-3 days. Remind them: the mental models are not a checklist to review once — they should become instinctive. Point them out as they appear in each module.
+Students can operate efficiently. Module 9 lands now on purpose: accountability is visceral only after a student has felt an agent take real action. It is the rulebook for what you do with the output — distinct from Module 1's data-handling (what flows in).
 
 ---
 
-# TECHNICAL FOUNDATIONS
+## Module 9 — Rules of Engagement: Ethics & Responsible AI Use
 
-## Module M1: LLM & Prompts
-
-**Estimated duration:** 90 minutes  
-**Instructional mode:** Demo + hands-on. Lecture/discussion: 5 min max.
+**Estimated duration:** Plan a block of Day 2 to close the agentic-leap day
 
 ### Learning Objectives
 
-- Distinguish between a user prompt and a system prompt
-- Write a clear, specific prompt using the RGCOA structure (Role, Goal, Context, Output, Asks)
-- Identify at least one LLM failure mode and explain how to verify for it
-- Understand what a context window is and when it becomes a constraint
+- Explain why capability does not transfer accountability — you sign for every product; "the model said so" is no defense
+- Reframe hallucination in a consequential product as authored harm; scale verification duty to the stakes
+- Counter automation bias by judging first and consulting second
+- Distinguish stereotype-matching from evidence-based output and own the duty not to launder bias
+- Apply the materiality test for disclosure; default to traceability; know DoDI 5400.19 governs public-facing content
+- State the lawful-use boundary (capability ≠ authorization); respect privacy beyond OPSEC (aggregation)
+- Name the five DoD AI Ethical Principles and map each to a practiced habit
 
-### Key Concepts to Emphasize
+### Instructor Notes (from this module's `??? note` blocks)
 
-- **RGCOA structure:** Role, Goal, Context, Output, Asks. The Asks element is where you give the model permission to surface uncertainty instead of papering over it. "If you need information I haven't provided, ask me before proceeding. Do not invent facts."
-- Specificity wins. Vague prompts get vague answers. Show both and let the difference speak.
-- Typing "You are a [role]" in the user turn is persona injection — visible in chat history. A true system prompt is loaded by the platform before the conversation. The distinction matters later when students configure harness files.
-- Nondeterminism: the same prompt submitted twice produces different output. Do not treat one output as "the answer" for high-stakes work.
-- Context windows: for Claude, roughly 200k tokens. Do not test the limits obsessively — the instinct ("keep focused input") is the deliverable.
+- **Make the signature literal:** Have students physically initial the AI-drafted paragraph before "release," meaning *I vouch for every claim here.* Several will sign, catch themselves, and pull it back to check — that hesitation is the lesson landing.
+- **Connect back, don't re-teach:** This is the supervisor mindset's "own the outcome" duty made specific to authored products. Name the link; do not re-teach delegate-verify-own.
+- **Don't let it become cynicism:** Calibrated duty, not distrust. Extraordinarily useful *and* a hallucination in a consequential product is an ethical failure. A student who refuses to use the tool missed the lesson as badly as one who signs without checking.
+- **Stakes set the standard, not your schedule:** A deadline raises the temptation to skip the check, not lowers the bar.
+- **Make the ordering non-negotiable (automation bias):** The lesson lives in the sequence — own assessment written and visible *before* the model's is revealed. If students peek first, the exercise is worthless.
+- **Hold the line between M1 and M9 (bias):** Module 1 owns *spotting* skewed output (literacy); Module 9 owns the *duty* not to launder it. Don't re-teach the mechanism — teach the obligation.
+- **Disclosure ≠ confession:** Reframe disclosure as a quality and trust practice, like citing a source. Pair with the public-affairs requirement so students see it is policy, not just etiquette.
+- **Distinguish cleanly from OPSEC (privacy):** OPSEC/data-handling protects *our* sensitive info (inbound); privacy/collection ethics respects *others'* info and limits on gathering it. The aggregation point is the one most students have never considered — spend time there.
+- **Keep dual-use on the boundary:** No how-to, no fearmongering. The deliverable is a calibrated operator who knows the capability is dual-use, the boundary is law/policy/authorities, and the reflex is to route near-the-line questions upward.
+- **Land the coherence (Section 8):** Walk the principles-to-habits map row by row. Reinforce that "ask the chain/legal" is a strength, not an admission — the whole module is permission to escalate.
+- **Verify currency before delivery — this is not legal advice:** The five Principles, CDAO RAI guidance, DoDI 5400.19, and NIST AI RMF are all in active revision. Confirm current versions and unit policy; when a real call is unclear, route to chain of command or legal/ethics advisor.
 
-**Data hygiene — run this before the first exercise:**
-- What never goes in: classified, CUI, PII (name + any identifier), operational planning detail, credentials, personnel records.
-- CUI defined: FOUO markings are being replaced by CUI across the federal government. If it carries any marking, or describes real people, real units, real operations, or real capabilities, it does not get pasted into a consumer AI tool.
-- Bracketed placeholder technique: replace specifics with [NCO], [LOCATION], [UNIT], [DATE]. The model does not need the real identifier to help.
-- **Scrub drill:** Provide a realistic-but-fabricated document (soldier's name and rank, unit designation, base name, grid coordinate, date, marking). Students produce a paste-safe version using bracketed placeholders. Debrief: what was removed, what category, can the model still accomplish the task with scrubbed input?
+### Hands-On Direction
 
-### Hands-On Activities
+1. **Sign for a product** — Have the model draft a short analytic paragraph on a non-sensitive topic; find and verify every checkable claim; surface a planted false claim; only then initial it.
+2. **Stakes ladder** — Take a claim with a citation and write the consequence at low vs. high stakes; do the high-stakes verification.
+3. **Judge first, consult second** — Write your own assessment before seeing the model's; compare; investigate every disagreement.
+4. **Spot and strip bias** — Have the model profile a group from a thin (fictional) description; underline confident conclusions; strip anything supported only by assumption.
+5. **Provenance note** — Apply the materiality test; draft a one-line provenance note; decide internal vs. public-facing.
+6. **Recognition exercises** — Dual-use (legitimate vs. misuse from the same features; who sets the boundary) and privacy aggregation (combine five harmless data points; note what the aggregate reveals; where to stop).
+7. **Map the principles** — Name the five from memory; map each to a Sections 1–7 habit.
 
-1. **Ice-breaker prompt** — "What is the weather?" vs "I live in [city]. What outdoor activities are good this time of year?" Observe how specificity changes the answer. Write a one-paragraph reflection.
+### Common Stumbles
 
-2. **System prompt experiment** — Same interview question answered by "a Marine Corps drill sergeant" and "a kindergarten teacher" (use "You are a…" at the start). Screenshot both. Note 3 differences in tone, vocabulary, and detail level.
+- Hearing "ethics" and defaulting to OPSEC — they are opposite directions (output vs. input).
+- Treating spotting bias as sufficient — spotting without correcting is itself a failure.
+- Reading "disclose AI use" as "admit you cheated."
 
-3. **Clarity exercise** — Given a list of 3 vague prompts, rewrite each using RGCOA. Submit both versions. Save a before/after comparison.
+### Deliverable
 
-4. **Context window boundary** — Paste a 10,000-word document. Ask Claude questions about it. Note where quality starts to degrade.
+No formal artifact, but the readiness gate is real: a signed-after-verifying paragraph, a judge-first/consult-second loop, a bias strip-down, and the five principles named from memory. (Accountability and data-handling discipline are graded in the Module 11 capstone.)
 
-5. **Iterative prompting** — Start with a vague prompt. Iterate 3 times, refining based on what missed. Track what changed each round.
+### Transition to Module 10
 
-**Deliverable:** 5 well-written prompts, one per learning objective.
-
-### Discussion Questions / Knowledge Checks
-
-- "You ask the model to 'write a report.' It produces something generic and too long. What is the most effective fix?"
-- "You run the same prompt twice in two separate chats and get different answers. What is the most accurate explanation?"
-
-**Common confusions:**
-- "Isn't it just a chatbot?" → "It is more like a sophisticated next-word predictor. You are steering it with prompts."
-- "Will it always give the same answer?" → "No. It uses probability. Temperature is real."
-- "How much context can I use?" → "Roughly 200k tokens for Claude. If a document is longer than a short novel, you might hit the limit."
-
-**Timing note:** If running long, skip the context window experiment and state the number directly.
-
-### Transition to M2
-
-Students now understand the LLM side. M2 is the terminal — the interface the agent uses on their machine. The skills are directly connected.
+The responsible habits are set. Module 10 applies them to real artifacts — clean Markdown, enough code literacy to verify output, a verified toolbox, and context files that steer an agent before you type.
 
 ---
 
-## Module M2: Terminal Basics
+## Module 10 — Field Craft: Markdown, Code, Tools & Context Files
 
-**Estimated duration:** 120 minutes  
-**Instructional mode:** Guided labs. Instructor demos, students follow.
+**Estimated duration:** Plan Day 3 (four consolidated sections)
 
 ### Learning Objectives
 
-- Navigate directories and list files from the terminal
-- Create, copy, move, and delete files and folders
-- Understand absolute vs relative paths
-- Use command flags and look up unknown flags with `--help`
-- Pipe and redirect command output
-- Stop a running command with `Ctrl+C`
+- Write structured Markdown; know the four critical spacing rules; draft in VS Code, never in Word
+- Read and narrate basic code (variables, conditionals, loops, functions); recognize off-by-one and infinite loops; pseudocode first
+- Install, authenticate, and verify the toolbox (Claude Code, git, `gh`, VS Code, Node/Python); diagnose "command not found" via PATH
+- Author a `CLAUDE.md` that genuinely constrains and a `me.md` that reflects how they work
+- Keep `.env` out of history (`.gitignore` before first commit); keep context files free of sensitive content
 
-**Windows students:** Use WSL, not native PowerShell. Install: open PowerShell, run `wsl --install`. All exercises assume a Linux/Unix environment. Windows files are accessible inside WSL at `/mnt/c/Users/YourName/`. Path conversion rule: `C:\Users\Jake\Documents` → `/mnt/c/Users/jake/documents` (backslashes to forward slashes, drive letter lowercase after `/mnt/`). VS Code + WSL extension: from a WSL terminal, type `code .` to open VS Code with full WSL integration.
+### Instructor Notes (from this module's `??? note` blocks)
 
-### Key Concepts to Emphasize
+- **Don't linger on Markdown syntax:** ~15 minutes of genuine instruction; the rest is reps. Get students writing a README in the first ten minutes; correct spacing errors as they appear. A comprehensive syntax lecture does not survive contact with their first real document.
+- **Concepts, not syntax mastery (programming):** The deliverable is reading literacy, not a programmer. Use pseudocode rigorously and one language (JS or Python). Off-by-one and infinite-loop errors are the highest-value bug classes — they recur constantly in agent output. Do not let it become a bootcamp.
+- **Windows PATH and gh order:** Two failures dominate the tools section. Windows does not auto-update PATH after install — restart the terminal as the default fix before debugging deeper. And `gh auth login` fails confusingly if `gh` is not installed — confirm `gh --version` before touching auth.
+- **The generic-CLAUDE.md failure:** The predictable miss is a `CLAUDE.md` that describes the project warmly and constrains nothing. Drive the fix with one question: "What should Claude NOT modify? What is out of scope?" Make students name a real prohibition and a real read-only file.
 
-- The terminal is just another interface. Same files, same folders — words instead of mouse clicks.
-- **`Ctrl+C` is the most important shortcut.** Name it explicitly and drill it before anything else. Students need this reflex.
-- Path confusion (relative vs absolute) is where ~30% of students stall. Practice this 5+ times.
-- "Command not found" means it is not on PATH. `which <command>` to check. Restart terminal after installs.
+### Hands-On Direction
 
-### Hands-On Activities
+1. **Markdown README** — h1, three skills, one bold + one inline-code term, a fenced code block, a table; deliberately break one spacing rule and watch the preview break, then fix it.
+2. **Read code** — Pseudocode a grade calculator; predict a loop's output; find why a `while` runs forever; narrate an AI-written function back into plain English and flag any block you can't narrate.
+3. **Toolbox sweep** — Run every `--version` check; diagnose failures with `which`/`where`; authenticate `gh`; create `.gitignore` with `.env` before creating a dummy `.env`, and confirm `git status` doesn't show it.
+4. **Context files** — Write a `me.md` (5–10 lines) and a `CLAUDE.md` for a scenario project with scope boundary, ≥2 hard rules, a named read-only file, success criteria, and a one-line conflict rule; run the agent and confirm it cites the `CLAUDE.md`; underline every genuine prohibition.
 
-1. **Orientation walk** (15 min) — Start in home directory. Navigate to 5 different locations. `pwd` after each move. `ls` to see what is in each folder. Create a simple text file in one.
+### Common Stumbles
 
-2. **File manipulation sprint** (25 min) — Create `projects/acc-prep/module-2/` folder structure. Create 3 text files. Copy one to another location. Rename a file. Delete a file. List the final structure.
+- Markdown errors trace to the four spacing rules (space after `#`, blank line before lists, blank line before code fences, table separator row).
+- Smart quotes from Word silently breaking code blocks — write Markdown in VS Code.
+- "Command not found" right after install — restart the terminal first.
+- A `CLAUDE.md` with no prohibitions — documentation, not steering. Push for at least one real "never" and one read-only file.
 
-3. **Path puzzle** (20 min) — Given a file at `/home/user/projects/claude/config.txt`, write the absolute path, the relative path from `/home/user/`, and the relative path from `/home/user/projects/`. Navigate using those paths to verify they work.
+### Deliverable
 
-4. **Help system** (15 min) — Use `man ls`, `ls --help`, `help cd` to answer: "What does the -l flag do? What about -a? How do you list by file size?" Build a help reference card for `ls`, `cd`, `mkdir`, `cp`, `mv`.
+**A README (5+ syntax elements), a verified toolbox checklist, and a `CLAUDE.md` + `me.md` with at least one genuine enforceable prohibition.**
 
-5. **Piping and redirection** (25 min) — Create a text file with 10 lines. List files and save output to a file. Count files in a directory using piping. Append text to a file.
+### Transition to Module 11
 
-6. **Real-world scenario** (20 min) — "You have a folder with 50 files. Find all `.txt` files, sort by date, move to an archive folder." Create the fake scenario, then solve it.
-
-**Deliverable:** Terminal transcript showing all 6 exercises completing.
-
-**Common stuck points:**
-- "Permission denied" → redirected to system files. Move to a safe sandbox folder.
-- "No such file or directory" → wrong folder or wrong path. `pwd` and `ls` to verify location.
-- Relative path confusion → practice 5 times in a row with different folders.
-
-**Timing:** This is the slowest module for absolute beginners. Do not rush.
-
-### Transition to M3
-
-Students can operate in the filesystem. M3 introduces version control — the logbook that records every change the agent makes to their files. The "why" was already loaded in Terminal Basics. Now come the commands.
+Students hold the field craft. Module 11 is the proving ground — they stop practicing the pieces and prove them under their own command on a real artifact.
 
 ---
 
-## Module M3: Git Basics
+## Module 11 — The Proving Ground: Capstone Build
 
-**Estimated duration:** 120 minutes (split: 60 min local, 60 min remote + conflicts)  
-**Instructional mode:** Guided labs. Demo first, students follow.
-
-### Learning Objectives
-
-- Initialize a local Git repository
-- Stage changes, commit with clear messages, view history
-- Create, switch, and merge branches
-- Clone a repository and push changes to GitHub
-- Recognize and resolve a simple merge conflict
-- Write meaningful commit messages
-- Create a `.gitignore` before the first commit
-
-### Key Concepts to Emphasize
-
-- Git is a time machine. Every commit is a snapshot you can jump back to.
-- **`.gitignore` must be created before the first commit.** If a credential file is committed first, adding it to `.gitignore` later does NOT remove it from history. The file remains recoverable. This is the OPSEC enforcement layer for git. State this clearly, state it early.
-- Minimum `.gitignore` entries for any project: `.env`, any credential files, `.DS_Store`, `__pycache__/`, `.venv/`
-- Merge conflicts: students panic. Walk through one example slowly, then make them create a practice conflict. It gets comfortable fast.
-- Pull requests: a PR is how you review agent-produced changes before they touch main. When an agent creates changes on a branch, the PR diff is your verification checkpoint.
-
-### Hands-On Activities
-
-1. **Your first repository** (20 min) — Create folder, `git init`, create `README.md`, stage, commit, view log, make changes, stage, commit, view diff.
-
-2. **Branching sprint** (20 min) — Create a branch `feature/add-content`, make changes, commit, switch back to main, verify file is unchanged, merge, delete the branch.
-
-3. **Cloning and pushing** (20 min) — Clone a public repo. Create your own GitHub repo, clone it, make changes, push successfully. Verify on GitHub.
-
-4. **Merge conflicts** (25 min) — Create a repo with a file. Create two branches from main, each modifying the same line. Merge one (succeeds). Merge the other (conflict). Resolve manually. Complete the merge.
-
-5. **Commit messages** (15 min) — Given bad examples ("fix stuff", "update"), and good examples ("Add authentication logic to login form"), write 5 commit messages for provided scenarios. Verify: present tense, action-focused, informative.
-
-6. **`.gitignore`** (25 min) — Create a repo. Create `.gitignore` first. Add `.env`, `node_modules/`, `*.log`. Verify ignored files do not appear in `git status`.
-
-7. **Pull request** (20 min) — Create a branch, make changes, push the branch, open a PR using `gh pr create`. Review the diff in GitHub web interface. Merge from the GitHub interface.
-
-**Deliverable:** GitHub repo with 5+ commits, successful push, `.gitignore` in place.
-
-**Common stuck points:**
-- "fatal: origin already exists" → `git remote -v` to check, `git remote remove origin` if needed.
-- Authentication fails → `gh auth status`. If not logged in, `gh auth login`.
-- "I lost my commits!" → They did a `git reset --hard`. Reassure: commits are still there via `git reflog`. This is advanced — do not open it now. Prevention: do not do that.
-
-### Transition to M4
-
-Students can track changes to their files. M4 is Markdown — the plaintext format they will use everywhere: READMEs, documentation, prompts, commit messages. This is the language of the tools they are learning.
-
----
-
-## Module M4: Markdown
-
-**Estimated duration:** 90 minutes  
-**Instructional mode:** Show (demo in VS Code) → student practice.
-
-### Learning Objectives
-
-- Write a properly formatted Markdown document with 5+ syntax elements
-- Follow the critical spacing rules (# space, blank lines before lists and code blocks)
-- Write Markdown in VS Code, not Word or Google Docs
-- Create tables, code blocks, and task lists
-
-### Key Concepts to Emphasize
-
-- Markdown is the lingua franca of developers. Used in READMEs, documentation, prompts, static site generators, and slides.
-- **Critical spacing rules — most beginner errors live here:**
-  - Space required between `#` and heading text
-  - Blank line required before any list
-  - Blank line required before a fenced code block
-  - Tables require both a header row and a separator row (`|---|---|`)
-- Do not write Markdown in Word or Google Docs. Auto-replaced smart quotes and em-dashes break code blocks and inline code silently.
-- Show first: open a raw `.md` file (ugly), then toggle preview (formatted). "Markdown is the source, preview is the output."
-
-### Hands-On Activities
-
-1. **Markdown anatomy** (15 min) — Read a well-formatted markdown file. Identify all syntax. Recreate from scratch with 10+ different syntax elements.
-
-2. **Personal README** (20 min) — Write a Markdown file: heading, bullet list, link, bold/italic, code block. Fields: name, role, skills, interests, favorite terminal command. Commit to git.
-
-3. **Code blocks with syntax** (15 min) — Create code examples in at least 3 languages with proper syntax highlighting (` ```python `, ` ```bash `, ` ```javascript `).
-
-4. **Tables** (15 min) — Create a table comparing features of 3 tools. Create a second table for a simple project plan. Practice alignment.
-
-5. **Documentation project** (20 min) — Document a simple process in Markdown: main heading, sections (h2), numbered steps, code blocks, table of contents. Target: 300-500 words.
-
-6. **YAML frontmatter** (5 min) — Add `---title/author/date---` frontmatter to the README.
-
-**Deliverable:** One complete Markdown document using 5+ syntax elements.
-
-**Common confusions:**
-- "Can I mix HTML?" → Yes, but stick to Markdown unless you need HTML.
-- "Tables are annoying." → True. Show a table generator online, or accept the slightly ugly raw format.
-
-### Transition to M5
-
-Students can document their work. M5 introduces programming concepts — the logic layer underneath the code Claude writes. Even non-coders need this module: it covers problem-solving and debugging mindset, not just syntax.
-
----
-
-## Module M5: Programming Concepts
-
-**Estimated duration:** 120 minutes  
-**Instructional mode:** Pseudocode first. Always. Code is translation of logic, not the logic itself.
-
-### Learning Objectives
-
-- Write pseudocode before writing real code
-- Understand variables, conditionals, loops, and functions
-- Read a buggy snippet and identify the error type
-- Write a working function with a clear name and documented purpose
-
-### Key Concepts to Emphasize
-
-- **Pseudocode first.** If students can think through the logic, syntax is just typing. Enforce this rigorously. Do not let students open a code editor before they have written pseudocode.
-- Programming is problem-solving, not math. Logic > algebra.
-- Common misconceptions:
-  - "I have to memorize syntax." → No. Look it up every time. Real developers use `--help` and documentation constantly.
-  - "Programming is for 'math people.'" → False. It is problem-solving.
-- Debugging mindset: "What does the error message say?" and "What did you expect vs. what happened?" — not "it's broken."
-- Use JavaScript (recommended for accessibility with Node.js in browser/terminal) or Python. The goal is concepts, not language mastery.
-
-### Hands-On Activities
-
-1. **Variables and types** (15 min) — Pseudocode: store name, age, whether you code; calculate next year's age; combine name and age in a sentence. Then implement in JavaScript/Python.
-
-2. **Control flow: if/else** (20 min) — Scenario: coffee machine pricing by size. Write pseudocode with if/else logic. Implement. Test with different inputs.
-
-3. **Loops** (20 min) — Print numbers 1-10. Print "I will learn to code" 5 times. Sum all numbers 1-100. Loop through an array of words.
-
-4. **Functions** (20 min) — Write: greeting function, sum function, password length check, vowel counter.
-
-5. **Debugging** (20 min) — Given 5 buggy snippets (syntax errors, logic errors, off-by-one), read, identify the bug, fix it, test. Annotate what was wrong.
-
-6. **Pseudocode planning** (25 min) — Scenario: grade calculator. Input: test scores. Output: average + letter grade. Write pseudocode first. Implement. Test edge cases.
-
-**Deliverable:** 3 small programs (a greeting function, a conditional, a loop). Logic correct, readable, commented.
-
-**Common stuck points:**
-- "I don't understand variables." → Box analogy: "A variable is a labeled box. You put data in, label it, take data out later."
-- "What's the difference between = and ==?" → "Single = assigns. Double == compares."
-- "Infinite loop" → They forgot the stopping condition. Check the loop boundary.
-
-### Transition to M6
-
-Students understand the code layer. M6 is tool setup — getting Claude Code, GitHub, and VS Code running and authenticated so M7 and M8 can proceed. This module has the most blocking issues. Test your environment before class.
-
----
-
-## Module M6: Developer Tools
-
-**Estimated duration:** 90 minutes  
-**Instructional mode:** Lab + troubleshooting. This module has the most blocking issues. Test your environment thoroughly beforehand.
-
-### Learning Objectives
-
-- Install and run Claude Code (`claude --version` passes)
-- Authenticate with GitHub CLI (`gh auth status` passes)
-- Have VS Code installed with preferred extensions
-- Understand `.env` files and why they must not be committed
-
-### Key Concepts to Emphasize
-
-- You need a toolbox. Every tool works together: Claude writes code, git tracks it, GitHub stores it, VS Code edits it.
-- **`.env` files:** Never commit. Never under any circumstances. This is the OPSEC enforcement layer for credentials. Show `.gitignore` exclusion explicitly.
-- Authentication: recommend HTTPS for beginners. SSH is fine for advanced students.
-- "Command not found" means it is not on PATH. Restart terminal after installs.
-- Windows PATH: Windows does not auto-update PATH after install. Restart the terminal, or restart the computer.
-
-### Hands-On Activities
-
-1. **Install Claude Code** (15 min) — `claude --version`. Run `claude`. Interact. Confirm it connects.
-
-2. **GitHub CLI** (20 min) — Install `gh`. Authenticate: `gh auth login` (choose HTTPS). Verify: `gh auth status`. Clone a test repo.
-
-3. **VS Code setup** (15 min) — Install VS Code. Open a folder. Install 2-3 extensions (Markdown Preview, Git Graph, Prettier). Create a simple file and view it.
-
-4. **Environment variables** (20 min) — Create a `.env` file with sample variables. Show how `.gitignore` excludes it. Explain: these are settings for your app. They never get committed.
-
-5. **Verification sprint** (15 min) — Run and screenshot: `claude --version`, `node --version` (or `python --version`), `git --version`, `gh --version`, `code --version`. All should return version numbers.
-
-6. **Troubleshooting practice** (5 min) — "Command not found" → `which <command>` + `echo $PATH`. "Permission denied" → likely needs `chmod +x`. "Module not found" → missing dependency, need to install.
-
-**Deliverable:** Verification checklist showing all tools installed and authenticated.
-
-**Common stuck points:**
-- Windows PATH → restart terminal after install
-- GitHub auth fails → check they have a GitHub account and `gh` is installed
-- Node/Python not installed → install Node (simpler for most cohorts)
-
-### Transition to M7
-
-Toolbox is in place. M7 is context files — teaching Claude Code what the project is and how the operator works. This is where agentic work goes from generic to specific.
-
----
-
-## Module M7: Context Files — CLAUDE.md and me.md
-
-**Estimated duration:** 90 minutes  
-**Instructional mode:** Template + iteration.
-
-### Learning Objectives
-
-- Write a CLAUDE.md that specifies project scope, rules, and constraints
-- Write a personal me.md with communication preferences and working style
-- Confirm Claude Code reads the context files and references them in conversation
-- Understand how Markdown formatting affects how the model reads instructions
-
-### Key Concepts to Emphasize
-
-- CLAUDE.md = the instruction manual for the project. me.md = the instruction manual for the operator. Together, they tell Claude Code how to help without being re-briefed every session.
-- Every element in CLAUDE.md is Markdown syntax from M4. If formatting breaks — a header without a space, a list without a blank line — the model reads a wall of text instead of structured instructions.
-- The most common CLAUDE.md failure: it is too generic and does not constrain anything. Push students to specify: "What SHOULD Claude NOT modify? What is out of scope? What is off-limits?" Real constraints are powerful.
-- The `.claude/` folder is where context files live. Claude Code reads them at the start of every session.
-
-### Hands-On Activities
-
-1. **CLAUDE.md anatomy** (15 min) — Read the provided example CLAUDE.md. Annotate each section and what behavior each element produces. Identify: project name, goals, constraints, deliverables.
-
-2. **Write your me.md** (20 min) — Fields: name and role, decision style (fast/slow, risk tolerance), communication preference (BLUF, examples, details), what you value, how you prefer Claude to interact.
-
-3. **Write a project CLAUDE.md** (25 min) — Scenario: simple task manager for field teams. Write a CLAUDE.md including: what the project is, what it is NOT (scope boundary), key constraints, files Claude can modify, files Claude cannot modify, success criteria.
-
-4. **Conflict resolution matrix** (15 min) — When requirements conflict, which wins? Build a matrix for the scenario project: Speed vs Security, Simplicity vs Features, Completeness vs Time-to-delivery.
-
-5. **Set up project context** (10 min) — Create a folder. Create `.claude/` inside it. Add CLAUDE.md and me.md. Run Claude Code in that folder.
-
-6. **Context verification** (5 min) — Ask Claude about the project. It should reference your CLAUDE.md. Observe how context influences its behavior.
-
-**Deliverable:** CLAUDE.md + me.md for a real or hypothetical project. Rubric: clarity, completeness, enforceability, practical usefulness.
-
-**Common stumble:** Students write generic CLAUDE.md that does not constrain anything. Fix: "What should Claude NOT modify? What is out of scope?" Push for real constraints.
-
-### Transition to M8
-
-All prerequisites are in place. M8 is the capstone — plan, build, commit, push. Remind students: the supervisor loop (delegate, verify, own) is the frame for the entire capstone, not the polish.
-
----
-
-## Module M8: Capstone Project
-
-**Estimated duration:** 180 minutes (can span across Day 2 into Day 3)  
+**Estimated duration:** Plan most of Day 4 (build + present)  
 **Instructional mode:** Mentored project. Coach, do not give answers.
 
 ### Learning Objectives
 
-- Integrate all 7 prior modules into one working project
-- Practice the full workflow: plan → code → commit → push
-- Troubleshoot real problems independently
-- Demonstrate the supervisor loop: delegate, verify, own
+- Integrate every prior module into one shipped project
+- Author a `CLAUDE.md` that demonstrably constrains a live agent run
+- Execute and document one full delegate-verify-own loop (verify the diff against the agent's claim)
+- Recover a deliberate bad agent edit to a known-good commit using git
+- Ship to GitHub with a README, clean history, no secrets, and an accountable sign-off
 
-### Key Concepts to Emphasize
+### Instructor Notes (from this module's `??? note` blocks)
 
-- Not a tutorial or a code-along. A real thing that does something useful, shipped to GitHub.
-- Optimize for the loop, not the polish. A checked rough artifact beats an unchecked polished one.
-- Coaching phrases (do not give direct answers):
-  - "What does the error message say?"
-  - "Can you draw what this should do?"
-  - "What would you do if I wasn't here?"
-  - "That's good progress. What's next?"
-- Scope discipline: "Can you demo this in 2 minutes? If not, it's too big."
+- **Scope is the whole game:** Students fail two ways — over-scope and never reach the verify loop, or under-scope into something with no decisions for the agent to get wrong. Push toward a project with at least one real constraint and at least one place the agent could plausibly err — that is where the graded loop lives.
+- **Make the constraint testable:** Require at least one prohibition you can test live (a read-only file, a forbidden output). If the `CLAUDE.md` has no rule you can try to make the agent violate, it has no constraint worth grading. Have them show the agent honoring the boundary on camera or in a transcript.
+- **Grade the loop, not the artifact:** A working artifact with no evidence of verification scores low; a modest artifact with a clean, documented delegate-verify-own loop scores high. Look specifically for the student checking the diff against the agent's claim.
+- **Make them cause the failure:** Require a deliberate bad-edit-and-recover, not a hypothetical. The learning is in *feeling* that a mistake is reversible.
+- **Weighting is deliberate:** If a student protests that their app runs perfectly but scored mid-range, the answer is the weighting — loop, constraint, rewind, and ethics discipline are 75 of 100 points. Working code is table stakes, not the certification. Hold the line.
 
-**Three paths (student choice):**
-- **Path A (CLI tool):** Takes input from user or file, processes with logic, outputs result, basic error handling, documented, 3+ commits. Tech: JavaScript (Node.js) or Python.
-- **Path B (Web app):** HTML + CSS + JavaScript, takes user input, does something with it, runs locally, documented, 3+ commits.
-- **Path C (API integration):** Calls a free public API, handles errors, displays results, documented, 3+ commits. Tech: Node.js + fetch or Python + requests.
+### Hands-On Direction (the five capstone phases)
 
-**Workflow (all paths):**
-1. **Plan** (20 min) — One-paragraph description. List 3-5 features. First commit: "Initial project plan."
-2. **Setup** (20 min) — Create `.claude/` with CLAUDE.md and me.md. Initialize git. Create basic file structure. Commit: "Project setup."
-3. **Build Phase 1** (60 min) — Core functionality first. Use Claude Code to help. At least one commit per feature.
-4. **Test and iterate** (40 min) — Use the tool. Find and fix bugs. Ask Claude to help improve error handling or efficiency. Commit each improvement.
-5. **Document** (20 min) — Write README.md: what it does, how to use it, requirements. Add comments to complex code. Final commit: "Update documentation."
-6. **Push to GitHub** (10 min) — Verify all commits are local. Push. Verify on GitHub.
+1. **The Mission** — Pick a path (CLI tool / web app / API integration); one-paragraph plan + 3–5 features; apply the two-minute test; commit the plan.
+2. **Standing orders** — `.claude/` with a `CLAUDE.md` that has a scope boundary, ≥2 prohibitions, a named read-only file, done criteria, and a conflict rule; add the actual read-only file the prohibition protects.
+3. **The loop** — Delegate a bounded task; verify by reading/narrating the code, running it, and checking the diff against the agent's claim; own it with a commit message naming what you verified. Repeat for at least one more feature.
+4. **The rewind** — Confirm a verified known-good commit; deliberately induce a bad edit; confirm the damage; roll back; re-issue with a tighter instruction.
+5. **Ship it** — README; final scrub for names/credentials/`.env` in history; push; one-line accountable sign-off.
 
-**Checkpoint moments (formative assessment):**
-- After planning (20 min): "Tell me in one sentence what you're building."
-- After setup (40 min): "Show me your folder structure. What's in each file?"
-- After first feature (100 min): "Does it run? Show me it working."
-- After iteration (140 min): "What did you change after testing? Why?"
-- After push (170 min): "Show me your GitHub repo with your commits."
+### Rubric (grades how the build was commanded, not just whether it runs)
 
-**Deliverable:** GitHub repo with 5+ commits, README, working code.
-
-**Assessment rubric:**
-| Criterion | Weight |
+| Criterion | Points |
 |---|---|
-| Code works | 50% |
-| Documented | 20% |
-| Commits meaningful | 15% |
-| Iterated based on feedback | 10% |
-| Polish (readable, no debug statements) | 5% |
-| Bonus: deployment, tests, second feature | +5% |
+| Delegate-verify-own loop (documented; diff checked against the agent's claim) | 30 |
+| CLAUDE.md actually constrained the run (testable prohibition + scope boundary) | 15 |
+| Git rewind of a bad agent edit (recovered to known-good; clean tree shown) | 15 |
+| Data-handling & ethics discipline (no real names/units/credentials; no `.env` in history; accountable sign-off) | 15 |
+| Working artifact (runs, basic error handling) | 15 |
+| Documentation & commits (clear README; 5+ meaningful commits; pushed) | 10 |
 
-**Common stumbles:**
-- Under-scope (too simple) or over-scope (too big). Calibrate with: "Can you demo this in 2 minutes?"
-- Students wait for instructions instead of troubleshooting. Redirect: "What does the error say? What did you expect?"
+**Passing:** 70+. **Honors:** 90+ with a clean loop and a recovered rewind.
+
+### Common Stumbles
+
+- Under-scope (no decisions for the agent to get wrong) or over-scope (never reaches the verify loop). Calibrate with "Can you demo this in two minutes?"
+- Accepting a confident "done" without reading the diff — the most expensive failure.
+- Skipping commits, then having nothing to rewind to. Frequent verified commits are what make supervision survivable.
+- A committed secret — already in history; rotate it and clean the repo, don't just delete the file.
+
+### Coaching phrases (no direct answers)
+
+- "What does the error message say?" · "Can you draw what this should do?" · "What would you do if I wasn't here?" · "That's good progress — what's next?"
+
+### Deliverable
+
+**A GitHub repo with 5+ commits, a README, a constraining `CLAUDE.md`, a documented delegate-verify-own loop, and a recovered bad-edit rewind.**
+
+### Transition to Module 12
+
+Students have proven the command, not just the artifact. Module 12 names what comes next on the far side of the line of departure — recognition depth only.
+
+---
+
+## Module 12 — Crossing the LD: Bridge to Advanced Agentics
+
+**Estimated duration:** A short brief on Day 4 (recognition, not build)  
+**Instructional mode:** Flyover. Hold the altitude — every segment is recognition, not instruction.
+
+### Learning Objectives
+
+- State that advanced agentics is the same engine-harness-operator primitive and delegate-verify-own loop, composed and scaled
+- Name RAG as the grounding pattern they used by hand in Module 7
+- Describe MCP as the standard for extending the harness; name Tool / Resource / Prompt; know it is version-sensitive
+- Name the permission/guardrail controls (scopes, allowlists, approval gates, sandboxes) behind the supervisor mindset
+- Explain why an agent's plan is a supervision checkpoint
+- Name the four workflow patterns (prompt chaining, routing, orchestrator-workers, evaluator-optimizer)
+- Recognize the sub-agent/multi-agent idea and that it expands, not removes, supervision
+- Name spot-checks, regression, and evaluator-optimizer as agent-evaluation ideas; know what is deferred to the main course
+
+### Instructor Notes (from this module's `??? note` blocks)
+
+- **Hold the altitude:** The strongest temptation is to start teaching. Don't. Every segment is a flyover. If students leave able to recognize the terms and say what is deferred, the module succeeded. Depth here steals time from the main course and overwhelms students fresh off a capstone.
+- **The MCP trap:** This is the highest verify-before-teaching risk in the entire prerequisite course. The protocol genuinely shifts between releases. Teach the *shape* — harness is extensible; MCP standardizes the connection; Tools/Resources/Prompts are the three exposed types — and tell students any concrete detail must be checked against current docs. Do not let a confident-sounding specific become a taught fact.
+
+### Hands-On Direction
+
+This module is recognition-only — no hands-on builds. Each segment has a single embedded quiz to confirm the term landed. Use the "map every new term back to the primitive (richer engine / bigger harness / tighter operator loop)" framing throughout.
+
+### Common Stumbles
+
+- Trying to actually build any of it — every segment carries a **Deferred to the main course** marker for a reason.
+- Delivering MCP specifics from memory.
+
+### Deliverable
+
+No artifact; readiness gate is the recognition checklist — naming each pattern and stating what is deferred.
+
+### Transition
+
+End of the prerequisite course. Students cross the line of departure with the vocabulary and the map; the main course is where they build.
+
+---
+
+## Glossary & Quick Reference
+
+**Estimated duration:** Reference only — not a taught session.
+
+The glossary (`docs/modules/glossary.md`) is a student-facing quick reference, available from day one and revisited throughout. Each term gets one or two plain sentences and a cross-reference to the module that owns it. Direct students there whenever they hit a term they don't know yet; do not let it substitute for the module that teaches the concept in depth.
+
+**Instructor reminder (from the glossary's verify-before-teaching note):** Model names, tiers, pricing, and context-window sizes change with releases, and MCP details are version-sensitive. Treat any specific number as something to confirm against current provider documentation before relying on it.
 
 ---
 
 # COURSE AT A GLANCE
 
-| Module | Duration | Summary |
-|---|---|---|
-| **Bedrock: AI Literacy** | Multi-week, short daily reps | LLM mental model, failure modes, deliberate prompting, delivery models, data handling hard rules |
-| **Bedrock: Personalizing Your AI** | 1-2 sessions | Custom instructions and Projects/memory — stop re-briefing the model every session |
-| **Terminal Basics: The Machine** | Multi-week, short daily reps | Filesystem tree, plaintext vs rich text, VS Code orientation |
-| **Terminal Basics: The Terminal** | Multi-week, heaviest calendar weight | Navigation, file operations, paths, tab-completion, flags, Ctrl+C, version control concept |
-| **Agentic AI: Core Concepts** | 1-2 sessions | Chatbot vs agent, read/write/execute access, engine-harness-operator model, supervisor mindset |
-| **Mental Models** | 35 minutes | Six frameworks: Harness, Context Windows, Tokens, Tool Calls, Operator Posture, Cost-Consciousness |
-| **TF M1: LLM & Prompts** | 90 minutes | RGCOA prompting, system prompts, hallucination, data hygiene scrub drill, iterative prompting |
-| **TF M2: Terminal Basics** | 120 minutes | Navigation, file manipulation, paths, piping, redirection, help system |
-| **TF M3: Git Basics** | 120 minutes | Init, commit, branch, merge, push, `.gitignore` before first commit, pull requests |
-| **TF M4: Markdown** | 90 minutes | Syntax elements, critical spacing rules, code blocks, tables, write in VS Code not Word |
-| **TF M5: Programming Concepts** | 120 minutes | Pseudocode first, variables, loops, functions, debugging mindset |
-| **TF M6: Developer Tools** | 90 minutes | Claude Code, GitHub CLI, VS Code, `.env` files, tool verification checklist |
-| **TF M7: Context Files** | 90 minutes | CLAUDE.md (project constraints), me.md (operator profile), context verification |
-| **TF M8: Capstone Project** | 180 minutes | Full workflow: plan → build → commit → push; supervisor loop is the frame |
+| # | Module | Phase / Duration | Deliverable |
+|---|---|---|---|
+| 1 | **Know Your Weapon: How AI Actually Works** | Foundations — multi-week reps | Hallucination produced; verification drills; bright line written |
+| 2 | **Briefing the Machine: Prompting as a Mission Order** | Foundations — 1–2 sessions | 5 structured prompts (one per technique) |
+| 3 | **Feeding the Machine: Grounding & Multimodality** | Foundations — 1–2 sessions | Grounded read traced to source; multimodal "verify the read" |
+| 4 | **Standing Orders: Making the AI Know You** | Foundations — 1–2 sessions | Custom instructions + one Project/config |
+| 5 | **Know the Terrain: Filesystem & Terminal** | Operator Block — Day 1 (heaviest reps) | Six terminal transcripts |
+| 6 | **The Duty Logbook: Version Control with Git** | Operator Block — Day 1 | GitHub repo, 5+ commits, resolved conflict, `.gitignore`-first |
+| 7 | **From Advisor to Operator: Commanding an Agent** | Operator Block — Day 2 | One delegate-verify-own loop; identify-the-models |
+| 8 | **Ammunition Discipline: Tokens, Context & Cost** | Operator Block — Day 2 | Selection heuristic + cost principles applied |
+| 9 | **Rules of Engagement: Ethics & Responsible AI Use** | Operator Block — Day 2 | Signed-after-verifying paragraph; five principles named |
+| 10 | **Field Craft: Markdown, Code, Tools & Context Files** | Operator Block — Day 3 | README, toolbox checklist, constraining `CLAUDE.md` + `me.md` |
+| 11 | **The Proving Ground: Capstone Build** | Operator Block — Day 4 | GitHub repo: constrained run, documented loop, recovered rewind |
+| 12 | **Crossing the LD: Bridge to Advanced Agentics** | Operator Block — Day 4 | Recognition checklist |
+| — | **Glossary & Quick Reference** | Reference throughout | — |
 
-**Total Technical Foundations instructional time:** ~15 hours over 2-3 days  
-**Critical path:** M1 → M2 → M3 → M5 → M8. Do not skip any module in this sequence.  
-**Can run in parallel:** M4 (Markdown) while other modules are sinking in.  
-**Must complete before M8:** M5, M6, M7.
-
----
-
-## Grading Summary
-
-| Module | Artifact | Pass criteria |
-|---|---|---|
-| M1 | 5 prompts | 4/5 are clear, specific, coherent |
-| M2 | Terminal transcript | 8/10 commands correct, navigation successful |
-| M3 | Commits + push | Commits have messages, push succeeds, `.gitignore` exists |
-| M4 | Markdown doc | 5+ syntax elements, readable |
-| M5 | 3 programs | All run, logic is correct |
-| M6 | Verification checklist | All tools installed, all version checks pass |
-| M7 | CLAUDE.md + me.md | Both complete, coherent, enforceable |
-| M8 | GitHub repo | 5+ commits, README, code runs |
-
-**Course completion:** 7/8 modules passed. 8/8 + capstone >80% = Honors.
+**Critical path:** 1 → 2 → 3 → 4 → 5 → 6 → 7 → … → 11. Single ascending track; no skips. Module 11 specifically requires Modules 6, 7, 9, and 10.  
+**The deliberate spiral:** "verify after acting" — introduced M5, reinforced M7, graded M11.
 
 ---
 
@@ -867,13 +663,14 @@ All prerequisites are in place. M8 is the capstone — plan, build, commit, push
 
 | Symptom | First check | Fix |
 |---|---|---|
-| "Command not found" | `which <command>` | Not on PATH; restart terminal after install |
+| "Command not found" | `which`/`where <command>` | Not on PATH; restart terminal after install |
 | Path confusion | `pwd` + `ls` | Navigate to a known location and rebuild |
-| Git merge conflict | `git status` | Edit file, keep your version, `git add`, `git commit` |
+| Git merge conflict | `git status` | Edit file, resolve markers, `git add`, `git commit` |
 | Auth fails | `gh auth status` | `gh auth login`, choose HTTPS |
 | Claude Code not connecting | `claude --version` | Reinstall if not found |
-| Markdown not rendering | Check extension | Install "Markdown All in One" in VS Code, restart |
+| Markdown not rendering | Check spacing rules / extension | Space after `#`, blank line before lists/fences, table separator row |
 | JS/Node error | `node --version` | Install from nodejs.org if missing |
+| Secret committed | `git log` / repo history | Rotate the credential; clean history; do not just delete the file |
 
 ---
 
