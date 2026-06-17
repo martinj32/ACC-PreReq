@@ -21,7 +21,7 @@ Syntax: `!!! type "Title"`
 
 ```markdown
 !!! warning "Watch Out"
-    Students frequently try to skip this step. It will break M3 if skipped.
+    Students frequently try to skip this step. It will break a later module if skipped.
 ```
 
 ---
