@@ -190,6 +190,12 @@ def new_deck():
     prs.slide_height = SLIDE_H
     return prs
 
+def set_notes(slide, text):
+    """Attach speaker notes to a slide. Returns the slide for call chaining."""
+    slide.notes_slide.notes_text_frame.text = text
+    return slide
+
+
 def save_deck(prs, script_file, out_name):
     """Save into slides/Finished/. script_file = __file__ of the caller."""
     finished = os.path.join(os.path.dirname(os.path.abspath(script_file)), "Finished")
